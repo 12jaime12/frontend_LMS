@@ -36,10 +36,10 @@ const Login = () => {
   }
   return (
     <>
-      <div className="">
-        <div className="">
+      <div className="generalContainer">
+        <div className="loginContainer">
           <h1>Acceso</h1>
-          <p>Bienvenidos a Legendary Motorsport</p>
+          <p>Bienvenid@ a Legendary Motorsport</p>
           <form onSubmit={handleSubmit(formSubmit)}>
             <div className="">
               <input
@@ -78,7 +78,7 @@ const Login = () => {
                 Acceso
               </button>
             </div>
-            <p className="">
+            <p className="pLogin">
               <small>
                 ¿No recuerdas tu contraseña?
                 <Link to="/forgotpassword" className="anchorCustom">
@@ -89,12 +89,12 @@ const Login = () => {
             </p>
           </form>
         </div>
-        <div className="">
+        {/* <div className="">
           <p className="">
             ¿Aún no estás registrado?
             <Link to="/register"> Regístrate aquí</Link>
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   );
