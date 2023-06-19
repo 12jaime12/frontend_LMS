@@ -35,7 +35,7 @@ const Register = () => {
   };
 
   useEffect(() => {
-    useRegisterError(res, setRegisterOk)
+    useRegisterError(res, setRegisterOk);
     bridgeData("ALLUSER");
   }, [res]);
 
@@ -81,6 +81,8 @@ const Register = () => {
               className="input_user"
               type="tel"
               pattern="[0-9]{9}"
+              maxLength="9"
+              minLength="9"
               id="telefono"
               name="telefono"
               autoComplete="telefono"
