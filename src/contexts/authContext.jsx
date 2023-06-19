@@ -32,7 +32,7 @@ export const AuthContextProvider = ({ children }) => {
     switch (state) {
       case "ALLUSER":
         setAllUser(dataJson);
-        localStorage.removeItem("data");
+        //localStorage.removeItem("data");
         break;
 
       default:
