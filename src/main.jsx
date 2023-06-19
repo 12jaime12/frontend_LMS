@@ -8,6 +8,7 @@ import CheckCode from "./pages/CheckCode/CheckCode.jsx";
 import { AuthContextProvider } from "./contexts/authContext.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Register from "./pages/Register/Register.jsx";
+import { Protected, ProtectedCheck, ProtectedCheckChildren, ProtectedGeneral } from "./components/Protected/Protected.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
