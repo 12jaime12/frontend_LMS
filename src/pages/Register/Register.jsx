@@ -164,8 +164,8 @@ const Register = () => {
             <input
               className="input_user"
               type="ciudad"
-              id="ciudad"
-              name="ciudad"
+              id="direccion"
+              name="direccion"
               autoComplete="false"
               {...register("direccion", { required: true })}
             />
