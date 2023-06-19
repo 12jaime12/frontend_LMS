@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import "./Home.css";
 
 import React from "react";
+import { useAuth } from "../../contexts/authContext";
 
 const Home = () => {
   const { user } = useAuth();

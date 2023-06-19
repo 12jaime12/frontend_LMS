@@ -1,12 +1,11 @@
-import "./Login.css"
+import "./Login.css";
 
-import React from 'react'
+import React from "react";
 
 const Login = () => {
   return (
     <>
-    <div className="fondo fondoLogin">
-    <div className="form-container">
+      <div className="form-container">
         <h1>Acceso</h1>
         <p>Bienvenidos a Legendary Motorsport</p>
         <form onSubmit={handleSubmit(formSubmit)}>
@@ -64,9 +63,8 @@ const Login = () => {
           <Link to="/register"> Regístrate aquí</Link>
         </p>
       </div>
-    </div>
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
