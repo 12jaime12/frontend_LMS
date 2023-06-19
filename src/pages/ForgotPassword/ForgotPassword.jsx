@@ -1,8 +1,27 @@
+import { Navigate, useNavigate } from "react-router"
 import "./ForgotPassword.css"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { forgotPassword } from "../../service/API_proyect/user.service"
+import { useAuth } from "../../contexts/authContext"
 
 const ForgotPassword = () => {
+  const navigate = useNavigate()
+  const {register, handleSubmit} = useForm()
+  const [send, setSend] = useState(false)
+  const [res, setRes] = useState()
+  const [forgotOk, setForgotOk]=useState()
+
+  const formSubmit = async (formData) => {
+    setSend(true)
+    setRes(await forgotPassword(formData))
+    setSend(false)
+  }
+
+  useEffect(()=>{
+    console.log(res)
+  },[res])
+
   return (
     <>
     <div className="fondo">

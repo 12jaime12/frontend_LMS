@@ -9,6 +9,7 @@ import { AuthContextProvider } from "./contexts/authContext.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Register from "./pages/Register/Register.jsx";
 import { Protected, ProtectedCheck, ProtectedCheckChildren, ProtectedGeneral } from "./components/Protected/Protected.jsx";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -28,7 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/changePassword" element />
-            <Route path="/forgotPassword" element />
+            <Route path="/forgotPassword" element={<ForgotPassword/>} />
             <Route path="/dashboard" element />
           </Route>
         </Routes>
