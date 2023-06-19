@@ -1,11 +1,11 @@
 import { useForm } from "react-hook-form";
 import "./Login.css";
-
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router";
 import { useAuth } from "../../contexts/authContext";
 import { loginUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
+import useLoginError from "../../hooks/useError/useLoginError";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -23,11 +23,12 @@ const Login = () => {
 
   useEffect(() => {
     console.log(res);
-    //userlogin(res)
+    useLoginError(res, setLoginOk, userlogin)
   }, [res]);
 
   if (loginOk) {
     if (res?.data?.user?.check == true) {
+      console.log("user",user)
       return <Navigate to="/dashboard" />;
     } else {
       return <Navigate to="/checkCode" />;
