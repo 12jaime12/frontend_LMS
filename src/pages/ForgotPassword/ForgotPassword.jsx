@@ -4,6 +4,7 @@ import "./ForgotPassword.css"
 import React, { useEffect, useState } from 'react'
 import { forgotPassword } from "../../service/API_proyect/user.service"
 import { useAuth } from "../../contexts/authContext"
+import { useForm } from "react-hook-form"
 
 const ForgotPassword = () => {
   const navigate = useNavigate()

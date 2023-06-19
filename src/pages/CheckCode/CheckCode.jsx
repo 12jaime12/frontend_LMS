@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate, Navigate } from "react-router-dom";
 import { checkCode, resendCode } from "../../service/API_proyect/user.service";
 import { useAuth } from "../../contexts/authContext";
+import useCodeError from "../../hooks/useError/useCodeError";
 
 const CheckCode = () => {
   const userLocal = localStorage.getItem("user")
@@ -14,6 +15,8 @@ const CheckCode = () => {
     const {allUser} = useAuth()
     //CREAMOS LA FUNCION QUE RECOGE LA INFORMACION DE LOS INPUTS DEL FORMULARIO Y LLAMAMOS AL SERVICIO DEL BACKEND
     const formSubmit = async (formData) => {
+      console.log(formData)
+      console.log("alluser", allUser)
       //Si no hay ningun usuario guardado en localStorage nos traemos la informacion del user del contexto global (allUser)
       if(userLocal==null){
         const customFormData = ({
@@ -60,8 +63,13 @@ const CheckCode = () => {
     }
 
   useEffect(()=>{
+    useCodeError(res, setCodeOk)
     console.log("hola")
   },[res])
+
+  if(codeOk){
+    return <Navigate to="/login"/>
+  }
   return (
     <>
       <div className="">

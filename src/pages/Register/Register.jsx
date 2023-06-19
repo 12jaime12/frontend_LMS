@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router";
 import { registerUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
+import useRegisterError from "../../hooks/useError/useRegisterError";
 
 const Register = () => {
   const { bridgeData } = useAuth();
@@ -34,12 +35,12 @@ const Register = () => {
   };
 
   useEffect(() => {
-    //useRegisterError(res, setRegisterOk);
+    useRegisterError(res, setRegisterOk)
     bridgeData("ALLUSER");
   }, [res]);
 
   if (registerOk) {
-    return <Navigate to="/verifyCode" />;
+    return <Navigate to="/checkCode" />;
   }
 
   return (
