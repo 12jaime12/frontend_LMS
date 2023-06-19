@@ -4,7 +4,7 @@
     padding: 0;
   }
   
-  .homeContainer{
+.homeContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,4 +13,8 @@
     padding: 15px 25px 30px;
     border-radius: 5px;
     gap: 1rem
-  }
+}
+
+.homeContainer{
+  min-height: 80vh;
+}

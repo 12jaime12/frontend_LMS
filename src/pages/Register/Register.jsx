@@ -45,10 +45,15 @@ const Register = () => {
 
   return (
     <>
-      <div className="form-wrap">
-        <h2>Regístrate para acceder a todas las ventajas.</h2>
+    <div className="generalContainerRegister">
+    <div className="form-wrap">
+    <h2>Regístrate para acceder a todas las ventajas</h2>
         <form onSubmit={handleSubmit(formSubmit)}>
+          <div className="nombreCompleto">
           <div className="user_container form-group">
+            <label htmlFor="custom-input" className="custom-placeholder">
+              Nombre
+            </label>
             <input
               className="input_user"
               type="text"
@@ -57,12 +62,12 @@ const Register = () => {
               autoComplete="false"
               {...register("name", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              nombre
-            </label>
           </div>
 
           <div className="user_container form-group">
+            <label htmlFor="custom-input" className="custom-placeholder">
+              Apellido
+            </label>
             <input
               className="input_user"
               type="text"
@@ -71,12 +76,13 @@ const Register = () => {
               autoComplete="false"
               {...register("apellido", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              apellido
-            </label>
+          </div>
           </div>
 
           <div className="telefono_container form-group">
+          <label htmlFor="custom-input" className="custom-placeholder">
+              Teléfono
+            </label>
             <input
               className="input_user"
               type="tel"
@@ -88,12 +94,12 @@ const Register = () => {
               autoComplete="telefono"
               {...register("movil", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              telefono
-            </label>
           </div>
 
           <div className="dni_container form-group">
+            <label htmlFor="custom-input" className="custom-placeholder">
+              DNI
+            </label>
             <input
               className="input_user"
               type="dni"
@@ -102,12 +108,12 @@ const Register = () => {
               autoComplete="false"
               {...register("dni", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              dni
-            </label>
           </div>
 
           <div className="email_container form-group">
+            <label htmlFor="custom-input" className="custom-placeholder">
+              Email
+            </label>
             <input
               className="input_user"
               type="email"
@@ -116,12 +122,12 @@ const Register = () => {
               autoComplete="false"
               {...register("email", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              email
-            </label>
           </div>
-
+          <div className="ubicacion">
           <div className="pais_container form-group">
+            <label htmlFor="custom-input" className="custom-placeholder">
+              País
+            </label>
             <input
               className="input_user"
               type="text"
@@ -130,12 +136,12 @@ const Register = () => {
               autoComplete="false"
               {...register("pais", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              pais
-            </label>
           </div>
 
           <div className="provincia_container form-group">
+            <label htmlFor="custom-input" className="custom-placeholder">
+              Provincia
+            </label>
             <input
               className="input_user"
               type="text"
@@ -144,12 +150,12 @@ const Register = () => {
               autoComplete="false"
               {...register("provincia", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              provincia
-            </label>
           </div>
 
           <div className="ciudad_container form-group">
+            <label htmlFor="custom-input" className="custom-placeholder">
+              Ciudad
+            </label>
             <input
               className="input_user"
               type="text"
@@ -158,12 +164,12 @@ const Register = () => {
               autoComplete="false"
               {...register("ciudad", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              ciudad
-            </label>
           </div>
 
           <div className="ciudad_container form-group">
+            <label htmlFor="custom-input" className="custom-placeholder">
+              Dirección
+            </label>
             <input
               className="input_user"
               type="ciudad"
@@ -172,9 +178,7 @@ const Register = () => {
               autoComplete="false"
               {...register("direccion", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              dirección
-            </label>
+          </div>
           </div>
 
           <div className="sexo">
@@ -201,6 +205,9 @@ const Register = () => {
           </div>
 
           <div className="password_container form-group">
+            <label htmlFor="custom-input" className="custom-placeholder">
+              Contraseña
+            </label>
             <input
               className="input_user"
               type="password"
@@ -209,9 +216,6 @@ const Register = () => {
               autoComplete="false"
               {...register("password", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              contraseña
-            </label>
           </div>
 
           {/* <div>
@@ -237,11 +241,13 @@ const Register = () => {
           </p>
         </form>
       </div>
+      </div>
       <div className="footerForm">
         <p className="parrafoLogin">
           ¿Ya tienes cuenta? <Link to="/login">Accede a tu cuenta aquí.</Link>
         </p>
       </div>
+      
     </>
   );
 };

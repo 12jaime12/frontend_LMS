@@ -12,7 +12,7 @@ const Home = () => {
     <div className="fondo">
       <div className="homeContainer">
         {user !== null ? (
-          <h1 className="titleHome">Bienvenido {user.user}</h1>
+          <h2 className="titleHome">Bienvenido {user.user}</h2>
         ) : (
           <>
             <h1 className="titleHome">

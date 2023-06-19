@@ -38,10 +38,13 @@ const Login = () => {
     <>
       <div className="generalContainer">
         <div className="loginContainer">
-          <h1>Acceso</h1>
+          <h1>Inicia sesión</h1>
           <p>Bienvenid@ a Legendary Motorsport</p>
           <form onSubmit={handleSubmit(formSubmit)}>
-            <div className="">
+            <div className="email-space">
+            <label htmlFor="custom-input" className="custom-placeholder">
+                Email
+              </label>
               <input
                 className=""
                 type="email"
@@ -50,11 +53,11 @@ const Login = () => {
                 autoComplete="false"
                 {...register("email", { required: true })}
               />
-              <label htmlFor="custom-input" className="">
-                Email
-              </label>
             </div>
-            <div className="">
+            <div className="password-space">
+              <label htmlFor="custom-input" className="custom-placeholder">
+                Contraseña
+              </label>
               <input
                 className="input-login"
                 type="password"
@@ -63,9 +66,7 @@ const Login = () => {
                 autoComplete="false"
                 {...register("password", { required: true })}
               />
-              <label htmlFor="custom-input" className="custom-placeholder">
-                Contraseña
-              </label>
+              
             </div>
 
             <div className="">
@@ -89,13 +90,14 @@ const Login = () => {
             </p>
           </form>
         </div>
+        </div>
         <div className="">
-          <p className="">
+          <p className="parrafoLogin">
             ¿Aún no estás registrado?
             <Link to="/register"> Regístrate aquí</Link>
           </p>
         </div>
-      </div>
+      
     </>
   );
 };
