@@ -1,29 +1,59 @@
+import { useForm } from "react-hook-form"
 import "./Login.css"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Navigate, useNavigate } from "react-router"
+import { useAuth } from "../../contexts/authContext"
+import { loginUser } from "../../service/API_proyect/user.service"
+import { Link } from "react-router-dom"
 
 const Login = () => {
+  const navigate = useNavigate()
+  const {register, handleSubmit} = useForm()
+  const [send, setSend] = useState(false)
+  const [res,setRes] = useState()
+  const [loginOk, setLoginOk] = useState()
+  const {user, userlogin} = useAuth()
+
+  const formSubmit=async(formData)=>{
+    setSend(true)
+    setRes(await loginUser(formData))
+    setSend(false)
+  }
+
+  useEffect(()=>{
+    console.log(res)
+    //userlogin(res)
+  },[res])
+
+  if(loginOk){
+    if(res?.data?.user?.check==true){
+      return <Navigate to="/dashboard"/>
+    }else{
+      return <Navigate to="/checkCode"/>
+    }
+  }
   return (
     <>
-    <div className="fondo fondoLogin">
-    <div className="form-container">
+    <div className="">
+    <div className="">
         <h1>Acceso</h1>
         <p>Bienvenidos a Legendary Motorsport</p>
         <form onSubmit={handleSubmit(formSubmit)}>
-          <div className="email-container form-group">
+          <div className="">
             <input
-              className="input-login"
+              className=""
               type="email"
               id="name"
               name="name"
               autoComplete="false"
               {...register("email", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
+            <label htmlFor="custom-input" className="">
               Email
             </label>
           </div>
-          <div className="password-container form-group">
+          <div className="">
             <input
               className="input-login"
               type="password"
@@ -37,7 +67,7 @@ const Login = () => {
             </label>
           </div>
 
-          <div className="btn-container">
+          <div className="">
             <button
               className="btn"
               type="submit"
@@ -47,7 +77,7 @@ const Login = () => {
               Acceso
             </button>
           </div>
-          <p className="buttom-text">
+          <p className="">
             <small>
               ¿No recuerdas tu contraseña?
               <Link to="/forgotpassword" className="anchorCustom">
@@ -58,8 +88,8 @@ const Login = () => {
           </p>
         </form>
       </div>
-      <div className="footer-form">
-        <p className="parrafoLogin">
+      <div className="">
+        <p className="">
           ¿Aún no estás registrado?
           <Link to="/register"> Regístrate aquí</Link>
         </p>

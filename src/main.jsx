@@ -7,6 +7,7 @@ import Home from './pages/Home/Home.jsx'
 import CheckCode from './pages/CheckCode/CheckCode.jsx'
 import { AuthContextProvider } from './contexts/authContext.jsx'
 import Login from './pages/Login/Login.jsx'
+import {Protected, ProtectedCheck, ProtectedGeneral, ProtectedCheckChildren} from './components/Protected/Protected.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -16,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<App/>}>
             <Route index element={<Home/>}/>
-            <Route path="/checkCode" element={<CheckCode/>}/>
+            <Route path="/checkCode" element={<ProtectedCheckChildren><CheckCode/></ProtectedCheckChildren>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element/>
             <Route path="/changePassword" element/>
