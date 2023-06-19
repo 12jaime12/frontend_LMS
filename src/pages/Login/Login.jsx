@@ -24,7 +24,6 @@ const Login = () => {
   useEffect(() => {
     console.log(res);
     //userlogin(res)
-
   }, [res]);
 
   if (loginOk) {
@@ -89,12 +88,12 @@ const Login = () => {
             </p>
           </form>
         </div>
-        {/* <div className="">
+        <div className="">
           <p className="">
             ¿Aún no estás registrado?
             <Link to="/register"> Regístrate aquí</Link>
           </p>
-        </div> */}
+        </div>
       </div>
     </>
   );
