@@ -16,7 +16,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
-            <Route path="/checkCode" element={<CheckCode />} />
+            <Route
+              path="/checkCode"
+              element={
+                <ProtectedCheckChildren>
+                  <CheckCode />
+                </ProtectedCheckChildren>
+              }
+            />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/changePassword" element />
