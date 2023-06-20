@@ -18,6 +18,7 @@ const CheckCode = () => {
     const [res, setRes] = useState()
     const [codeOk, setCodeOk] = useState(false)
     const [deleteUser, setDeleteUser] = useState(false)
+    const [resend, setResend] = useState()
     const {allUser,user,userlogin} = useAuth()
     //CREAMOS LA FUNCION QUE RECOGE LA INFORMACION DE LOS INPUTS DEL FORMULARIO Y LLAMAMOS AL SERVICIO DEL BACKEND
     const formSubmit = async (formData) => {
@@ -57,7 +58,7 @@ const CheckCode = () => {
           email:allUser.email
         })
         setSend(true)
-        setRes(await resendCode(customFormData))
+        setResend(await resendCode(customFormData))
         setSend(false)
       }else{
         const parseUser = JSON.parse(userLocal)
@@ -65,7 +66,7 @@ const CheckCode = () => {
           email:parseUser.email
         })
         setSend(true)
-        setRes(await resendCode(customFormData))
+        setResend(await resendCode(customFormData))
         setSend(false)
       }
     }
@@ -75,6 +76,10 @@ const CheckCode = () => {
     useCodeError(res, setCodeOk, setDeleteUser)
     
   },[res])
+
+  useEffect(()=>{
+    console.log("codigo reenviado")
+  },[resend])
 
   if(deleteUser){
     return <Navigate to="/register"/>
@@ -114,7 +119,7 @@ const CheckCode = () => {
               variant="contained"
               color="white"
             />
-              {/* <button
+              <button
                 id="btnResend"
                 className="btn"
                 disabled={send}
@@ -122,7 +127,7 @@ const CheckCode = () => {
                 onClick={() => handleResend()}
               >
                 Reenviar código
-              </button> */}
+              </button> 
             </div>
             </LayoutFlex>
             <p className="aviso">
