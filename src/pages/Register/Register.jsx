@@ -37,6 +37,7 @@ const Register = () => {
   useEffect(() => {
     useRegisterError(res, setRegisterOk);
     bridgeData("ALLUSER");
+    console.log(res)
   }, [res]);
 
   if (registerOk) {

@@ -3,12 +3,14 @@ import { useAuth } from "../../contexts/authContext";
 import { Navigate } from "react-router";
 
 //PROTECTED-> Protegemos las rutas para que el usuario tenga que estar logeado, y en caso de que lo este tambien debe estar checkeado
-export const Protected = () => {
+export const Protected = ({children}) => {
   const { user } = useAuth();
 
   if ((user == null) | (user.check == false)) {
     localStorage.removeItem("user");
     return <Navigate to="/login" />;
+  }else{
+    return children
   }
 };
 

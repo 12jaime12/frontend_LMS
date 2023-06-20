@@ -6,17 +6,20 @@ import { useAuth } from "../../contexts/authContext";
 import useCodeError from "../../hooks/useError/useCodeError";
 
 const CheckCode = () => {
-  const userLocal = localStorage.getItem("user")
+  const userLocal = localStorage.getItem("data")
     const navigate = useNavigate()
     const {register, handleSubmit} = useForm()
     const [send, setSend] = useState(false)
     const [res, setRes] = useState()
-    const [codeOk, setCodeOk] = useState()
-    const {allUser} = useAuth()
+    const [codeOk, setCodeOk] = useState(false)
+    const [deleteUser, setDeleteUser] = useState(false)
+    const {allUser,user} = useAuth()
     //CREAMOS LA FUNCION QUE RECOGE LA INFORMACION DE LOS INPUTS DEL FORMULARIO Y LLAMAMOS AL SERVICIO DEL BACKEND
     const formSubmit = async (formData) => {
       console.log(formData)
       console.log("alluser", allUser)
+      console.log("user",user)
+      console.log(formData.confirmationCode)
       //Si no hay ningun usuario guardado en localStorage nos traemos la informacion del user del contexto global (allUser)
       if(userLocal==null){
         const customFormData = ({
@@ -63,10 +66,14 @@ const CheckCode = () => {
     }
 
   useEffect(()=>{
-    useCodeError(res, setCodeOk)
-    console.log("hola")
+    console.log(res)
+    useCodeError(res, setCodeOk, setDeleteUser)
+    
   },[res])
 
+  if(deleteUser){
+    return <Navigate to="/register"/>
+  }
   if(codeOk){
     return <Navigate to="/login"/>
   }
