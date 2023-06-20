@@ -20,6 +20,7 @@ import Taller from "./pages/Taller/Taller.jsx";
 import CompraVenta from "./pages/CompraVenta/CompraVenta.jsx";
 import Catalogo from "./pages/Catalogo/Catalogo.jsx";
 import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx";
+import ComprayventaHome from "./components/ComprayventaHome/ComprayventaHome.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -43,7 +44,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/forgotPassword" element={<ForgotPassword />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/taller" element={<Taller />} />
-            <Route path="/compraryvender" element={<CompraVenta />}></Route>
+            <Route path="/compraryvender" element={<CompraVenta />}>
+              <Route index element={<ComprayventaHome />} />
+            </Route>
+
             <Route path="/catalogo" element={<Catalogo />} />
           </Route>
         </Routes>
