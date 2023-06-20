@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router";
 import { useAuth } from "../../contexts/authContext";
 import { getAllCochesOcasion } from "../../service/API_proyect/coche.service";
-import printCoches from "../../components/printCoches";
 import Button from "../../components/ui/Button";
 
 const CompraVenta = () => {
