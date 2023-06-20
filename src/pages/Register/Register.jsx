@@ -55,10 +55,11 @@ const Register = () => {
     <LayoutFlex direction="column" gap="0.5rem" padding="1rem">
     <H2C text="Regístrate para accceder a todas las ventajas" width="largo"/>
     </LayoutFlex>
-    <LayoutForm direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
+    <LayoutForm  direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
           <form onSubmit={handleSubmit(formSubmit)}>
-            <div className="FormularioRegister">
+            
           <LayoutInline gap="0.5rem" padding="1rem">
+           
             <label htmlFor="custom-input" className="custom-placeholder">
               Nombre
             </label>
@@ -205,7 +206,7 @@ const Register = () => {
             </label>
           </div>
           </LayoutInline>
-          </div>
+          
           <LayoutFlex direction="column" gap="0.5rem" color="f2f2f2"padding="1rem">
           <Button type="submit" text="Registrar" variant="contained" color="white"/>
           
