@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 import useLoginError from "../../hooks/useError/useLoginError";
 import { H1C } from "../../components/ui";
 import {LayoutFlex} from "../../components/Layout"
+import Button from "../../components/ui/Button";
+
+
+
 const Login = () => {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
@@ -37,15 +41,15 @@ const Login = () => {
   }
   return (
     <>
-      <LayoutFlex direction="column" gap="2gap">
+      <LayoutFlex direction="column" gap="1rem">
 
           <H1C text="Inicia sesión" width="largo"/>
           <p>Bienvenid@ a Legendary Motorsport</p>
           <form onSubmit={handleSubmit(formSubmit)}>
-          <LayoutFlex direction="column" gap="2rem">
+          <LayoutFlex direction="column" gap="1rem">
             
             <div className="email-space">
-              <LayoutFlex direction="column" gap="2rem">
+              <LayoutFlex direction="column" gap="1rem">
 
             <label htmlFor="custom-input" className="custom-placeholder">
                 Email
@@ -62,7 +66,7 @@ const Login = () => {
             </div>
               
             <div className="password-space">
-              <LayoutFlex direction="column" gap="2rem">
+              <LayoutFlex direction="column" gap="1rem">
               <label htmlFor="custom-input" className="custom-placeholder">
                 Contraseña
               </label>
@@ -78,16 +82,7 @@ const Login = () => {
             </LayoutFlex>
             </div>
 
-            <div className="">
-              <button
-                className="btn"
-                type="submit"
-                disabled={send}
-                style={{ background: send ? "#001d86" : "#001d86b1" }}
-              >
-                Acceso
-              </button>
-            </div>
+           <Button type="submit" text="Entrar" variant="contained" color="white"/>
             <p className="pLogin">
               <small>
                 ¿No recuerdas tu contraseña?
