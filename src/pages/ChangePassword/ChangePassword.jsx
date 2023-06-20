@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useAuth } from '../../contexts/authContext'
 import { changePassword } from '../../service/API_proyect/user.service'
-
+import "./ChangePassword.css"
 import Swal from "sweetalert2/dist/sweetalert2.all.js";
 import useChangePasswordError from '../../hooks/useError/useChangePasswordError'
+import { H1C } from "../../components/ui";
+import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
+import Button from "../../components/ui/Button";
 
 
 const ChangePassword = () => {
@@ -54,32 +57,37 @@ const ChangePassword = () => {
     },[res])
     
   return (
-    <div className="divFormulario">
-        <button onClick={()=> console.log(user)}>hola</button>
-        <h3>CHANGE PASSWORD</h3>
+    <>
+    <LayoutInline gap="0.5rem" padding="1rem">
+    <H1C text="Cambiar contraseña" width="largo"/>
+    <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
+    <LayoutForm direction="column" gap="2rem"  width="500px" heigth="300px" padding = "3rem">
         <form className='form-register' onSubmit={handleSubmit(formSubmit)}> 
-            <div className="inputContainer">
-                <label className='input-container'><p>Old password:</p>
+            <div className="password-space">
+                <label htmlFor="custom-input" className="custom-placeholder">
+                <p>Introduce tu antigua contraseña:</p>
                 <input
-                    className="input_user"
+                    className="input-login"
                     type="password"
                     id="oldpassword"
                     name="password"
                     autoComplete="false"
                     {...register("password", { required: true })}
                 /></label>
-                <label className='input-container'><p>New password:</p>
+                <label htmlFor="custom-input" className="custom-placeholder">
+                <p>Introduce tu nueva contraseña:</p>
                 <input
-                    className="input_user"
+                    className="input-login"
                     type="password"
                     id="newpassword"
                     name="password"
                     autoComplete="false"
                     {...register("newPassword", { required: true })}
                 /></label>
-                <label className='input-container'><p>Confirm password:</p>
+                <label htmlFor="custom-input" className="custom-placeholder">
+                <p>Confirma contraseña:</p>
                 <input
-                    className="input_user"
+                    className="input-login"
                     type="password"
                     id="confirmpassword"
                     name="password"
@@ -87,9 +95,17 @@ const ChangePassword = () => {
                     {...register("confirmationPassword", { required: true })}
                 /></label>
             </div>
-            <button className="button" id="button-changePass" type="submit" disabled={send} style={{background: "#49c1a388"}}>CHANGE</button>
+            <LayoutFlex direction="column" gap="0.5rem" color="f2f2f2"padding="1rem">
+            <Button type="submit" text="Cambiar contraseña" variant="contained" color="white"/>
+            </LayoutFlex>
+            
         </form>
-    </div>
+    </LayoutForm>
+    </LayoutFlex>
+    </LayoutInline>
+ 
+    </>
+   
   )
 }
 

@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 import React from "react";
-React
-styled
 
 const H3Custom = styled.h3`
  
   width: ${({ widthVariant }) =>
-    widthVariant == "largo"
+    widthVariant == "extralargo"
+      ? "400px"
+      : "largo"
       ? "200px"
       : "medio"
       ? "100px"

@@ -7,6 +7,7 @@ import { loginUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useLoginError from "../../hooks/useError/useLoginError";
 import { H1C } from "../../components/ui";
+import { H3C } from "../../components/ui";
 import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
 import Button from "../../components/ui/Button";
 
@@ -46,11 +47,10 @@ const Login = () => {
     <LayoutInline gap="0.5rem" padding="1rem">
       <H1C text="Inicia sesión" width="largo"/>
       <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
-      
-          
-          
           <LayoutForm direction="column" gap="2rem"  width="500px" heigth="300px" padding = "3rem">
-          <p>Bienvenid@ a Legendary Motorsport</p>
+          
+          <H3C text="Bienvenid@ a Legendary Motorsport" width="extralargo"/>
+         
           <form onSubmit={handleSubmit(formSubmit)}>
          
             <div className="email-space">
@@ -98,6 +98,7 @@ const Login = () => {
             </LayoutFlex>
             
           </form>
+          
           </LayoutForm>
         <div className="">
           <p className="parrafoLogin">
@@ -105,6 +106,7 @@ const Login = () => {
             <Link to="/register" className="anchorCustom"> Regístrate aquí</Link>
           </p>
         </div>
+        
         </LayoutFlex>
         </LayoutInline>
     </>

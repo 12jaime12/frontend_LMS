@@ -10,6 +10,7 @@ const ButtonStyled = styled.button`
   font-family: inherit;
   padding: 0.5rem 1rem;
   border: none;
+  cursor: pointer;
   transition: 0.1s ease-in-out;
   &:focus {
     background-color: red;

@@ -1,0 +1,17 @@
+.codigoregistro-space{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-checkcode{
+    height: 30px;
+}
+
+.input-checkcode:focus{
+   outline-color:  #C61C14;
+ 
+}
+
+.aviso{
+    color: #C61C14;
+}

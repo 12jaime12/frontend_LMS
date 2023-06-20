@@ -7,14 +7,14 @@ display: flex;
 flex-direction: row;
 justify-content: space-around;
 align-items: center;
-background: white;
+background: ${({ color }) => color};
 padding: ${({ padding }) => padding};
 border-radius: 5px;
-gap: ${({ gap }) => gap};
-`;
-export const LayoutInline = ({children, padding, gap}) => {
+gap: ${({ gap }) => gap};`
+
+export const LayoutInline = ({children, direction, color, padding, gap}) => {
   return (
-    <FlexInline gap={ gap} padding = { padding}>
+    <FlexInline direction={ direction}  gap={ gap} color= { color} padding = { padding}>
         {children}
     </FlexInline>
   )

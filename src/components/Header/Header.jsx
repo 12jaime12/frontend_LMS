@@ -15,7 +15,7 @@ const Header = () => {
       </div>
       <div className="relative">
         <div className="navHeader">
-          <a>Catalogo</a>
+          <a>Catálogo</a>
           <a>Compra y Venta</a>
           <a>Taller</a>
         </div>

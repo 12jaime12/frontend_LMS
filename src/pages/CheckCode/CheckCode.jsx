@@ -5,6 +5,10 @@ import { checkCode, resendCode } from "../../service/API_proyect/user.service";
 import { useAuth } from "../../contexts/authContext";
 import useCodeError from "../../hooks/useError/useCodeError";
 import useAutologin from "../../hooks/useAutologin";
+import Button from "../../components/ui/Button";
+import { H1C } from "../../components/ui";
+import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
+import "./CheckCode.css"
 
 const CheckCode = () => {
   const userLocal = localStorage.getItem("data")
@@ -82,37 +86,35 @@ const CheckCode = () => {
   }
   return (
     <>
-      <div className="">
-        <div className="">
-          <h1>Verificación de código</h1>
-          <p>Escribe el código que has recibido a tu correo electrónico</p>
+    <LayoutInline gap="0.5rem" padding="1rem">
+        <H1C text="Verificación de código" width="extralargo"/>
+        <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
+        <LayoutForm direction="column" gap="1rem"  width="500px" heigth="300px" padding = "1rem">
+        <p>Escribe el código que has recibido en tu correo electrónico.</p>
           <form onSubmit={handleSubmit(formSubmit)}>
-            <div className="">
-            <label htmlFor="custom-input" className="">
+            <div className="codigoregistro-space">
+            <label htmlFor="custom-input" className="custom-placeholder">
                 Código de registro
+                </label>
                 <input
-                  className=""
+                  className="input-checkcode"
                   type="text"
                   id="name"
                   name="name"
                   autoComplete="false"
                   {...register("confirmationCode", { required: false })}
                 />
-              </label>
             </div>
+            <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
+            <Button type="submit" text="Enviar" variant="contained" color="white"/>
             <div className="">
-              <button
-                id="btnCheck"
-                className="btn"
-                type="submit"
-                disabled={send}
-                style={{ background: send ? "#001d86" : "#001d86b1" }}
-              >
-                ENVIAR
-              </button>
-            </div>
-            <div className="">
-              <button
+            <Button
+              text="Reenvir código"
+              action={() => handleResend()}
+              variant="contained"
+              color="white"
+            />
+              {/* <button
                 id="btnResend"
                 className="btn"
                 disabled={send}
@@ -120,17 +122,19 @@ const CheckCode = () => {
                 onClick={() => handleResend()}
               >
                 Reenviar código
-              </button>
+              </button> */}
             </div>
-            <p className="bottom-text">
+            </LayoutFlex>
+            <p className="aviso">
               <small>
                 Si el código introducido no es correcto, su usuario será
-                eliminado de la base de datos y tendrá que registrarse de nuevo.{" "}
+                eliminado de la base de datos y tendrá que registrarse de nuevo.
               </small>
             </p>
           </form>
-        </div>
-      </div>
+        </LayoutForm>
+        </LayoutFlex>
+    </LayoutInline>
     </>
   );
 };

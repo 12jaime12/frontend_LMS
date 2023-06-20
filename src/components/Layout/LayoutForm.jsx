@@ -8,7 +8,6 @@ justify-content: center;
 align-items: center;
 background: #f2f2f2;
 width:  ${({ width }) => width};
-heigth: ${({ heigth }) => heigth};
 padding: ${({ padding }) => padding};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
