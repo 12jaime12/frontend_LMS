@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
 import React from "react";
-React
-styled
 
 const H2Custom = styled.h2`
  
   width: ${({ widthVariant }) =>
-    widthVariant == "largo"
-      ? "500px"
+    widthVariant == "extralargo"
+      ? "400px"
+      : "largo"
+      ? "200px"
       : "medio"
       ? "100px"
       : "pequeño" && "50px"};

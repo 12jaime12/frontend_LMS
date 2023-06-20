@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-React
-
 const H1Custom = styled.h1`
   width: ${({ widthVariant }) =>
     widthVariant == "extralargo"

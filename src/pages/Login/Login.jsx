@@ -7,6 +7,7 @@ import { loginUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useLoginError from "../../hooks/useError/useLoginError";
 import { H1C } from "../../components/ui";
+import { H3C } from "../../components/ui";
 import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
 import Button from "../../components/ui/Button";
 
@@ -50,7 +51,7 @@ const Login = () => {
           
           
           <LayoutForm direction="column" gap="2rem"  width="500px" heigth="300px" padding = "3rem">
-          <p>Bienvenid@ a Legendary Motorsport</p>
+          <H3C text="Bienvenid@ a Legendary Motorsport" width="extralargo"/>
           <form onSubmit={handleSubmit(formSubmit)}>
          
             <div className="email-space">
