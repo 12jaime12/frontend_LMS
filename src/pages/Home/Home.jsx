@@ -14,7 +14,7 @@ const Home = () => {
       <div className="homeContainer">
         {user !== null ? (
           <><h2 className="titleHome">Bienvenido {user.user}</h2>
-          <Button onClick={()=> navigate("/dashboard")} type="submit" text="Acceder" variant="contained" color="white"/></>
+          <button className="btn" onClick={()=> navigate("/dashboard")}>ACCEDER</button></>
         ) : (
           <>
             <h1 className="titleHome">
