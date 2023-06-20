@@ -12,10 +12,12 @@ const Header = () => {
           className="logo"
         />
       </div>
-      <div className="navHeader">
-        <a>Catalogo</a>
-        <a>Compra y Venta</a>
-        <a>Taller</a>
+      <div className="relative">
+        <div className="navHeader">
+          <a>Catalogo</a>
+          <a>Compra y Venta</a>
+          <a>Taller</a>
+        </div>
       </div>
     </header>
   );
