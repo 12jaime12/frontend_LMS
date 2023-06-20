@@ -3,7 +3,8 @@ import { useAuth } from "../../contexts/authContext";
 import "./Dashboard.css";
 import React from "react";
 import Button from "../../components/ui/Button";
-
+import { H2C } from "../../components/ui";
+import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -21,12 +22,11 @@ const Dashboard = () => {
       <div>
         <ul className="nav">
           <li>
-            <div className="Conocenos">
-              <h2>Conócenos</h2>
-
+          <div className="Conocenos">
+            <H2C text="Conócenos" width="pequeño"/>
               <p>
                 Lengedary Motorsport es una comunidad creada para reunir a los
-                amantes de los coches. Y ademas encontrar diferentes
+                amantes de los coches y, además, encontrar diferentes
                 funcionalidades.
               </p>
               <Button type="submit" text="Saber más" variant="contained" color="white"/>
@@ -44,10 +44,10 @@ const Dashboard = () => {
               className="CatalogoImg"
             />
             <div className="Catalogo">
-              <h2>Catálogo</h2>
+            <H2C text="Catálogo" width="pequeño"/>
               <p>
                 Podrás descubrir los últimos modelos de nuestras marcas
-                colaboradoras y personalizar tu coche en tiempo real
+                colaboradoras y personalizar tu coche en tiempo real.
               </p>
               <Button
               text="Saber más"
@@ -59,13 +59,13 @@ const Dashboard = () => {
           </li>
           <li>
             <div className="Comprayvende">
-              <h2>Compra y vende</h2>
+            <H2C text="Compra y vende" width="medio"/>
               <p>
                 ¿Necesitas vender tu coche?¿Estás en busca de un coche de
-                segunda mano? Esta es tu sección, aqui encontrarás lo que
-                buscas, o podras publicar el coche que quieras vender. Con una
+                segunda mano? Esta es tu sección. Aquí encontrarás lo que
+                buscas, o podrás publicar el coche que quieras vender. Con una
                 sección de comentarios donde compartir con el resto de los
-                usuarios
+                usuarios.
               </p>
               <Button
               text="Saber más"
@@ -87,11 +87,11 @@ const Dashboard = () => {
               className="tallerImg"
             />
             <div className="Taller">
-              <h2>Taller</h2>
+            <H2C text="Taller" width="pequeño"/>
               <p>
                 Accede a nuestra red de Talleres asociados. Seleccionados por
-                sus servicios de la mayor calidad y cercania para dejar tu coche
-                en las mejores manos
+                sus servicios de la mayor calidad y cercanía para dejar tu coche
+                en las mejores manos.
               </p>
               <Button
               text="Saber más"

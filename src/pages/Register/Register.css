@@ -59,11 +59,3 @@
 
 
 
-.anchorCustom{
-    text-decoration: none;
-    color: black
-}
-
-.anchorCustom:hover{
-    text-decoration: underline;
-}

@@ -53,7 +53,7 @@ const Register = () => {
     <>
     <LayoutInline  gap="0.5rem" padding="1rem">
     <LayoutFlex direction="column" gap="0.5rem" padding="1rem">
-    <H2C text="Regístrate para accceder a todas las ventajas" width="largo"/>
+    <H2C text="Regístrate para accceder a todas las ventajas" width="extralargo"/>
     </LayoutFlex>
     <LayoutForm  direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
           <form onSubmit={handleSubmit(formSubmit)}>
@@ -221,7 +221,7 @@ const Register = () => {
         </form>
     
         <p className="parrafoLogin">
-          ¿Ya tienes cuenta? <Link to="/login">Accede a tu cuenta aquí.</Link>
+          ¿Ya tienes cuenta? <Link to="/login" className="anchorCustom">Accede a tu cuenta aquí.</Link>
         </p>
       </LayoutForm>
       </LayoutInline>
