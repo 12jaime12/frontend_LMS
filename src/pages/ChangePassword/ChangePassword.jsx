@@ -20,6 +20,10 @@ const ChangePassword = () => {
         console.log("all",allUser)
         const {password, newPassword, confirmationPassword} = formData
         console.log(newPassword, confirmationPassword)
+        const customData={
+            password,
+            newPassword
+        }
         if(newPassword==confirmationPassword){
             Swal.fire({
                 title: "¿Estas seguro de que quieres cambiar la contraseña?",
@@ -31,7 +35,7 @@ const ChangePassword = () => {
             }).then(async(result)=>{
                 if(result.isConfirmed){
                     setSend(true)
-                    setRes(await changePassword(password, newPassword))
+                    setRes(await changePassword(customData))
                     setSend(false)
                 }
             })
