@@ -7,7 +7,7 @@ header{
     border-bottom: solid 2px black;
 }
 .logo{
-    height: 10vh;
+    height: 85px;
 }
 .navHeader{
     display: flex;
@@ -18,7 +18,7 @@ header{
     top: 39rem;
     left: 33rem;*/
 } 
-.relative{
+/* .relative{
     position: absolute;
 }
 .navHeader{
@@ -29,7 +29,30 @@ header{
 .navHeader a{
     margin: 2rem;
     font-size: 25px;
+} */
+.divHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80vh;
+    width: 100%;
 }
+.imagenHeader{
+    display: flex;
+}
+.relative{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.navHeader{
+    gap:20px;
+    width: 100%;
+    color:red;
+    font-size: 36px;
+}
+
 /* .navHeader a::after{
     
   background-color: white;
