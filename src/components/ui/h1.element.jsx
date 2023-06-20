@@ -4,7 +4,6 @@ import React from "react";
 React
 
 const H1Custom = styled.h1`
- 
   width: ${({ widthVariant }) =>
     widthVariant == "largo"
       ? "200px"

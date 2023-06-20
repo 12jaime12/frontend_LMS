@@ -6,9 +6,8 @@ import { useAuth } from "../../contexts/authContext";
 import { loginUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useLoginError from "../../hooks/useError/useLoginError";
-import loginContainer from "../../components/ui/loginContainer.element";
-
-
+import { H1C } from "../../components/ui";
+import {LayoutFlex} from "../../components/Layout"
 const Login = () => {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
@@ -38,12 +37,16 @@ const Login = () => {
   }
   return (
     <>
-      <loginContainer direction="column direction" gap="2gap">
+      <LayoutFlex direction="column" gap="2gap">
 
-          <h1>Inicia sesión</h1>
+          <H1C text="Inicia sesión" width="largo"/>
           <p>Bienvenid@ a Legendary Motorsport</p>
           <form onSubmit={handleSubmit(formSubmit)}>
+          <LayoutFlex direction="column" gap="2rem">
+            
             <div className="email-space">
+              <LayoutFlex direction="column" gap="2rem">
+
             <label htmlFor="custom-input" className="custom-placeholder">
                 Email
               </label>
@@ -55,8 +58,11 @@ const Login = () => {
                 autoComplete="false"
                 {...register("email", { required: true })}
               />
+              </LayoutFlex>
             </div>
+              
             <div className="password-space">
+              <LayoutFlex direction="column" gap="2rem">
               <label htmlFor="custom-input" className="custom-placeholder">
                 Contraseña
               </label>
@@ -67,8 +73,9 @@ const Login = () => {
                 name="password"
                 autoComplete="false"
                 {...register("password", { required: true })}
-              />
               
+              />
+            </LayoutFlex>
             </div>
 
             <div className="">
@@ -90,6 +97,7 @@ const Login = () => {
                 </Link>
               </small>
             </p>
+            </LayoutFlex>
           </form>
         <div className="">
           <p className="parrafoLogin">
@@ -97,7 +105,7 @@ const Login = () => {
             <Link to="/register"> Regístrate aquí</Link>
           </p>
         </div>
-      </loginContainer>
+      </LayoutFlex>
     </>
   );
 };

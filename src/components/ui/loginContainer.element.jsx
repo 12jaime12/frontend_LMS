@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import React from "react";
 
 
 const ContainerStyled = styled.div`
@@ -13,7 +14,7 @@ border-radius: 5px;
 gap: ${({ gap }) => gap};
 `;
 
-const loginContainer = ({children, direction, gap})=>{
+export const LoginContainer = ({children, direction, gap})=>{
     return(
         <ContainerStyled direction = { direction} gap = { gap}>
             {children}
@@ -22,4 +23,3 @@ const loginContainer = ({children, direction, gap})=>{
     )
 }
 
-export default loginContainer
