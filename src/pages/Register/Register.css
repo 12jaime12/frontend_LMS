@@ -46,3 +46,27 @@
     display: flex;
     justify-content: center;
 } */
+
+
+.FormularioRegister{
+    display: flex;
+    flex-direction: column;
+} 
+
+.input_user{
+    
+    height: 30px;
+}
+
+.input_user:focus{
+   outline-color:  #C61C14;
+}
+
+.anchorCustom{
+    text-decoration: none;
+    color: black
+}
+
+.anchorCustom:hover{
+    text-decoration: underline;
+}
