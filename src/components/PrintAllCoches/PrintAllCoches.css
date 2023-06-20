@@ -1,0 +1,44 @@
+.divAllCoches{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.figureCoche{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+}
+.divFigureCoche{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 95%;
+
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.figureCoche img{
+
+    width: 100%;
+    object-fit: contain;
+
+}
+.divCocheInfo{
+    width: 30vw;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.figureCoche:hover{
+    background-color: crimson;
+    color:white;
+}
