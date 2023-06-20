@@ -5,7 +5,7 @@ import React from "react";
 const FlexInline = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 background: white;
 padding: ${({ padding }) => padding};

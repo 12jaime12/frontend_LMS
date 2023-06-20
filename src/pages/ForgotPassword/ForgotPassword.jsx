@@ -6,7 +6,8 @@ import { useAuth } from "../../contexts/authContext"
 import { useForm } from "react-hook-form"
 import Button from "../../components/ui/Button";
 import { H1C } from "../../components/ui";
-import {LayoutFlex, LayoutForm} from "../../components/Layout"
+import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
+
 
 const ForgotPassword = () => {
   const navigate = useNavigate()
@@ -27,8 +28,10 @@ const ForgotPassword = () => {
 
   return (
     <>
-    <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
+    <LayoutInline gap="0.5rem" padding="1rem">
+    
     <H1C text="Cambio de contraseña" width="extralargo"/>
+    <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
     <LayoutForm direction="column" gap="1rem"  width="500px" heigth="300px" padding = "1rem">
     <p className="bottom-text">
             <small>Escribe el email donde quieres recibir el cambio de contraseña.</small>
@@ -55,7 +58,7 @@ const ForgotPassword = () => {
       
     
     </LayoutFlex>
-    
+    </LayoutInline>
     </>
   )
 }
