@@ -19,10 +19,10 @@ header{
     left: 33rem;*/
 } 
 .relative{
-    position: relative;
+    position: absolute;
 }
 .navHeader{
-    position: absolute;
+    position: relative;
     top: 30rem;
     left: 25rem;
 }
