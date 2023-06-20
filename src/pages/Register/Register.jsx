@@ -58,8 +58,8 @@ const Register = () => {
     <LayoutForm  direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
           <form onSubmit={handleSubmit(formSubmit)}>
             
-          <LayoutInline gap="0.5rem" padding="1rem">
-           
+          <LayoutInline gap="0rem" padding="1rem">
+            <LayoutFlex direction="column" gap="0.5rem" padding="0">
             <label htmlFor="custom-input" className="custom-placeholder">
               Nombre
             </label>
@@ -71,7 +71,9 @@ const Register = () => {
               autoComplete="false"
               {...register("name", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
+            </LayoutFlex>
+             <LayoutFlex direction="column" gap="0.5rem" padding="0">
+             <label htmlFor="custom-input" className="custom-placeholder">
               Apellido
             </label>
             <input
@@ -82,9 +84,13 @@ const Register = () => {
               autoComplete="false"
               {...register("apellido", { required: true })}
             />
+             </LayoutFlex>
             </LayoutInline>
-          <LayoutInline gap="0.5rem" padding="1rem">
-          <label htmlFor="custom-input" className="custom-placeholder">
+
+
+<LayoutInline gap="0.5rem" padding="1rem">
+            <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
+            <label htmlFor="custom-input" className="custom-placeholder">
               Teléfono
             </label>
             <input
@@ -95,10 +101,12 @@ const Register = () => {
               minLength="9"
               id="telefono"
               name="telefono"
-              autoComplete="telefono"
+              autoComplete="false"
               {...register("movil", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
+            </LayoutFlex>
+             <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
+             <label htmlFor="custom-input" className="custom-placeholder">
               DNI
             </label>
             <input
@@ -109,8 +117,10 @@ const Register = () => {
               autoComplete="false"
               {...register("dni", { required: true })}
             />
+             </LayoutFlex>
             </LayoutInline>
             <LayoutInline gap="0.5rem" padding="1rem">
+            <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
             <label htmlFor="custom-input" className="custom-placeholder">
               Email
             </label>
@@ -122,7 +132,9 @@ const Register = () => {
               autoComplete="false"
               {...register("email", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
+            </LayoutFlex>
+             <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
+             <label htmlFor="custom-input" className="custom-placeholder">
               Contraseña
             </label>
             <input
@@ -133,8 +145,10 @@ const Register = () => {
               autoComplete="false"
               {...register("password", { required: true })}
             />
-          </LayoutInline>
-          <LayoutInline gap="0.5rem" padding="1rem">
+             </LayoutFlex>
+            </LayoutInline>
+            <LayoutInline gap="0.5rem" padding="1rem">
+            <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
             <label htmlFor="custom-input" className="custom-placeholder">
               País
             </label>
@@ -146,7 +160,9 @@ const Register = () => {
               autoComplete="false"
               {...register("pais", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
+            </LayoutFlex>
+             <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
+             <label htmlFor="custom-input" className="custom-placeholder">
               Provincia
             </label>
             <input
@@ -157,8 +173,10 @@ const Register = () => {
               autoComplete="false"
               {...register("provincia", { required: true })}
             />
+             </LayoutFlex>
             </LayoutInline>
-          <LayoutInline gap="0.5rem" padding="1rem">
+            <LayoutInline gap="0.5rem" padding="1rem">
+            <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
             <label htmlFor="custom-input" className="custom-placeholder">
               Ciudad
             </label>
@@ -170,18 +188,22 @@ const Register = () => {
               autoComplete="false"
               {...register("ciudad", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
+            </LayoutFlex>
+             <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
+             <label htmlFor="custom-input" className="custom-placeholder">
               Dirección
             </label>
             <input
               className="input_user"
-              type="ciudad"
+              type="text"
               id="direccion"
               name="direccion"
               autoComplete="false"
               {...register("direccion", { required: true })}
             />
+             </LayoutFlex>
             </LayoutInline>
+
             <LayoutInline gap="0.5rem" padding="1rem">
           <div className="sexo"> 
             <input

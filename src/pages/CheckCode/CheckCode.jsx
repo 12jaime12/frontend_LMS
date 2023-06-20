@@ -108,7 +108,13 @@ const CheckCode = () => {
             <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
             <Button type="submit" text="Enviar" variant="contained" color="white"/>
             <div className="">
-              <button
+            <Button
+              text="Reenvir código"
+              action={() => handleResend()}
+              variant="contained"
+              color="white"
+            />
+              {/* <button
                 id="btnResend"
                 className="btn"
                 disabled={send}
@@ -116,7 +122,7 @@ const CheckCode = () => {
                 onClick={() => handleResend()}
               >
                 Reenviar código
-              </button>
+              </button> */}
             </div>
             </LayoutFlex>
             <p className="aviso">
