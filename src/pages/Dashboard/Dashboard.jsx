@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import { useAuth } from "../../contexts/authContext";
 import "./Dashboard.css";
 
@@ -5,6 +6,12 @@ import React from "react";
 
 const Dashboard = () => {
   const { user } = useAuth();
+  const navigate = useNavigate();
+
+  const navigateFunction = (route) => {
+    const ruta = `/${route}`;
+    navigate(ruta);
+  };
 
   console.log(user);
   return (
@@ -40,7 +47,9 @@ const Dashboard = () => {
                 Podrás descubrir los últimos modelos de nuestras marcas
                 colaboradoras y personalizar tu coche en tiempo real
               </p>
-              <button>Saber más</button>
+              <button onClick={() => navigateFunction("catalogo")}>
+                Saber más
+              </button>
             </div>
           </li>
           <li>
@@ -53,7 +62,9 @@ const Dashboard = () => {
                 sección de comentarios donde compartir con el resto de los
                 usuarios
               </p>
-              <button>Saber más</button>
+              <button onClick={() => navigateFunction("compraryvender")}>
+                Saber más
+              </button>
             </div>
             <img
               src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687246794/993409168-0_dmj2q2.jpg"
@@ -74,7 +85,9 @@ const Dashboard = () => {
                 sus servicios de la mayor calidad y cercania para dejar tu coche
                 en las mejores manos
               </p>
-              <button>Saber más</button>
+              <button onClick={() => navigateFunction("taller")}>
+                Saber más
+              </button>
             </div>
           </li>
         </ul>
