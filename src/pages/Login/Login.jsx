@@ -6,7 +6,8 @@ import { useAuth } from "../../contexts/authContext";
 import { loginUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useLoginError from "../../hooks/useError/useLoginError";
-
+import { H1C } from "../../components/ui";
+import {LayoutFlex} from "../../components/Layout"
 const Login = () => {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
@@ -36,12 +37,16 @@ const Login = () => {
   }
   return (
     <>
-      <div className="generalContainer">
-        <div className="loginContainer">
-          <h1>Inicia sesión</h1>
+      <LayoutFlex direction="column" gap="2gap">
+
+          <H1C text="Inicia sesión" width="largo"/>
           <p>Bienvenid@ a Legendary Motorsport</p>
           <form onSubmit={handleSubmit(formSubmit)}>
+          <LayoutFlex direction="column" gap="2rem">
+            
             <div className="email-space">
+              <LayoutFlex direction="column" gap="2rem">
+
             <label htmlFor="custom-input" className="custom-placeholder">
                 Email
               </label>
@@ -53,8 +58,11 @@ const Login = () => {
                 autoComplete="false"
                 {...register("email", { required: true })}
               />
+              </LayoutFlex>
             </div>
+              
             <div className="password-space">
+              <LayoutFlex direction="column" gap="2rem">
               <label htmlFor="custom-input" className="custom-placeholder">
                 Contraseña
               </label>
@@ -65,8 +73,9 @@ const Login = () => {
                 name="password"
                 autoComplete="false"
                 {...register("password", { required: true })}
-              />
               
+              />
+            </LayoutFlex>
             </div>
 
             <div className="">
@@ -88,16 +97,15 @@ const Login = () => {
                 </Link>
               </small>
             </p>
+            </LayoutFlex>
           </form>
-        </div>
-        </div>
         <div className="">
           <p className="parrafoLogin">
             ¿Aún no estás registrado?
             <Link to="/register"> Regístrate aquí</Link>
           </p>
         </div>
-      
+      </LayoutFlex>
     </>
   );
 };

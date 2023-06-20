@@ -8,10 +8,18 @@ import CheckCode from "./pages/CheckCode/CheckCode.jsx";
 import { AuthContextProvider } from "./contexts/authContext.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Register from "./pages/Register/Register.jsx";
-import { Protected, ProtectedCheck, ProtectedCheckChildren, ProtectedGeneral } from "./components/Protected/Protected.jsx";
+import {
+  Protected,
+  ProtectedCheck,
+  ProtectedCheckChildren,
+  ProtectedGeneral,
+} from "./components/Protected/Protected.jsx";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword.jsx";
-import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
+import Taller from "./pages/Taller/Taller.jsx";
+import CompraVenta from "./pages/CompraVenta/CompraVenta.jsx";
+import Catalogo from "./pages/Catalogo/Catalogo.jsx";
+import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -31,9 +39,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/changePassword" element={<Protected><ChangePassword/></Protected>} />
-            <Route path="/forgotPassword" element={<ForgotPassword/>} />
-            <Route path="/dashboard" element={<Dashboard/>} />
+            <Route path="/changePassword" element={<ChangePassword/>}/>
+            <Route path="/forgotPassword" element={<ForgotPassword />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/taller" element={<Taller />} />
+            <Route path="/compraryvender" element={<CompraVenta />} />
+            <Route path="/catalogo" element={<Catalogo />} />
           </Route>
         </Routes>
       </AuthContextProvider>

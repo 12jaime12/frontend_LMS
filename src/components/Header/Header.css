@@ -1,6 +1,8 @@
 header{
-    min-height: 10vh;
+    min-height: 80vh;
     width: 100%;
-    background-color: transparent;
+    background-image: url("https://res.cloudinary.com/dx3e6knoz/image/upload/v1687252466/hpn-l-hondatyper-2560x1440-d70b_wvkrs1.jpg");
+    background-position: center;
+    background-size: cover;
     border-bottom: solid 2px black;
 }

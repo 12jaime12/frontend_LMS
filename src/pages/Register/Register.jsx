@@ -7,6 +7,8 @@ import { Navigate } from "react-router";
 import { registerUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useRegisterError from "../../hooks/useError/useRegisterError";
+import { H1C } from "../../components/ui/h1.element";
+
 
 const Register = () => {
   const { bridgeData } = useAuth();
@@ -48,7 +50,7 @@ const Register = () => {
     <>
     <div className="generalContainerRegister">
     <div className="form-wrap">
-    <h2>Regístrate para acceder a todas las ventajas</h2>
+    <H1C text="Regístrate para accceder a todas las ventajas"width="largo"/>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="nombreCompleto">
           <div className="user_container form-group">

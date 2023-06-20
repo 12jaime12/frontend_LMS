@@ -16,7 +16,7 @@ export const ZINDEX = {
 };
 
 const PALETTE_COLOR_LIGHT = {
-  background: "#fff",
+  background: "#7f0a0a",
   color: "#551951ff",
   button: "#51e4a2ff",
   border: "#df5e4b",
