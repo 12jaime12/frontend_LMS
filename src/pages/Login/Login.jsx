@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <>
       <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
-
+      
           <H1C text="Inicia sesión" width="largo"/>
           
           <LayoutForm direction="column" gap="2rem"  width="500px" heigth="300px" padding = "3rem">
@@ -88,7 +88,7 @@ const Login = () => {
                 ¿No recuerdas tu contraseña?
                 <Link to="/forgotpassword" className="anchorCustom">
                   {" "}
-                  Cambio de contraseña
+                Cambio de contraseña
                 </Link>
               </small>
             </p>
@@ -99,7 +99,7 @@ const Login = () => {
         <div className="">
           <p className="parrafoLogin">
             ¿Aún no estás registrado?
-            <Link to="/register"> Regístrate aquí</Link>
+            <Link to="/register" className="anchorCustom"> Regístrate aquí</Link>
           </p>
         </div>
         </LayoutFlex>

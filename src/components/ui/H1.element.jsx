@@ -5,7 +5,9 @@ React
 
 const H1Custom = styled.h1`
   width: ${({ widthVariant }) =>
-    widthVariant == "largo"
+    widthVariant == "extralargo"
+      ? "400px"
+      : "largo"
       ? "200px"
       : "medio"
       ? "100px"

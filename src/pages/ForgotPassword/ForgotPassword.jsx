@@ -1,10 +1,12 @@
 import { Navigate, useNavigate } from "react-router"
 import "./ForgotPassword.css"
-
 import React, { useEffect, useState } from 'react'
 import { forgotPassword } from "../../service/API_proyect/user.service"
 import { useAuth } from "../../contexts/authContext"
 import { useForm } from "react-hook-form"
+import Button from "../../components/ui/Button";
+import { H1C } from "../../components/ui";
+import {LayoutFlex, LayoutForm} from "../../components/Layout"
 
 const ForgotPassword = () => {
   const navigate = useNavigate()
@@ -25,42 +27,35 @@ const ForgotPassword = () => {
 
   return (
     <>
-    <div className="fondo">
-    <div className="form-wrap">
-        <h1>Cambio de contraseña</h1>
-  
+    <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
+    <H1C text="Cambio de contraseña" width="extralargo"/>
+    <LayoutForm direction="column" gap="1rem"  width="500px" heigth="300px" padding = "1rem">
+    <p className="bottom-text">
+            <small>Escribe el email donde quieres recibir el cambio de contraseña.</small>
+          </p>
         <form onSubmit={handleSubmit(formSubmit)}>
-          <div className="user_container form-group">
+          <div className="email-space">
+          <label htmlFor="custom-input" className="custom-placeholder">
+              Email
+            </label>
             <input
-              className="input_user"
+              className="input-forgot"
               type="text"
               id="email"
               name="email"
               autoComplete="false"
               {...register("email", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              Email
-            </label>
           </div>
-
-          <div className="btn_container">
-            <button
-              className="btn"
-              type="submit"
-              disabled={send}
-              style={{ background: send ? "#001d86" : "#001d86b1" }}
-            >
-              Cambiar contraseña
-            </button>
-          </div>
-
-          <p className="bottom-text">
-            <small>Escribe el email donde quieres recibir el cambio de contraseña.</small>
-          </p>
+          <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
+          <Button type="submit" text="Cambiar contraseña" variant="contained" color="white"/>
+          </LayoutFlex>
         </form>
-      </div>
-    </div>
+        </LayoutForm>
+      
+    
+    </LayoutFlex>
+    
     </>
   )
 }
