@@ -4,6 +4,7 @@ import { useNavigate, Navigate } from "react-router-dom";
 import { checkCode, resendCode } from "../../service/API_proyect/user.service";
 import { useAuth } from "../../contexts/authContext";
 import useCodeError from "../../hooks/useError/useCodeError";
+import useAutologin from "../../hooks/useAutologin";
 
 const CheckCode = () => {
   const userLocal = localStorage.getItem("data")
@@ -13,7 +14,7 @@ const CheckCode = () => {
     const [res, setRes] = useState()
     const [codeOk, setCodeOk] = useState(false)
     const [deleteUser, setDeleteUser] = useState(false)
-    const {allUser,user} = useAuth()
+    const {allUser,user,userlogin} = useAuth()
     //CREAMOS LA FUNCION QUE RECOGE LA INFORMACION DE LOS INPUTS DEL FORMULARIO Y LLAMAMOS AL SERVICIO DEL BACKEND
     const formSubmit = async (formData) => {
       console.log(formData)
@@ -75,7 +76,9 @@ const CheckCode = () => {
     return <Navigate to="/register"/>
   }
   if(codeOk){
-    return <Navigate to="/login"/>
+    /* console.log("codeOK", allUser)
+    useAutologin(allUser,userlogin) */
+    return <Navigate to="/dashboard"/>
   }
   return (
     <>

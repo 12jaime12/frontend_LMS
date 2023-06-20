@@ -16,6 +16,7 @@ const Register = () => {
   const [res, setRes] = useState({});
   const [registerOk, setRegisterOk] = useState(false);
   const [send, setSend] = useState(false);
+  const {allUser} = useAuth()
 
   const formSubmit = async (formData) => {
     const inputfile = 0; //document.getElementById("file-upload").files;
@@ -39,7 +40,7 @@ const Register = () => {
   useEffect(() => {
     useRegisterError(res, setRegisterOk);
     bridgeData("ALLUSER");
-    console.log(res)
+    console.log("allUser register",allUser) //AQUI SE SETEAN BIEN LOS DATOS DENTRO DE ALLUSER
   }, [res]);
 
   if (registerOk) {
