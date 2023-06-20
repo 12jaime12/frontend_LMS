@@ -15,15 +15,26 @@ const Home = () => {
     <div className="fondo">
       <div className="homeContainer">
         {user !== null ? (
-          <><h2 className="titleHome">Bienvenido {user.user}</h2>
-            <Button onClick={() => navigate("/dashboard")} text="Entrar" variant="contained" color="white"/>
+          <>
+            <h2 className="titleHome">Bienvenido {user.user}</h2>
+            <Button
+              text="Entrar"
+              action={() => navigate("/dashboard")}
+              variant="contained"
+              color="white"
+            />
           </>
         ) : (
           <>
             <H1C className="titleHome">
               Por favor, regístrese para poder acceder a la página
             </H1C>
-            <Button onClick={() => navigate("/login")} text="ir a login" variant="contained" color="white"/>
+            <Button
+              text="ir a login"
+              action={() => navigate("/login")}
+              variant="contained"
+              color="white"
+            />
           </>
         )}
       </div>
