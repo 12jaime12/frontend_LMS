@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 
 
+
 const ButtonStyled = styled.button`
   background-color: ${({ variant }) =>
     variant === "contained" ? "#C61C14" : "transparent"};
@@ -17,9 +18,9 @@ const ButtonStyled = styled.button`
   }
 `;
 
-const Button = ({ text, navigate, variant, color }) => {
+const Button = ({ text, action, variant, color }) => {
   return (
-    <ButtonStyled variant={variant} color={color} onClick={navigate}>
+    <ButtonStyled onClick={action} variant={variant} color={color}>
       {text}
     </ButtonStyled>
   );
