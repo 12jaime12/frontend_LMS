@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-
-
 const ButtonStyled = styled.button`
   background-color: ${({ variant }) =>
     variant === "contained" ? "#C61C14" : "transparent"};
@@ -27,4 +25,3 @@ const Button = ({ text, action, variant, color }) => {
 };
 
 export default Button;
-
