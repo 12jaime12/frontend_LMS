@@ -36,14 +36,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 </ProtectedCheckChildren>
               }
             />
-            
+
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/changePassword" element={<ChangePassword/>}/>
+            <Route path="/changePassword" element={<ChangePassword />} />
             <Route path="/forgotPassword" element={<ForgotPassword />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/taller" element={<Taller />} />
-            <Route path="/compraryvender" element={<CompraVenta />} />
+            <Route path="/compraryvender" element={<CompraVenta />}></Route>
             <Route path="/catalogo" element={<Catalogo />} />
           </Route>
         </Routes>

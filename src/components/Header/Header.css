@@ -9,3 +9,28 @@ header{
 .logo{
     height: 10vh;
 }
+.navHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* position: absolute;
+    top: 39rem;
+    left: 33rem;*/
+} 
+.navHeader a{
+    margin: 2rem;
+    position: relative;
+    top:33rem;
+    font-size: 25px;
+}
+.navHeader a::after{
+    content: "";
+  background-color: var(--primary-color);
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+.navHeader a:hover::after{
+    width: 100%;
+}
