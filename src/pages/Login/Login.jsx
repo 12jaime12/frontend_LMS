@@ -6,6 +6,8 @@ import { useAuth } from "../../contexts/authContext";
 import { loginUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useLoginError from "../../hooks/useError/useLoginError";
+import loginContainer from "../../components/ui/loginContainer.element";
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -36,8 +38,8 @@ const Login = () => {
   }
   return (
     <>
-      <div className="generalContainer">
-        <div className="loginContainer">
+      <loginContainer direction="column direction" gap="2gap">
+
           <h1>Inicia sesión</h1>
           <p>Bienvenid@ a Legendary Motorsport</p>
           <form onSubmit={handleSubmit(formSubmit)}>
@@ -89,15 +91,13 @@ const Login = () => {
               </small>
             </p>
           </form>
-        </div>
-        </div>
         <div className="">
           <p className="parrafoLogin">
             ¿Aún no estás registrado?
             <Link to="/register"> Regístrate aquí</Link>
           </p>
         </div>
-      
+      </loginContainer>
     </>
   );
 };
