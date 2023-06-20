@@ -1,5 +1,27 @@
 Footer{
-    min-height: 10vh;
+    min-height: 30vh;
     width: 100%;
-    background-color: black;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fotoLogo img{
+    height: 100px; 
+}
+/* .div-listaInteres{
+    margin
+} */
+.listaInteres{
+    list-style: none;
+    color: white;
+    margin-left: 2.5rem;
+}
+.iconos{
+    margin-right: 2rem;
+}
+.iconoRedSocial{
+    height: 30px;
+    filter: invert();
+    margin: 1rem;
 }
