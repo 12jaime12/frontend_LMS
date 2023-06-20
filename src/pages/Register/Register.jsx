@@ -1,13 +1,17 @@
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../contexts/authContext";
-import "./Register.css";
+
 
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router";
 import { registerUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useRegisterError from "../../hooks/useError/useRegisterError";
-import { H1C } from "../../components/ui/h1.element";
+import { H2C } from "../../components/ui";
+import { LayoutFlex, LayoutForm, LayoutInline } from "../../components/Layout";
+import Button from "../../components/ui/Button";
+
+
 
 
 const Register = () => {
@@ -49,12 +53,15 @@ const Register = () => {
 
   return (
     <>
-    <div className="generalContainerRegister">
-    <div className="form-wrap">
-    <H1C text="Regístrate para accceder a todas las ventajas"width="largo"/>
-        <form onSubmit={handleSubmit(formSubmit)}>
-          <div className="nombreCompleto">
-          <div className="user_container form-group">
+    <LayoutInline gap="0.5rem" padding="1rem">
+    <LayoutFlex direction="column" gap="0.5rem" padding="1rem">
+   
+    <H2C text="Regístrate para accceder a todas las ventajas" width="largo"/>
+    </LayoutFlex>
+    <LayoutForm direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
+          <form onSubmit={handleSubmit(formSubmit)}>
+          
+          {/* <div className="user_container form-group"> */}
             <label htmlFor="custom-input" className="custom-placeholder">
               Nombre
             </label>
@@ -66,9 +73,9 @@ const Register = () => {
               autoComplete="false"
               {...register("name", { required: true })}
             />
-          </div>
+          {/* </div> */}
 
-          <div className="user_container form-group">
+          {/* <div className="user_container form-group"> */}
             <label htmlFor="custom-input" className="custom-placeholder">
               Apellido
             </label>
@@ -80,10 +87,9 @@ const Register = () => {
               autoComplete="false"
               {...register("apellido", { required: true })}
             />
-          </div>
-          </div>
-
-          <div className="telefono_container form-group">
+          {/* </div> */}
+        
+          {/* <div className="telefono_container form-group"> */}
           <label htmlFor="custom-input" className="custom-placeholder">
               Teléfono
             </label>
@@ -98,9 +104,9 @@ const Register = () => {
               autoComplete="telefono"
               {...register("movil", { required: true })}
             />
-          </div>
+          {/* </div> */}
 
-          <div className="dni_container form-group">
+          {/* <div className="dni_container form-group"> */}
             <label htmlFor="custom-input" className="custom-placeholder">
               DNI
             </label>
@@ -112,9 +118,9 @@ const Register = () => {
               autoComplete="false"
               {...register("dni", { required: true })}
             />
-          </div>
+          {/* </div> */}
 
-          <div className="email_container form-group">
+          {/* <div className="email_container form-group"> */}
             <label htmlFor="custom-input" className="custom-placeholder">
               Email
             </label>
@@ -126,9 +132,9 @@ const Register = () => {
               autoComplete="false"
               {...register("email", { required: true })}
             />
-          </div>
-          <div className="ubicacion">
-          <div className="pais_container form-group">
+          {/* </div> */}
+        
+          {/* <div className="pais_container form-group"> */}
             <label htmlFor="custom-input" className="custom-placeholder">
               País
             </label>
@@ -140,9 +146,9 @@ const Register = () => {
               autoComplete="false"
               {...register("pais", { required: true })}
             />
-          </div>
+          {/* </div>
 
-          <div className="provincia_container form-group">
+          <div className="provincia_container form-group"> */}
             <label htmlFor="custom-input" className="custom-placeholder">
               Provincia
             </label>
@@ -154,9 +160,9 @@ const Register = () => {
               autoComplete="false"
               {...register("provincia", { required: true })}
             />
-          </div>
+          {/* </div>
 
-          <div className="ciudad_container form-group">
+          <div className="ciudad_container form-group"> */}
             <label htmlFor="custom-input" className="custom-placeholder">
               Ciudad
             </label>
@@ -168,9 +174,9 @@ const Register = () => {
               autoComplete="false"
               {...register("ciudad", { required: true })}
             />
-          </div>
+          {/* </div>
 
-          <div className="ciudad_container form-group">
+          <div className="ciudad_container form-group"> */}
             <label htmlFor="custom-input" className="custom-placeholder">
               Dirección
             </label>
@@ -182,10 +188,8 @@ const Register = () => {
               autoComplete="false"
               {...register("direccion", { required: true })}
             />
-          </div>
-          </div>
-
-          <div className="sexo">
+          {/* {/* </div> */}
+          <div className="sexo"> 
             <input
               type="radio"
               name="sexo"
@@ -208,7 +212,7 @@ const Register = () => {
             </label>
           </div>
 
-          <div className="password_container form-group">
+          {/* ¨<div className="password_container form-group">  */}
             <label htmlFor="custom-input" className="custom-placeholder">
               Contraseña
             </label>
@@ -220,22 +224,16 @@ const Register = () => {
               autoComplete="false"
               {...register("password", { required: true })}
             />
-          </div>
+          {/* </div>
 
           {/* <div>
             <UploadFile />
           </div> */}
 
-          <div className="btn_container">
-            <button
-              className="btn"
-              type="submit"
-              disabled={send}
-              style={{ background: send ? "#001d86" : "#001d86b1" }}
-            >
-              Registrar
-            </button>
-          </div>
+          {/* <div className="btn_container"> */} 
+          <Button type="submit" text="Registrar" variant="contained" color="white"/>
+            
+          {/* </div> */}
           <p className="bottom-text">
             <small>
               Haciendo click en el botón de Registrar, estás de acuerdo con{" "}
@@ -243,15 +241,16 @@ const Register = () => {
               <Link className="anchorCustom">Política de Privacidad</Link>.
             </small>
           </p>
+        
         </form>
-      </div>
-      </div>
-      <div className="footerForm">
+    
+      {/* <div className="footerForm"> */}
         <p className="parrafoLogin">
           ¿Ya tienes cuenta? <Link to="/login">Accede a tu cuenta aquí.</Link>
         </p>
-      </div>
-      
+      {/* </div>*/}
+      </LayoutForm>
+      </LayoutInline>
     </>
   );
 };

@@ -1,2 +1,3 @@
 export * from "./LayoutFlex.element"
 export * from "./LayoutForm"
+export * from "./LayoutInline"

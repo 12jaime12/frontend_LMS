@@ -7,7 +7,7 @@ const H2Custom = styled.h2`
  
   width: ${({ widthVariant }) =>
     widthVariant == "largo"
-      ? "200px"
+      ? "500px"
       : "medio"
       ? "100px"
       : "pequeño" && "50px"};
