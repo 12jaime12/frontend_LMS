@@ -76,9 +76,9 @@ const CheckCode = () => {
     return <Navigate to="/register"/>
   }
   if(codeOk){
-    /* console.log("codeOK", allUser)
-    useAutologin(allUser,userlogin) */
-    return <Navigate to="/dashboard"/>
+    console.log("codeOK", allUser)
+    useAutologin(allUser,userlogin) 
+    //return <Navigate to="/dashboard"/>
   }
   return (
     <>

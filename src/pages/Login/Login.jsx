@@ -7,8 +7,9 @@ import { loginUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useLoginError from "../../hooks/useError/useLoginError";
 import { H1C } from "../../components/ui";
-import {LayoutFlex} from "../../components/Layout"
+import {LayoutFlex, LayoutForm} from "../../components/Layout"
 import Button from "../../components/ui/Button";
+
 
 
 
@@ -41,32 +42,31 @@ const Login = () => {
   }
   return (
     <>
-      <LayoutFlex direction="column" gap="1rem">
+      <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
 
           <H1C text="Inicia sesión" width="largo"/>
+          
+          <LayoutForm direction="column" gap="2rem"  width="500px" heigth="300px" padding = "3rem">
           <p>Bienvenid@ a Legendary Motorsport</p>
           <form onSubmit={handleSubmit(formSubmit)}>
-          <LayoutFlex direction="column" gap="1rem">
-            
+         
             <div className="email-space">
-              <LayoutFlex direction="column" gap="1rem">
-
             <label htmlFor="custom-input" className="custom-placeholder">
                 Email
               </label>
               <input
-                className=""
+                className="input-login"
                 type="email"
                 id="name"
                 name="name"
                 autoComplete="false"
                 {...register("email", { required: true })}
               />
-              </LayoutFlex>
+              
             </div>
               
             <div className="password-space">
-              <LayoutFlex direction="column" gap="1rem">
+              
               <label htmlFor="custom-input" className="custom-placeholder">
                 Contraseña
               </label>
@@ -79,9 +79,9 @@ const Login = () => {
                 {...register("password", { required: true })}
               
               />
-            </LayoutFlex>
+              
             </div>
-
+            <LayoutFlex direction="column" gap="0.5rem" color="f2f2f2"padding="1rem">
            <Button type="submit" text="Entrar" variant="contained" color="white"/>
             <p className="pLogin">
               <small>
@@ -93,14 +93,17 @@ const Login = () => {
               </small>
             </p>
             </LayoutFlex>
+            
           </form>
+          </LayoutForm>
         <div className="">
           <p className="parrafoLogin">
             ¿Aún no estás registrado?
             <Link to="/register"> Regístrate aquí</Link>
           </p>
         </div>
-      </LayoutFlex>
+        </LayoutFlex>
+  
     </>
   );
 };

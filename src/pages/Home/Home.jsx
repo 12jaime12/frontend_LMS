@@ -30,7 +30,7 @@ const Home = () => {
               Por favor, regístrese para poder acceder a la página
             </H1C>
             <Button
-              text="ir a login"
+              text="Inicia sesión"
               action={() => navigate("/login")}
               variant="contained"
               color="white"
