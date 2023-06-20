@@ -21,6 +21,7 @@ import CompraVenta from "./pages/CompraVenta/CompraVenta.jsx";
 import Catalogo from "./pages/Catalogo/Catalogo.jsx";
 import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx";
 import ComprayventaHome from "./components/ComprayventaHome/ComprayventaHome.jsx";
+import CocheById from "./components/CocheById/CocheById.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -46,6 +47,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/taller" element={<Taller />} />
             <Route path="/compraryvender" element={<CompraVenta />}>
               <Route index element={<ComprayventaHome />} />
+              <Route path="/compraryvender/coche/:id" element={<CocheById/>}/>
             </Route>
 
             <Route path="/catalogo" element={<Catalogo />} />

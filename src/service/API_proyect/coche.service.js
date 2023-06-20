@@ -10,6 +10,14 @@ export const getAllCochesOcasion = async () => {
       return error;
     });
 };
+//--------------------GET BY ID----------------------
+export const getCocheById = async (id) => {
+  return API.get(`/coche/coche/${id}`)
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
 //--------------------GET BY MODELO-------------------
 //--------------------GET BY LIKES--------------------
 //--------------------GET BY MARCA--------------------
