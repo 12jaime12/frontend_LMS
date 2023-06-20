@@ -3,6 +3,8 @@ import "./Home.css";
 
 import React from "react";
 import { useAuth } from "../../contexts/authContext";
+
+import { H1C } from "../../components/ui";
 import Button from "../../components/ui/Button";
 
 const Home = () => {
@@ -14,15 +16,14 @@ const Home = () => {
       <div className="homeContainer">
         {user !== null ? (
           <><h2 className="titleHome">Bienvenido {user.user}</h2>
-          <button className="btn" onClick={()=> navigate("/dashboard")}>ACCEDER</button></>
+            <Button onClick={() => navigate("/dashboard")} text="Entrar" variant="contained" color="white"/>
+          </>
         ) : (
           <>
-            <h1 className="titleHome">
+            <H1C className="titleHome">
               Por favor, regístrese para poder acceder a la página
-            </h1>
-            <button className="btn" onClick={() => navigate("/login")}>
-              IR A LOGIN
-            </button>
+            </H1C>
+            <Button onClick={() => navigate("/login")} text="ir a login" variant="contained" color="white"/>
           </>
         )}
       </div>
