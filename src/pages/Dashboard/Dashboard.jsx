@@ -6,12 +6,6 @@ import React from "react";
 const Dashboard = () => {
   const { user } = useAuth();
 
-<<<<<<< HEAD
-  
-  return <div>Dashboard
-    
-  </div>;
-=======
   console.log(user);
   return (
     <>
@@ -124,7 +118,6 @@ const Dashboard = () => {
       </div>
     </>
   );
->>>>>>> 0483e6fd2333fd14fdfc4364401829ff5c3b00ad
 };
 
 export default Dashboard;
