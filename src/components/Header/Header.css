@@ -6,3 +6,6 @@ header{
     background-size: cover;
     border-bottom: solid 2px black;
 }
+.logo{
+    height: 10vh;
+}
