@@ -14,22 +14,12 @@ header{
     justify-content: center;
     align-items: center;
     color: white;
-    /* position: absolute;
-    top: 39rem;
-    left: 33rem;*/
+    gap:4rem;
+    width: 100%;
+    font-size: 33px;
+    margin-bottom: 1rem;
 } 
-/* .relative{
-    position: absolute;
-}
-.navHeader{
-    position: relative;
-    top: 30rem;
-    left: 25rem;
-}
-.navHeader a{
-    margin: 2rem;
-    font-size: 25px;
-} */
+
 .divHeader{
     display: flex;
     flex-direction: column;
@@ -46,12 +36,8 @@ header{
     justify-content: center;
 
 }
-.navHeader{
-    gap:20px;
-    width: 100%;
-    color:red;
-    font-size: 36px;
-}
+
+   
 
 /* .navHeader a::after{
     
