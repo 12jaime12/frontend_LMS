@@ -6,7 +6,7 @@ const GlobalStyles = () => {
       styles={(theme) => [
         {
           "*": {
-            fontFamily: "Regular",
+            fontFamily: "'Prompt', sans-serif;",
             boxSizing: "border-box",
           },
           "html,body": {

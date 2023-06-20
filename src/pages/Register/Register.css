@@ -19,6 +19,7 @@
 .form-wrap .form-group input {
     display: flex;
     flex-direction: row;
+
     width: 90%;
     padding: 10px;
     border: black 2px solid;
