@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router";
 import { useAuth } from "../../contexts/authContext";
 import "./Dashboard.css";
-
 import React from "react";
+import Button from "../../components/ui/Button";
+
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -27,7 +28,7 @@ const Dashboard = () => {
                 amantes de los coches. Y ademas encontrar diferentes
                 funcionalidades.
               </p>
-              <button>Saber más</button>
+              <Button type="submit" text="Saber más" variant="contained" color="white"/>
             </div>
             <img
               src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1686737065/logoredondo-removebg-preview_uidph4.png"
@@ -47,9 +48,12 @@ const Dashboard = () => {
                 Podrás descubrir los últimos modelos de nuestras marcas
                 colaboradoras y personalizar tu coche en tiempo real
               </p>
-              <button onClick={() => navigateFunction("catalogo")}>
-                Saber más
-              </button>
+              <Button
+              text="Saber más"
+              action={() => navigate("/catalogo")}
+              variant="contained"
+              color="white"
+            />
             </div>
           </li>
           <li>
@@ -62,9 +66,12 @@ const Dashboard = () => {
                 sección de comentarios donde compartir con el resto de los
                 usuarios
               </p>
-              <button onClick={() => navigateFunction("compraryvender")}>
-                Saber más
-              </button>
+              <Button
+              text="Saber más"
+              action={() => navigate("/compraryvender")}
+              variant="contained"
+              color="white"
+            />
             </div>
             <img
               src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687246794/993409168-0_dmj2q2.jpg"
@@ -85,9 +92,12 @@ const Dashboard = () => {
                 sus servicios de la mayor calidad y cercania para dejar tu coche
                 en las mejores manos
               </p>
-              <button onClick={() => navigateFunction("taller")}>
-                Saber más
-              </button>
+              <Button
+              text="Saber más"
+              action={() => navigate("/taller")}
+              variant="contained"
+              color="white"
+            />
             </div>
           </li>
         </ul>
