@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap:10px;
 }
 .figureCoche{
     width: 350px;
@@ -15,6 +16,7 @@
     justify-content: center;
     position:relative;
     border-radius: 5px;
+    padding:10px;
 }
 .divFigureCoche{
     display: flex;
@@ -30,7 +32,8 @@
 .figureCoche img{
 
     width: 100%;
-    object-fit: contain;
+    height: 200px;
+    object-fit: cover;
 
 }
 .divCocheInfo{
