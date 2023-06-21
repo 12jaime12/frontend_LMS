@@ -8,6 +8,7 @@ header{
 }
 .logo{
     height: 85px;
+    position: fixed;
 }
 .navHeader{
     display: flex;
@@ -27,15 +28,29 @@ header{
     justify-content: space-between;
     min-height: 80vh;
     width: 100%;
+    position: relative;
 }
 .imagenHeader{
     display: flex;
+    justify-content: space-between;
+    position: relative;
+
 }
 .relative{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    position: relative;
+}
+.imgHeaderHome{
+    height: 60px;
+    background-color: #39E3EB;
+    color:whitesmoke;
+    filter:invert();
+    margin: 10px 10px 0 0;
+    border-radius: 50%;
+    position:fixed;
+    right:10px;
 }
 
    

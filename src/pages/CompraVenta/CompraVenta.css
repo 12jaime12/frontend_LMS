@@ -1,0 +1,7 @@
+.ulNavCompraventa{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap:35px;
+    padding: 15px;
+}
