@@ -52,6 +52,7 @@ const CheckCode = () => {
     }
 
     const handleResend = async ()=>{
+      console.log("entro")
       const userLocal=localStorage.getItem("user")
       if(userLocal==null){
         const customFormData = ({
@@ -73,12 +74,12 @@ const CheckCode = () => {
 
   useEffect(()=>{
     console.log(res)
-    useCodeError(res, setCodeOk, setDeleteUser)
+    // useCodeError(res, setCodeOk, setDeleteUser)
     
   },[res])
 
   useEffect(()=>{
-    console.log("codigo reenviado")
+    console.log("codigo reenviado",resend)
   },[resend])
 
   if(deleteUser){
@@ -113,21 +114,6 @@ const CheckCode = () => {
             <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
             <Button type="submit" text="Enviar" variant="contained" color="white"/>
             <div className="">
-            {/* <Button
-              text="Reenvir código"
-              action={() => handleResend}
-              variant="contained"
-              color="white"
-            /> */}
-              <button
-                id="btnResend"
-                className="btn"
-                disabled={send}
-                style={{ background: send ? "#001d86" : "#001d86b1" }}
-                onClick={() => handleResend()}
-              >
-                Reenviar código
-              </button> 
             </div>
             </LayoutFlex>
             <p className="aviso">
@@ -137,6 +123,13 @@ const CheckCode = () => {
               </small>
             </p>
           </form>
+          <Button
+            type="button"
+              text="Reenvir código"
+              action={handleResend}
+              variant="contained"
+              color="white"
+            />
         </LayoutForm>
         </LayoutFlex>
     </LayoutInline>
