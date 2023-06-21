@@ -21,7 +21,6 @@ import CompraVenta from "./pages/CompraVenta/CompraVenta.jsx";
 import Catalogo from "./pages/Catalogo/Catalogo.jsx";
 import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx";
 
-
 import ComprayventaHome from "./pages/ComprayventaHome/ComprayventaHome.jsx";
 import CocheById from "./pages/CocheById/CocheById.jsx";
 
@@ -45,13 +44,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/register" element={<Register />} />
             <Route path="/changePassword" element={<ChangePassword />} />
             <Route path="/forgotPassword" element={<ForgotPassword />} />
+            <Route path="/perfil" element />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/taller" element={<Taller />} />
             <Route path="/compraryvender" element={<CompraVenta />}>
               <Route index element={<ComprayventaHome />} />
-              <Route path="/compraryvender/coche/:id" element={<CocheById/>}/>
+              <Route path="/compraryvender/coche/:id" element={<CocheById />} />
             </Route>
-
             <Route path="/catalogo" element={<Catalogo />} />
           </Route>
         </Routes>
