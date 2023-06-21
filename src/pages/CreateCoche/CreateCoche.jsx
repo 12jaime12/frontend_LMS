@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router'
 import { useAuth } from '../../contexts/authContext'
@@ -14,14 +14,27 @@ const CreateCoche = () => {
     const [res, setRes] = useState()
     const [created, setCreatedOk] = useState(false)
     const { register, handleSubmit } = useForm();
+    const inputFrontal = useRef()
+    const inputIzquierdo = useRef()
+    const inputDerecho = useRef()
+    const inputTrasero = useRef()
+    
+    
     const formSubmit=async(formData)=>{
+      const arrayImagenes = [inputFrontal?.current?.value, inputDerecho?.current?.value, inputTrasero?.current?.value, inputDerecho?.current?.value]
+      const dataCustom={
+        ...formData,
+        image:arrayImagenes
+      }
+      console.log("dataCustom", dataCustom)
         setSend(true)
-        setRes(await createCocheServicio(formData))
+        setRes(await createCocheServicio(dataCustom))
         setSend(false)
     }
 
 useEffect(()=>{
     res!=null && console.log("create car", res)
+    
 },[res])
   return (
     <div>
@@ -59,10 +72,6 @@ useEffect(()=>{
               {...register("modelo", { required: true })}
             />
              </LayoutFlex>
-
-
-
-
             <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
             <label htmlFor="custom-input" className="custom-placeholder">
               AÑO
@@ -114,7 +123,7 @@ useEffect(()=>{
               id="imageCar"
               name="imageCar"
               autoComplete="false"
-              {...register("image", )}
+              ref={inputFrontal}
             /></label>
             <label>lateral derecho: <input
               className="input_user"
@@ -122,15 +131,15 @@ useEffect(()=>{
               id="imageCar"
               name="imageCar"
               autoComplete="false"
-              {...register("image", )}
+              ref={inputDerecho}
             /></label>
-            <label>culo: <input
+            <label>trasera: <input
               className="input_user"
               type="file"
               id="imageCar"
               name="imageCar"
               autoComplete="false"
-              {...register("image", )}
+              ref={inputTrasero}
             /></label>
             <label>lateral izquierdo: <input
               className="input_user"
@@ -138,7 +147,7 @@ useEffect(()=>{
               id="imageCar"
               name="imageCar"
               autoComplete="false"
-              {...register("image",)}
+              input={inputIzquierdo}
             /></label>
              </LayoutFlex>
             
