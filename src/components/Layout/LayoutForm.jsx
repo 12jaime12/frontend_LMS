@@ -7,14 +7,14 @@ flex-direction: ${({ direction }) => direction};
 justify-content: center;
 align-items: center;
 background: #f2f2f2;
-width:  ${({ width }) => width};
+heigth:  ${({ heigth }) => heigth};
 padding: ${({ padding }) => padding};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
 `;
-export const LayoutForm = ({children, direction, padding, width, heigth, gap}) => {
+export const LayoutForm = ({children, direction, padding, heigth, gap}) => {
   return (
-    <FlexForm direction = { direction} gap={ gap} width={width} heigth={heigth} padding = { padding}>
+    <FlexForm direction = { direction} gap={ gap} heigth={heigth} padding = { padding}>
         {children}
     </FlexForm>
   )
