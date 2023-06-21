@@ -4,32 +4,31 @@ import "./Dashboard.css";
 import React from "react";
 import Button from "../../components/ui/Button";
 import { H2C } from "../../components/ui";
-import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
+import { LayoutFlex, LayoutForm, LayoutInline } from "../../components/Layout";
 
 const Dashboard = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  const navigateFunction = (route) => {
-    const ruta = `/${route}`;
-    navigate(ruta);
-  };
-
   console.log(user);
   return (
     <>
-    
       <div>
         <ul className="nav">
           <li>
-          <div className="Conocenos">
-            <H2C text="Conócenos" width="pequeño"/>
+            <div className="Conocenos">
+              <H2C text="Conócenos" width="pequeño" />
               <p>
                 Lengedary Motorsport es una comunidad creada para reunir a los
                 amantes de los coches y, además, encontrar diferentes
                 funcionalidades.
               </p>
-              <Button type="submit" text="Saber más" variant="contained" color="white"/>
+              <Button
+                type="submit"
+                text="Saber más"
+                variant="contained"
+                color="white"
+              />
             </div>
             <img
               src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1686737065/logoredondo-removebg-preview_uidph4.png"
@@ -44,22 +43,22 @@ const Dashboard = () => {
               className="CatalogoImg"
             />
             <div className="Catalogo">
-            <H2C text="Catálogo" width="pequeño"/>
+              <H2C text="Catálogo" width="pequeño" />
               <p>
                 Podrás descubrir los últimos modelos de nuestras marcas
                 colaboradoras y personalizar tu coche en tiempo real.
               </p>
               <Button
-              text="Saber más"
-              action={() => navigate("/catalogo")}
-              variant="contained"
-              color="white"
-            />
+                text="Saber más"
+                action={() => navigate("/catalogo")}
+                variant="contained"
+                color="white"
+              />
             </div>
           </li>
           <li>
             <div className="Comprayvende">
-            <H2C text="Compra y vende" width="medio"/>
+              <H2C text="Compra y vende" width="medio" />
               <p>
                 ¿Necesitas vender tu coche?¿Estás en busca de un coche de
                 segunda mano? Esta es tu sección. Aquí encontrarás lo que
@@ -68,11 +67,11 @@ const Dashboard = () => {
                 usuarios.
               </p>
               <Button
-              text="Saber más"
-              action={() => navigate("/compraryvender")}
-              variant="contained"
-              color="white"
-            />
+                text="Saber más"
+                action={() => navigate("/compraryvender")}
+                variant="contained"
+                color="white"
+              />
             </div>
             <img
               src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687246794/993409168-0_dmj2q2.jpg"
@@ -87,18 +86,18 @@ const Dashboard = () => {
               className="tallerImg"
             />
             <div className="Taller">
-            <H2C text="Taller" width="pequeño"/>
+              <H2C text="Taller" width="pequeño" />
               <p>
                 Accede a nuestra red de Talleres asociados. Seleccionados por
                 sus servicios de la mayor calidad y cercanía para dejar tu coche
                 en las mejores manos.
               </p>
               <Button
-              text="Saber más"
-              action={() => navigate("/taller")}
-              variant="contained"
-              color="white"
-            />
+                text="Saber más"
+                action={() => navigate("/taller")}
+                variant="contained"
+                color="white"
+              />
             </div>
           </li>
         </ul>
