@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { getAllCochesOcasion } from '../../service/API_proyect/coche.service'
 import { useAuth } from '../../contexts/authContext'
-import PrintAllCoches from '../PrintAllCoches/PrintAllCoches'
+import PrintAllCoches from '../../components/PrintAllCoches/PrintAllCoches'
+
 
 
 const ComprayventaHome = () => {

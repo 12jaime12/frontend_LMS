@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getCocheById } from '../../service/API_proyect/coche.service'
 import { useParams } from 'react-router'
-import PrintInfoCoche from '../PrintInfoCoche'
+import PrintInfoCoche from '../../components/PrintInfoCoche/PrintInfoCoche'
+
 
 const CocheById = () => {
     const {id} = useParams()

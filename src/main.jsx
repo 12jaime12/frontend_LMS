@@ -20,8 +20,10 @@ import Taller from "./pages/Taller/Taller.jsx";
 import CompraVenta from "./pages/CompraVenta/CompraVenta.jsx";
 import Catalogo from "./pages/Catalogo/Catalogo.jsx";
 import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx";
-import ComprayventaHome from "./components/ComprayventaHome/ComprayventaHome.jsx";
-import CocheById from "./components/CocheById/CocheById.jsx";
+
+
+import ComprayventaHome from "./pages/ComprayventaHome/ComprayventaHome.jsx";
+import CocheById from "./pages/CocheById/CocheById.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

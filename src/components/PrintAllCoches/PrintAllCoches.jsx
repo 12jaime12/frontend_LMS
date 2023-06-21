@@ -1,6 +1,5 @@
 import React from 'react'
 import "./PrintAllCoches.css"
-import PrintInfoCoche from '../PrintInfoCoche'
 import { useAuth } from '../../contexts/authContext'
 import { useNavigate } from 'react-router'
 
