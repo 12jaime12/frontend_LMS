@@ -104,8 +104,8 @@ export const getAllUser = async () => {
     });
 };
 //---------------------getByIdUser-------------------
-export const getByIdUser = async () => {
-  return API.get("user/:id")
+export const getByIdUser = async (id) => {
+  return API.get(`user/id/${id}`)
     .then((res) => res)
     .catch((error) => {
       return error;

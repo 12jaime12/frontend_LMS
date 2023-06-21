@@ -3,10 +3,11 @@ import { autologinUser } from '../service/API_proyect/user.service'
 import { Navigate, useNavigate } from "react-router";
 const useAutologin = async(allUser, userlogin) => {
     try {
-        const {password, email} = allUser
+        console.log("autologin ALLUSER",allUser)
+        
         const customData = {
-            email,
-            password,
+            email:allUser.data.user.email,
+            password:allUser.data.user.password,
         }
         console.log("autologin allUser", allUser)
         console.log("entro autologin", customData)

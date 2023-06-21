@@ -23,26 +23,26 @@ const CheckCode = () => {
     //CREAMOS LA FUNCION QUE RECOGE LA INFORMACION DE LOS INPUTS DEL FORMULARIO Y LLAMAMOS AL SERVICIO DEL BACKEND
     const formSubmit = async (formData) => {
       console.log(formData)
-      console.log("alluser", allUser)
-      console.log("user",user)
-      console.log(formData.confirmationCode)
+      console.log("checkCode allUser", allUser)
       //Si no hay ningun usuario guardado en localStorage nos traemos la informacion del user del contexto global (allUser)
       if(userLocal==null){
+        
         const customFormData = ({
           confirmationCode:parseInt(formData.confirmationCode),
-          email:allUser.email
+          email:allUser.data.user.email
         })
         //Seteamos al respuesta con la llamada al servicio, y mediante setSend bloqueamos el botón de enviar
         setSend(true)
         setRes(await checkCode(customFormData))
         setSend(false)
       }else{
+        console.log("checkCode data", userLocal)
         //Si hay un usuario en localStorage esa informacion es de tipo string, asique hay que hacer JSON.parse() para convertirlo
         //en un objeto y asi poder acceder a la clave email
         const parseUser = JSON.parse(userLocal)
         const customFormData=({
           confirmationCode:parseInt(formData.confirmationCode),
-          email:parseUser.email
+          email:parseUser.data.user.email
         })
         //Seteamos al respuesta con la llamada al servicio, y mediante setSend bloqueamos el botón de enviar
         setSend(true)
@@ -74,7 +74,7 @@ const CheckCode = () => {
 
   useEffect(()=>{
     console.log(res)
-    // useCodeError(res, setCodeOk, setDeleteUser)
+    useCodeError(res, setCodeOk, setDeleteUser)
     
   },[res])
 

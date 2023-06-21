@@ -1,0 +1,19 @@
+.divImgmasInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    padding-top: 15px;
+    gap:4rem;
+}
+.infoPersonal{
+    font-style: italic;
+}
+.divInfoUser{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:35px;
+    height: 100%;
+    
+}
