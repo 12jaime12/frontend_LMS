@@ -16,6 +16,10 @@ Footer{
     list-style: none;
     color: white;
     margin-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .iconos{
     margin-right: 2rem;

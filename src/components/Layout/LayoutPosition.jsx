@@ -8,8 +8,8 @@ justify-content: center;
 align-items: center;
 margin-top: 30vh;
 z-index: 400;
-position:abosolute;
-`;
+position:abosolute;`
+;
 export const LayoutPosition = ({children, direction}) => {
   return (
     <div style={{position: "relative"}}>
@@ -18,6 +18,6 @@ export const LayoutPosition = ({children, direction}) => {
     </PositionStyled>
 
     </div>
-    
+
   )
 }

@@ -1,13 +1,12 @@
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../contexts/authContext";
 import "./Register.css"
-
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router";
 import { registerUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useRegisterError from "../../hooks/useError/useRegisterError";
-import { H2C } from "../../components/ui";
+import { H2C, PC } from "../../components/ui";
 import { LayoutFlex, LayoutForm, LayoutInline } from "../../components/Layout";
 import Button from "../../components/ui/Button";
 
@@ -205,8 +204,8 @@ const Register = () => {
             </LayoutInline>
 
             <LayoutInline gap="0.5rem" padding="1rem">
-          <div className="sexo"> 
-            <input
+          <div className="sexo-masculino">
+          <input
               type="radio"
               name="sexo"
               id="masculino"
@@ -216,7 +215,9 @@ const Register = () => {
             <label htmlFor="masculino" className="label-radio masculino">
               Masculino
             </label>
-            <input
+          </div>
+           <div className="sexo-femenino">
+           <input
               type="radio"
               name="sexo"
               id="femenino"
@@ -226,25 +227,23 @@ const Register = () => {
             <label htmlFor="femenino" className="label-radio femenino">
               Femenino
             </label>
-          </div>
+           </div>
           </LayoutInline>
           
           <LayoutFlex direction="column" gap="0.5rem" color="f2f2f2"padding="1rem">
           <Button type="submit" text="Registrar" variant="contained" color="white"/>
           
-          <p className="FormularioRegister">
-            <small>
-              Haciendo click en el botón de Registrar, estás de acuerdo con{" "}
-              <Link className="anchorCustom">Términos y Condiciones</Link> y{" "}
-              <Link className="anchorCustom">Política de Privacidad</Link>.
-            </small>
-          </p>
+          <PC text="Haciendo click en el botón de Registrar, estás de acuerdo con:" width="extralargo"/>
+        
+          
         </LayoutFlex>
+        <Link className="anchorCustom">Términos y Condiciones</Link> 
+        <Link className="anchorCustom">Política de Privacidad</Link>
         </form>
-    
-        <p className="parrafoLogin">
-          ¿Ya tienes cuenta? <Link to="/login" className="anchorCustom">Accede a tu cuenta aquí.</Link>
-        </p>
+        <PC text="¿Ya tienes cuenta?" width="largo"/>
+       
+          <Link to="/login" className="anchorCustom">Accede a tu cuenta aquí.</Link>
+      
       </LayoutForm>
       </LayoutInline>
     </>

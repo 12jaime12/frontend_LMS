@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Footer.css";
 
 import React from "react";
@@ -19,10 +20,10 @@ const Footer = () => {
             <p>Catalogo de BMW</p>
           </li>
           <li>
-            <p>Compra y venta de vehiculos</p>
+          <NavLink className="linkheader" to="/compraryvender">Compra y venta de vehiculos</NavLink>
           </li>
           <li>
-            <p>Taller</p>
+          <NavLink className="linkheader" to="/taller">Taller</NavLink>
           </li>
         </ul>
       </div>
