@@ -4,7 +4,8 @@ import "./Dashboard.css";
 import React from "react";
 import Button from "../../components/ui/Button";
 import { H2C } from "../../components/ui";
-import { LayoutFlex, LayoutForm, LayoutInline, LayoutPosition } from "../../components/Layout";
+import { LayoutAbsolute, LayoutFlex, LayoutForm, LayoutInline, LayoutPosition } from "../../components/Layout";
+LayoutAbsolute
 
 
 const Dashboard = () => {
