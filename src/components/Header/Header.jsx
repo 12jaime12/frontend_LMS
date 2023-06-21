@@ -1,7 +1,8 @@
 import "./Header.css";
 import { useNavigate } from "react-router";
-
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 
 const Header = () => {
   const navigate = useNavigate()
@@ -24,9 +25,9 @@ const Header = () => {
       </div>
       <div className="relative">
         <div className="navHeader">
-          <a>Catálogo</a>
-          <a>Compra y Venta</a>
-          <a>Taller</a>
+          <NavLink className="linkheader" to="/catalogo">Catálogo<div className="underline"></div></NavLink>
+          <NavLink className="linkheader" to="/compraryvender">Compra y Venta<div className="underline"></div></NavLink>
+          <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
         </div>
       </div>
       </div>

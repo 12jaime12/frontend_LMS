@@ -6,6 +6,26 @@
     padding-top: 15px;
     gap:4rem;
 }
+.divImgmasInfo img{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+.divUserCoches{
+    width: 100vw;
+    height: 500px;
+    border: 2px solid green;
+}
+.divUserLikes{
+    width: 100vw;
+    height: 500px;
+    border: 2px solid red;
+}
+.divUserComments{
+    width: 100vw;
+    height: 500px;
+    border:2px solid blue
+}
 .infoPersonal{
     font-style: italic;
 }
@@ -15,5 +35,8 @@
     text-align: center;
     gap:35px;
     height: 100%;
-    
+}
+.divInfoUser h2{
+    font-size: 3rem;
+    letter-spacing: 5px;
 }

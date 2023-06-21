@@ -11,6 +11,7 @@ const H2Custom = styled.h2`
       : "medio"
       ? "100px"
       : "pequeño" && "50px"};
+      text-align: center;
 `;
 
 export const H2C = ({ text, width }) => {

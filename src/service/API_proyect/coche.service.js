@@ -1,7 +1,23 @@
 import { API } from "./service.config";
 
 //--------------------CREATE CAR----------------------
+export const createCocheServicio = async (dataForm) => {
+  return API.post("/coche/createCoche", dataForm, {
+    headers: { "Content-Type": "multipart/form-data" },
+  })
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
 //--------------------DELETE CAR----------------------
+export const deleteCocheServicio = async (id) => {
+  return API.delete(`/coche/deleteCoche/${id}`)
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
 //--------------------GET ALL-------------------------
 export const getAllCochesOcasion = async () => {
   return API.get("/coche")

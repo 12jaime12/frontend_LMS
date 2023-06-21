@@ -10,31 +10,55 @@
     display: flex;
     height: 20rem;
 } */
+
+
 .ConocenosImg{
     
     width: 30vw;
     object-fit: cover;
 }
-/* .Catalogo{
+ /* .Catalogo{
     background-color: rgb(200, 200, 200);
     width: 40vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    z-index:2;
+    position: relative;
+    left: 500px;
+    top: 100px;
+} 
+.Comprayvende{
+    background-color: rgb(200, 200, 200);
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    z-index: 400
 } */
+
+.pdashboard{
+    text-align: center;
+}
+
+.li-catalogo{
+    margin-bottom: 600px;
+}
+
+li{
+    list-style: none;
+}
+
+
+
 .CatalogoImg{
     width: 60vw;
     object-fit: cover;
 }
-/* .Comprayvende{
-    background-color: rgb(200, 200, 200);
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-} */
+
+
 .comprayvendeImg{
     width: 60vw;
     object-fit: cover;

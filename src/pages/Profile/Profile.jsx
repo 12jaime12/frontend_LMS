@@ -3,6 +3,13 @@ import { useNavigate } from "react-router";
 import { getByIdUser } from "../../service/API_proyect/user.service";
 import { useAuth } from "../../contexts/authContext";
 import "./Profile.css"
+import PrintCochesPerfil from "../../components/PrintInfoCoche/PrintInfoCoche";
+import PrintInfoCoche from "../../components/PrintInfoCoche/PrintInfoCoche";
+import PrintAllCoches from "../../components/PrintAllCoches/PrintAllCoches";
+import deleteCocheUser from "../../util/deleteCocheUser";
+
+
+
 const Profile = () => {
   const {user, allUser} = useAuth()
   const [send, setSend] = useState(false)
@@ -24,6 +31,7 @@ const Profile = () => {
   return (
     <div>
       {userInfo!=null &&(
+        <>
         <div className="divImgmasInfo">
         <img src={userInfo.imagen} alt={userInfo.name} />
         <div className="divInfoUser">
@@ -46,6 +54,22 @@ const Profile = () => {
           </div>
         </div>
         </div>
+        <div className="divUserCoches">
+          <h2>COCHES PROPIOS</h2>
+          <PrintAllCoches data={userInfo.coche_cliente}/>
+
+        </div>
+        <div className="divUserLikes">
+          <h2>LIKES</h2>
+
+
+        </div>
+        <div className="divUserComments">
+          <h2>COMENTARIOS</h2>
+
+
+        </div>
+        </>
       )}
 
 

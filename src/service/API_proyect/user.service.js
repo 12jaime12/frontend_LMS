@@ -75,7 +75,7 @@ export const forgotPassword = async (formData) => {
 export const updateUser = async (formData) => {
   return API.patch("/user/updateUser)", formData, {
     headers: {
-      Authorization: `Bearer ${updateToken}`,
+      Authorization: `Bearer ${updateToken()}`,
     },
   })
     .then((res) => res)
@@ -87,7 +87,7 @@ export const updateUser = async (formData) => {
 export const deleteUser = async () => {
   return API.delete("/user/deleteUser", {
     headers: {
-      Authorization: `Bearer ${updateToken}`,
+      Authorization: `Bearer ${updateToken()}`,
     },
   })
     .then((res) => res)

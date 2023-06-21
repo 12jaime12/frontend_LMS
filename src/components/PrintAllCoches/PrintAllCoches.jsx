@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./PrintAllCoches.css"
 import { useAuth } from '../../contexts/authContext'
 import { useNavigate } from 'react-router'
+import deleteCocheUser from '../../util/deleteCocheUser'
 
 const PrintAllCoches = ({data}) => {
+  console.log("compraventa data",data)
   const navigate=useNavigate()
   const {user} = useAuth()
+  const [res, setRes]=useState(false)
+  
   const handleInfo = (data) =>{
     const dataCustom = data.marca
     console.log(dataCustom)
@@ -20,11 +24,16 @@ const PrintAllCoches = ({data}) => {
 
 
   }
+
+  useEffect(()=>{
+    console.log("cocheborradouseeffect")
+  },[res])
   
     console.log(data)
   return (
-        <div className="divAllCoches">{data?.data?.map((elem)=>(
-            <figure  key={elem._id} className="figureCoche" onClick={()=>navigate(`/compraryvender/coche/${elem._id}`)}>
+        <div className="divAllCoches">{data?.map((elem)=>(
+            <div key={elem._id}>
+            <figure className="figureCoche" onClick={()=>navigate(`/compraryvender/coche/${elem._id}`)}>
               <div className="divFigureCoche">
               <img src={elem.image[0]} alt={elem.modelo}/>
               <div className="divCocheInfo">
@@ -32,9 +41,10 @@ const PrintAllCoches = ({data}) => {
                 <p>Precio: <strong>{elem.precio} €</strong></p>
               </div>
               </div>
-              <button>Like</button>
-              <button>Add</button>
             </figure>
+            <button>Like</button>
+            <button onClick={()=>deleteCocheUser(elem._id, setRes)}>Borrar</button>
+            </div>
         ))
         
         }</div>
