@@ -11,6 +11,16 @@ const PrintAllCoches = ({data}) => {
     console.log(dataCustom)
     console.log(user)
   }
+  const addUserLike = async () => {
+
+
+  }
+
+  const addUserComentario = async () => {
+
+
+  }
+  
     console.log(data)
   return (
         <div className="divAllCoches">{data?.data?.map((elem)=>(
