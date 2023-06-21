@@ -51,9 +51,7 @@ const Register = () => {
   return (
     <>
     <LayoutInline  gap="0.5rem" padding="1rem">
-    <LayoutFlex direction="column" gap="0.5rem" padding="1rem">
     <H2C text="Regístrate para accceder a todas las ventajas" width="extralargo"/>
-    </LayoutFlex>
     <LayoutForm  direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
           <form onSubmit={handleSubmit(formSubmit)}>
             
@@ -230,20 +228,17 @@ const Register = () => {
            </div>
           </LayoutInline>
           
-          <LayoutFlex direction="column" gap="0.5rem" color="f2f2f2"padding="1rem">
+          <LayoutFlex direction="column" gap="1rem" color="f2f2f2" padding="1rem">
           <Button type="submit" text="Registrar" variant="contained" color="white"/>
-          
           <PC text="Haciendo click en el botón de Registrar, estás de acuerdo con:" width="extralargo"/>
-        
-          
-        </LayoutFlex>
-        <Link className="anchorCustom">Términos y Condiciones</Link> 
+          <Link className="anchorCustom">Términos y Condiciones</Link>
         <Link className="anchorCustom">Política de Privacidad</Link>
+        </LayoutFlex>
         </form>
-        <PC text="¿Ya tienes cuenta?" width="largo"/>
-       
+        <LayoutInline gap="0" padding="1rem">
+        <PC text="¿Ya tienes cuenta?" width="medio"/>
           <Link to="/login" className="anchorCustom">Accede a tu cuenta aquí.</Link>
-      
+          </LayoutInline>
       </LayoutForm>
       </LayoutInline>
     </>

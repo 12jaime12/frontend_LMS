@@ -68,13 +68,11 @@ header{
 
 .underline {
     content: "";
-    background-color: white; /* Asegúrate de que --primary-color está definido en algún lugar de tu CSS, o simplemente usa un color codificado como 'red' o '#333' */
+    background-color: white; 
     width: 0;
     height: 2px;
     transition: all 0.3s ease-in-out;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    
 }
 
 .linkheader:hover .underline {
@@ -82,13 +80,3 @@ header{
 }
    
 
-/* .navHeader a::after{
-    
-  background-color: white;
-  width: 0;
-  height: 2px;
-  transition: all 0.3s ease-in-out;
-}
-.navHeader a:hover::after{
-    width: 100%;
-} */
