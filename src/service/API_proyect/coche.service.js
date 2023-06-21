@@ -1,6 +1,13 @@
 import { API } from "./service.config";
 
 //--------------------CREATE CAR----------------------
+export const createCocheServicio = async (dataForm) => {
+  return API.post("/coche/createCoche", dataForm)
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
 //--------------------DELETE CAR----------------------
 //--------------------GET ALL-------------------------
 export const getAllCochesOcasion = async () => {
