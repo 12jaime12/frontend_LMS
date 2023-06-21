@@ -5,7 +5,7 @@ const useRegisterError = (res, setRegisterOk) => {
     //RES 200 -> REGISTRO CORRECTO
     if(res?.status==200){
         console.log("RESSS", res?.data?.user)
-        localStorage.setItem("data", JSON.stringify(res.data.user))
+        localStorage.setItem("data", JSON.stringify(res))
         setRegisterOk(()=>true)
         Swal.fire({
             icon: "success",

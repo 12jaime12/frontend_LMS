@@ -19,7 +19,7 @@ const Header = () => {
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687338307/home-2_snquca.svg" 
           alt="home"
           className="imgHeaderHome" 
-          onClick={()=>navigate("/perfil")}
+          onClick={()=>navigate("/profile")}
           />
       </div>
       <div className="relative">
