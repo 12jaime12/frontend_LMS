@@ -23,6 +23,8 @@ import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx";
 
 import ComprayventaHome from "./pages/ComprayventaHome/ComprayventaHome.jsx";
 import CocheById from "./pages/CocheById/CocheById.jsx";
+import CatalogoHome from "./pages/CatalogoHome/CatalogoHome.jsx";
+import Profile from "./pages/Profile/Profile.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -44,14 +46,16 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/register" element={<Register />} />
             <Route path="/changePassword" element={<ChangePassword />} />
             <Route path="/forgotPassword" element={<ForgotPassword />} />
-            <Route path="/perfil" element />
+            <Route path="/perfil" element={<Profile />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/taller" element={<Taller />} />
             <Route path="/compraryvender" element={<CompraVenta />}>
               <Route index element={<ComprayventaHome />} />
               <Route path="/compraryvender/coche/:id" element={<CocheById />} />
             </Route>
-            <Route path="/catalogo" element={<Catalogo />} />
+            <Route path="/catalogo" element={<Catalogo />}>
+              <Route index element={<CatalogoHome />} />
+            </Route>
           </Route>
         </Routes>
       </AuthContextProvider>

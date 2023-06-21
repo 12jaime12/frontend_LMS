@@ -1,7 +1,7 @@
 import React from "react";
-import "./Catalogo.css";
+import "./CatalogoHome.css";
 import { NavLink } from "react-router-dom";
-const Catalogo = () => {
+const CatalogoHome = () => {
   return (
     <div className="catalogo">
       <h1>Catalogo</h1>
@@ -22,4 +22,4 @@ const Catalogo = () => {
   );
 };
 
-export default Catalogo;
+export default CatalogoHome;
