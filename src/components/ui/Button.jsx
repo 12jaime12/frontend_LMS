@@ -18,8 +18,9 @@ const ButtonStyled = styled.button`
 `;
 
 const Button = ({ text, action, variant, color }) => {
+  console.log(action)
   return (
-    <ButtonStyled onClick={action} variant={variant} color={color}>
+    <ButtonStyled onClick={()=>action()} variant={variant} color={color}>
       {text}
     </ButtonStyled>
   );
