@@ -3,9 +3,10 @@ import { useAuth } from "../../contexts/authContext";
 import "./Dashboard.css";
 import React from "react";
 import Button from "../../components/ui/Button";
-import { H2C } from "../../components/ui";
-import { LayoutAbsolute, LayoutFlex, LayoutForm, LayoutInline, LayoutPosition } from "../../components/Layout";
-LayoutAbsolute
+import { H2C, ImgC } from "../../components/ui";
+import { LayoutAbsolute, LayoutFlex, LayoutForm, LayoutInline, LayoutRelative } from "../../components/Layout";
+import { LayoutPosition } from "../../components/Layout/LayoutPosition";
+
 
 
 const Dashboard = () => {
@@ -41,17 +42,21 @@ const Dashboard = () => {
           
           <li className="li-catalogo">
             <figure>
-                <div>
+              <LayoutAbsolute color="transparent">
+                {/* <div> */}
+               
                   <img
                     src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687246794/7caf41ae44f772efd62df44450c72947d871dea699073065a3ef8367b7f006ba5bfa37dc66dbf7ec896d300ba8f69ac31578455787ae89322ba47c_1280_bcan6x.jpg"
                     alt="catalogo"
                     className="Img-Dashboard CatalogoImg"
-                    style={{position: "absolute"}}
+                    // style={{position: "absolute"}}
                   />
-                </div>
-
-                <div className="Catalogo">
               
+                {/* </div> */}
+                </LayoutAbsolute>
+
+                {/* <div className="Catalogo"> */}
+                <LayoutRelative color="#f2f2f2">
                   <H2C text="Catálogo" width="pequeño"/>
                   <p className="pdashboard">
                   Podrás descubrir los últimos modelos de nuestras marcas colaboradoras y personalizar tu coche en tiempo real.
@@ -62,7 +67,8 @@ const Dashboard = () => {
                   variant="contained"
                   color="white"
                   />
-                </div>
+                {/* </div> */}
+                </LayoutRelative>
             </figure>
           </li>
 
@@ -70,7 +76,8 @@ const Dashboard = () => {
           <li style={{margin: "13rem"}}> 
   
            <figure>
-            <div className="Comprayvende" style={{position:"absolute"}}>
+           <LayoutAbsolute color="f2f2f2">
+            {/* <div className="Comprayvende" style={{position:"absolute"}}> */}
               <H2C text="Compra y vende" width="medio"/>
               <p className="pdashboard">
                 ¿Necesitas vender tu coche?¿Estás en busca de un coche de
@@ -85,27 +92,28 @@ const Dashboard = () => {
               variant="contained"
               color="white"
             />
-
-            </div>
-            
+            {/* </div> */}
+            </LayoutAbsolute>
+            <LayoutRelative color="transparent">
             <img
               src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687246794/993409168-0_dmj2q2.jpg"
               alt="Compra y vende"
               className="Img-Dashboard comprayvendeImg"
-              style={{position: "relative", left: "300px", bottom: "100px"}}
+              // style={{position: "relative", left: "300px", bottom: "100px"}}
             />
+            </LayoutRelative>
             </figure>
           </li>
 
 
-          {/* <li> 
-          <LayoutPosition direction="column" >
+          <li> 
+          
             <img
               src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687246794/25b4391b79de1d76fb565d9a92c406a33c6b2a93d040761dca90c7163699c6a41d552b001665594e936a882820e733b055bd5da60cc0f8e45d4d9b_1280_qvgp7l.jpg"
               alt="Taller"
               className="Img-Dashboard tallerImg"
             />
-            <LayoutForm direction="column" heigth={50} padding="0.5rem" gap="1rem" >
+           
             <div className="Taller">
             
             <H2C text="Taller" width="pequeño"/>
@@ -122,10 +130,10 @@ const Dashboard = () => {
                 color="white"
               />
             </div>
-            </LayoutForm>
-            </LayoutPosition>
-          </li> */}
+            
+          </li> 
         </ul>
+        
         <div className="div-info">
           <ul className="ul-info" >
             <li>
