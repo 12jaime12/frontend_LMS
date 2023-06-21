@@ -4,35 +4,44 @@ import "./Dashboard.css";
 import React from "react";
 import Button from "../../components/ui/Button";
 import { H2C } from "../../components/ui";
-import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
+import { LayoutFlex, LayoutForm, LayoutInline } from "../../components/Layout";
 
 const Dashboard = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  const navigateFunction = (route) => {
-    const ruta = `/${route}`;
-    navigate(ruta);
-  };
-
   console.log(user);
   return (
     <>
-    
       <div>
         <ul  className="nav">
           <li>
+<<<<<<< HEAD
           <LayoutFlex direction="row" color="white" padding="0.5rem" gap="1rem">
           <LayoutForm direction="column" heigth={50} padding="0.5rem" gap="1rem">
          
             <H2C text="Conócenos" width="pequeño"/>
+=======
+            <div className="Conocenos">
+              <H2C text="Conócenos" width="pequeño" />
+>>>>>>> 0f8d129cd04dde7c7b7e6f02efcb747497685d06
               <p>
                 Lengedary Motorsport es una comunidad creada para reunir a los
                 amantes de los coches y, además, encontrar diferentes
                 funcionalidades.
               </p>
+<<<<<<< HEAD
               <Button type="submit" text="Saber más" variant="contained" color="white"/>
             </LayoutForm>
+=======
+              <Button
+                type="submit"
+                text="Saber más"
+                variant="contained"
+                color="white"
+              />
+            </div>
+>>>>>>> 0f8d129cd04dde7c7b7e6f02efcb747497685d06
             <img
               src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1686737065/logoredondo-removebg-preview_uidph4.png"
               alt="segundoLogo"
@@ -49,27 +58,43 @@ const Dashboard = () => {
               className="CatalogoImg"
             />
             <div className="Catalogo">
+<<<<<<< HEAD
             <LayoutForm direction="column" heigth={50} padding="0.5rem" gap="1rem">
             <H2C text="Catálogo" width="pequeño"/>
+=======
+              <H2C text="Catálogo" width="pequeño" />
+>>>>>>> 0f8d129cd04dde7c7b7e6f02efcb747497685d06
               <p>
                 Podrás descubrir los últimos modelos de nuestras marcas
                 colaboradoras y personalizar tu coche en tiempo real.
               </p>
               <Button
+<<<<<<< HEAD
               text="Saber más"
               action={() => navigate("/catalogo")}
               variant="contained"
               color="white"
             />
             </LayoutForm>
+=======
+                text="Saber más"
+                action={() => navigate("/catalogo")}
+                variant="contained"
+                color="white"
+              />
+>>>>>>> 0f8d129cd04dde7c7b7e6f02efcb747497685d06
             </div>
             </LayoutFlex>
           </li>
           <li>
           <LayoutFlex direction="row" color="white" padding="0.5rem" gap="1rem">
             <div className="Comprayvende">
+<<<<<<< HEAD
             <LayoutForm direction="column" heigth={50} padding="0.5rem" gap="1rem">
             <H2C text="Compra y vende" width="medio"/>
+=======
+              <H2C text="Compra y vende" width="medio" />
+>>>>>>> 0f8d129cd04dde7c7b7e6f02efcb747497685d06
               <p>
                 ¿Necesitas vender tu coche?¿Estás en busca de un coche de
                 segunda mano? Esta es tu sección. Aquí encontrarás lo que
@@ -78,12 +103,20 @@ const Dashboard = () => {
                 usuarios.
               </p>
               <Button
+<<<<<<< HEAD
               text="Saber más"
               action={() => navigate("/compraryvender")}
               variant="contained"
               color="white"
             />
             </LayoutForm>
+=======
+                text="Saber más"
+                action={() => navigate("/compraryvender")}
+                variant="contained"
+                color="white"
+              />
+>>>>>>> 0f8d129cd04dde7c7b7e6f02efcb747497685d06
             </div>
             
             <img
@@ -102,8 +135,12 @@ const Dashboard = () => {
             />
             <LayoutForm direction="column" heigth={50} padding="0.5rem" gap="1rem">
             <div className="Taller">
+<<<<<<< HEAD
             
             <H2C text="Taller" width="pequeño"/>
+=======
+              <H2C text="Taller" width="pequeño" />
+>>>>>>> 0f8d129cd04dde7c7b7e6f02efcb747497685d06
               <p>
                 Accede a nuestra red de Talleres asociados. Seleccionados por
                 sus servicios de la mayor calidad y cercanía para dejar tu coche
@@ -111,11 +148,11 @@ const Dashboard = () => {
               </p>
               
               <Button
-              text="Saber más"
-              action={() => navigate("/taller")}
-              variant="contained"
-              color="white"
-            />
+                text="Saber más"
+                action={() => navigate("/taller")}
+                variant="contained"
+                color="white"
+              />
             </div>
             </LayoutForm>
             </LayoutFlex>
