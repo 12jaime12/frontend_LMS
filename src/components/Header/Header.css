@@ -9,6 +9,7 @@ header{
 .logo{
     height: 85px;
     position: fixed;
+    z-index:401;
 }
 .navHeader{
     display: flex;

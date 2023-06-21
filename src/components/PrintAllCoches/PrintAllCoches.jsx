@@ -4,8 +4,10 @@ import { useAuth } from '../../contexts/authContext'
 import { useNavigate } from 'react-router'
 
 const PrintAllCoches = ({data}) => {
+  console.log("compraventa data",data)
   const navigate=useNavigate()
   const {user} = useAuth()
+  
   const handleInfo = (data) =>{
     const dataCustom = data.marca
     console.log(dataCustom)
@@ -23,7 +25,7 @@ const PrintAllCoches = ({data}) => {
   
     console.log(data)
   return (
-        <div className="divAllCoches">{data?.data?.map((elem)=>(
+        <div className="divAllCoches">{data?.map((elem)=>(
             <figure  key={elem._id} className="figureCoche" onClick={()=>navigate(`/compraryvender/coche/${elem._id}`)}>
               <div className="divFigureCoche">
               <img src={elem.image[0]} alt={elem.modelo}/>
@@ -33,7 +35,7 @@ const PrintAllCoches = ({data}) => {
               </div>
               </div>
               <button>Like</button>
-              <button>Add</button>
+
             </figure>
         ))
         

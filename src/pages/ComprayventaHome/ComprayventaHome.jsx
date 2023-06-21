@@ -25,7 +25,7 @@ const ComprayventaHome = () => {
   },[])
 
   return (
-    <div><PrintAllCoches data={res}/></div>
+    <div><PrintAllCoches data={res?.data}/></div>
   )
 }
 
