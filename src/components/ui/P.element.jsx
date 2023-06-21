@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-const H1Custom = styled.h1`
+const PCustom = styled.p`
   width: ${({ widthVariant }) =>
     widthVariant == "extralargo"
       ? "400px"
@@ -13,6 +13,6 @@ const H1Custom = styled.h1`
       text-align: center;
 `;
 
-export const H1C = ({ text, width }) => {
-  return <H1Custom widthVariant={width}>{text}</H1Custom>;
+export const PC = ({ text, width }) => {
+  return <PCustom widthVariant={width}>{text}</PCustom>;
 };

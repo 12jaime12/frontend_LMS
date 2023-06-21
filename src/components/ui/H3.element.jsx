@@ -11,6 +11,7 @@ const H3Custom = styled.h3`
       : "medio"
       ? "100px"
       : "pequeño" && "50px"};
+      text-align: center;
 `;
 
 export const H3C = ({ text, width }) => {

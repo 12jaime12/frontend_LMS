@@ -18,7 +18,7 @@ header{
     gap:4rem;
     width: 100%;
     font-size: 33px;
-    /* margin-bottom: 1rem; */
+    margin-bottom: 1rem;
     background-color: rgba(0, 0, 0, 0.33);
 } 
 
@@ -53,6 +53,32 @@ header{
     right:10px;
 }
 
+.linkheader {
+    text-decoration: none;
+    color: white;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.linkheader:hover {
+    cursor: pointer;
+}
+
+.underline {
+    content: "";
+    background-color: white; /* Asegúrate de que --primary-color está definido en algún lugar de tu CSS, o simplemente usa un color codificado como 'red' o '#333' */
+    width: 0;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.linkheader:hover .underline {
+    width: 100%;
+}
    
 
 /* .navHeader a::after{

@@ -23,7 +23,7 @@ const Dashboard = () => {
             <LayoutFlex direction="row" color="white" padding="0.5rem" gap="1rem">
               <LayoutPosition direction="column"  >
                 <H2C text="Conócenos" width="pequeño"/>
-                <p >
+                <p className="pdashboard">
                   Lengedary Motorsport es una comunidad creada para reunir a los
                   amantes de los coches y, además, encontrar diferentes
                   funcionalidades.
@@ -52,9 +52,8 @@ const Dashboard = () => {
                 <div className="Catalogo">
               
                   <H2C text="Catálogo" width="pequeño"/>
-                  <p >
-                  Podrás descubrir los últimos modelos de nuestras marcas
-                          colaboradoras y personalizar tu coche en tiempo real.
+                  <p className="pdashboard">
+                  Podrás descubrir los últimos modelos de nuestras marcas colaboradoras y personalizar tu coche en tiempo real.
                   </p>
                   <Button
                   text="Saber más"
@@ -72,7 +71,7 @@ const Dashboard = () => {
            <figure>
             <div className="Comprayvende" style={{position:"absolute"}}>
               <H2C text="Compra y vende" width="medio"/>
-              <p>
+              <p className="pdashboard">
                 ¿Necesitas vender tu coche?¿Estás en busca de un coche de
                 segunda mano? Esta es tu sección. Aquí encontrarás lo que
                 buscas, o podrás publicar el coche que quieras vender. Con una
@@ -134,7 +133,7 @@ const Dashboard = () => {
                 alt="Oportunidades"
               />
               <h2>Oportunidades</h2>
-              <p>
+              <p className="pdashboard">
                 Las mejores opciones en servicio calidad y precio, para nuestros
                 clientes.
               </p>
@@ -145,7 +144,7 @@ const Dashboard = () => {
                 alt="Diseño"
               />
               <h2>Diseño</h2>
-              <p>
+              <p className="pdashboard">
                 Página intuitiva y facil de usar para ofrecer una experiencia
                 óptima.
               </p>
@@ -156,7 +155,7 @@ const Dashboard = () => {
                 alt="Calidad"
               />
               <h2>Calidad</h2>
-              <p>
+              <p className="pdashboard">
                 Garantía de calidad en todos nuestros servicios. Gracias a la
                 confianza de los usuarios
               </p>
