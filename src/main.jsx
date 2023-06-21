@@ -25,6 +25,8 @@ import ComprayventaHome from "./pages/ComprayventaHome/ComprayventaHome.jsx";
 import CocheById from "./pages/CocheById/CocheById.jsx";
 import CatalogoHome from "./pages/CatalogoHome/CatalogoHome.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
+import CatalogoMarca from "./components/CatalogoMarca/CatalogoMarca.jsx";
+import CochePersonalizar from "./components/CochePersonalizar/CochePersonalizar.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -55,6 +57,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             </Route>
             <Route path="/catalogo" element={<Catalogo />}>
               <Route index element={<CatalogoHome />} />
+              <Route path="/catalogo/:marca" element={<CatalogoMarca />} />
+              <Route
+                path="/catalogo/:marca/:id"
+                element={<CochePersonalizar />}
+              />
             </Route>
           </Route>
         </Routes>
