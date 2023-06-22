@@ -28,10 +28,6 @@ import Profile from "./pages/Profile/Profile.jsx";
 import CatalogoMarca from "./components/CatalogoMarca/CatalogoMarca.jsx";
 import CochePersonalizar from "./components/CochePersonalizar/CochePersonalizar.jsx";
 import CreateCoche from "./pages/CreateCoche/CreateCoche.jsx";
-<<<<<<< HEAD
-
-=======
->>>>>>> 95df7df330f823baa41be2ac61f0f5d34fc5006b
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter basename="/">
