@@ -12,9 +12,9 @@ const CompraVenta = () => {
   <>
   <nav className="ulNavCompraventa">
 
-    <Button type="text" text="COMPRAR" variant="contained" color="white" action={()=>navigate("/compraryvender")}/>
+    <Button type="text" text="Comprar" variant="contained" color="white" action={()=>navigate("/compraryvender")}/>
 
-    <Button type="text" text="VENDER" variant="contained" color="" action={() => navigate("/compraryvender/createCoche")}/>
+    <Button type="text" text="Vender" variant="contained" color="" action={() => navigate("/compraryvender/createCoche")}/>
 
   </nav>
   <Outlet/>
