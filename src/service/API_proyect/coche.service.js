@@ -1,3 +1,4 @@
+import { updateToken } from "../../util/updateToken";
 import { API } from "./service.config";
 
 //--------------------CREATE CAR----------------------
@@ -12,7 +13,11 @@ export const createCocheServicio = async (dataForm) => {
 };
 //--------------------DELETE CAR----------------------
 export const deleteCocheServicio = async (id) => {
-  return API.delete(`/coche/deleteCoche/${id}`)
+  return API.delete(`/coche/deleteCoche/${id}`, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
     .then((res) => res)
     .catch((error) => {
       return error;

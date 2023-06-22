@@ -111,3 +111,11 @@ export const getByIdUser = async (id) => {
       return error;
     });
 };
+//--------------------getByRolUser-------------------
+export const getByRolUser = async () => {
+  return API.get("/user/rol/taller/")
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};

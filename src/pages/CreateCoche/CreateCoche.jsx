@@ -21,6 +21,7 @@ const CreateCoche = () => {
     
     
     const formSubmit=async(formData)=>{
+      console.log("ref", inputFrontal)
       const arrayImagenes = [inputFrontal?.current?.value, inputDerecho?.current?.value, inputTrasero?.current?.value, inputDerecho?.current?.value]
       const dataCustom={
         ...formData,
@@ -124,6 +125,7 @@ useEffect(()=>{
               name="imageCar"
               autoComplete="false"
               ref={inputFrontal}
+              
             /></label>
             <label>lateral derecho: <input
               className="input_user"
@@ -132,6 +134,7 @@ useEffect(()=>{
               name="imageCar"
               autoComplete="false"
               ref={inputDerecho}
+              
             /></label>
             <label>trasera: <input
               className="input_user"
@@ -140,6 +143,7 @@ useEffect(()=>{
               name="imageCar"
               autoComplete="false"
               ref={inputTrasero}
+              
             /></label>
             <label>lateral izquierdo: <input
               className="input_user"
@@ -148,6 +152,7 @@ useEffect(()=>{
               name="imageCar"
               autoComplete="false"
               input={inputIzquierdo}
+              
             /></label>
              </LayoutFlex>
             

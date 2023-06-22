@@ -1,0 +1,9 @@
+#map{
+    height: 400px;
+    width: 400px;
+    border-color:2px solid black;
+}
+.divImgTaller img{
+    width: 400px;
+    height: 400px;
+}

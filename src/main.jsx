@@ -25,12 +25,9 @@ import ComprayventaHome from "./pages/ComprayventaHome/ComprayventaHome.jsx";
 import CocheById from "./pages/CocheById/CocheById.jsx";
 import CatalogoHome from "./pages/CatalogoHome/CatalogoHome.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
-<<<<<<< HEAD
+import CreateCoche from "./pages/CreateCoche/CreateCoche.jsx";
 import CatalogoMarca from "./components/CatalogoMarca/CatalogoMarca.jsx";
 import CochePersonalizar from "./components/CochePersonalizar/CochePersonalizar.jsx";
-=======
-import CreateCoche from "./pages/CreateCoche/CreateCoche.jsx";
->>>>>>> 6f51034b3f9a894d418e05f9fdfbdd337b346017
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
