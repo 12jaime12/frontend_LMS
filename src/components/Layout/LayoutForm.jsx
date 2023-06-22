@@ -12,9 +12,9 @@ padding: ${({ padding }) => padding};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
 `;
-export const LayoutForm = ({children, direction, padding, width, heigth, gap}) => {
+export const LayoutForm = ({children, direction, width, heigth, padding, gap}) => {
   return (
-    <FlexForm direction = { direction} gap={ gap} width={width} heigth={heigth} padding = { padding}>
+    <FlexForm direction = { direction} width={width} heigth={heigth} padding = { padding} gap={ gap}>
         {children}
     </FlexForm>
   )
