@@ -131,7 +131,6 @@ const Dashboard = () => {
           
         </ul>
        
-       
         <LayoutInline color="white" padding="3rem" gap="0.5rem" margin="2rem">
         <div className="div-info">
           <ul className="ul-info" >
@@ -140,33 +139,27 @@ const Dashboard = () => {
                 src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687255176/gift_vouwzw.png"
                 alt="Oportunidades"
               />
-              <h2>Oportunidades</h2>
-              <p className="pdashboard">
-                Las mejores opciones en servicio calidad y precio, para nuestros
-                clientes.
-              </p>
+              <H2C>Oportunidades</H2C>
+              <PC text="Las mejores opciones en servicio, calidad y precio, para nuestros
+                clientes." width="largo"></PC>
             </li>
             <li>
               <img
                 src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687255174/cube_yddwhl.png"
                 alt="Diseño"
               />
-              <h2>Diseño</h2>
-              <p className="pdashboard">
-                Página intuitiva y facil de usar para ofrecer una experiencia
-                óptima.
-              </p>
+              <H2C>Diseño</H2C>
+              <PC text="Página intuitiva y facil de usar para ofrecer una experiencia
+                óptima." width="largo"></PC>
             </li>
             <li>
               <img
                 src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687255172/medal-2_jpep79.png"
                 alt="Calidad"
               />
-              <h2>Calidad</h2>
-              <p className="pdashboard">
-                Garantía de calidad en todos nuestros servicios. Gracias a la
-                confianza de los usuarios
-              </p>
+              <H2C>Calidad</H2C>
+              <PC className="Garantía de calidad en todos nuestros servicios. Gracias a la
+                confianza de los usuarios."></PC>
             </li>
             
           </ul>
