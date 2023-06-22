@@ -2,12 +2,15 @@ import "./Header.css";
 import { useNavigate } from "react-router";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { H1C, H2C, PC } from "../ui";
+import { LayoutHeader } from "../Layout";
 
 
 const Header = () => {
   const navigate = useNavigate()
   return (
     <header>
+      
       <div className="divHeader">
       <div className="imagenHeader">
         <img
@@ -23,14 +26,17 @@ const Header = () => {
           onClick={()=>navigate("/profile")}
           />
       </div>
-      <div className="relative">
-        <div className="navHeader">
+      <LayoutHeader width="100%" heigth="100%"  padding = "0" margin="0">
+      {/* <div className="relative">
+        <div className="navHeader"> */}
           <NavLink className="linkheader" to="/catalogo">Catálogo<div className="underline"></div></NavLink>
           <NavLink className="linkheader" to="/compraryvender">Compra y Venta<div className="underline"></div></NavLink>
           <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
-        </div>
+        {/* </div>
+      </div> */}
+      </LayoutHeader>
       </div>
-      </div>
+      
     </header>
   );
 };

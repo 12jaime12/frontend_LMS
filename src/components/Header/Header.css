@@ -1,17 +1,17 @@
-header{
-    min-height: 80vh;
+/* header{
+    min-height: 10vh;
     width: 100%;
     background-image: url("https://res.cloudinary.com/dx3e6knoz/image/upload/v1687252466/hpn-l-hondatyper-2560x1440-d70b_wvkrs1.jpg");
     background-position: center;
     background-size: cover;
     border-bottom: solid 2px black;
-}
+} */
 .logo{
     height: 85px;
     position: fixed;
     z-index:401;
 }
-.navHeader{
+/* .navHeader{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,28 +21,28 @@ header{
     font-size: 33px;
     margin-bottom: 1rem;
     background-color: rgba(0, 0, 0, 0.33);
-} 
+}  */
 
-.divHeader{
+/* .divHeader{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 80vh;
     width: 100%;
     position: relative;
-}
+} */
 .imagenHeader{
     display: flex;
     justify-content: space-between;
     position: relative;
 
 }
-.relative{
+/* .relative{
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-}
+} */
 .imgHeaderHome{
     height: 60px;
     background-color: #39E3EB;
