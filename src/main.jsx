@@ -25,10 +25,9 @@ import ComprayventaHome from "./pages/ComprayventaHome/ComprayventaHome.jsx";
 import CocheById from "./pages/CocheById/CocheById.jsx";
 import CatalogoHome from "./pages/CatalogoHome/CatalogoHome.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
-import CreateCoche from "./pages/CreateCoche/CreateCoche.jsx";
 import CatalogoMarca from "./components/CatalogoMarca/CatalogoMarca.jsx";
 import CochePersonalizar from "./components/CochePersonalizar/CochePersonalizar.jsx";
-
+import CreateCoche from "./pages/CreateCoche/CreateCoche.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter basename="/">
@@ -49,13 +48,16 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/register" element={<Register />} />
             <Route path="/changePassword" element={<ChangePassword />} />
             <Route path="/forgotPassword" element={<ForgotPassword />} />
-            <Route path="/profile" element={<Profile/>} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/taller" element={<Taller />} />
             <Route path="/compraryvender" element={<CompraVenta />}>
               <Route index element={<ComprayventaHome />} />
               <Route path="/compraryvender/coche/:id" element={<CocheById />} />
-              <Route path="/compraryvender/createCoche" element={<CreateCoche/>}/>
+              <Route
+                path="/compraryvender/createCoche"
+                element={<CreateCoche />}
+              />
             </Route>
             <Route path="/catalogo" element={<Catalogo />}>
               <Route index element={<CatalogoHome />} />

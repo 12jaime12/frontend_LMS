@@ -40,3 +40,14 @@
     text-decoration: underline;
     color: #C61C14;
 }
+
+.anchorCustomSmall{
+    font-size: small;
+    text-decoration: none;
+    color: black
+}
+
+.anchorCustomSmall:hover{
+    text-decoration: underline;
+    color: #C61C14;
+}

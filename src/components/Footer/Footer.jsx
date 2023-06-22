@@ -10,14 +10,14 @@ const Footer = () => {
         <ul className="listaInteres">
           <li>
             <strong>
-              <p>Enlaces de interes</p>
+              <p>Enlaces de interés</p>
             </strong>
           </li>
           <li>
-            <p>Catalogo de Honda</p>
+          <NavLink className="linkheader" to="/catalogo/honda">Catálogo de Honda</NavLink>
           </li>
           <li>
-            <p>Catalogo de BMW</p>
+          <NavLink className="linkheader" to="/catalogo/Bmw">Catálogo de BMW</NavLink>
           </li>
           <li>
           <NavLink className="linkheader" to="/compraryvender">Compra y venta de vehiculos</NavLink>

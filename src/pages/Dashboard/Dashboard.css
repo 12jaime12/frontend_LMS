@@ -43,9 +43,9 @@
     text-align: center;
 }
 
-.li-catalogo{
+/* .li-catalogo{
     margin-bottom: 600px;
-}
+} */
 
 li{
     list-style: none;
@@ -61,7 +61,6 @@ li{
 
 .comprayvendeImg{
     width: 60vw;
-    object-fit: cover;
 }
 /* .Taller{
     background-color: rgb(200, 200, 200);
