@@ -6,16 +6,16 @@ display: flex;
 flex-direction: ${({ direction }) => direction};
 justify-content: center;
 align-items: center;
-background: #f2f2f2;
+background: ${({ color }) => color};
 width:  ${({ width }) => width};
 heigth:  ${({ heigth }) => heigth};
 padding: ${({ padding }) => padding};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
 `;
-export const LayoutForm = ({children, direction, width, heigth, padding, gap}) => {
+export const LayoutForm = ({children, direction, color, width, heigth, padding, gap}) => {
   return (
-    <FlexForm direction = { direction} width={width} heigth={heigth} padding = { padding} gap={ gap}>
+    <FlexForm direction = { direction} color={color} width={width} heigth={heigth} padding = { padding} gap={ gap}>
         {children}
     </FlexForm>
   )
