@@ -15,7 +15,7 @@ export const Switch = (array) => {
   switch (array) {
     case "Bmw_iX_negro_1":
       return Bmw_iX_negro_1;
-    case " Bmw_iX_negro_2":
+    case "Bmw_iX_negro_2":
       return Bmw_iX_negro_2;
     case "Bmw_iX_azul_1":
       return Bmw_iX_azul_1;

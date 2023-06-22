@@ -31,15 +31,15 @@ export const Bmw_iX_negro_2 = [
 ];
 export const Bmw_iX_blanco_2 = [
   "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336795/delanteBlanco_ni87vu.png",
-  "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336776/BMWIX_Blanco_llantas1_duban7.png",
+  "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336761/izqblanco2_eqtxup.png",
   "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336795/atrasBlanco_yvz69j.png",
-  "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336776/izqBlanco_coonsq.png",
+  "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336761/derblanco2_orsn5c.png",
 ];
 export const Bmw_iX_gris_2 = [
   "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336799/delanteGris_avsymv.png",
-  "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336761/izqblanco2_eqtxup.png",
+  "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336911/izqGris2_epjai7.png",
   "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336799/atrasGris_sk9iqz.png",
-  "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336761/derblanco2_orsn5c.png",
+  "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336912/derGris2_c5iidl.png",
 ];
 export const Bmw_iX_azul_2 = [
   "https://res.cloudinary.com/dx3e6knoz/image/upload/v1687336791/delanteAzul_yulj14.png",

@@ -10,7 +10,6 @@ const CarruselFotos = ({ data }) => {
     if (position < 4 - 1) {
       console.log("entro");
       setPosition(position + 1);
-      setCoche(data[position + 1]?._id);
     }
   };
 
@@ -20,7 +19,6 @@ const CarruselFotos = ({ data }) => {
     if (position > 0) {
       console.log("entro");
       setPosition(position - 1);
-      setCoche(data[position - 1]?._id);
     }
   };
 
