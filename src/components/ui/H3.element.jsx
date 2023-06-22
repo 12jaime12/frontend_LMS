@@ -12,8 +12,9 @@ const H3Custom = styled.h3`
       ? "100px"
       : "pequeño" && "50px"};
       text-align: center;
+      color: ${({ color }) => color};
 `;
 
-export const H3C = ({ text, width }) => {
-  return <H3Custom widthVariant={width}>{text}</H3Custom>;
+export const H3C = ({ text, width, color }) => {
+  return <H3Custom widthVariant={width} color={color}>{text}</H3Custom>;
 };

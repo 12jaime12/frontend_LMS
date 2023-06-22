@@ -4,15 +4,16 @@ import styled from "@emotion/styled";
 const InfoStyled = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: center;
+justify-content: ${({ content }) => content};
 align-items: center;
-position: absolute;
+position: ${({ position }) => position};
+background: ${({ color }) => color};
 `;
-export const LayoutAbsolute = ({children}) => {
+export const LayoutInfo = ({children, content, position, color}) => {
   return (
-    <PositionAbsStyled>
+    <InfoStyled content={content} position={position} color={color} >
         {children}
-    </PositionAbsStyled>
+    </InfoStyled>
 
   )
 }
