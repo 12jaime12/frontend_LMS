@@ -2,17 +2,23 @@ import styled from "@emotion/styled";
 import React from "react";
 
 const H1Custom = styled.h1`
-  width: ${({ widthVariant }) =>
-    widthVariant == "extralargo"
+  width: ${({ width }) =>
+    width === "extralargo"
       ? "400px"
-      : "largo"
+      : width === "largo2"
+      ? "250px"
+      : width === "largo"
       ? "200px"
-      : "medio"
+      : width === "medio"
       ? "100px"
-      : "pequeño" && "50px"};
-      text-align: center;
+      : width === "pequeño" && "50px"};
+  text-align: ${({ align }) => (align === "left" ? "left" : "center")};
 `;
 
-export const H1C = ({ text, width }) => {
-  return <H1Custom widthVariant={width}>{text}</H1Custom>;
+export const H1C = ({ text, width, align }) => {
+  return (
+    <H1Custom widthVariant={width} align={align}>
+      {text}
+    </H1Custom>
+  );
 };

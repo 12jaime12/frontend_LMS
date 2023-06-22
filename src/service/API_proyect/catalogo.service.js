@@ -24,3 +24,15 @@ export const getById = async (id) => {
       return error;
     });
 };
+//--------------create-catalogo----------------
+export const createCatalogo = async (formData) => {
+  return API.post(`/catalogo/create`, formData, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};

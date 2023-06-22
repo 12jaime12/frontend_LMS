@@ -4,13 +4,14 @@ import React from "react";
 const ButtonStyled = styled.button`
   background-color: ${({ variant }) =>
     variant === "contained" ? "#C61C14" : "transparent"};
-  width: fit-content;
+  width: 140px;
   color: ${({ color }) => (color ? color : "white")};
   outline: none;
   font-family: inherit;
   padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
+  border-radius: 20px;
   transition: 0.1s ease-in-out;
   &:focus {
     background-color: red;

@@ -5,7 +5,7 @@ import { forgotPassword } from "../../service/API_proyect/user.service"
 import { useAuth } from "../../contexts/authContext"
 import { useForm } from "react-hook-form"
 import Button from "../../components/ui/Button";
-import { H1C } from "../../components/ui";
+import { H1C, PC } from "../../components/ui";
 import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
 
 
@@ -29,13 +29,12 @@ const ForgotPassword = () => {
   return (
     <>
     <LayoutInline gap="0.5rem" padding="1rem">
-    
+    <LayoutForm  direction="column" gap="1rem" color="white" width="700px" heigth="300px" padding = "1rem">
     <H1C text="Cambio de contraseña" width="extralargo"/>
+    <PC text="Escribe el email donde quieres recibir el cambio de contraseña." width="extralargo"/>
+    </LayoutForm>
     <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
-    <LayoutForm direction="column" gap="1rem"  width="500px" heigth="300px" padding = "1rem">
-    <p className="bottom-text">
-            <small>Escribe el email donde quieres recibir el cambio de contraseña.</small>
-          </p>
+    <LayoutForm direction="column" gap="1rem" color="#f2f2f2" width="500px" heigth="300px" padding = "1rem">
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="email-space">
           <label htmlFor="custom-input" className="custom-placeholder">
@@ -51,7 +50,7 @@ const ForgotPassword = () => {
             />
           </div>
           <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
-          <Button type="submit" text="Cambiar contraseña" variant="contained" color="white"/>
+          <Button type="submit" text="Cambiar" variant="contained" color="white"/>
           </LayoutFlex>
         </form>
         </LayoutForm>
