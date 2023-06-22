@@ -5,12 +5,21 @@ const PCustom = styled.p`
   width: ${({ widthVariant }) =>
     widthVariant == "extralargo"
       ? "400px"
+      : "largo2"
+      ? "250px"
       : "largo"
       ? "200px"
       : "medio"
       ? "100px"
       : "pequeño" && "50px"};
-      text-align: center;
+     
+     text-align: ${({ align }) =>
+    align === "left"
+      ? "left"
+      : align === "right"
+      ? "right"
+      : "center"};
+     
       color: ${({ color }) => color};
       font-size: ${({ size }) =>
     size === "xl"
@@ -25,6 +34,6 @@ const PCustom = styled.p`
       
 `;
 
-export const PC = ({ text, width, color, size}) => {
-  return <PCustom widthVariant={width} color={color} size={size}>{text}</PCustom>;
+export const PC = ({ text, width, align, color, size}) => {
+  return <PCustom widthVariant={width} align={align} color={color} size={size}>{text}</PCustom>;
 };

@@ -67,7 +67,7 @@ const ChangePassword = () => {
                 <label htmlFor="custom-input" className="custom-placeholder">
                 <p>Introduce tu antigua contraseña:</p>
                 <input
-                    className="input-login"
+                    className="input-change"
                     type="password"
                     id="oldpassword"
                     name="password"
@@ -77,7 +77,7 @@ const ChangePassword = () => {
                 <label htmlFor="custom-input" className="custom-placeholder">
                 <p>Introduce tu nueva contraseña:</p>
                 <input
-                    className="input-login"
+                    className="input-change"
                     type="password"
                     id="newpassword"
                     name="password"
@@ -87,7 +87,7 @@ const ChangePassword = () => {
                 <label htmlFor="custom-input" className="custom-placeholder">
                 <p>Confirma contraseña:</p>
                 <input
-                    className="input-login"
+                    className="input-change"
                     type="password"
                     id="confirmpassword"
                     name="password"

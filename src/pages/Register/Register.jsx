@@ -6,8 +6,8 @@ import { Navigate } from "react-router";
 import { registerUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useRegisterError from "../../hooks/useError/useRegisterError";
-import { H2C, PC } from "../../components/ui";
-import { LayoutFlex, LayoutForm, LayoutInline } from "../../components/Layout";
+import { H1C, H2C, H3C, PC } from "../../components/ui";
+import { LayoutFlex, LayoutForm, LayoutInline, LayoutInfo } from "../../components/Layout";
 import Button from "../../components/ui/Button";
 
 
@@ -51,19 +51,18 @@ const Register = () => {
   return (
     <>
     <LayoutInline  gap="0.5rem" padding="1rem">
-    <LayoutForm  direction="column" gap="3rem" color="white" width="700px" heigth="300px" padding = "2rem">
-    <H2C text="Regístrate para accceder a todas las ventajas" width="extralargo"/>
-    <PC text="Creando una cuenta podrás acceder a la personalización de nuestros coches de catálogo. 
-    Poner a la venta tus vehículos o comprar coches a otros particulares." width="extralargo"></PC>
+    <LayoutForm  direction="column" gap="2rem" color="white" width="700px" heigth="300px" padding = "2rem">
+    <H1C text="Registro:" width="extralargo"/>
+    <H3C text="¿Por qué necesitamos esta información?" width="extralargo"/>
+    <PC text="Esta información es necesaria para crear tu cuenta y te permitirá accceder a todas las ventajas." width="extralargo"></PC>
     </LayoutForm>
-    <LayoutForm  direction="column" gap="0.5rem" color="#f2f2f2" width="700px" heigth="300px" padding = "1rem">
+    <LayoutForm  direction="column" gap="0.5rem" color="#white" width="700px" heigth="300px" padding = "0">
+    <LayoutForm  direction="column" gap="0.5rem" color="#f2f2f2" width="700px" heigth="300px" padding = "0">
           <form onSubmit={handleSubmit(formSubmit)}>
             
-          <LayoutInline gap="0rem" padding="1rem">
-            <LayoutFlex direction="column" gap="0.5rem" padding="0">
-            <label htmlFor="custom-input" className="custom-placeholder">
-              Nombre
-            </label>
+          <LayoutInline gap="0.5rem" padding="1rem">
+            
+            <label htmlFor="custom-input" className="placeholder-register">Nombre</label>
             <input
               className="input_user"
               type="text"
@@ -72,11 +71,9 @@ const Register = () => {
               autoComplete="false"
               {...register("name", { required: true })}
             />
-            </LayoutFlex>
-             <LayoutFlex direction="column" gap="0.5rem" padding="0">
-             <label htmlFor="custom-input" className="custom-placeholder">
-              Apellido
-            </label>
+            
+            
+             <label htmlFor="custom-input" className="placeholder-register">Apellido</label>
             <input
               className="input_user"
               type="text"
@@ -85,15 +82,13 @@ const Register = () => {
               autoComplete="false"
               {...register("apellido", { required: true })}
             />
-             </LayoutFlex>
+            
             </LayoutInline>
 
 
-<LayoutInline gap="0.5rem" padding="1rem">
-            <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
-            <label htmlFor="custom-input" className="custom-placeholder">
-              Teléfono
-            </label>
+            <LayoutInline gap="0.5rem" padding="1rem">
+            
+            <label htmlFor="custom-input" className="placeholder-register">Teléfono</label>
             <input
               className="input_user"
               type="tel"
@@ -105,9 +100,9 @@ const Register = () => {
               autoComplete="false"
               {...register("movil", { required: true })}
             />
-            </LayoutFlex>
-             <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
-             <label htmlFor="custom-input" className="custom-placeholder">
+           
+             
+             <label htmlFor="custom-input" className="placeholder-register">
               DNI
             </label>
             <input
@@ -118,11 +113,11 @@ const Register = () => {
               autoComplete="false"
               {...register("dni", { required: true })}
             />
-             </LayoutFlex>
+            
             </LayoutInline>
             <LayoutInline gap="0.5rem" padding="1rem">
-            <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
-            <label htmlFor="custom-input" className="custom-placeholder">
+            
+            <label htmlFor="custom-input" className="placeholder-register">
               Email
             </label>
             <input
@@ -133,9 +128,9 @@ const Register = () => {
               autoComplete="false"
               {...register("email", { required: true })}
             />
-            </LayoutFlex>
-             <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
-             <label htmlFor="custom-input" className="custom-placeholder">
+           
+             
+             <label htmlFor="custom-input" className="placeholder-register">
               Contraseña
             </label>
             <input
@@ -146,11 +141,11 @@ const Register = () => {
               autoComplete="false"
               {...register("password", { required: true })}
             />
-             </LayoutFlex>
+            
             </LayoutInline>
             <LayoutInline gap="0.5rem" padding="1rem">
-            <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
-            <label htmlFor="custom-input" className="custom-placeholder">
+            
+            <label htmlFor="custom-input" className="placeholder-register">
               País
             </label>
             <input
@@ -161,9 +156,9 @@ const Register = () => {
               autoComplete="false"
               {...register("pais", { required: true })}
             />
-            </LayoutFlex>
-             <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
-             <label htmlFor="custom-input" className="custom-placeholder">
+           
+            
+             <label htmlFor="custom-input" className="placeholder-register">
               Provincia
             </label>
             <input
@@ -174,11 +169,11 @@ const Register = () => {
               autoComplete="false"
               {...register("provincia", { required: true })}
             />
-             </LayoutFlex>
+          
             </LayoutInline>
             <LayoutInline gap="0.5rem" padding="1rem">
-            <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
-            <label htmlFor="custom-input" className="custom-placeholder">
+       
+            <label htmlFor="custom-input" className="placeholder-register">
               Ciudad
             </label>
             <input
@@ -189,9 +184,8 @@ const Register = () => {
               autoComplete="false"
               {...register("ciudad", { required: true })}
             />
-            </LayoutFlex>
-             <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
-             <label htmlFor="custom-input" className="custom-placeholder">
+           
+             <label htmlFor="custom-input" className="placeholder-register">
               Dirección
             </label>
             <input
@@ -202,7 +196,7 @@ const Register = () => {
               autoComplete="false"
               {...register("direccion", { required: true })}
             />
-             </LayoutFlex>
+             
             </LayoutInline>
 
             <LayoutInline gap="0.5rem" padding="1rem">
@@ -232,18 +226,40 @@ const Register = () => {
            </div>
           </LayoutInline>
           
+
+
           <LayoutFlex direction="column" gap="1rem" color="f2f2f2" padding="1rem">
           <Button type="submit" text="Registrar" variant="contained" color="white"/>
-          <PC text="Haciendo click en el botón de Registrar, estás de acuerdo con:" width="extralargo"/>
-          <Link className="anchorCustom">Términos y Condiciones</Link>
-        <Link className="anchorCustom">Política de Privacidad</Link>
         </LayoutFlex>
         </form>
-        <LayoutInline gap="0" padding="1rem">
-        <PC text="¿Ya tienes cuenta?" width="medio"/>
-          <Link to="/login" className="anchorCustom">Accede a tu cuenta aquí.</Link>
-          </LayoutInline>
       </LayoutForm>
+
+
+
+      <LayoutForm  direction="column" gap="0" color="white" padding = "0">
+      <LayoutInfo content="center" >
+      <PC text="Haciendo click en Registrar, aceptas:" width="largo2" size="small"/>
+      <LayoutInfo content="center" gap="0.5rem">
+          <Link className="anchorCustomSmall">Términos y Condiciones</Link>
+        <Link className="anchorCustomSmall">Política de Privacidad</Link>
+</LayoutInfo>
+      </LayoutInfo>
+       
+       
+        <LayoutInfo content="center" gap="1rem">
+        <PC text="¿Ya tienes cuenta?" width="medio" align="right"/>
+          <Link to="/login" className="anchorCustom">Accede a tu cuenta aquí.</Link>
+          </LayoutInfo>
+          </LayoutForm>
+
+
+</LayoutForm>
+
+
+      
+
+
+
       </LayoutInline>
     </>
   );

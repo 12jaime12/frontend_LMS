@@ -11,9 +11,12 @@ const H2Custom = styled.h2`
       : "medio"
       ? "100px"
       : "pequeño" && "50px"};
-      text-align: center;
+      text-align: ${({ align }) =>
+    align === "left"
+      ? "left"
+      : "center"};
 `;
 
-export const H2C = ({ text, width }) => {
-  return <H2Custom widthVariant={width}>{text}</H2Custom>;
+export const H2C = ({ text, width, align }) => {
+  return <H2Custom widthVariant={width} align={align}>{text}</H2Custom>;
 };

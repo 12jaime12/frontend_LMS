@@ -11,10 +11,13 @@ const H3Custom = styled.h3`
       : "medio"
       ? "100px"
       : "pequeño" && "50px"};
-      text-align: center;
       color: ${({ color }) => color};
+      text-align: ${({ align }) =>
+    align === "left"
+      ? "left"
+      : "center"};
 `;
 
-export const H3C = ({ text, width, color }) => {
-  return <H3Custom widthVariant={width} color={color}>{text}</H3Custom>;
+export const H3C = ({ text, width, color, align }) => {
+  return <H3Custom widthVariant={width} color={color} align={align}>{text}</H3Custom>;
 };

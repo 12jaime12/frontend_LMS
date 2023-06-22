@@ -45,9 +45,9 @@ const Login = () => {
   return (
     <>
     <LayoutInline gap="0.5rem" padding="1rem">
-      <H1C text="Inicia sesión" width="largo"/>
       <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
-          <LayoutForm direction="column" gap="2rem"  width="500px" heigth="300px" padding = "3rem">
+      <H1C text="Inicia sesión" width="largo"/>
+          <LayoutForm direction="column" gap="2rem" color="#f2f2f2" width="500px" heigth="300px" padding = "3rem">
           
           <H3C text="Bienvenid@ a Legendary Motorsport" width="extralargo"/>
          
@@ -84,22 +84,41 @@ const Login = () => {
               />
               
             </div>
-            <LayoutFlex direction="column" gap="0.5rem" color="f2f2f2"padding="1rem">
-           <Button type="submit" text="Entrar" variant="contained" color="white"/>
-           <LayoutInline gap="0" padding="1rem">
-           <PC text="¿No recuerdas tu contraseña?" width="largo" size="small"/>
-           <Link to="/forgotpassword" className="anchorCustomSmall">Cambio de contraseña</Link>
-           </LayoutInline>
+            <LayoutFlex direction="column" gap="2rem" padding="2rem">
+           <Button type="submit" text="Iniciar sesión" variant="contained" color="white"/>
+           <Link to="/forgotpassword" className="anchorCustomSmall">¿Has olvidado la contraseña?</Link>
             </LayoutFlex>
-            
           </form>
+          </LayoutForm>
+        </LayoutFlex>
+
+        <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
+      <H1C text="¿Aún no tienes cuenta?" width="extralargo"/>
+      <LayoutForm direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "0.5rem">
+          <H3C text="Las ventajas de tener una cuenta:" width="extralargo" align="left"/>
+          <ul>
+          <li className="listaLogin">
+          <PC text="Accede a la personalización de nuestros coches de catálogo." align="left" width="extralargo"/>
+          </li>
+          <li className="listaLogin">
+          <PC text="Vende tus vehículos o compra coches a otros particulares." align="left" width="extralargo"/>
+          </li>
+          <li className="listaLogin">
+          <PC text="Revisa tu vehículo en el taller más cercano." align="left" width="extralargo"/>
+          </li>
+          <li className="listaLogin">
+          <PC text="Mantente al día con la información más reciente sobre tus vehículos favoritos e interactúa con otros usuarios." align="left" width="extralargo"/>
+          </li>
+          </ul>
+          <Button
+              text="Registrarse"
+              action={() => navigate("/register")}
+              variant="contained"
+              color="white"
+            />
+          
           
           </LayoutForm>
-          <LayoutInline gap="0" padding="1rem">
-           <PC text="¿Aún no estás registrado?" width="extralargo"/>
-           <Link to="/register" className="anchorCustom">Regístrate aquí</Link>
-           </LayoutInline>
-       
         
         </LayoutFlex>
         </LayoutInline>
