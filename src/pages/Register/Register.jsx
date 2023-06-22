@@ -51,8 +51,12 @@ const Register = () => {
   return (
     <>
     <LayoutInline  gap="0.5rem" padding="1rem">
+    <LayoutForm  direction="column" gap="3rem" color="white" width="700px" heigth="300px" padding = "2rem">
     <H2C text="Regístrate para accceder a todas las ventajas" width="extralargo"/>
-    <LayoutForm  direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
+    <PC text="Creando una cuenta podrás acceder a la personalización de nuestros coches de catálogo. 
+    Poner a la venta tus vehículos o comprar coches a otros particulares." width="extralargo"></PC>
+    </LayoutForm>
+    <LayoutForm  direction="column" gap="0.5rem" color="#f2f2f2" width="700px" heigth="300px" padding = "1rem">
           <form onSubmit={handleSubmit(formSubmit)}>
             
           <LayoutInline gap="0rem" padding="1rem">

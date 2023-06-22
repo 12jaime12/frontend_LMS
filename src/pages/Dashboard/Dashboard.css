@@ -73,6 +73,7 @@ li{
 .tallerImg{
     width: 60vw;
     object-fit: cover;
+
 }
 /* .div-info{
     display: flex;
@@ -92,6 +93,6 @@ li{
     flex-direction: column;
     text-align: center;
 } */
-/* .ul-info li img{
-    height: 100px;
-} */
+.imgiconos{
+    height: 50px;
+}

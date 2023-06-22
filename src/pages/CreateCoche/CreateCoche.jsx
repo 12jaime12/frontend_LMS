@@ -3,11 +3,12 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router'
 import { useAuth } from '../../contexts/authContext'
 import { LayoutFlex, LayoutForm, LayoutInline, LayoutPosition } from '../../components/Layout'
-import { H1C } from '../../components/ui'
+import { H1C, PC } from '../../components/ui'
 import Button from '../../components/ui/Button'
 import { Link } from 'react-router-dom'
 import { createCocheServicio } from '../../service/API_proyect/coche.service'
 import "./CreateCoche.css"
+
 const CreateCoche = () => {
     const {user} = useAuth()
     const [send, setSend] = useState(false)
@@ -62,9 +63,11 @@ useEffect(()=>{
   return (
     <>
 <LayoutInline padding="1rem" gap="0.5rem">
+    <LayoutForm  direction="column" gap="3rem" color="white" width="700px" heigth="300px" padding = "2rem">
     <H1C text="Datos del vehículo" width="extralargo"/>
-   
-    <LayoutForm  direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
+    <PC text="Añade los datos de tu vehículo y las mejores fotos para iniciar la venta." width="largo"></PC>
+    </LayoutForm>
+    <LayoutForm  direction="column" gap="3rem" color="#f2f2f2" width="700px" heigth="300px" padding = "2rem">
     
           <form onSubmit={handleSubmit(formSubmit)} encType="multipart/form-data">
             
