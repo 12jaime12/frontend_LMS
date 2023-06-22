@@ -12,17 +12,17 @@ const useAutologin = async(allUser, userlogin) => {
         console.log("autologin allUser", allUser)
         console.log("entro autologin", customData)
         const setData = await autologinUser(customData)
+        console.log("setData autologin", setData)
         if(setData.status==200){
             const newDataCustom ={
-                token: setData.data.token,
-                user: setData.data.user.name,
-                email: setData.data.user.email,
-                image: setData.data.user.image,
-                check: setData.data.user.check,
-                events: setData.data.user.events,
-                reviews: setData.data.user.events,
-                id: setData.data.user.id,
+                user:setData.data.user.name,
+                email:setData.data.user.email,
+                check:setData.data.user.check,
+                token:setData.data.token,
+                rol:setData.data.user.rol,
+                id:setData.data.user._id
             }
+            console.log(newDataCustom)
             const dataString = JSON.stringify(newDataCustom)
             userlogin(dataString)
             return <Navigate to="/dashboard"/>
