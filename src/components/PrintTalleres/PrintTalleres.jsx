@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import "./PrintTalleres.css"
+import { useAuth } from '../../contexts/authContext'
+import PrintAllCoches from '../PrintAllCoches/PrintAllCoches'
 
 
 const PrintTalleres = ({data}) => {
+    const {user, allUser} = useAuth()
+    console.log("user",user)
     console.log("print",data)
     
 
 
   return (
+    <>
+    <div className="divCochesUser">
+        {
+            
+        }
+    </div>
     <div className="divAllTalleres">
         {
             data?.map((elem)=>{
@@ -46,6 +56,9 @@ const PrintTalleres = ({data}) => {
         }
 
     </div>
+    </>
+
+    
   )
 }
 
