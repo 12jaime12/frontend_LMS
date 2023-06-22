@@ -4,7 +4,7 @@ import "./Dashboard.css";
 import React from "react";
 import Button from "../../components/ui/Button";
 import { H2C, ImgC, PC } from "../../components/ui";
-import { LayoutAbsolute, LayoutFlex, LayoutForm, LayoutInline, LayoutRelative } from "../../components/Layout";
+import { LayoutAbsolute, LayoutFlex, LayoutForm, LayoutInfo, LayoutInline, LayoutRelative } from "../../components/Layout";
 import { LayoutPosition } from "../../components/Layout/LayoutPosition";
 
 
@@ -22,7 +22,7 @@ const Dashboard = () => {
           <li>
             <LayoutFlex direction="row" color="white" padding="3rem" gap="10rem">
               
-              <LayoutForm direction="column" width="40vw" heigth="20vh" padding="2rem" gap="0.5em">
+            <LayoutForm direction = "column" color="#f2f2f2" width="50vw"  padding = "2rem" gap="1rem">
                 <H2C text="Conócenos" width="pequeño"/>
                 <PC text="Lengedary Motorsport es una comunidad creada para reunir a los
                   amantes de los coches y, además, encontrar diferentes
@@ -56,7 +56,8 @@ const Dashboard = () => {
                 </LayoutAbsolute>
 
                 {/* <div className="Catalogo"> */}
-                <LayoutRelative color="#f2f2f2" margin="150px" zindex="3" left="400px" right="0" bottom="0" top="500vh">
+                <LayoutRelative color="transparent" margin="150px" zindex="3" left="400px" right="0" bottom="0" top="500vh">
+                <LayoutForm direction = "column" color="#f2f2f2" width="40vw"  padding = "2rem" gap="1rem">
                   <H2C text="Catálogo" width="pequeño"/>
                   <PC text="Podrás descubrir los últimos modelos de nuestras marcas colaboradoras y personalizar tu coche en tiempo real."
                   width="extralargo"></PC>
@@ -67,6 +68,7 @@ const Dashboard = () => {
                   variant="contained"
                   color="white"
                   />
+                  </LayoutForm>
                 {/* </div> */}
                 </LayoutRelative>
             </figure>
@@ -75,8 +77,9 @@ const Dashboard = () => {
           <li style={{margin: "13rem"}}> 
           <LayoutFlex direction="row" color="white" padding="3rem" gap="10rem">
            <figure>
-           <LayoutAbsolute color="#f2f2f2" direction="column" zindex="600"  top="260vh" bottom="0" right="20vh" left="0">
+            <LayoutAbsolute color="#f2f2f2" direction="column" zindex="110"  top="260vh" bottom="0" right="40vh" left="50px">
             {/* <div className="Comprayvende" style={{position:"absolute"}}> */}
+            <LayoutForm direction = "column" color="#f2f2f2" width="50vw"  padding = "2rem" gap="1rem">
               <H2C text="Compra y vende" width="medio"/>
               <PC text="¿Necesitas vender tu coche?¿Estás en busca de un coche de
                 segunda mano? Esta es tu sección. Aquí encontrarás lo que
@@ -89,6 +92,7 @@ const Dashboard = () => {
               variant="contained"
               color="white"
             />
+            </LayoutForm>
             {/* </div> */}
             </LayoutAbsolute>
             <LayoutRelative color="none" margin="0" zindex="2" left="300px" right="0" bottom="0" top="0">
@@ -104,7 +108,7 @@ const Dashboard = () => {
           </li>
           <li> 
           <LayoutFlex direction="row" color="white" padding="3rem" gap="10rem">
-          <LayoutAbsolute color="none" direction="row" zindex="2"  top="350vh" bottom="0" right="0" left="0">
+          <LayoutAbsolute color="none" direction="row" zindex="2"  top="370vh" bottom="0" right="0" left="0">
             <img
               src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687246794/25b4391b79de1d76fb565d9a92c406a33c6b2a93d040761dca90c7163699c6a41d552b001665594e936a882820e733b055bd5da60cc0f8e45d4d9b_1280_qvgp7l.jpg"
               alt="Taller"
@@ -112,7 +116,8 @@ const Dashboard = () => {
             />
            </LayoutAbsolute>
             {/* <div className="Taller"> */}
-            <LayoutRelative color="#f2f2f2" margin="0" zindex="3" left="400px" right="0" bottom="0" top="0">
+            <LayoutRelative color="#transparent" margin="0" zindex="3" left="400px" right="0" bottom="" top="">
+            <LayoutForm direction = "column" color="#f2f2f2" width="40vw"  padding = "2rem" gap="1rem">
             <H2C text="Taller" width="pequeño"/>
               <PC text="Accede a nuestra red de Talleres asociados. Seleccionados por
                 sus servicios de la mayor calidad y cercanía para dejar tu coche
@@ -124,49 +129,47 @@ const Dashboard = () => {
                 variant="contained"
                 color="white"
               />
+              </LayoutForm>
               </LayoutRelative>
             {/* </div> */}
             </LayoutFlex>
-          </li> 
-          
+          </li>
         </ul>
-       
-        <LayoutInline color="white" padding="3rem" gap="0.5rem" margin="2rem">
-        <div className="div-info">
-          <ul className="ul-info" >
-            <li>
+        
+        <LayoutInline gap="1rem" padding="5rem">    
+        <LayoutForm direction = "column" color="#f2f2f2" width="300px"  padding = "2rem" gap="1rem">
               <img
                 src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687255176/gift_vouwzw.png"
                 alt="Oportunidades"
+                className="imgiconos"
               />
-              <H2C>Oportunidades</H2C>
+              <H2C text="Oportunidades" width="largo"></H2C>
               <PC text="Las mejores opciones en servicio, calidad y precio, para nuestros
                 clientes." width="largo"></PC>
-            </li>
-            <li>
+         </LayoutForm>   
+         <LayoutForm direction = "column" color="#f2f2f2" width="300px" padding = "2rem" gap="1rem">
               <img
                 src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687255174/cube_yddwhl.png"
                 alt="Diseño"
+                className="imgiconos"
               />
-              <H2C>Diseño</H2C>
-              <PC text="Página intuitiva y facil de usar para ofrecer una experiencia
+              <H2C text="Diseño" width="largo"></H2C>
+              <PC text="Página intuitiva y fácil de usar para ofrecer una experiencia
                 óptima." width="largo"></PC>
-            </li>
-            <li>
+          </LayoutForm>
+          <LayoutForm direction = "column" color="#f2f2f2"width="300px" padding = "2rem" gap="1rem">
               <img
                 src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687255172/medal-2_jpep79.png"
                 alt="Calidad"
+                className="imgiconos"
               />
-              <H2C>Calidad</H2C>
-              <PC className="Garantía de calidad en todos nuestros servicios. Gracias a la
-                confianza de los usuarios."></PC>
-            </li>
-            
-          </ul>
-        </div>
-        </LayoutInline>
-      
-      </div>
+              <H2C text="Calidad" width="largo"></H2C>
+              <PC text="Garantía de calidad en todos nuestros servicios. Gracias a la
+                confianza de los usuarios." width="largo"></PC>
+          </LayoutForm>
+         </LayoutInline>
+       </div>
+     
     </>
   );
 };
