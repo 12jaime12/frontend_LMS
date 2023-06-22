@@ -216,8 +216,8 @@ const Register = () => {
                 />
               </LayoutInline>
 
-              <LayoutInline gap="0.5rem" padding="1rem">
-                <div className="sexo-masculino">
+              <LayoutInfo content="center" gap="3rem">
+              <LayoutInline gap="1rem" padding="0">
                   <input
                     type="radio"
                     name="sexo"
@@ -225,11 +225,11 @@ const Register = () => {
                     value="hombre"
                     {...register("genero", { required: true })}
                   />
-                  <label htmlFor="masculino" className="label-radio masculino">
+                <label htmlFor="masculino" className="label-radio masculino">
                     Masculino
                   </label>
-                </div>
-                <div className="sexo-femenino">
+                </LayoutInline>
+                <LayoutInline gap="1rem" padding="0">
                   <input
                     type="radio"
                     name="sexo"
@@ -237,11 +237,12 @@ const Register = () => {
                     value="mujer"
                     {...register("genero", { required: true })}
                   />
-                  <label htmlFor="femenino" className="label-radio femenino">
+                 <label htmlFor="femenino" className="label-radio femenino">
                     Femenino
                   </label>
-                </div>
-              </LayoutInline>
+                  </LayoutInline>
+                
+              </LayoutInfo>
 
               <LayoutFlex
                 direction="column"
@@ -250,7 +251,7 @@ const Register = () => {
                 padding="1rem">
                 <Button
                   type="submit"
-                  text="Registrar"
+                  text="Registrarse"
                   variant="contained"
                   color="white"
                 />
@@ -258,13 +259,12 @@ const Register = () => {
             </form>
           </LayoutForm>
 
-          <LayoutForm direction="column" gap="0" color="white" padding="0">
-            <LayoutInfo content="center">
-              <PC
-                text="Haciendo click en Registrar, aceptas:"
-                width="largo2"
-                size="small"
+          
+            <LayoutInfo content="center" gap="1rem">
+            
+              <PC text="Haciendo click en Registrar, aceptas:" width="largo2" size="small"
               />
+             
               <LayoutInfo content="center" gap="0.5rem">
                 <Link className="anchorCustomSmall">
                   Términos y Condiciones
@@ -282,7 +282,7 @@ const Register = () => {
               </Link>
             </LayoutInfo>
           </LayoutForm>
-        </LayoutForm>
+       
       </LayoutInline>
     </>
   );
