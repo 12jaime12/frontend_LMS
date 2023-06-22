@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router'
 import { useAuth } from '../../contexts/authContext'
 import { LayoutFlex, LayoutForm, LayoutInline, LayoutPosition } from '../../components/Layout'
-import { H2C } from '../../components/ui'
+import { H1C } from '../../components/ui'
 import Button from '../../components/ui/Button'
 import { Link } from 'react-router-dom'
 import { createCocheServicio } from '../../service/API_proyect/coche.service'
@@ -39,7 +39,7 @@ useEffect(()=>{
   return (
     <>
 <LayoutInline padding="1rem" gap="0.5rem">
-    <H2C text="Datos del vehículo" width="extralargo"/>
+    <H1C text="Datos del vehículo" width="extralargo"/>
    
     <LayoutForm  direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
     
