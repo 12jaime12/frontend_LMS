@@ -6,7 +6,7 @@ import { useAuth } from "../../contexts/authContext";
 import { loginUser } from "../../service/API_proyect/user.service";
 import { Link } from "react-router-dom";
 import useLoginError from "../../hooks/useError/useLoginError";
-import { H1C } from "../../components/ui";
+import { H1C, PC } from "../../components/ui";
 import { H3C } from "../../components/ui";
 import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
 import Button from "../../components/ui/Button";
@@ -86,26 +86,20 @@ const Login = () => {
             </div>
             <LayoutFlex direction="column" gap="0.5rem" color="f2f2f2"padding="1rem">
            <Button type="submit" text="Entrar" variant="contained" color="white"/>
-            <p className="pLogin">
-              <small>
-                ¿No recuerdas tu contraseña?
-                <Link to="/forgotpassword" className="anchorCustom">
-                  {" "}
-                Cambio de contraseña
-                </Link>
-              </small>
-            </p>
+           <LayoutInline gap="0" padding="1rem">
+           <PC text="¿No recuerdas tu contraseña?" width="largo" size="small"/>
+           <Link to="/forgotpassword" className="anchorCustomSmall">Cambio de contraseña</Link>
+           </LayoutInline>
             </LayoutFlex>
             
           </form>
           
           </LayoutForm>
-        <div className="">
-          <p className="parrafoLogin">
-            ¿Aún no estás registrado?
-            <Link to="/register" className="anchorCustom"> Regístrate aquí</Link>
-          </p>
-        </div>
+          <LayoutInline gap="0" padding="1rem">
+           <PC text="¿Aún no estás registrado?" width="extralargo"/>
+           <Link to="/register" className="anchorCustom">Regístrate aquí</Link>
+           </LayoutInline>
+       
         
         </LayoutFlex>
         </LayoutInline>

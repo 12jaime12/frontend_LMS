@@ -3,6 +3,7 @@ import "./PrintAllCoches.css"
 import { useAuth } from '../../contexts/authContext'
 import { useNavigate } from 'react-router'
 import deleteCocheUser from '../../util/deleteCocheUser'
+import Button from '../ui/Button'
 
 const PrintAllCoches = ({data}) => {
   console.log("compraventa data",data)
@@ -44,6 +45,13 @@ const PrintAllCoches = ({data}) => {
             </figure>
             <button>Like</button>
             <button onClick={()=>deleteCocheUser(elem._id, setRes)}>Borrar</button>
+            {/* <Button
+            type="button"
+              text="Borrar"
+              action={deleteCocheUser(elem._id, setRes)}
+              variant="contained"
+              color="white"
+            /> */}
             </div>
         ))
         

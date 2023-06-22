@@ -6,7 +6,7 @@ import { useAuth } from "../../contexts/authContext";
 import useCodeError from "../../hooks/useError/useCodeError";
 import useAutologin from "../../hooks/useAutologin";
 import Button from "../../components/ui/Button";
-import { H1C } from "../../components/ui";
+import { H1C, PC } from "../../components/ui";
 import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
 import "./CheckCode.css"
 
@@ -96,7 +96,7 @@ const CheckCode = () => {
         <H1C text="Verificación de código" width="extralargo"/>
         <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
         <LayoutForm direction="column" gap="1rem"  width="500px" heigth="300px" padding = "1rem">
-        <p>Escribe el código que has recibido en tu correo electrónico.</p>
+        <PC text="Escribe el código que has recibido en tu correo electrónico." width="extralargo"/>
           <form onSubmit={handleSubmit(formSubmit)}>
             <div className="codigoregistro-space">
             <label htmlFor="custom-input" className="custom-placeholder">
@@ -116,16 +116,18 @@ const CheckCode = () => {
             <div className="">
             </div>
             </LayoutFlex>
-            <p className="aviso">
+            <PC text="Si el código introducido no es correcto, su usuario será
+                eliminado de la base de datos y tendrá que registrarse de nuevo." width="extralargo" color="#C61C14" size="small"/>
+            {/* <p className="aviso">
               <small>
                 Si el código introducido no es correcto, su usuario será
                 eliminado de la base de datos y tendrá que registrarse de nuevo.
               </small>
-            </p>
+            </p> */}
           </form>
           <Button
             type="button"
-              text="Reenvir código"
+              text="Reenviar código"
               action={handleResend}
               variant="contained"
               color="white"

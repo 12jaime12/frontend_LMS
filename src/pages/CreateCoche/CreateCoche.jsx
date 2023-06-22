@@ -3,11 +3,11 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router'
 import { useAuth } from '../../contexts/authContext'
 import { LayoutFlex, LayoutForm, LayoutInline, LayoutPosition } from '../../components/Layout'
-import { H2C } from '../../components/ui'
+import { H1C } from '../../components/ui'
 import Button from '../../components/ui/Button'
 import { Link } from 'react-router-dom'
 import { createCocheServicio } from '../../service/API_proyect/coche.service'
-
+import "./CreateCoche.css"
 const CreateCoche = () => {
     const {user} = useAuth()
     const [send, setSend] = useState(false)
@@ -37,18 +37,18 @@ useEffect(()=>{
     
 },[res])
   return (
-    <div>
-
-    <LayoutFlex direction="column" gap="0.5rem" padding="1rem">
-    <H2C text="DATOS DEL VEHICULO" width="extralargo"/>
-    </LayoutFlex>
+    <>
+<LayoutInline padding="1rem" gap="0.5rem">
+    <H1C text="Datos del vehículo" width="extralargo"/>
+   
     <LayoutForm  direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
+    
           <form onSubmit={handleSubmit(formSubmit)}>
             
-          
+          <LayoutInline padding="1rem" gap="3rem">
             <LayoutFlex direction="column" gap="0.5rem" padding="0">
             <label htmlFor="custom-input" className="custom-placeholder">
-              MARCA
+              Marca
             </label>
             <input
               className="input_user"
@@ -58,10 +58,8 @@ useEffect(()=>{
               autoComplete="false"
               {...register("marca", { required: true })}
             />
-            </LayoutFlex>
-             <LayoutFlex direction="column" gap="0.5rem" padding="0">
              <label htmlFor="custom-input" className="custom-placeholder">
-              MODELO
+              Modelo
             </label>
             <input
               className="input_user"
@@ -71,24 +69,19 @@ useEffect(()=>{
               autoComplete="false"
               {...register("modelo", { required: true })}
             />
-             </LayoutFlex>
-            <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
             <label htmlFor="custom-input" className="custom-placeholder">
-              AÑO
+              Año
             </label>
             <input
               className="input_user"
               type="number"
-              
               id="yearCar"
               name="yearCar"
               autoComplete="false"
               {...register("year", { required: true })}
             />
-            </LayoutFlex>
-             <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
              <label htmlFor="custom-input" className="custom-placeholder">
-              COMBUSTIBLE
+              Combustible
             </label>
             <input
               className="input_user"
@@ -98,11 +91,8 @@ useEffect(()=>{
               autoComplete="false"
               {...register("combustible", { required: true })}
             />
-             </LayoutFlex>
-            
-            <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
             <label htmlFor="custom-input" className="custom-placeholder">
-              PRECIO
+              Precio
             </label>
             <input
               className="input_user"
@@ -113,19 +103,23 @@ useEffect(()=>{
               {...register("precio", { required: true })}
             />
             </LayoutFlex>
+
+
              <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
              <label htmlFor="custom-input" className="custom-placeholder">
-              IMAGENES
+              Imágenes
             </label>
-            <label>frontal: <input
+            
+            <label className='archivo'>Frontal: <input
               className="input_user"
               type="file"
               id="imageCar"
               name="imageCar"
               autoComplete="false"
               ref={inputFrontal}
-            /></label>
-            <label>lateral derecho: <input
+            />
+            </label>
+            <label className='archivo'>Lateral derecho: <input
               className="input_user"
               type="file"
               id="imageCar"
@@ -133,7 +127,7 @@ useEffect(()=>{
               autoComplete="false"
               ref={inputDerecho}
             /></label>
-            <label>trasera: <input
+            <label className='archivo'>Trasera: <input
               className="input_user"
               type="file"
               id="imageCar"
@@ -141,7 +135,7 @@ useEffect(()=>{
               autoComplete="false"
               ref={inputTrasero}
             /></label>
-            <label>lateral izquierdo: <input
+            <label className='archivo'>Lateral izquierdo: <input
               className="input_user"
               type="file"
               id="imageCar"
@@ -151,20 +145,16 @@ useEffect(()=>{
             /></label>
              </LayoutFlex>
             
-            
-          
-          
-          
-          <LayoutFlex direction="column" gap="0.5rem" color="f2f2f2"padding="1rem">
+        </LayoutInline>
+        <LayoutFlex direction="column" gap="0.5rem" color="f2f2f2" padding="1rem">
           <Button type="submit" text="Crear Coche" variant="contained" color="white"/>
         </LayoutFlex>
         </form>
       </LayoutForm>
 
-
-
-
-    </div>
+      </LayoutInline>
+    </>
+   
   )
 }
 

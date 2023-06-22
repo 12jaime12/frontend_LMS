@@ -7,15 +7,18 @@ width: 40vw;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 2rem;
-z-index:2;
+padding: 3rem;
+margin-top: ${({margin})=> margin};
+z-index:${({zindex})=> zindex};
 position: relative;
-left: 500px;
-top: 100px;
+left: ${({ left }) => left};
+right: ${({ right }) => right}
+bottom: ${({ bottom }) => bottom}
+top: ${({ top }) => top};
 `;
-export const LayoutRelative = ({children, color}) => {
+export const LayoutRelative = ({children, color, margin, zindex, left, right, bottom, top}) => {
   return (
-    <PositionRelStyled color={color}>
+    <PositionRelStyled color={color} margin={margin} z-index={zindex} left={left} right={right} bottom={bottom} top={top}>
         {children}
     </PositionRelStyled>
 

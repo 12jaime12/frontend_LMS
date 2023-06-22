@@ -16,7 +16,7 @@
     justify-content: center;
     position:relative;
     border-radius: 5px;
-    padding:10px;
+    padding:0;
 }
 .divFigureCoche{
     display: flex;
@@ -42,7 +42,7 @@
     padding-bottom: 40px;
 }
 .figureCoche:hover{
-    background-color: crimson;
+    background-color: #C61C14;
     color:white;
 }
 .divPrintInfo{
