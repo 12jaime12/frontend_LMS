@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import "./CochePersonalizar.css";
-import { getById } from "../../service/API_proyect/catalogo.service";
+import {
+  createCatalogo,
+  getById,
+} from "../../service/API_proyect/catalogo.service";
 import { Switch } from "../Switch/Switch";
 import CarruselFotos from "../CarruselFotos/CarruselFotos";
 import { useAuth } from "../../contexts/authContext";
@@ -22,7 +25,7 @@ const CochePersonalizar = () => {
   const [precioColor, setPrecioColor] = useState(0);
   const { user } = useAuth();
 
-  const enviarDatos = () => {
+  const enviarDatos = async () => {
     const formData = {
       marca: cocheBase?.data?.marca,
       modelo: cocheBase?.data?.modelo,
@@ -34,8 +37,11 @@ const CochePersonalizar = () => {
       combustible: cocheBase?.data?.combustible,
       cliente: user.id,
       image: array,
+      rol: "personalizado",
     };
     console.log(formData);
+    await createCatalogo(formData);
+    console.log("enviado");
   };
   useEffect(() => {
     (async () => {
