@@ -77,9 +77,9 @@ const Dashboard = () => {
           <li style={{margin: "13rem"}}> 
           <LayoutFlex direction="row" color="white" padding="3rem" gap="10rem">
            <figure>
-            <LayoutAbsolute color="#f2f2f2" direction="column" zindex="110"  top="260vh" bottom="0" right="40vh" left="50px">
+            <LayoutAbsolute color="#f2f2f2" direction="column" zindex="80"  top="260vh" bottom="0" right="40vh" left="50px">
             {/* <div className="Comprayvende" style={{position:"absolute"}}> */}
-            <LayoutForm direction = "column" color="#f2f2f2" width="50vw"  padding = "2rem" gap="1rem">
+            <LayoutForm direction = "column" zindex="5" color="#f2f2f2" width="50vw"  padding = "2rem" gap="1rem">
               <H2C text="Compra y vende" width="medio"/>
               <PC text="¿Necesitas vender tu coche?¿Estás en busca de un coche de
                 segunda mano? Esta es tu sección. Aquí encontrarás lo que
@@ -95,7 +95,7 @@ const Dashboard = () => {
             </LayoutForm>
             {/* </div> */}
             </LayoutAbsolute>
-            <LayoutRelative color="none" margin="0" zindex="2" left="300px" right="0" bottom="0" top="0">
+            <LayoutRelative color="none" margin="0" zindex="4" left="300px" right="0" bottom="0" top="0">
             <img
               src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687246794/993409168-0_dmj2q2.jpg"
               alt="Compra y vende"
