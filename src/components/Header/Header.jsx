@@ -2,13 +2,9 @@ import "./Header.css";
 import { useNavigate } from "react-router";
 import React from "react";
 import { NavLink } from "react-router-dom";
-<<<<<<< HEAD
 import { H1C, H2C, PC } from "../ui";
 import { LayoutHeader } from "../Layout";
-=======
 import { useAuth } from "../../contexts/authContext";
->>>>>>> ea34fa09e7608e1a453d1ff9853c790d791f5828
-
 
 const Header = () => {
   const {logout} = useAuth()
