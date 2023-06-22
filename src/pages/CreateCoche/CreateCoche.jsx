@@ -18,25 +18,47 @@ const CreateCoche = () => {
     const inputIzquierdo = useRef()
     const inputDerecho = useRef()
     const inputTrasero = useRef()
+    const [image, setImage] = useState([])
     
-    
-    const formSubmit=async(formData)=>{
-      console.log("ref", inputFrontal)
-      const arrayImagenes = [inputFrontal?.current?.value, inputDerecho?.current?.value, inputTrasero?.current?.value, inputDerecho?.current?.value]
-      const dataCustom={
-        ...formData,
-        image:arrayImagenes
+
+    const formData2 = new FormData();
+      
+
+
+     const formSubmit=async(formData)=>{
+      console.log(inputFrontal?.current?.files)
+
+      const customFormData = {
+        option_1: inputFrontal?.current?.files[0],
+        option_2: inputDerecho?.current?.files[0],
+        option_3: inputTrasero?.current?.files[0],
+        option_4: inputDerecho?.current?.files[0],
+        ...formData
       }
-      console.log("dataCustom", dataCustom)
         setSend(true)
-        setRes(await createCocheServicio(dataCustom))
+        setRes(await createCocheServicio(customFormData))
         setSend(false)
+    }
+
+    const handleImage=(e)=>{
+      const file = e.target.files[0]
+      const fileName = file.name
+      console.log(fileName)
+      setImage([...image, fileName])
+      console.log(e.target.files)
+
     }
 
 useEffect(()=>{
     res!=null && console.log("create car", res)
     
 },[res])
+
+useEffect(()=>{
+  console.log("image",image)
+  console.log("dataCustom", formData2)
+},[formData2])
+
   return (
     <>
 <LayoutInline padding="1rem" gap="0.5rem">
@@ -44,7 +66,7 @@ useEffect(()=>{
    
     <LayoutForm  direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "1rem">
     
-          <form onSubmit={handleSubmit(formSubmit)}>
+          <form onSubmit={handleSubmit(formSubmit)} encType="multipart/form-data">
             
           <LayoutInline padding="1rem" gap="3rem">
             <LayoutFlex direction="column" gap="0.5rem" padding="0">
@@ -118,6 +140,7 @@ useEffect(()=>{
               name="imageCar"
               autoComplete="false"
               ref={inputFrontal}
+              onChange={(e)=>handleImage(e)}
             />
             </label>
             <label className='archivo'>Lateral derecho: <input
@@ -127,7 +150,7 @@ useEffect(()=>{
               name="imageCar"
               autoComplete="false"
               ref={inputDerecho}
-              
+              onChange={(e)=>handleImage(e)}
             /></label>
             <label className='archivo'>Trasera: <input
               className="input_user"
@@ -136,7 +159,7 @@ useEffect(()=>{
               name="imageCar"
               autoComplete="false"
               ref={inputTrasero}
-              
+              onChange={(e)=>handleImage(e)}
             /></label>
             <label className='archivo'>Lateral izquierdo: <input
               className="input_user"
@@ -145,7 +168,7 @@ useEffect(()=>{
               name="imageCar"
               autoComplete="false"
               input={inputIzquierdo}
-              
+              onChange={(e)=>handleImage(e)}
             /></label>
              </LayoutFlex>
             
@@ -158,7 +181,6 @@ useEffect(()=>{
 
       </LayoutInline>
     </>
-   
   )
 }
 

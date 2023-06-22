@@ -4,7 +4,10 @@ import { API } from "./service.config";
 //--------------------CREATE CAR----------------------
 export const createCocheServicio = async (dataForm) => {
   return API.post("/coche/createCoche", dataForm, {
-    headers: { "Content-Type": "multipart/form-data" },
+    headers: {
+      "Content-Type": "multipart/form-data",
+      Authorization: `Bearer ${updateToken()}`,
+    },
   })
     .then((res) => res)
     .catch((error) => {

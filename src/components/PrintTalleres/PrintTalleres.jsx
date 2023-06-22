@@ -12,7 +12,7 @@ const PrintTalleres = ({data}) => {
         {
             data?.map((elem)=>{
                 return (
-                <section key={elem._id}>
+                <section key={elem._id} className="sectionTaller">
                     <div>
                         <div className="divImgTaller">
                             <h2>{elem.name} - {elem.apellido}</h2>
@@ -27,10 +27,16 @@ const PrintTalleres = ({data}) => {
                         </div>
                     </div>
                     <div>
-                        <div id="map"></div>
-                        
-                        <h3>{elem.ciudad}</h3>
-                        <p>{elem.direccion}</p>
+                        <div className="divLocation">
+                            <div id="map"></div>
+                            
+                            <h3>{elem.ciudad}</h3>
+                            <p>{elem.direccion}</p>
+                            <button className="botonTaller">AÑADIR AL TALLER</button>
+                        </div>
+                        <div className="divBotonTaller">
+                           
+                        </div>
                     </div>
                 </section>
                 

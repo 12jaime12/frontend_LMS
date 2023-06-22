@@ -1,9 +1,53 @@
 #map{
-    height: 400px;
-    width: 400px;
-    border-color:2px solid black;
+    height: 200px;
+    width: 200px;
+    border:2px solid black;
+}
+.divImgTaller{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .divImgTaller img{
-    width: 400px;
+    width: 200px;
+    height: 200px;
+}
+.divLocation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sectionTaller{
     height: 400px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(182, 179, 179);
+    border-bottom: 2px solid black;
+
+}
+.sectionTaller div{
+    height: 100%;
+    padding:10px 0 ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.sectionTaller div div{
+    display:flex;
+    flex-direction: column;
+}
+.divBotonTaller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.botonTaller{
+    height: 40px;
+    width: 200px;
 }
