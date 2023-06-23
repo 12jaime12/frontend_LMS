@@ -17,34 +17,38 @@ const CochePersonalizar = () => {
   const [array, setArray] = useState([]);
   const [positionColor, setPositionColor] = useState(0);
   const [positionLlantas, setPositionLlantas] = useState(0);
-  const [motor, setMotor] = useState();
+  const [positionMotor, setPositionMotor] = useState(0);
   const [precio, setPrecio] = useState();
   const [precioMotor, setPrecioMotor] = useState(0);
   const [precioLlantas, setPrecioLlantas] = useState(0);
   const [precioColor, setPrecioColor] = useState(0);
   const { user } = useAuth();
 
-  // const enviarDatos = async () => {
-  //   const formData = {
-  //     marca: cocheBase?.data?.marca,
-  //     modelo: cocheBase?.data?.modelo,
-  //     color: color,
-  //     precio: precio,
-  //     llantas: llantas,
-  //     motor: motor,
-  //     year: cocheBase?.data?.year,
-  //     combustible: cocheBase?.data?.combustible,
-  //     cliente: user.id,
-  //     image: array,
-  //     rol: "personalizado",
-  //   };
-  //   console.log(formData);
-  //   //await createCatalogo(formData);
-  //   console.log("enviado");
-  // };
-  useEffect(() => {}, [positionColor]);
+  const enviarDatos = async () => {
+    const formData = {
+      cocheBase: id,
+      color: cocheBase?.data?.color[positionColor]._id,
+      precio: precio,
+      llantas: cocheBase?.data?.llantas[positionLlantas]._id,
+      motor: cocheBase?.data?.motor[positionMotor]._id,
+      cliente: user.id,
+      image: array,
+    };
+    console.log(formData);
+    await createCatalogo(formData);
+    //console.log("enviado");
+  };
 
-  useEffect(() => {}, [positionLlantas]);
+  useEffect(() => {
+    const precioFinal =
+      cocheBase?.data?.precio + precioColor + precioLlantas + precioMotor;
+    console.log(precioFinal);
+    setPrecio(precioFinal);
+  }, [precioColor, precioLlantas, precioMotor]);
+
+  useEffect(() => {
+    console.log(positionMotor);
+  }, [positionMotor]);
 
   useEffect(() => {
     (async () => {
@@ -60,6 +64,7 @@ const CochePersonalizar = () => {
     const arrayAux = cocheBase?.data?.image;
 
     setArray(arrayAux);
+    setPrecio(cocheBase?.data?.precio);
   }, [cocheBase]);
 
   useEffect(() => {
@@ -79,21 +84,48 @@ const CochePersonalizar = () => {
     <div className="personalizarCoche">
       <h2>Coches </h2>
       {array !== undefined && <CarruselFotos data={array} />}
+      <h4>Precio {precio} €</h4>
+      <h3>Llantas</h3>
       <div className="divLlantas">
         {cocheBase?.data?.llantas?.map((element, index) => (
-          <div key={element?._id} onClick={() => setPositionLlantas(index)}>
+          <div
+            key={element?._id}
+            onClick={() => {
+              setPositionLlantas(index);
+              setPrecioLlantas(cocheBase?.data?.llantas[index]?.precio);
+            }}
+          >
             <img src={element?.image} className="imgLlantas" />
           </div>
         ))}
       </div>
+      <h3>Color</h3>
       <div className="divColores">
         {cocheBase?.data?.color?.map((element, index) => (
           <div
             key={element?._id}
             style={{ background: element?.codeColor }}
             className="divColors"
-            onClick={() => setPositionColor(index)}
+            onClick={() => {
+              setPositionColor(index);
+              setPrecioColor(cocheBase?.data?.color[index]?.precio);
+            }}
           ></div>
+        ))}
+      </div>
+      <h3>Motor</h3>
+      <div className="divMotores">
+        {cocheBase?.data?.motor?.map((element, index) => (
+          <div
+            key={element?._id}
+            onClick={() => {
+              setPositionMotor(index);
+              setPrecioMotor(cocheBase?.data?.motor[index]?.precio);
+            }}
+            className="motor"
+          >
+            <p>{element?.name}</p>
+          </div>
         ))}
       </div>
       <button onClick={() => enviarDatos()}>Guardar Coche Personalizado</button>
