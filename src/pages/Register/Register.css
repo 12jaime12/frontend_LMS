@@ -1,7 +1,10 @@
 .Register {
-    margin-top: 6rem;
-    padding-bottom: 1rem;
-    min-height: 70vh;
+    padding-top: 10vh;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* .form-wrap{

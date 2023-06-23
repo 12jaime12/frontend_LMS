@@ -21,7 +21,10 @@
 .Login{
     min-height: 80vh;
     width: 100%;
-    padding-top: 3rem;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .email-space, .password-space{
