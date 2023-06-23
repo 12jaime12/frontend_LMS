@@ -4,20 +4,29 @@ import { useAuth } from '../../contexts/authContext'
 import { useNavigate } from 'react-router'
 import deleteCocheUser from '../../util/deleteCocheUser'
 import Button from '../ui/Button'
+import { addLike } from '../../service/API_proyect/user.service'
 
 const PrintAllCoches = ({data}) => {
   console.log("compraventa data",data)
   const navigate=useNavigate()
   const {user} = useAuth()
   const [res, setRes]=useState(false)
-  
+  const [userLike, setUserLike] = useState()
+
+  console.log("uuuuuuuuu",user)
   const handleInfo = (data) =>{
     const dataCustom = data.marca
     console.log(dataCustom)
     console.log(user)
   }
-  const addUserLike = async () => {
+  const addUserLike = async (idCoche, idUser) => {
 
+   const dataCustom = {
+    idCoche,
+    idUser
+   } 
+   console.log(dataCustom)
+   setUserLike(await addLike(dataCustom))
 
   }
 
@@ -25,11 +34,16 @@ const PrintAllCoches = ({data}) => {
 
 
   }
-
+useEffect(()=>{
+  console.log(userLike)
+},[userLike])
   useEffect(()=>{
     console.log("cocheborradouseeffect")
   },[res])
   
+  useEffect(()=>{
+    console.log("like enviado")
+  },[addLike])
     console.log(data)
   return (
         <div className="divAllCoches">
@@ -45,7 +59,8 @@ const PrintAllCoches = ({data}) => {
               </div>
               </div>
             </figure>
-            <button>Like</button>
+            <button onClick={()=>addUserComentario(elem._id, user.id)}>Comentar</button>
+            <button onClick={()=>addUserLike(elem._id, user.id)}>Like</button>
             <button onClick={()=>deleteCocheUser(elem._id, setRes)}>Borrar</button>
             {/* <Button
             type="button"

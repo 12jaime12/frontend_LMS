@@ -20,10 +20,30 @@ const useLoginError = (res, setLoginOk, userlogin) => {
     userlogin(dataString)
     Swal.fire({
       icon: "success",
-      title: "Welcome to Legendary MotorSport",
-      text: "Login ok ✅",
+      title: "🎊 ¡¡¡ Bienvenido !!! 🎊",
+      text: "Disfruta tu experiencia en Legendary MotorSport ",
       showConfirmButton: false,
       timer: 3000,
+    })
+  }
+  
+  if(res?.response?.data.includes("usuario no existe")){
+    Swal.fire({
+      icon: "error",
+      title: "❌ Usuario INVALIDO ❌",
+      text: "Por favor, revisa tus datos de acceso",
+      showConfirmButton: false,
+      timer: 4000,
+    })
+  }
+
+  if(res?.response?.data.includes("Contraseña")){
+    Swal.fire({
+      icon: "error",
+      title: "❌ La contraseña introducida no es correcta ❌",
+      text: "Por favor, revisa tus datos de acceso",
+      showConfirmButton: false,
+      timer: 4000,
     })
   }
 }

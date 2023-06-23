@@ -18,8 +18,8 @@ const useRegisterError = (res, setRegisterOk) => {
     if(res?.response?.status==409){
         Swal.fire({
             icon: "error",
-            title: "Oops...",
-            text: "El usuario ya existe",
+            title: "El usuario ya existe",
+            text: "Por favor introduce otros datos",
             showConfirmButton: false,
             timer: 3000,
         })
