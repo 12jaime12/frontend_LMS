@@ -45,7 +45,7 @@ const Login = () => {
   return (
     <>
     <div className="Login">
-    <LayoutInline gap="0.5rem" padding="1rem">
+    <LayoutInline gap="3rem" padding="1rem">
       <LayoutFlex direction="column" gap="0.5rem" padding="2rem" >
       <H1C text="Inicia sesión" width="largo"/>
           <LayoutForm direction="column" gap="2rem" color="#f2f2f2" width="500px" heigth="300px" padding = "3rem" margin="0">
