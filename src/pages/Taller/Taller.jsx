@@ -4,7 +4,7 @@ import { useAuth } from "../../contexts/authContext";
 import PrintTalleres from "../../components/PrintTalleres/PrintTalleres";
 import PrintAllCoches from "../../components/PrintAllCoches/PrintAllCoches";
 import CarruselPersonalizar from "../../components/CarruselPersonalizar/CarruselPersonalizar";
-
+import "./Taller.css"
 
 
 
@@ -35,7 +35,8 @@ const Taller = () => {
   },[coche])
   console.log("res",resUser)
   return (
-    <>
+    <div className="Taller">
+  
       {
         
         resUser!=null&&(
@@ -47,7 +48,7 @@ const Taller = () => {
       <div>
         <PrintTalleres data={res} coche={coche}/>
       </div>
-    </>
+    </div>
   )
 };
 

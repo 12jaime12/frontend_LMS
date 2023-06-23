@@ -57,7 +57,7 @@ const ChangePassword = () => {
     },[res])
     
   return (
-    <>
+    <div className="ChangePass">
     <LayoutInline gap="0.5rem" padding="1rem">
     <H1C text="Cambiar contraseña" width="largo"/>
     <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
@@ -104,7 +104,7 @@ const ChangePassword = () => {
     </LayoutFlex>
     </LayoutInline>
  
-    </>
+    </div>
    
   )
 }

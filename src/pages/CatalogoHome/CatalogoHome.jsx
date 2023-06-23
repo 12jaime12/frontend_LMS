@@ -5,7 +5,7 @@ const CatalogoHome = () => {
   const navigate = useNavigate();
   return (
     <div className="catalogo">
-      <h1>Catalogo</h1>
+      <h1>Catálogo</h1>
       <div className="marcas">
         <nav>
           <img

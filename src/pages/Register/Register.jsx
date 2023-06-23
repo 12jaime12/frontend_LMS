@@ -53,7 +53,7 @@ const Register = () => {
   }
 
   return (
-    <>
+    <div className="Register">
       <LayoutInline gap="0.5rem" padding="1rem">
         <LayoutForm
           direction="column"
@@ -284,7 +284,7 @@ const Register = () => {
           </LayoutForm>
        
       </LayoutInline>
-    </>
+    </div>
   );
 };
 export default Register;

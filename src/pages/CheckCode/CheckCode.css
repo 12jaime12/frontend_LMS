@@ -1,3 +1,8 @@
+.CheckCode {
+    min-height: 80vh;
+    padding-top: 6rem;
+}
+
 .codigoregistro-space{
     display: flex;
     flex-direction: column;

@@ -19,9 +19,9 @@
 }*/
 
 .Login{
-    background-color: cadetblue;
     min-height: 70vh;
     width: 100%;
+    padding-top: 3rem;
 }
 
 .email-space, .password-space{

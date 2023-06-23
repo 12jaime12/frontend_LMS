@@ -29,7 +29,7 @@ const Profile = () => {
   },[])
   
   return (
-    <div>
+    <div className="Profile">
       {userInfo!=null &&(
         <>
         <div className="divImgmasInfo">
