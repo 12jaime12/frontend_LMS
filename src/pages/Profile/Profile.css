@@ -7,6 +7,10 @@
     justify-content: center;
     align-items: center;
 }
+.DivUpdatePerfil{
+    display: flex;
+    flex-direction: column;
+}
 .divUserCoches{
     display:flex;
     flex-direction: column;
