@@ -3,20 +3,34 @@ import "./PrintTalleres.css"
 import { useAuth } from '../../contexts/authContext'
 import PrintAllCoches from '../PrintAllCoches/PrintAllCoches'
 import { createServiceTaller } from '../../service/API_proyect/coche.service'
+import useTallerService from '../../hooks/useTallerService'
 
 
 const PrintTalleres = ({data, coche}) => {
-    const {user, allUser} = useAuth()
-    let idCoche=data?.data[0]._id
-    console.log(idCoche)
+    const {user} = useAuth()
+    const [res,setRes] = useState()
+    let idTaller
+    let idCoche=user.coches[0]
 
     const crearServicio = async (tallerId) => {
-        (coche==undefined) ? idCoche : idCoche=coche
-        idTaller=tallerId
+        
+        const dataId = {
+            idCoche: (coche===undefined) ? idCoche=idCoche : idCoche=coche,
+            idTaller: tallerId
+        }
 
-        await createServiceTaller(idCoche, idTaller)
-
+        console.log("data coche y taller", dataId)
+        setRes(await createServiceTaller(dataId))
+        
     }
+
+    useEffect(()=>{
+        console.log("ENTRO PRINT TALLERES USER ---------------",user)
+    },[])
+   useEffect(()=>{
+    console.log("----------------------RESSSSS",res)
+    useTallerService(res)
+   },[res]) 
 
   return (
     <>
@@ -49,7 +63,7 @@ const PrintTalleres = ({data, coche}) => {
                             
                             <h3>{elem.ciudad}</h3>
                             <p>{elem.direccion}</p>
-                            <button className="botonTaller">AÑADIR AL TALLER</button>
+                            <button className="botonTaller" onClick={()=>crearServicio(elem._id)}>AÑADIR AL TALLER</button>
                         </div>
                         <div className="divBotonTaller">
                            
