@@ -8,11 +8,14 @@ import Button from '../../components/ui/Button'
 import { Link } from 'react-router-dom'
 import { createCocheServicio } from '../../service/API_proyect/coche.service'
 import "./CreateCoche.css"
+import useCreateCoche from '../../hooks/useError/useCreateCoche'
 
 const CreateCoche = () => {
+  const navigate=useNavigate()
     const {user} = useAuth()
     const [send, setSend] = useState(false)
     const [res, setRes] = useState()
+    const [resOk, setResOk] = useState(false)
     const [created, setCreatedOk] = useState(false)
     const { register, handleSubmit } = useForm();
     const inputFrontal = useRef()
@@ -52,13 +55,15 @@ const CreateCoche = () => {
 
 useEffect(()=>{
     res!=null && console.log("create car", res)
-    
+    useCreateCoche(res, setResOk)
 },[res])
 
 useEffect(()=>{
   console.log("image",image)
   console.log("dataCustom", formData2)
 },[formData2])
+
+resOk && navigate("/profile")
 
   return (
     <div className="CreateCar">

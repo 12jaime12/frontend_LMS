@@ -14,7 +14,7 @@ const CompraVenta = () => {
 
     <Button type="text" text="Tienda" variant="contained" color="white" action={()=>navigate("/compraryvender")}/>
 
-    <Button type="text" text="Crear coche" variant="contained" color="" action={() => navigate("/compraryvender/createCoche")}/>
+    <Button type="text" text="Crear coche" variant="contained" color="" action={() => navigate("/createCoche")}/>
 
   </nav>
   <Outlet/>

@@ -43,7 +43,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 </ProtectedCheckChildren>
               }
             />
-
+<Route
+                path="createCoche"
+                element={<CreateCoche />}
+              />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/changePassword" element={<ChangePassword />} />
@@ -54,10 +57,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/compraryvender" element={<CompraVenta />}>
               <Route index element={<ComprayventaHome />} />
               <Route path="/compraryvender/coche/:id" element={<CocheById />} />
-              <Route
-                path="/compraryvender/createCoche"
-                element={<CreateCoche />}
-              />
+              
             </Route>
             <Route path="/catalogo" element={<Catalogo />}>
               <Route index element={<CatalogoHome />} />

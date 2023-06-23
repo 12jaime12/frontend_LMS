@@ -7,6 +7,8 @@ import PrintCochesPerfil from "../../components/PrintInfoCoche/PrintInfoCoche";
 import PrintInfoCoche from "../../components/PrintInfoCoche/PrintInfoCoche";
 import PrintAllCoches from "../../components/PrintAllCoches/PrintAllCoches";
 import deleteCocheUser from "../../util/deleteCocheUser";
+import CarruselPersonalizar from "../../components/CarruselPersonalizar/CarruselPersonalizar";
+import CarruselPorTres from "../../components/CarruselPorTres/CarruselPorTres";
 
 
 
@@ -14,6 +16,7 @@ const Profile = () => {
   const {user, allUser} = useAuth()
   const [send, setSend] = useState(false)
   const [res, setRes] = useState()
+  const navigate=useNavigate()
   
   console.log("user perfil",user)
   console.log(user.id)
@@ -56,7 +59,9 @@ const Profile = () => {
         </div>
         <div className="divUserCoches">
           <h2>COCHES PROPIOS</h2>
-          <PrintAllCoches data={userInfo.coche_cliente}/>
+          <button onClick={() => navigate("/createCoche")}>Añadir coche</button>
+          {/* <PrintAllCoches data={userInfo.coche_cliente}/> */}
+          <CarruselPorTres data={userInfo.coche_cliente}/>
 
         </div>
         <div className="divUserLikes">

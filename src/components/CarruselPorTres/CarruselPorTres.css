@@ -1,0 +1,29 @@
+.flechaportres{
+    height: 50px;
+    cursor: pointer;
+}
+.fotoCarta{
+    height: 300px;
+}
+.carta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+    border:2px solid black;
+}
+.carruselportres{
+    width: 90vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartaportres{
+    width: 350px
+}
+.cartaportres img{
+    width:200px;
+    height: 200px;
+}
