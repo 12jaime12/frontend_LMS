@@ -4,16 +4,15 @@ import React from "react";
 const HeaderForm = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
 background: rgba(0, 0, 0, 0.33);
-font-size: 33px;
+font-size: 20px;
 gap: 4rem;
-
-width:  ${({ width }) => width};
-heigth:  ${({ heigth }) => heigth};
-position: absolute;
-z-index:5;
+margin-right: 20px;
+width:  100%;
+heigth: 13vh;
+position: fixed;
 `;
 export const LayoutHeader = ({children, width, heigth}) => {
   return (

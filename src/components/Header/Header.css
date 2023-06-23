@@ -1,11 +1,14 @@
-.divHeader{
+/* .Header{
     min-height: 13vh;
     width: 100%;
     position: fixed;
     top: 0;
    background-color: rgba(0, 0, 0, 0.289);
-}
-
+} */
+/* Header{
+    height: 13vh;
+    width: 100%;
+} */
 .logo{
     height: 85px;
     z-index:401;
