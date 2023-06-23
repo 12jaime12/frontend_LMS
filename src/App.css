@@ -1,11 +1,14 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  margin: 0rem;
-  padding: 0rem;
 }
 
-main{
+/* main{
   min-height: 67vh;
-  /* margin-top: 13vh; */
-}
+  margin-top: 13vh;
+} */
 
+/* main{
+  margin-top: 10vh;
+} */
