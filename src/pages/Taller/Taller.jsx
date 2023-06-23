@@ -3,12 +3,15 @@ import { getByIdUser, getByRolUser } from "../../service/API_proyect/user.servic
 import { useAuth } from "../../contexts/authContext";
 import PrintTalleres from "../../components/PrintTalleres/PrintTalleres";
 import PrintAllCoches from "../../components/PrintAllCoches/PrintAllCoches";
+import CarruselPersonalizar from "../../components/CarruselPersonalizar/CarruselPersonalizar";
+
 
 
 
 const Taller = () => {
   const [res,setRes] = useState()
   const [resUser, setResUser] = useState()
+  const [coche, setCoche] = useState()
   const {user} = useAuth()
   console.log("userID", user.id)
   
@@ -17,20 +20,32 @@ const Taller = () => {
   }
   const userId = async () => {
     setResUser(await getByIdUser(user.id))
+    setCoche(resUser?.coche_cliente)
   }
 
+  
   useEffect(()=>{
     allTaller()
     userId()
+    console.log("cocheeeeeeeeeeee",coche)
   },[])
+
+  useEffect(()=>{
+    console.log(coche)
+  },[coche])
   console.log("res",resUser)
   return (
     <>
+      {
+        
+        resUser!=null&&(
+          <div>
+            <CarruselPersonalizar data={resUser?.data?.coche_cliente} setCoche={setCoche}/>
+          </div>
+        )
+      }
       <div>
-        <PrintAllCoches data={resUser?.data.coche_cliente}/>
-      </div>
-      <div>
-        <PrintTalleres data={res?.data}/>
+        <PrintTalleres data={res} coche={coche}/>
       </div>
     </>
   )
