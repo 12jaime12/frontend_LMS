@@ -9,7 +9,7 @@ align-items: center;
 background: rgba(0, 0, 0, 0.33);
 font-size: 33px;
 gap: 4rem;
-margin-top: 63vh;
+
 width:  ${({ width }) => width};
 heigth:  ${({ heigth }) => heigth};
 position: absolute;
