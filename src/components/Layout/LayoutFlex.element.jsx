@@ -10,10 +10,11 @@ background: ${({ color }) => color};;
 padding: ${({ padding }) => padding};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
-`;
-export const LayoutFlex = ({children, direction, color, padding, gap}) => {
+margin-top: ${({ margin }) => margin}`
+;
+export const LayoutFlex = ({children, direction, color, padding, gap, margin}) => {
   return (
-    <FlexStyled direction = { direction} gap={ gap} color={color} padding = { padding}>
+    <FlexStyled direction = { direction} gap={ gap} color={color} padding = { padding} margin={margin}>
         {children}
     </FlexStyled>
   )

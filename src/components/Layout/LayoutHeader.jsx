@@ -12,7 +12,7 @@ gap: 4rem;
 margin-right: 20px;
 width:  100vw;
 heigth: 13vh;
-position: fixed;
+
 `;
 export const LayoutHeader = ({children}) => {
   return (

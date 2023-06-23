@@ -5,10 +5,11 @@
     top: 0;
    background-color: rgba(0, 0, 0, 0.289);
 } */
-/* Header{
+Header{
     height: 13vh;
     width: 100%;
-} */
+    position: fixed;
+}
 .logo{
     height: 85px;
     z-index:401;

@@ -12,7 +12,6 @@ const Header = () => {
   return (
     <header>
       <LayoutHeader >
-  
         <img
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1686737065/logoredondo-removebg-preview_uidph4.png"
           alt="logo"
