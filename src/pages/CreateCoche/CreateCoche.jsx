@@ -61,7 +61,7 @@ useEffect(()=>{
 },[formData2])
 
   return (
-    <>
+    <div className="CreateCar">
 <LayoutInline padding="1rem" gap="0.5rem">
     <LayoutForm  direction="column" gap="3rem" color="white" width="700px" heigth="300px" padding = "2rem">
     <H1C text="Datos del vehículo" width="extralargo"/>
@@ -183,7 +183,7 @@ useEffect(()=>{
       </LayoutForm>
 
       </LayoutInline>
-    </>
+    </div>
   )
 }
 

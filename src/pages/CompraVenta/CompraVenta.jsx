@@ -9,7 +9,7 @@ const CompraVenta = () => {
   //form comprar, form vender...etc
   const navigate=useNavigate()
   return (
-  <>
+  <div className="Compra-venta">
   <nav className="ulNavCompraventa">
 
     <Button type="text" text="Tienda" variant="contained" color="white" action={()=>navigate("/compraryvender")}/>
@@ -18,7 +18,7 @@ const CompraVenta = () => {
 
   </nav>
   <Outlet/>
-  </>
+  </div>
   )
 };
 

@@ -18,9 +18,10 @@
     height: 50vh;
 }*/
 
-Login{
-    height: 70vh;
+.Login{
+    min-height: 70vh;
     width: 100%;
+    padding-top: 3rem;
 }
 
 .email-space, .password-space{

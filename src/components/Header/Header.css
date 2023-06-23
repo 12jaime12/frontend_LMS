@@ -1,48 +1,19 @@
-/* .Header{
-    min-height: 13vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-   background-color: rgba(0, 0, 0, 0.289);
-} */
-/* Header{
+Header{
     height: 13vh;
     width: 100%;
-} */
+    position: fixed;
+    background: rgba(0, 0, 0, 0.33);
+    top: 0;
+    z-index: 300;
+}
+
 .logo{
     height: 85px;
-    z-index:401;
 }
-/* .imgHeaderHome{
-    height: 40px;
-    background-color: #39E3EB;
-    color:whitesmoke;
-    filter:invert();
-    margin: 20px 10px 0 0;
-    border-radius: 100%;
-    right:10px;
-    z-index: 401;
-    position: fixed;
-}
-.imgHeaderLogout{
-    height: 40px;
-    background-color: #39E3EB;
-    color:whitesmoke;
-    filter:invert();
-    margin: 20px 10px 0 0;
-    border-radius: 100%;
-    right:70px;
-    z-index: 401;
-    position: fixed;
-    
-} */
 
 .linkheader {
     text-decoration: none;
     color: white;
-    display: inline-flex;
-    flex-direction: column;
-    position: relative;
 }
 
 .linkheader:hover {
@@ -55,7 +26,6 @@
     width: 0;
     height: 3px;
     transition: all 0.3s ease-in-out;
-    
 }
 
 .linkheader:hover .underline {
@@ -65,4 +35,9 @@
 
 .material-symbols-outlined{
     color: #C61C14;
+}
+
+.material-symbols-outlined:hover{
+    color: #C61C14;
+    cursor: pointer;
 }

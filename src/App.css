@@ -1,6 +1,14 @@
-/* #root {
-  margin: 0 ;
-  padding: 0rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* main{
+  min-height: 80vh;
+  /* margin-top: 13vh; 
 } */
 
+/* main{
+  margin-top: 10vh;
+} */

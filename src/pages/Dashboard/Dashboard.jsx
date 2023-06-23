@@ -47,7 +47,7 @@ const Dashboard = () => {
           <li className="li-catalogo">
           <LayoutFlex direction="row" color="white" padding="3rem" gap="10rem">
             <figure>
-              <LayoutAbsolute color="transparent" direction= "row" zindex="2" top="180vh" bottom="0" right="0" left="0">
+              <LayoutAbsolute color="transparent" direction= "row" zindex="2" top="220vh" bottom="0" right="0" left="0">
                 {/* <div> */}
                
                   <img
@@ -61,7 +61,7 @@ const Dashboard = () => {
                 </LayoutAbsolute>
 
                 {/* <div className="Catalogo"> */}
-                <LayoutRelative color="transparent" margin="150px" zindex="3" left="400px" right="0" bottom="0" top="500vh">
+                <LayoutRelative color="transparent" margin="150px" zindex="3" left="350px" right="0" bottom="100px" top="0">
                 <LayoutForm direction = "column" color="#f2f2f2" width="40vw"  padding = "2rem" gap="1rem">
                   <H2C text="Catálogo" width="pequeño"/>
                   <PC text="Podrás descubrir los últimos modelos de nuestras marcas colaboradoras y personalizar tu coche en tiempo real."

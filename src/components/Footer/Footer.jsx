@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
 import React from "react";
-import {LayoutFlex, LayoutInline, LayoutInfo, LayoutForm} from "../../components/Layout"
+import {LayoutFlex, LayoutInline, LayoutFooter } from "../../components/Layout"
 import { H3C } from '../ui/H3.element'
 
 const Footer = () => {
   return (
     <footer>
       
-    <LayoutInfo content="space-between" color="#242424">
+    <LayoutFooter>
      <LayoutFlex direction="column" gap="0.5rem">
           <H3C text="Enlaces de interés" color="white" width="largo"/>
           <NavLink className="linkheader" to="/catalogo">Catálogo</NavLink>
@@ -20,7 +20,7 @@ const Footer = () => {
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687248341/logoprincipal_rsq0kx_cpp7tp.jpg"
           alt="logoLMS"
         />
-      <LayoutInline gap="0" padding="1rem">
+      <LayoutInline gap="2rem">
         <img
           className="iconoRedSocial"
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687249121/instagram_vgzuji.png"
@@ -37,8 +37,8 @@ const Footer = () => {
           alt="logoFacebook"
         />
       </LayoutInline>
-      </LayoutInfo>
-  
+     
+      </LayoutFooter>
     </footer>
   );
 };

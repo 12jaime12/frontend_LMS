@@ -91,7 +91,7 @@ const CheckCode = () => {
     //return <Navigate to="/dashboard"/>
   }
   return (
-    <>
+    <div className="CheckCode">
     <LayoutInline gap="0.5rem" padding="1rem">
         <H1C text="Verificación de código" width="extralargo"/>
         <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
@@ -136,7 +136,7 @@ const CheckCode = () => {
         
         </LayoutFlex>
     </LayoutInline>
-    </>
+    </div>
   );
 };
 

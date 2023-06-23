@@ -3,7 +3,7 @@ import "./Catalogo.css";
 import { NavLink, Outlet } from "react-router-dom";
 const Catalogo = () => {
   return (
-    <div>
+    <div className="Catalog">
       <Outlet />
     </div>
   );

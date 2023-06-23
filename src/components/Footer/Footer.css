@@ -1,10 +1,20 @@
 Footer{
-    min-height: 30vh;
+    height: 20vh;
     width: 100%;
+    background-color: #242424;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
 }
 
 .fotoLogo{
     height: 100px; 
+}
+
+.iconoRedSocial{
+    height: 30px;
+    filter: invert();
+    
 }
 /* .div-listaInteres{
     margin
@@ -21,8 +31,3 @@ Footer{
 /* .iconos{
     margin-right: 2rem;
 } */
-.iconoRedSocial{
-    height: 30px;
-    filter: invert();
-    margin: 1rem;
-}

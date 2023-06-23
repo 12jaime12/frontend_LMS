@@ -27,7 +27,7 @@ const ForgotPassword = () => {
   },[res])
 
   return (
-    <>
+    <div className="ForgotPassword">
     <LayoutInline gap="0.5rem" padding="1rem">
     <LayoutForm  direction="column" gap="1rem" color="white" width="700px" heigth="300px" padding = "1rem">
     <H1C text="Cambio de contraseña" width="extralargo"/>
@@ -58,7 +58,7 @@ const ForgotPassword = () => {
     
     </LayoutFlex>
     </LayoutInline>
-    </>
+    </div>
   )
 }
 
