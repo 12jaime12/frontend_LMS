@@ -1,4 +1,6 @@
 .Taller{
+    padding-top: 10vh;
     min-height: 80vh;
-    padding-top: 6rem;
+    width: 100%;
+   
 }

@@ -1,5 +1,5 @@
 Header{
-    height: 13vh;
+    max-height: 10vh;
     width: 100%;
     position: fixed;
     background: rgba(0, 0, 0, 0.33);

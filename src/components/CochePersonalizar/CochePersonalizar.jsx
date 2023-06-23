@@ -12,38 +12,44 @@ import { getByIdCocheBase } from "../../service/API_proyect/cocheBase.service";
 
 const CochePersonalizar = () => {
   const { id } = useParams();
-  const [cocheBase, setCocheBase] = useState({ data: {} });
+  const [cocheBase, setCocheBase] = useState(null);
   const [arrayString, setArrayString] = useState("");
   const [array, setArray] = useState([]);
-  const [marca, setMarca] = useState("");
-  const [modelo, setModelo] = useState("");
-  const [color, setColor] = useState("");
-  const [llantas, setLlantas] = useState();
-  const [motor, setMotor] = useState();
+  const [positionColor, setPositionColor] = useState(0);
+  const [positionLlantas, setPositionLlantas] = useState(0);
+  const [positionMotor, setPositionMotor] = useState(0);
   const [precio, setPrecio] = useState();
   const [precioMotor, setPrecioMotor] = useState(0);
   const [precioLlantas, setPrecioLlantas] = useState(0);
   const [precioColor, setPrecioColor] = useState(0);
   const { user } = useAuth();
 
-  // const enviarDatos = async () => {
-  //   const formData = {
-  //     marca: cocheBase?.data?.marca,
-  //     modelo: cocheBase?.data?.modelo,
-  //     color: color,
-  //     precio: precio,
-  //     llantas: llantas,
-  //     motor: motor,
-  //     year: cocheBase?.data?.year,
-  //     combustible: cocheBase?.data?.combustible,
-  //     cliente: user.id,
-  //     image: array,
-  //     rol: "personalizado",
-  //   };
-  //   console.log(formData);
-  //   //await createCatalogo(formData);
-  //   console.log("enviado");
-  // };
+  const enviarDatos = async () => {
+    const formData = {
+      cocheBase: id,
+      color: cocheBase?.data?.color[positionColor]._id,
+      precio: precio,
+      llantas: cocheBase?.data?.llantas[positionLlantas]._id,
+      motor: cocheBase?.data?.motor[positionMotor]._id,
+      cliente: user.id,
+      image: array,
+    };
+    console.log(formData);
+    await createCatalogo(formData);
+    //console.log("enviado");
+  };
+
+  useEffect(() => {
+    const precioFinal =
+      cocheBase?.data?.precio + precioColor + precioLlantas + precioMotor;
+    console.log(precioFinal);
+    setPrecio(precioFinal);
+  }, [precioColor, precioLlantas, precioMotor]);
+
+  useEffect(() => {
+    console.log(positionMotor);
+  }, [positionMotor]);
+
   useEffect(() => {
     (async () => {
       setCocheBase(await getByIdCocheBase(id));
@@ -53,152 +59,75 @@ const CochePersonalizar = () => {
   useEffect(() => {
     console.log(cocheBase?.data);
   }, [cocheBase]);
-  // useEffect(() => {
-  //   console.log(cocheBase?.data);
-  //   setColor(cocheBase?.data?.color);
-  //   setModelo(cocheBase?.data?.modelo);
-  //   setMarca(cocheBase?.data?.marca);
-  //   setLlantas(cocheBase?.data?.llantas);
-  //   setPrecio(cocheBase?.data?.precio);
-  //   const arraAux = `${cocheBase?.data?.marca}_${cocheBase?.data?.modelo}_${cocheBase?.data?.color}_${cocheBase?.data?.llantas}`;
-  //   console.log(arraAux);
-  //   setArrayString(arraAux);
-  // }, [cocheBase]);
 
-  // useEffect(() => {
-  //   const fotos = Switch(arrayString);
-  //   console.log(fotos);
-  //   setArray(fotos);
-  // }, [arrayString]);
+  useEffect(() => {
+    const arrayAux = cocheBase?.data?.image;
 
-  // useEffect(() => {
-  //   console.log(array);
-  // }, [array]);
+    setArray(arrayAux);
+    setPrecio(cocheBase?.data?.precio);
+  }, [cocheBase]);
 
-  // useEffect(() => {
-  //   console.log(color);
-  // }, [color]);
+  useEffect(() => {
+    //console.log(cocheBase);
+    console.log(positionColor);
+    //console.log(positionLlantas);
 
-  // useEffect(() => {
-  //   console.log(precio);
-  // }, [precio]);
-  // useEffect(() => {
-  //   setPrecio(
-  //     cocheBase?.data?.precio + precioMotor + precioColor + precioLlantas
-  //   );
-  // }, [precioMotor, precioColor, precioLlantas]);
+    if (cocheBase) {
+      console.log(positionLlantas);
+      const arrayAux =
+        cocheBase?.data?.llantas[positionLlantas].images[positionColor];
+      setArray(() => arrayAux);
+    }
+  }, [cocheBase, positionColor, positionLlantas]);
 
-  // useEffect(() => {
-  //   //console.log(marca, modelo, color, llantas);
-  //   const arraAux2 = `${marca}_${modelo}_${color}_${llantas}`;
-  //   console.log(arraAux2);
-  //   setArrayString(arraAux2);
-  // }, [modelo, marca, color, llantas]);
   return (
     <div className="personalizarCoche">
       <h2>Coches </h2>
       {array !== undefined && <CarruselFotos data={array} />}
-      {/* 
-      <h3>Precio: {precio} €</h3>
-      <div>
-        <img
-          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687422016/download_rvnxwv.png"
-          alt="color negro"
-          onClick={() => setColor("negro")}
-          className="colorSelector"
-        />
-        <img
-          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687422025/download_m0oygb.jpg"
-          alt="color blanco"
-          onClick={() => {
-            setColor("blanco");
-            setPrecioColor(1000);
-          }}
-          className="colorSelector"
-        />
-        <img
-          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687422040/download_iosvc3.jpg"
-          alt="color gris"
-          onClick={() => {
-            setColor("gris");
-            setPrecioColor(3000);
-          }}
-          className="colorSelector"
-        />
-        <img
-          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687422008/azul-color_itvunv.png"
-          alt="color azul"
-          onClick={() => {
-            setColor("azul");
-            setPrecioColor(5000);
-          }}
-          className="colorSelector"
-        />
+      <h4>Precio {precio} €</h4>
+      <h3>Llantas</h3>
+      <div className="divLlantas">
+        {cocheBase?.data?.llantas?.map((element, index) => (
+          <div
+            key={element?._id}
+            onClick={() => {
+              setPositionLlantas(index);
+              setPrecioLlantas(cocheBase?.data?.llantas[index]?.precio);
+            }}
+          >
+            <img src={element?.image} className="imgLlantas" />
+          </div>
+        ))}
       </div>
-      <div>
-        <img
-          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687423570/llantas1_zchfoi.png"
-          alt="llanta tipo 1"
-          onClick={() => {
-            setLlantas("1");
-            setPrecioLlantas(5000);
-          }}
-          className="llantasSelector"
-        />
-        <img
-          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687425160/llantas2bmw_oyl58q.png"
-          alt="llanta tipo 2"
-          onClick={() => {
-            setLlantas("2");
-            setPrecioLlantas(10000);
-          }}
-          className="llantasSelector"
-        />
+      <h3>Color</h3>
+      <div className="divColores">
+        {cocheBase?.data?.color?.map((element, index) => (
+          <div
+            key={element?._id}
+            style={{ background: element?.codeColor }}
+            className="divColors"
+            onClick={() => {
+              setPositionColor(index);
+              setPrecioColor(cocheBase?.data?.color[index]?.precio);
+            }}
+          ></div>
+        ))}
       </div>
-
-      {cocheBase?.data?.combustible === "electrico" ? (
-        <div className="divMotores">
-          <figure
-            className="motorSelector"
+      <h3>Motor</h3>
+      <div className="divMotores">
+        {cocheBase?.data?.motor?.map((element, index) => (
+          <div
+            key={element?._id}
             onClick={() => {
-              setMotor("1");
-              setPrecioMotor(1000);
+              setPositionMotor(index);
+              setPrecioMotor(cocheBase?.data?.motor[index]?.precio);
             }}
+            className="motor"
           >
-            <p>motor: electrico 100W</p>
-          </figure>
-          <figure
-            className="motorSelector"
-            onClick={() => {
-              setMotor("2");
-              setPrecioMotor(10000);
-            }}
-          >
-            <p>motor: electrico 1000W</p>
-          </figure>
-        </div>
-      ) : (
-        <div className="divMotores">
-          <figure
-            className="motorSelector"
-            onClick={() => {
-              setMotor("1");
-              setPrecio(precio + 5000);
-            }}
-          >
-            <p>motor: gasolina 230cv</p>
-          </figure>
-          <figure
-            className="motorSelector"
-            onClick={() => {
-              setMotor("2");
-              setPrecio(precio + 3000);
-            }}
-          >
-            <p>motor: diesel 210cv</p>
-          </figure>
-        </div>
-      )} */}
+            <p>{element?.name}</p>
+          </div>
+        ))}
+      </div>
       <button onClick={() => enviarDatos()}>Guardar Coche Personalizado</button>
     </div>
   );

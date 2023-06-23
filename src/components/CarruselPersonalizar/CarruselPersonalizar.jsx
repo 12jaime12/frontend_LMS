@@ -40,6 +40,7 @@ const CarruselPersonalizar = ({ data, setCoche }) => {
         <h3>
           {data[position]?.marca} {data[position]?.modelo}
         </h3>
+        <h3>Desde {data[position]?.precio} €</h3>
       </figure>
       <img
         className="flecha"

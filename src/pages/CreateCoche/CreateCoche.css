@@ -1,6 +1,9 @@
 
 .CreateCar {
+    padding-top: 10vh;
     min-height: 80vh;
+    width: 100%;
+    
 }
 .archivo{
     width: 300px;
