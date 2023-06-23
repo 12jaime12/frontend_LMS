@@ -8,6 +8,7 @@ import {
 import { Switch } from "../Switch/Switch";
 import CarruselFotos from "../CarruselFotos/CarruselFotos";
 import { useAuth } from "../../contexts/authContext";
+import { getByIdCocheBase } from "../../service/API_proyect/cocheBase.service";
 
 const CochePersonalizar = () => {
   const { id } = useParams();
@@ -25,75 +26,79 @@ const CochePersonalizar = () => {
   const [precioColor, setPrecioColor] = useState(0);
   const { user } = useAuth();
 
-  const enviarDatos = async () => {
-    const formData = {
-      marca: cocheBase?.data?.marca,
-      modelo: cocheBase?.data?.modelo,
-      color: color,
-      precio: precio,
-      llantas: llantas,
-      motor: motor,
-      year: cocheBase?.data?.year,
-      combustible: cocheBase?.data?.combustible,
-      cliente: user.id,
-      image: array,
-      rol: "personalizado",
-    };
-    console.log(formData);
-    await createCatalogo(formData);
-    console.log("enviado");
-  };
+  // const enviarDatos = async () => {
+  //   const formData = {
+  //     marca: cocheBase?.data?.marca,
+  //     modelo: cocheBase?.data?.modelo,
+  //     color: color,
+  //     precio: precio,
+  //     llantas: llantas,
+  //     motor: motor,
+  //     year: cocheBase?.data?.year,
+  //     combustible: cocheBase?.data?.combustible,
+  //     cliente: user.id,
+  //     image: array,
+  //     rol: "personalizado",
+  //   };
+  //   console.log(formData);
+  //   //await createCatalogo(formData);
+  //   console.log("enviado");
+  // };
   useEffect(() => {
     (async () => {
-      setCocheBase(await getById(id));
+      setCocheBase(await getByIdCocheBase(id));
     })();
   }, []);
 
   useEffect(() => {
     console.log(cocheBase?.data);
-    setColor(cocheBase?.data?.color);
-    setModelo(cocheBase?.data?.modelo);
-    setMarca(cocheBase?.data?.marca);
-    setLlantas(cocheBase?.data?.llantas);
-    setPrecio(cocheBase?.data?.precio);
-    const arraAux = `${cocheBase?.data?.marca}_${cocheBase?.data?.modelo}_${cocheBase?.data?.color}_${cocheBase?.data?.llantas}`;
-    console.log(arraAux);
-    setArrayString(arraAux);
   }, [cocheBase]);
+  // useEffect(() => {
+  //   console.log(cocheBase?.data);
+  //   setColor(cocheBase?.data?.color);
+  //   setModelo(cocheBase?.data?.modelo);
+  //   setMarca(cocheBase?.data?.marca);
+  //   setLlantas(cocheBase?.data?.llantas);
+  //   setPrecio(cocheBase?.data?.precio);
+  //   const arraAux = `${cocheBase?.data?.marca}_${cocheBase?.data?.modelo}_${cocheBase?.data?.color}_${cocheBase?.data?.llantas}`;
+  //   console.log(arraAux);
+  //   setArrayString(arraAux);
+  // }, [cocheBase]);
 
-  useEffect(() => {
-    const fotos = Switch(arrayString);
-    console.log(fotos);
-    setArray(fotos);
-  }, [arrayString]);
+  // useEffect(() => {
+  //   const fotos = Switch(arrayString);
+  //   console.log(fotos);
+  //   setArray(fotos);
+  // }, [arrayString]);
 
-  useEffect(() => {
-    console.log(array);
-  }, [array]);
+  // useEffect(() => {
+  //   console.log(array);
+  // }, [array]);
 
-  useEffect(() => {
-    console.log(color);
-  }, [color]);
+  // useEffect(() => {
+  //   console.log(color);
+  // }, [color]);
 
-  useEffect(() => {
-    console.log(precio);
-  }, [precio]);
-  useEffect(() => {
-    setPrecio(
-      cocheBase?.data?.precio + precioMotor + precioColor + precioLlantas
-    );
-  }, [precioMotor, precioColor, precioLlantas]);
+  // useEffect(() => {
+  //   console.log(precio);
+  // }, [precio]);
+  // useEffect(() => {
+  //   setPrecio(
+  //     cocheBase?.data?.precio + precioMotor + precioColor + precioLlantas
+  //   );
+  // }, [precioMotor, precioColor, precioLlantas]);
 
-  useEffect(() => {
-    //console.log(marca, modelo, color, llantas);
-    const arraAux2 = `${marca}_${modelo}_${color}_${llantas}`;
-    console.log(arraAux2);
-    setArrayString(arraAux2);
-  }, [modelo, marca, color, llantas]);
+  // useEffect(() => {
+  //   //console.log(marca, modelo, color, llantas);
+  //   const arraAux2 = `${marca}_${modelo}_${color}_${llantas}`;
+  //   console.log(arraAux2);
+  //   setArrayString(arraAux2);
+  // }, [modelo, marca, color, llantas]);
   return (
     <div className="personalizarCoche">
       <h2>Coches </h2>
       {array !== undefined && <CarruselFotos data={array} />}
+      {/* 
       <h3>Precio: {precio} €</h3>
       <div>
         <img
@@ -193,7 +198,7 @@ const CochePersonalizar = () => {
             <p>motor: diesel 210cv</p>
           </figure>
         </div>
-      )}
+      )} */}
       <button onClick={() => enviarDatos()}>Guardar Coche Personalizado</button>
     </div>
   );
