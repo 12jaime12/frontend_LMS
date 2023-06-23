@@ -18,10 +18,11 @@
     height: 50vh;
 }*/
 
-Login{
+/* .Login{
     height: 70vh;
     width: 100%;
-}
+    margin-top: 13vh;
+} */
 
 .email-space, .password-space{
     display: flex;

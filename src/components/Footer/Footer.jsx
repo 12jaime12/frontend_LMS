@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer>
       
-    <LayoutInfo content="space-between" color="#242424">
+    <LayoutInfo content="space-between" color="#242424" height="30vh">
      <LayoutFlex direction="column" gap="0.5rem">
           <H3C text="Enlaces de interés" color="white" width="largo"/>
           <NavLink className="linkheader" to="/catalogo">Catálogo</NavLink>

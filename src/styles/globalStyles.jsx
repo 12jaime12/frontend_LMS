@@ -12,7 +12,7 @@ const GlobalStyles = () => {
             margin: 0,
           },
           "html,body": {
-            height: "200vh",
+            height: "100vh",
             padding: 0,
             margin: 0,
             backgroundColor: theme.palette.background.main,
