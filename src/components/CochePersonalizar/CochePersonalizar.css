@@ -4,21 +4,40 @@
     align-items: center;
     flex-direction: column;
 }
-.colorSelector{
+.divLlantas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    
+}
+.divColores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+}
+.divColors{
     height: 60px;
     width: 60px;
     margin: 1.5rem;
     cursor: pointer;
     border-radius: 50px;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
 }
-.llantasSelector{
+.imgLlantas{
     height: 80px;
     width: 80px;
     margin: 1.5rem;
     cursor: pointer;
     border-radius: 50px;
+    
 }
-.llantasSelector:hover, .colorSelector:hover{
+.imgLlantas:hover, .divColors:hover{
     border: solid 2px black;
 }
 .motorSelector{
