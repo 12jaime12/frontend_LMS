@@ -24,8 +24,7 @@
 } 
 
 .input-login{
-    height: 5vh;
-    width: 30vw;
+    height: 30px;
 }
 
 .input-login:focus{

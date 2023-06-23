@@ -32,7 +32,7 @@ export const AuthContextProvider = ({ children }) => {
     switch (state) {
       case "ALLUSER":
         setAllUser(dataJson);
-        //localStorage.removeItem("data");
+        localStorage.removeItem("data");
         break;
 
       default:
@@ -42,6 +42,7 @@ export const AuthContextProvider = ({ children }) => {
   const userlogin = (data) => {
     localStorage.setItem("user", data);
     const parseData = JSON.parse(data);
+    console.log("data user login",parseData)
     setUser(() => parseData);
   };
 

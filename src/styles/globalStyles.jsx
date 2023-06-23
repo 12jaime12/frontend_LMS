@@ -8,6 +8,8 @@ const GlobalStyles = () => {
           "*": {
             fontFamily: "'Prompt', sans-serif;",
             boxSizing: "border-box",
+            padding: 0,
+            margin: 0,
           },
           "html,body": {
             height: "200vh",

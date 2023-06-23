@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
 import React from "react";
-import { PC } from "../ui/P.element";
-import {LayoutFlex, LayoutForm, LayoutInline, LayoutInfo} from "../../components/Layout"
+import {LayoutFlex, LayoutInline, LayoutInfo} from "../../components/Layout"
 import { H3C } from '../ui/H3.element'
 
 const Footer = () => {
@@ -15,12 +14,11 @@ const Footer = () => {
           <NavLink className="linkheader" to="/compraryvender">Compra y venta</NavLink>
           <NavLink className="linkheader" to="/taller">Taller</NavLink>
       </LayoutFlex>
-      <div className="fotoLogo">
-        <img
+        <img 
+        className="fotoLogo"
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687248341/logoprincipal_rsq0kx_cpp7tp.jpg"
           alt="logoLMS"
         />
-      </div>
       <LayoutInline gap="0" padding="1rem">
         <img
           className="iconoRedSocial"

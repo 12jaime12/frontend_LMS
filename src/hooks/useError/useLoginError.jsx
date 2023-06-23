@@ -13,7 +13,8 @@ const useLoginError = (res, setLoginOk, userlogin) => {
         check:res.data.user.check,
         token:res.data.token,
         rol:res.data.user.rol,
-        id:res.data.user._id
+        id:res.data.user._id,
+        coches: res.data.user.coche_cliente
     }
     const dataString = JSON.stringify(dataCustom)
     userlogin(dataString)

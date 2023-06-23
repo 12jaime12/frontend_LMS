@@ -95,7 +95,7 @@ const CheckCode = () => {
     <LayoutInline gap="0.5rem" padding="1rem">
         <H1C text="Verificación de código" width="extralargo"/>
         <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
-        <LayoutForm direction="column" gap="1rem"  width="500px" heigth="300px" padding = "1rem">
+        <LayoutForm direction="column" color="#f2f2f2" width="500px" heigth="300px" padding = "1rem" gap="1rem">
         <PC text="Escribe el código que has recibido en tu correo electrónico." width="extralargo"/>
           <form onSubmit={handleSubmit(formSubmit)}>
             <div className="codigoregistro-space">
@@ -133,6 +133,7 @@ const CheckCode = () => {
               color="white"
             />
         </LayoutForm>
+        
         </LayoutFlex>
     </LayoutInline>
     </>

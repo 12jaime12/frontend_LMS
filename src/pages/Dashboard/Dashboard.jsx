@@ -17,6 +17,11 @@ const Dashboard = () => {
   return (
     <>
       <div>
+        <img 
+        src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687252466/hpn-l-hondatyper-2560x1440-d70b_wvkrs1.jpg"
+        alt="imagenprincipal"
+        className="ImgPrincipalDash"
+        />
         <ul  className="nav">
           {/*--------------- CONTAINER LOGO------------------------------- */}
           <li>

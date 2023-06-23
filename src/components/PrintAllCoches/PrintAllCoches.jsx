@@ -32,7 +32,9 @@ const PrintAllCoches = ({data}) => {
   
     console.log(data)
   return (
-        <div className="divAllCoches">{data?.map((elem)=>(
+        <div className="divAllCoches">
+          
+          {data?.map((elem)=>(
             <div key={elem._id}>
             <figure className="figureCoche" onClick={()=>navigate(`/compraryvender/coche/${elem._id}`)}>
               <div className="divFigureCoche">
@@ -55,7 +57,8 @@ const PrintAllCoches = ({data}) => {
             </div>
         ))
         
-        }</div>
+        }
+        </div>
         
     
   )
