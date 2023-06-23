@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router";
 import "./CatalogoMarca.css";
 import { getMarcaBase } from "../../service/API_proyect/catalogo.service";
 import CarruselPersonalizar from "../CarruselPersonalizar/CarruselPersonalizar";
+import { getMarcaCocheBase } from "../../service/API_proyect/cocheBase.service";
 const CatalogoMarca = () => {
   const { marca } = useParams();
   const navigate = useNavigate();
@@ -10,12 +11,14 @@ const CatalogoMarca = () => {
   const [cocheCurrent, setCocheCurrent] = useState();
   useEffect(() => {
     (async () => {
-      setCoches(await getMarcaBase(marca));
+      setCoches(await getMarcaCocheBase(marca));
     })();
   }, []);
+
   useEffect(() => {
     setCocheCurrent(coches?.data[0]?._id);
   }, [coches]);
+
   useEffect(() => {
     console.log(cocheCurrent);
   });

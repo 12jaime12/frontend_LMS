@@ -1,70 +1,41 @@
-/* header{
-    min-height: 10vh;
+/* .Header{
+    min-height: 13vh;
     width: 100%;
-    background-image: url("https://res.cloudinary.com/dx3e6knoz/image/upload/v1687252466/hpn-l-hondatyper-2560x1440-d70b_wvkrs1.jpg");
-    background-position: center;
-    background-size: cover;
-    border-bottom: solid 2px black;
+    position: fixed;
+    top: 0;
+   background-color: rgba(0, 0, 0, 0.289);
+} */
+/* Header{
+    height: 13vh;
+    width: 100%;
 } */
 .logo{
     height: 85px;
-    position: fixed;
     z-index:401;
 }
-/* .navHeader{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    gap:4rem;
-    width: 100%;
-    font-size: 33px;
-    margin-bottom: 1rem;
-    background-color: rgba(0, 0, 0, 0.33);
-}  */
-
-/* .divHeader{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 80vh;
-    width: 100%;
-    position: relative;
-} */
-.imagenHeader{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-
-}
-/* .relative{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-} */
-.imgHeaderHome{
-    height: 60px;
+/* .imgHeaderHome{
+    height: 40px;
     background-color: #39E3EB;
     color:whitesmoke;
     filter:invert();
-    margin: 10px 10px 0 0;
-    border-radius: 50%;
-    position:fixed;
+    margin: 20px 10px 0 0;
+    border-radius: 100%;
     right:10px;
     z-index: 401;
+    position: fixed;
 }
 .imgHeaderLogout{
     height: 40px;
     background-color: #39E3EB;
     color:whitesmoke;
     filter:invert();
-    margin: 10px 10px 0 0;
-    border-radius: 50%;
-    position:fixed;
-    right:80px;
+    margin: 20px 10px 0 0;
+    border-radius: 100%;
+    right:70px;
     z-index: 401;
-}
+    position: fixed;
+    
+} */
 
 .linkheader {
     text-decoration: none;
@@ -92,3 +63,6 @@
 }
    
 
+.material-symbols-outlined{
+    color: #C61C14;
+}

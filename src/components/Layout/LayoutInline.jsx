@@ -9,13 +9,14 @@ justify-content: space-around;
 align-items: center;
 background: ${({ color }) => color};
 padding: ${({ padding }) => padding};
+heigth: ${({heigth})=> heigth};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
-margin: ${({ margin }) => margin}`
+margin-top: ${({ margin }) => margin}`
 
-export const LayoutInline = ({children, direction, color, padding, gap, margin}) => {
+export const LayoutInline = ({children, direction, color, padding, heigth, gap, margin}) => {
   return (
-    <FlexInline direction={ direction}  gap={ gap} color= { color} padding = { padding} margin={margin}>
+    <FlexInline direction={ direction}  gap={ gap} color= { color} heigth={heigth} padding = { padding} margin={margin}>
         {children}
     </FlexInline>
   )

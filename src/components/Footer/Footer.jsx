@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
 import React from "react";
-import {LayoutFlex, LayoutInline, LayoutInfo} from "../../components/Layout"
+import {LayoutFlex, LayoutInline, LayoutInfo, LayoutForm} from "../../components/Layout"
 import { H3C } from '../ui/H3.element'
 
 const Footer = () => {
   return (
     <footer>
+      
     <LayoutInfo content="space-between" color="#242424">
-     <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
+     <LayoutFlex direction="column" gap="0.5rem">
           <H3C text="Enlaces de interés" color="white" width="largo"/>
           <NavLink className="linkheader" to="/catalogo">Catálogo</NavLink>
           <NavLink className="linkheader" to="/compraryvender">Compra y venta</NavLink>
@@ -37,6 +38,7 @@ const Footer = () => {
         />
       </LayoutInline>
       </LayoutInfo>
+  
     </footer>
   );
 };
