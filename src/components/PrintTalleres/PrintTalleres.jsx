@@ -2,14 +2,21 @@ import React, { useEffect, useState } from 'react'
 import "./PrintTalleres.css"
 import { useAuth } from '../../contexts/authContext'
 import PrintAllCoches from '../PrintAllCoches/PrintAllCoches'
+import { createServiceTaller } from '../../service/API_proyect/coche.service'
 
 
-const PrintTalleres = ({data}) => {
+const PrintTalleres = ({data, coche}) => {
     const {user, allUser} = useAuth()
-    console.log("user",user)
-    console.log("print",data)
-    
+    let idCoche=data?.data[0]._id
+    console.log(idCoche)
 
+    const crearServicio = async (tallerId) => {
+        (coche==undefined) ? idCoche : idCoche=coche
+        idTaller=tallerId
+
+        await createServiceTaller(idCoche, idTaller)
+
+    }
 
   return (
     <>
@@ -20,7 +27,7 @@ const PrintTalleres = ({data}) => {
     </div>
     <div className="divAllTalleres">
         {
-            data?.map((elem)=>{
+            data?.data.map((elem)=>{
                 return (
                 <section key={elem._id} className="sectionTaller">
                     <div>

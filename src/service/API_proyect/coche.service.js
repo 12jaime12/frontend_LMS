@@ -14,6 +14,14 @@ export const createCocheServicio = async (dataForm) => {
       return error;
     });
 };
+//--------------------CREATE SERVICE------------------
+export const createServiceTaller = async (idTaller, idCoche) => {
+  return API.post("/coche/addTaller")
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
 //--------------------DELETE CAR----------------------
 export const deleteCocheServicio = async (id) => {
   return API.delete(`/coche/deleteCoche/${id}`, {
