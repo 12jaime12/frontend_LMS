@@ -6,7 +6,7 @@ import { Navigate } from "react-router";
 export const Protected = ({children}) => {
   const { user } = useAuth();
 
-  if ((user == null) | (user.check == false)) {
+  if ((user == null) | (user?.check == false)) {
     localStorage.removeItem("user");
     return <Navigate to="/login" />;
   }else{

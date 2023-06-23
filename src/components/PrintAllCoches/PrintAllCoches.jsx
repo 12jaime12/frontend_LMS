@@ -30,10 +30,7 @@ const PrintAllCoches = ({data}) => {
 
   }
 
-  const addUserComentario = async () => {
 
-
-  }
 useEffect(()=>{
   console.log(userLike)
 },[userLike])
@@ -59,10 +56,10 @@ useEffect(()=>{
               </div>
               </div>
             </figure>
-            <button onClick={()=>addUserComentario(elem._id, user.id)}>Comentar</button>
-            <button onClick={()=>addUserLike(elem._id, user.id)}>Like</button>
-            <button onClick={()=>deleteCocheUser(elem._id, setRes)}>Borrar</button>
-            {/* <Button
+            <button onClick={()=>(user==null? navigate("/login") : navigate(`/compraryvender/coche/${elem._id}`) )}>Comentar</button>
+            <button onClick={()=>(user==null? navigate("/login") : addUserLike(elem._id, user.id) )}>Like</button>
+            {(user?.coches.includes(elem._id)) && <button onClick={()=>deleteCocheUser(elem._id, setRes)}>Borrar</button>}
+            {/* <Button)
             type="button"
               text="Borrar"
               action={deleteCocheUser(elem._id, setRes)}

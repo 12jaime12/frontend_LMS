@@ -6,7 +6,17 @@ import { PC } from '../ui/P.element'
 import { LayoutFlex} from "../../components/Layout";
 
 const PrintInfoCoche = ({data}) => {
-    
+    const activarPopup = ()=>{
+      const divCambiar=document.querySelector(".divPopUp")
+      console.log(divCambiar)
+    }
+
+  const addUserComentario = async () => {
+
+
+  }
+
+
     const info = data?.data
     console.log(info)
     console.log(info?.modelo)
@@ -23,9 +33,12 @@ const PrintInfoCoche = ({data}) => {
     </LayoutFlex>
         
        
-        <Button text="Comentarios" variant="contained" color="white"/>
+        <Button text="Comentarios" variant="contained" color="white" onClick={()=>activarPopup()}/>
         </LayoutFlex>
-   
+    <div className="divPopUp">
+      <textarea></textarea>
+      <button>SEND</button>
+    </div>
     </>
     
   )
