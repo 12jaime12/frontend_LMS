@@ -15,8 +15,8 @@ export const createCocheServicio = async (dataForm) => {
     });
 };
 //--------------------CREATE SERVICE------------------
-export const createServiceTaller = async (idTaller, idCoche) => {
-  return API.post("/coche/addTaller")
+export const createServiceTaller = async (dataId) => {
+  return API.post("/coche/addTaller", dataId)
     .then((res) => res)
     .catch((error) => {
       return error;
