@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { H1C, H2C, PC } from "../ui";
-import { LayoutHeader } from "../Layout";
+import { LayoutHeader, LayoutInfo } from "../Layout";
 import { useAuth } from "../../contexts/authContext";
 
 const Header = () => {
@@ -13,14 +13,14 @@ const Header = () => {
     <header>
       
       <div className="divHeader">
-      <div className="imagenHeader">
+      {/* <div className="imagenHeader"> */}
         <img
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1686737065/logoredondo-removebg-preview_uidph4.png"
           alt="logo"
           className="logo"
           onClick={()=>navigate("/dashboard")}
         />
-        <img 
+        {/* <img 
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687456756/logout_pjonak.svg" 
           alt="home"
           className="imgHeaderLogout" 
@@ -31,9 +31,13 @@ const Header = () => {
           alt="home"
           className="imgHeaderHome" 
           onClick={()=>navigate("/profile")}
-          />
-      </div>
-      <LayoutHeader width="100%" heigth="100%"  padding = "0" margin="0">
+          /> */}
+          <LayoutInfo content="flex-end" gap="1rem">
+          <span class="material-symbols-outlined" onClick={logout}>logout</span>
+          <span class="material-symbols-outlined" onClick={()=>navigate("/profile")}>person</span>
+          </LayoutInfo>
+      {/* </div> */}
+      
       {/* <div className="relative">
         <div className="navHeader"> */}
           <NavLink className="linkheader" to="/catalogo">Catálogo<div className="underline"></div></NavLink>
@@ -41,7 +45,7 @@ const Header = () => {
           <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
         {/* </div>
       </div> */}
-      </LayoutHeader>
+      
       </div>
       
     </header>

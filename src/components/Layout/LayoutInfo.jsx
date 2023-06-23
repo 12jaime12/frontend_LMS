@@ -9,6 +9,7 @@ align-items: center;
 position: ${({ position }) => position};
 background: ${({ color }) => color};
 gap: ${({ gap }) => gap};
+
 `;
 export const LayoutInfo = ({children, content, position, color, gap}) => {
   return (
