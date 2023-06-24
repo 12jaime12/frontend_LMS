@@ -61,7 +61,7 @@ const ChangePassword = () => {
     <LayoutInline gap="0.5rem" padding="1rem">
     <H1C text="Cambiar contraseña" width="largo"/>
     <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
-    <LayoutForm direction="column" gap="2rem"  width="500px" heigth="300px" padding = "3rem">
+    <LayoutForm direction="column" gap="2rem" color="#f2f2f2" width="500px" heigth="300px" padding = "3rem">
         <form className='form-register' onSubmit={handleSubmit(formSubmit)}> 
             <div className="password-space">
                 <label htmlFor="custom-input" className="custom-placeholder">
@@ -96,7 +96,7 @@ const ChangePassword = () => {
                 /></label>
             </div>
             <LayoutFlex direction="column" gap="0.5rem" color="f2f2f2"padding="1rem">
-            <Button type="submit" text="Cambiar contraseña" variant="contained" color="white"/>
+            <Button type="submit" text="Cambiar" variant="contained" color="white"/>
             </LayoutFlex>
             
         </form>

@@ -125,6 +125,7 @@ const CheckCode = () => {
               </small>
             </p> */}
           </form>
+          {/* <button className="resend" onClick={()=>handleResend()}>Reenviar código</button> */}
           <Button
             type="button"
               text="Reenviar código"
