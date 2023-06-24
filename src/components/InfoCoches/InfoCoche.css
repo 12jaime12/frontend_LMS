@@ -1,0 +1,21 @@
+.fondo{
+    height: 40vh;
+}
+.infoCoche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.infoCoche h2{
+    margin: 2rem;
+    font-size: 50px;
+}
+.infoCoche p{
+    width: 70%;
+    text-align: center;
+    margin: 2rem;
+}
+.imagenReal{
+    height: 400px;
+}

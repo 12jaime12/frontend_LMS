@@ -97,7 +97,8 @@ export const deleteUser = async () => {
 };
 //---------------------add like----------------------
 export const addLike = async (dataId) => {
-  return API.patch("/user/addLike", dataId, {
+  console.log(dataId);
+  return API.patch("/coche/addLike", dataId, {
     headers: {
       Authorization: `Bearer ${updateToken()}`,
     },

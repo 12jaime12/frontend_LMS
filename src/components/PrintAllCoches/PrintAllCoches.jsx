@@ -5,43 +5,43 @@ import { useNavigate } from "react-router";
 import deleteCocheUser from "../../util/deleteCocheUser";
 import Button from "../ui/Button";
 import { addLike } from "../../service/API_proyect/user.service";
+import ToggleButton from "../Like/Like";
+import { getAllCochesOcasion } from "../../service/API_proyect/coche.service";
 
-const PrintAllCoches = ({ data }) => {
-  console.log("compraventa data", data);
+const PrintAllCoches = () => {
+  const [coches, setCoches] = useState(null);
   const navigate = useNavigate();
   const { user } = useAuth();
   const [res, setRes] = useState(false);
   const [userLike, setUserLike] = useState();
 
-  console.log("uuuuuuuuu", user);
-  const handleInfo = (data) => {
-    const dataCustom = data.marca;
-    console.log(dataCustom);
-    console.log(user);
-  };
-  const addUserLike = async (idCoche, idUser) => {
-    const dataCustom = {
-      idCoche,
-      idUser,
-    };
-    console.log(dataCustom);
-    setUserLike(await addLike(dataCustom));
+  const [initRes, setInitRes] = useState(null);
+  const [send, setSend] = useState(false);
+
+  const getCochesOcasion = async () => {
+    console.log("user coches ocasion", user);
+    setSend(true);
+    setInitRes(await getAllCochesOcasion());
+    setSend(false);
   };
 
   useEffect(() => {
-    console.log(userLike);
-  }, [userLike]);
-  useEffect(() => {
-    console.log("cocheborradouseeffect");
-  }, [res]);
+    getCochesOcasion();
+  }, []);
 
   useEffect(() => {
-    console.log("like enviado");
-  }, [addLike]);
-  console.log(data);
+    if (initRes?.status == 200) setCoches(initRes.data);
+  }, [initRes]);
+
+  useEffect(() => {
+    console.log(coches);
+  }, [coches]);
+
+  useEffect(() => {}, [res]);
+
   return (
     <div className="divAllCoches">
-      {data?.map((elem) => (
+      {coches?.map((elem) => (
         <div key={elem._id}>
           <figure
             className="figureCoche"
@@ -68,25 +68,21 @@ const PrintAllCoches = ({ data }) => {
           >
             Comentar
           </button>
-          <button
-            onClick={() =>
-              user == null ? navigate("/login") : addUserLike(elem._id, user.id)
-            }
-          >
-            Like
-          </button>
+          <div>
+            <ToggleButton car={elem} setAllElementByPather={setCoches} />
+          </div>
           {user?.coches?.includes(elem._id) && (
             <button onClick={() => deleteCocheUser(elem._id, setRes)}>
               Borrar
             </button>
           )}
           {/* <Button)
-            type="button"
-              text="Borrar"
-              action={deleteCocheUser(elem._id, setRes)}
-              variant="contained"
-              color="white"
-            /> */}
+      type="button"
+        text="Borrar"
+        action={deleteCocheUser(elem._id, setRes)}
+        variant="contained"
+        color="white"
+      /> */}
         </div>
       ))}
     </div>

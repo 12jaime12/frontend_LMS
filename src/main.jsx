@@ -29,6 +29,7 @@ import CatalogoMarca from "./components/CatalogoMarca/CatalogoMarca.jsx";
 import CochePersonalizar from "./components/CochePersonalizar/CochePersonalizar.jsx";
 import CreateCoche from "./pages/CreateCoche/CreateCoche.jsx";
 import UpdateProfile from "./pages/UpdateProfile/UpdateProfile.jsx";
+import InfoCoches from "./components/InfoCoches/infoCoches.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter basename="/">
@@ -44,29 +45,43 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 </ProtectedCheckChildren>
               }
             />
-<Route
-                path="createCoche"
-                element={<CreateCoche />}
-              />
-              
+            <Route path="createCoche" element={<CreateCoche />} />
+
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/changePassword" element={<ChangePassword />} />
             <Route path="/forgotPassword" element={<ForgotPassword />} />
-            <Route path="/profile" element={<Protected><Profile /></Protected>} />
-            <Route path="/updateProfile" element={<UpdateProfile/>}/>
+            <Route
+              path="/profile"
+              element={
+                <Protected>
+                  <Profile />
+                </Protected>
+              }
+            />
+            <Route path="/updateProfile" element={<UpdateProfile />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/taller" element={<Protected><Taller /></Protected>} />
+            <Route
+              path="/taller"
+              element={
+                <Protected>
+                  <Taller />
+                </Protected>
+              }
+            />
             <Route path="/compraryvender" element={<CompraVenta />}>
               <Route index element={<ComprayventaHome />} />
               <Route path="/compraryvender/coche/:id" element={<CocheById />} />
-              
             </Route>
             <Route path="/catalogo" element={<Catalogo />}>
               <Route index element={<CatalogoHome />} />
               <Route path="/catalogo/:marca" element={<CatalogoMarca />} />
               <Route
-                path="/catalogo/:marca/:id"
+                path="/catalogo/:marca/info/:id"
+                element={<InfoCoches />}
+              />
+              <Route
+                path="/catalogo/:marca/personalizar/:id"
                 element={<CochePersonalizar />}
               />
             </Route>

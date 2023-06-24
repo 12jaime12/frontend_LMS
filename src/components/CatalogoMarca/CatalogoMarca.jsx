@@ -18,7 +18,7 @@ const CatalogoMarca = () => {
 
   useEffect(() => {
     if (cocheCurrent !== undefined) {
-      navigate(`/catalogo/${marca}/${cocheCurrent}`);
+      navigate(`/catalogo/${marca}/info/${cocheCurrent}`);
     }
   }, [cocheCurrent]);
 
