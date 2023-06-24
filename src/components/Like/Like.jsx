@@ -5,7 +5,6 @@ import { addLike } from "../../service/API_proyect/user.service";
 import { useAuth } from "../../contexts/authContext";
 
 const ToggleButton = ({ car, setAllElementByPather }) => {
-  console.log(car);
   const [res, setRes] = useState(null);
   const [loading, setLoading] = useState(false);
   const { user } = useAuth();
