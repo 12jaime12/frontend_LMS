@@ -12,6 +12,7 @@ import CarruselPorTres from "../../components/CarruselPorTres/CarruselPorTres";
 import UpdateProfile from "../UpdateProfile/UpdateProfile";
 import Button from "../../components/ui/Button";
 import { Link } from "react-router-dom";
+import ChangeImageProfile from "../../components/ChangeImageProfile/ChangeImageProfile";
 
 
 
@@ -40,6 +41,7 @@ const Profile = () => {
         <>
         <div className="divImgmasInfo">
           <div className="DivUpdatePerfil">
+            
             <img src={userInfo.imagen} alt={userInfo.name} />
             <Link to="/updateProfile" className="anchorCustom">
                 <Button type="text" text="Modificar PERFIL" variant="contained" color="white" onClick={<UpdateProfile data={userInfo}/>}/>

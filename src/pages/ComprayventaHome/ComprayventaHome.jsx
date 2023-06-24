@@ -24,8 +24,15 @@ const ComprayventaHome = () => {
     getCochesOcasion()
   },[])
 
+
+
   return (
-    <div><PrintAllCoches data={res?.data}/></div>
+    <div>
+      <label><input placeholder="marca"/></label>
+      
+      <PrintAllCoches data={res?.data}/>
+      
+    </div>
   )
 }
 
