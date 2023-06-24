@@ -10,6 +10,7 @@ const useTallerService = async (res,coche,taller) => {
     Swal.fire({
         icon: "success",
         title: res.request.responseText,
+        text: "Por motivos de seguridad serás redirigido a la pagina principal 😁",
         showConfirmButton: true,
         
     })
@@ -19,6 +20,7 @@ const useTallerService = async (res,coche,taller) => {
     Swal.fire({
         icon: "error",
         title: res.request.response,
+        text: "Revisa tus datos para comprobar que ese coche ya tiene cita en el taller seleccionado",
         showConfirmButton: true,
         
     })

@@ -95,6 +95,19 @@ export const deleteUser = async () => {
       return error;
     });
 };
+//---------------------add like----------------------
+export const addLike = async (dataId) => {
+  return API.patch("/user/addLike", dataId, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
+
 //---------------------getAllUser--------------------
 export const getAllUser = async () => {
   return API.get("/user/")

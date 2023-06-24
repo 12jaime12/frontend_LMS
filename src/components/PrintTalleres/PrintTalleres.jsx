@@ -4,6 +4,7 @@ import { useAuth } from '../../contexts/authContext'
 import PrintAllCoches from '../PrintAllCoches/PrintAllCoches'
 import { createServiceTaller } from '../../service/API_proyect/coche.service'
 import useTallerService from '../../hooks/useTallerService'
+import CarruselPersonalizar from '../CarruselPersonalizar/CarruselPersonalizar'
 
 
 const PrintTalleres = ({data, coche}) => {
@@ -32,14 +33,10 @@ const PrintTalleres = ({data, coche}) => {
     useTallerService(res)
    },[res]) 
 
-  return (
+   return (
     <>
     <div className="divCochesUser">
-        {
-            
-        }
-    </div>
-    <div className="divAllTalleres">
+
         {
             data?.data.map((elem)=>{
                 return (
@@ -60,25 +57,23 @@ const PrintTalleres = ({data, coche}) => {
                     <div>
                         <div className="divLocation">
                             <div id="map"></div>
-                            
+
                             <h3>{elem.ciudad}</h3>
                             <p>{elem.direccion}</p>
+                            <button className="botonTaller">AÑADIR AL TALLER</button>
                             <button className="botonTaller" onClick={()=>crearServicio(elem._id)}>AÑADIR AL TALLER</button>
                         </div>
                         <div className="divBotonTaller">
-                           
+
                         </div>
                     </div>
                 </section>
                 
                 )
-
             })
         }
-
     </div>
     </>
-
     
   )
 }

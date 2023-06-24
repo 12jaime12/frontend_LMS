@@ -9,6 +9,10 @@ import PrintAllCoches from "../../components/PrintAllCoches/PrintAllCoches";
 import deleteCocheUser from "../../util/deleteCocheUser";
 import CarruselPersonalizar from "../../components/CarruselPersonalizar/CarruselPersonalizar";
 import CarruselPorTres from "../../components/CarruselPorTres/CarruselPorTres";
+import UpdateProfile from "../UpdateProfile/UpdateProfile";
+import Button from "../../components/ui/Button";
+import { Link } from "react-router-dom";
+import ChangeImageProfile from "../../components/ChangeImageProfile/ChangeImageProfile";
 
 
 
@@ -36,26 +40,33 @@ const Profile = () => {
       {userInfo!=null &&(
         <>
         <div className="divImgmasInfo">
-        <img src={userInfo.imagen} alt={userInfo.name} />
-        <div className="divInfoUser">
-          <h2>{userInfo.name.toUpperCase()} {userInfo.apellido.toUpperCase()}</h2>
-          <h4>email: {userInfo.email}</h4>
-          <h4>rol: {userInfo.rol}</h4>
-          <div>
-          
-            <details className="infoPersonal">
-            <summary>
-              INFORMACION PERSONAL:
-            </summary>
-              <p>PAIS: {userInfo.pais}</p>
-              <p>PROVINCIA: {userInfo.provincia}</p>
-              <p>CIUDAD: {userInfo.ciudad}</p>
-              <p>DIRECCION: {userInfo.direccion}</p>
-              <p>DNI: {userInfo.dni}</p>
-              <p></p>
-            </details>
+          <div className="DivUpdatePerfil">
+            
+            <img src={userInfo.imagen} alt={userInfo.name} />
+            <Link to="/updateProfile" className="anchorCustom">
+                <Button type="text" text="Modificar PERFIL" variant="contained" color="white" onClick={<UpdateProfile data={userInfo}/>}/>
+              </Link>
+           
           </div>
-        </div>
+          <div className="divInfoUser">
+            <h2>{userInfo.name.toUpperCase()} {userInfo.apellido.toUpperCase()}</h2>
+            <h4>email: {userInfo.email}</h4>
+            <h4>rol: {userInfo.rol}</h4>
+            <div>
+            
+              <details className="infoPersonal">
+              <summary>
+                INFORMACION PERSONAL:
+              </summary>
+                <p>PAIS: {userInfo.pais}</p>
+                <p>PROVINCIA: {userInfo.provincia}</p>
+                <p>CIUDAD: {userInfo.ciudad}</p>
+                <p>DIRECCION: {userInfo.direccion}</p>
+                <p>DNI: {userInfo.dni}</p>
+                <p></p>
+              </details>
+            </div>
+          </div>
         </div>
         <div className="divUserCoches">
           <h2>COCHES PROPIOS</h2>
@@ -66,7 +77,7 @@ const Profile = () => {
         </div>
         <div className="divUserLikes">
           <h2>LIKES</h2>
-
+          <CarruselPorTres data={userInfo.like_coche}/>
 
         </div>
         <div className="divUserComments">

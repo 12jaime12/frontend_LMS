@@ -6,30 +6,30 @@ const useCodeError = (res, setCodeOk, setDeleteUser) => {
       if(res?.data?.testCheck === true){
         Swal.fire({
             icon: "success",
-          title: "Ok correct code ✅",
+          title: "✅ Codigo correcto ✅ Cuenta verificada",
+          text: "Disfruta de tu experiencia en Legendary MotorSport",
           showConfirmButton: false,
           timer: 3000,
         })
         setCodeOk(()=>true)
       }
+
       if (res?.data?.delete?.includes("usuario borrado")) {
         setDeleteUser(() => true);
-    
         Swal.fire({
           icon: "error",
-          title: "No correct Code ❎.",
-          text: "Your user is delete. Register again, please.",
-          showConfirmButton: false,
-          timer: 2500,
+          title: "❌ Codigo incorrecto ❌ Registrate de nuevo ",
+          text: "Por motivos de seguridad el usuario ha sido borrado.",
+          showConfirmButton: true,
         });
       }
+
       if (res?.response?.status == 404){
             Swal.fire({
             icon: "error",
-            title: "Interval server error ❎.",
-            text: "No delete user. Try again, please.",
-            showConfirmButton: false,
-            timer: 1500,
+            title: "❌ Algo ha ido mal ❌",
+            text: "El usuario no ha sido borrado. Introduce el codigo de nuevo",
+            showConfirmButton: true,
             });
         }
 }

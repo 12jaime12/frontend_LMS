@@ -8,6 +8,7 @@ import useChangePasswordError from '../../hooks/useError/useChangePasswordError'
 import { H1C } from "../../components/ui";
 import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
 import Button from "../../components/ui/Button";
+import { useNavigate } from 'react-router'
 
 
 const ChangePassword = () => {
@@ -16,7 +17,7 @@ const ChangePassword = () => {
     const [send, setSend] = useState(false)
     const [res, setRes] = useState()
     const [changeOk, setChangeOk] = useState(false)
-
+    const navigate=useNavigate()
 
     const formSubmit = async (formData) => {
         console.log("user",user)
@@ -54,8 +55,9 @@ const ChangePassword = () => {
 
     useEffect(()=>{
         console.log(res)
+        useChangePasswordError(res, setChangeOk)
     },[res])
-    
+    changeOk && navigate("/profile")
   return (
     <div className="ChangePass">
     <LayoutInline gap="0.5rem" padding="1rem">

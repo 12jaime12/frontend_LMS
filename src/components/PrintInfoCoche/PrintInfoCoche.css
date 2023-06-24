@@ -28,3 +28,14 @@
     width: 600px;
     height: 400px;
 } */
+
+.divPopUp{
+    display:none;
+}
+.activarFormComment{
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 35vh;
+    background-color: red;
+}

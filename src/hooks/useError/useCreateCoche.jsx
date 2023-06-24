@@ -11,6 +11,17 @@ const useCreateCoche = (res, setResOk) => {
         })
         setResOk(()=>true)
       }
-}
+
+    if(res?.response?.data?.includes("combustible")){
+        Swal.fire({
+            icon: "error",
+            title: `❌ Combustible invalido ❌`,
+            text: "Prueba a introducir uno de los siguientes -> 'gasolina, diesel, electrico, hibrido'",
+            showConfirmButton: true,
+            
+        })
+      }
+    }
+
 
 export default useCreateCoche
