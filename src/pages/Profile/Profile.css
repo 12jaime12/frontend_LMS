@@ -10,6 +10,8 @@
 .DivUpdatePerfil{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .divUserCoches{
     display:flex;
@@ -27,7 +29,7 @@
     align-items: center;
     height: 60vh;
     padding-top: 15px;
-    gap:4rem;
+    gap:8rem;
 }
 .divImgmasInfo img{
     height: 350px;
@@ -37,17 +39,18 @@
 .divUserCoches{
     width: 100vw;
     height: 500px;
-    border: 2px solid green;
+    background-color: #f2f2f2;
 }
 .divUserLikes{
     width: 100vw;
     height: 500px;
-    border: 2px solid red;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 .divUserComments{
     width: 100vw;
     height: 500px;
-    border:2px solid blue
+    background-color: #f2f2f2;
 }
 .infoPersonal{
     font-style: italic;
