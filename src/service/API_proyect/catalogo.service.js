@@ -36,3 +36,16 @@ export const createCatalogo = async (formData) => {
       return error;
     });
 };
+//---------------add-like-----------------------
+export const addLike = async (dataId) => {
+  console.log(dataId);
+  return API.patch("/CocheBase/addLike", dataId, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};

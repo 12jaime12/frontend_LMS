@@ -8,13 +8,7 @@ import CartasMarca from "../CartasMarca/CartasMarca";
 const CatalogoMarca = () => {
   const { marca } = useParams();
   const navigate = useNavigate();
-  const [coches, setCoches] = useState({ data: [] });
   const [cocheCurrent, setCocheCurrent] = useState();
-  useEffect(() => {
-    (async () => {
-      setCoches(await getMarcaCocheBase(marca));
-    })();
-  }, []);
 
   useEffect(() => {
     if (cocheCurrent !== undefined) {
@@ -31,7 +25,7 @@ const CatalogoMarca = () => {
       <h2>Coches {marca}</h2>
       {/* <CarruselPersonalizar data={coches?.data} setCoche={setCocheCurrent} /> */}
 
-      <CartasMarca data={coches?.data} setCoche={setCocheCurrent} />
+      <CartasMarca marca={marca} setCoche={setCocheCurrent} />
     </div>
   );
 };

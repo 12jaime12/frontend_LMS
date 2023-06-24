@@ -32,24 +32,18 @@ const CarruselPorTres = ({ data, setCoche }) => {
         onClick={() => resta()}
       />
       <figure className="cartaportres" id={data[position]?._id}>
-        <img
-          src={data[position]?.image[1]}
-          alt={data[position]?.name}
-        />
+        <img src={data[position]?.image[1]} alt={data[position]?.name} />
         <h3>
           {data[position]?.marca} {data[position]?.modelo}
         </h3>
       </figure>
       <figure className="cartaportres" id={data[position]?._id}>
-        <img
-          src={data[position]?.image[1]}
-          alt={data[position]?.name}
-        />
+        <img src={data[position]?.image[1]} alt={data[position]?.name} />
         <h3>
           {data[position]?.marca} {data[position]?.modelo}
         </h3>
       </figure>
-      
+
       <img
         className="flechaportres"
         src="https://res.cloudinary.com/dtyjzv2xg/image/upload/v1686508364/right_hnqa08.png"
