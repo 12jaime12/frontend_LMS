@@ -20,7 +20,7 @@ const useLoginError = (res, setLoginOk, userlogin) => {
     userlogin(dataString)
     Swal.fire({
       icon: "success",
-      title: "🎊 ¡¡¡ Bienvenido !!! 🎊",
+      title: "🏎️💨 ¡¡¡ Bienvenido !!! 🏎️💨",
       text: "Disfruta tu experiencia en Legendary MotorSport ",
       showConfirmButton: false,
       timer: 3000,

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { H1C, H2C, H3C, PC } from "../../components/ui";
 import {
   LayoutFlex,
@@ -8,15 +8,44 @@ import {
 } from "../../components/Layout";
 import Button from "../../components/ui/Button";
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/authContext';
+import { getByIdUser, updateUser } from '../../service/API_proyect/user.service';
 
 
-const UpdateProfile = () => {
+const UpdateProfile = ({data}) => {
     console.log("UPDATE PROFILE")
     const {register, handleSubmit} = useForm()
-    
-    const formSubmit=()=>{}
+    const [res,setRes] = useState()
+    const [send, setSend] = useState(false)
+    const navigate= useNavigate()
+    const [infoUser, setInfoUser] = useState({})
+    const {user} = useAuth()
 
+    const getUser = async () => {
+      setInfoUser(await getByIdUser(user.id))
+    }
+    console.log("info",infoUser)
+
+    const formSubmit = async(formData)=>{
+      const dataCustom = {
+        name:(formData.name ? formData.name : infoUser.data.name),
+        apellido:(formData.apellido ? formData.apellido : infoUser.data.apellido),
+        pais:(formData.pais ? formData.pais : infoUser.data.pais),
+        provincia:(formData.provincia ? formData.provincia : infoUser.provincia),
+        ciudad:(formData.ciudad ? formData.ciudad : infoUser.ciudad),
+        direccion:(formData.direccion ? formData.direccion : infoUser.direccion),
+        movil:(formData.movil ? formData.movil : infoUser.direccion),
+      }
+      setSend(true)
+      setRes(await updateUser(dataCustom))
+      setSend(false)
+    }
+    
+    useEffect(()=>{
+      getUser()
+    },[])
+    useEffect(()=>{console.log("res", res)},[res])
   return (
     <div className="Profile">
         <H1C text="Introduce SÓLO los datos que quieras cambiar" width="extralargo"/>
@@ -45,7 +74,7 @@ const UpdateProfile = () => {
                   id="name"
                   name="name"
                   autoComplete="false"
-                  {...register("name", { required: true })}
+                  {...register("name", )}
                 />
 
                 <label htmlFor="custom-input" className="placeholder-register">
@@ -57,7 +86,7 @@ const UpdateProfile = () => {
                   id="apellido"
                   name="apellido"
                   autoComplete="false"
-                  {...register("apellido", { required: true })}
+                  {...register("apellido",)}
                 />
               </LayoutInline>
 
@@ -73,7 +102,7 @@ const UpdateProfile = () => {
                   id="pais"
                   name="pais"
                   autoComplete="false"
-                  {...register("pais", { required: true })}
+                  {...register("pais", )}
                 />
 
                 <label htmlFor="custom-input" className="placeholder-register">
@@ -85,7 +114,7 @@ const UpdateProfile = () => {
                   id="provincia"
                   name="provincia"
                   autoComplete="false"
-                  {...register("provincia", { required: true })}
+                  {...register("provincia", )}
                 />
               </LayoutInline>
               <LayoutInline gap="0.5rem" padding="1rem">
@@ -98,7 +127,7 @@ const UpdateProfile = () => {
                   id="ciudad"
                   name="ciudad"
                   autoComplete="false"
-                  {...register("ciudad", { required: true })}
+                  {...register("ciudad", )}
                 />
 
                 <label htmlFor="custom-input" className="placeholder-register">
@@ -110,7 +139,7 @@ const UpdateProfile = () => {
                   id="direccion"
                   name="direccion"
                   autoComplete="false"
-                  {...register("direccion", { required: true })}
+                  {...register("direccion", )}
                 />
               </LayoutInline>
 
@@ -127,7 +156,7 @@ const UpdateProfile = () => {
                   id="telefono"
                   name="telefono"
                   autoComplete="false"
-                  {...register("movil", { required: true })}
+                  {...register("movil", )}
                 />
 
               </LayoutInline>

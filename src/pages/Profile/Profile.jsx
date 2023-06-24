@@ -42,7 +42,7 @@ const Profile = () => {
           <div className="DivUpdatePerfil">
             <img src={userInfo.imagen} alt={userInfo.name} />
             <Link to="/updateProfile" className="anchorCustom">
-                <Button type="text" text="Modificar PERFIL" variant="contained" color="white"/>
+                <Button type="text" text="Modificar PERFIL" variant="contained" color="white" onClick={<UpdateProfile data={userInfo}/>}/>
               </Link>
            
           </div>
