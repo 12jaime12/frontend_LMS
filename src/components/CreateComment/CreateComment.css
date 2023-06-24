@@ -1,0 +1,13 @@
+.divCreateComentario{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputComentario{
+    width: 500px;
+    height: 150px;
+    background-color: rgb(200, 200, 200);
+}

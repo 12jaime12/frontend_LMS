@@ -6,7 +6,8 @@ import { PC } from '../ui/P.element'
 import { LayoutFlex} from "../../components/Layout";
 import { useNavigate } from 'react-router'
 import { useAuth } from '../../contexts/authContext'
-useEffect
+import CreateComment from '../CreateComment/CreateComment'
+
 const PrintInfoCoche = ({data}) => {
   const [comment, setComment] = useState(false)
   const [res,setRes] = useState()
@@ -23,7 +24,9 @@ const PrintInfoCoche = ({data}) => {
     const info = data?.data
     console.log(info)
     console.log(info?.modelo)
-
+  useEffect(()=>{
+    console.log(comment)
+  },[])
 
   return (
     <>
@@ -37,10 +40,15 @@ const PrintInfoCoche = ({data}) => {
         <PC text={`Precio: ${info?.precio} €`} width="medio"/>
     </LayoutFlex>
         
-       
-        <Button text="Comentarios" variant="contained" color="white" onClick={()=>activarPopup()}/>
+        <button onClick={()=>setComment(true)}>button 2</button>
         </LayoutFlex>
-    
+      
+        {comment != false && (
+          <div>
+           <CreateComment variable={"coche"} id={info?._id}/>
+          </div>
+        )}
+      
     </>
     
   )
