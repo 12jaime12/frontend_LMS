@@ -37,7 +37,9 @@ const PrintAllCoches = () => {
     console.log(coches);
   }, [coches]);
 
-  useEffect(() => {}, [res]);
+  useEffect(() => {
+    getCochesOcasion()
+  }, [res]);
 
   return (
     <div className="divAllCoches">

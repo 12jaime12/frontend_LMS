@@ -4,12 +4,15 @@ import Button from '../ui/Button'
 import { H3C } from '../ui/H3.element'
 import { PC } from '../ui/P.element'
 import { LayoutFlex} from "../../components/Layout";
+import { useNavigate } from 'react-router'
+import { useAuth } from '../../contexts/authContext'
 
 const PrintInfoCoche = ({data}) => {
-    const activarPopup = ()=>{
-      const divCambiar=document.querySelector(".divPopUp")
-      console.log(divCambiar)
-    }
+  const [comment, setComment] = useState(false)
+  const [res,setRes] = useState()
+  const [send, setSend] = useState(false)
+  const {user} = useAuth()
+  const navigate=useNavigate()
 
   const addUserComentario = async () => {
 
@@ -20,6 +23,8 @@ const PrintInfoCoche = ({data}) => {
     const info = data?.data
     console.log(info)
     console.log(info?.modelo)
+
+    
   return (
     <>
     <LayoutFlex direction="column" gap="2rem" padding="2rem">
@@ -35,10 +40,7 @@ const PrintInfoCoche = ({data}) => {
        
         <Button text="Comentarios" variant="contained" color="white" onClick={()=>activarPopup()}/>
         </LayoutFlex>
-    <div className="divPopUp">
-      <textarea></textarea>
-      <button>SEND</button>
-    </div>
+    
     </>
     
   )
