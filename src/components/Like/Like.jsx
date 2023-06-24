@@ -36,7 +36,7 @@ const ToggleButton = ({ car, setAllElementByPather }) => {
         )
       ) : null}
 
-      {!user && <AiTwotoneHeart size={15} className="favorite-icon-red" />}
+      {!user && <AiTwotoneHeart size={15} className="favorite-icon" />}
     </button>
   );
 };

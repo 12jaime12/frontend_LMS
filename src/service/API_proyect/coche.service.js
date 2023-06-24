@@ -53,6 +53,17 @@ export const getCocheById = async (id) => {
 //--------------------GET BY MODELO-------------------
 //--------------------GET BY LIKES--------------------
 //--------------------GET BY MARCA--------------------
+export const getByMarca = async (marca) => {
+  return API.delete(`/coche/marca/${marca}`, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
 //--------------------ADD INTERESADO------------------
 //--------------------ADD LIKE------------------------
 //--------------------ADD TALLER----------------------
