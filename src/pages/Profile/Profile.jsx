@@ -13,6 +13,7 @@ import UpdateProfile from "../UpdateProfile/UpdateProfile";
 import Button from "../../components/ui/Button";
 import { Link } from "react-router-dom";
 import ChangeImageProfile from "../../components/ChangeImageProfile/ChangeImageProfile";
+import { H2C, PC } from "../../components/ui";
 
 
 
@@ -70,7 +71,13 @@ const Profile = () => {
         </div>
         <div className="divUserCoches">
           <h2>COCHES PROPIOS</h2>
-          <button onClick={() => navigate("/createCoche")}>Añadir coche</button>
+          <Button
+              text="Añadir coche"
+              action={() => navigate("/createCoche")}
+              variant="contained"
+              color="white"
+            />
+          {/* <button onClick={() => navigate("/createCoche")}>Añadir coche</button> */}
           {/* <PrintAllCoches data={userInfo.coche_cliente}/> */}
           <CarruselPorTres data={userInfo.coche_cliente}/>
 

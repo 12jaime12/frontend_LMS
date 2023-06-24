@@ -25,7 +25,7 @@ const Header = () => {
           <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
           </LayoutInfo>
 
-          <LayoutInfo gap="1rem">
+          <LayoutInfo gap="1rem" >
           <span className="material-symbols-outlined" onClick={logout}>logout</span>
           <span className="material-symbols-outlined" onClick={()=>navigate("/profile")}>person</span>
           </LayoutInfo>

@@ -7,7 +7,6 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 font-size: 20px;
-
 `;
 export const LayoutHeader = ({children}) => {
   return (
