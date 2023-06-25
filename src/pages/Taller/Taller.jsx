@@ -48,7 +48,7 @@ const Taller = () => {
           </div>
         )
         :(<div className="divSuperiorTaller">
-          <h3>No tienes ningun coche registrado en la web. Si quieres contratar servicios de taller deberás dar de alta algun coche</h3>
+          <h3>No tienes ningún coche registrado en la web. Si quieres contratar servicios de taller deberás dar de alta algún coche</h3>
           <Button type="text" text="Crear coche" variant="contained" color="" action={() => navigate("/createCoche")}/>
         </div>)
       }

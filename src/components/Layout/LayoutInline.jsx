@@ -12,7 +12,8 @@ padding: ${({ padding }) => padding};
 heigth: ${({heigth})=> heigth};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
-margin-top: ${({ margin }) => margin}`
+margin-top: ${({ margin }) => margin}
+`
 
 export const LayoutInline = ({children, direction, color, padding, heigth, gap, margin}) => {
   return (

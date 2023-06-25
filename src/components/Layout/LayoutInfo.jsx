@@ -9,12 +9,13 @@ align-items: center;
 position: ${({ position }) => position};
 background: ${({ color }) => color};
 gap: ${({ gap }) => gap};
+padding: ${({ padding }) => padding};
 height: ${({ height }) => height};
 
 `;
-export const LayoutInfo = ({children, content, position, color, gap, height}) => {
+export const LayoutInfo = ({children, content, position, color, gap, padding, height}) => {
   return (
-    <InfoStyled content={content} position={position} color={color} gap={gap} height={height} >
+    <InfoStyled content={content} position={position} color={color} gap={gap} paddin={padding} height={height} >
         {children}
     </InfoStyled>
 

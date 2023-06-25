@@ -50,7 +50,7 @@ const PrintTalleres = ({data, coche}) => {
                             <p>ID: {elem._id}</p>
                             <p>TLFN: {elem.movil}</p>
                             <p>EMAIL: {elem.email}</p>
-                            <p>LOCALIZACION: {elem.pais} - {elem.provincia}</p>
+                            <p>LOCALIZACIÓN: {elem.pais} - {elem.provincia}</p>
                             
                         </div>
                     </div>
@@ -62,7 +62,7 @@ const PrintTalleres = ({data, coche}) => {
                             <p>{elem.direccion}</p>
                             
                             {
-                                user.coches.length>0 && <button className="botonTaller" onClick={()=>crearServicio(elem._id)}>AÑADIR AL TALLER</button>
+                                user.coches.length>0 && <button className="botonTaller" onClick={()=>crearServicio(elem._id)}>Añadir al taller</button>
                             }
                         </div>
                         <div className="divBotonTaller">

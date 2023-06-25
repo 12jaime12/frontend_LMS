@@ -25,9 +25,22 @@ const Header = () => {
           <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
           </LayoutInfo>
 
-          <LayoutInfo gap="1rem" >
-          <span className="material-symbols-outlined" onClick={logout}>logout</span>
-          <span className="material-symbols-outlined" onClick={()=>navigate("/profile")}>person</span>
+          <LayoutInfo content="center" gap="1rem" >
+          {/* <span className="material-symbols-outlined" onClick={logout}>logout</span>
+          <span className="material-symbols-outlined" onClick={()=>navigate("/profile")}>person</span> */}
+          <img 
+          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687456756/logout_pjonak.svg" 
+          alt="home"
+          className="imgHeaderLogout" 
+          onClick={logout}
+          />
+        <img 
+          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687338307/home-2_snquca.svg" 
+          alt="home"
+          className="imgHeaderHome" 
+          onClick={()=>navigate("/profile")}
+          />
+
           </LayoutInfo>
 
       </LayoutHeader>

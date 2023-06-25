@@ -38,7 +38,7 @@ const PrintInfoCoche = ({data}) => {
   return (
     <>
     <LayoutFlex direction="column" gap="2rem" padding="2rem">
-    <img src={info?.image[0]} alt={info?.modelo}/>
+    <img className="imgPrintCoche" src={info?.image[0]} alt={info?.modelo}/>
     <LayoutFlex direction="column" gap="0.5rem" padding="0">
     <PC text={`Marca: ${info?.marca}`} width="medio"/>
         <PC text={`Modelo: ${info?.modelo}`} width="extralargo"/>

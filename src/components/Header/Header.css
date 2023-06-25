@@ -2,7 +2,7 @@ Header{
     max-height: 10vh;
     width: 100%;
     position: fixed;
-    background: rgba(0, 0, 0, 0.33);
+    background: #242424b5;
     top: 0;
     z-index: 300;
 }
@@ -33,11 +33,43 @@ Header{
 }
    
 
-.material-symbols-outlined{
+/* .material-symbols-outlined{
     color: #C61C14;
 }
 
 .material-symbols-outlined:hover{
     color: #C61C14;
     cursor: pointer;
+} */
+
+.iconos img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.imgHeaderHome{
+    height: 45px;
+    background-color: #39E3EB;
+    color:whitesmoke;
+    filter:invert();
+    margin: 20px 10px 0 0;
+    border-radius: 100%;
+    right:10px;
+    z-index: 401;
+    position: fixed;
+}
+.imgHeaderLogout{
+    height: 45px;
+    background-color: #39E3EB;
+    color:whitesmoke;
+    filter:invert();
+    margin: 20px 10px 0 0;
+    border-radius: 100%;
+    right:70px;
+    z-index: 401;
+    position: fixed;
+    
 }

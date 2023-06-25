@@ -157,7 +157,7 @@ const UpdateProfile = ({data}) => {
                   />
                 </LayoutInline>
   
-                <LayoutInline gap="0.5rem" padding="0">
+                <LayoutInfo content="start" gap="1rem" padding="1rem">
                   <label htmlFor="custom-input" className="placeholder-register">
                     Teléfono
                   </label>
@@ -172,14 +172,13 @@ const UpdateProfile = ({data}) => {
                     autoComplete="false"
                     {...register("movil", )}
                   />
+                </LayoutInfo>
   
-                </LayoutInline>
-  
-                <LayoutFlex
+                <LayoutFlex 
                   direction="column"
                   gap="1rem"
                   color="f2f2f2"
-                  padding="1rem">
+                  padding="2.5rem">
                   <Button
                     type="submit"
                     text="Actualizar"
@@ -194,7 +193,7 @@ const UpdateProfile = ({data}) => {
               <LayoutInfo content="center" gap="1rem">
                 <PC text="¿Quieres cambiar la contraseña?" width="medio" />
                 <Link to="/changePassword" className="anchorCustom">
-                  <Button type="text" text="PASSWORD" variant="contained" color="white"/>
+                  <Button type="text" text="Cambiar" variant="contained" color="white"/>
                 </Link>
               </LayoutInfo>
             </LayoutForm>
