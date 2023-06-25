@@ -8,6 +8,11 @@
     
     gap:10px;
 }
+.divIconos{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .figureCoche{
     width: 350px;
     height: 350px;

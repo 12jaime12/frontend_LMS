@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { getByIdUser } from "../../service/API_proyect/user.service";
+import { deleteUser, getByIdUser } from "../../service/API_proyect/user.service";
 import { useAuth } from "../../contexts/authContext";
 import "./Profile.css"
 import PrintCochesPerfil from "../../components/PrintInfoCoche/PrintInfoCoche";
@@ -14,20 +14,63 @@ import Button from "../../components/ui/Button";
 import { Link } from "react-router-dom";
 import ChangeImageProfile from "../../components/ChangeImageProfile/ChangeImageProfile";
 import { H2C, PC } from "../../components/ui";
+import Swal from "sweetalert2";
 
 
 
 const Profile = () => {
-  const {user, allUser} = useAuth()
+  const {user, logout, setUser} = useAuth()
   const [send, setSend] = useState(false)
   const [res, setRes] = useState()
+  const [resDelete, setResDelete] = useState(false)
   const navigate=useNavigate()
   
   console.log("user perfil",user)
   console.log(user.id)
+  if(user==null){
+    navigate("/dashboard")
+  }
 
   const getIdService = async()=>{
     setRes(await getByIdUser(user.id))
+  }
+  const userDelete = async () => {
+    Swal.fire({
+      title: "¿Seguro que quieres borrar el usuario?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "rgb(73, 193, 162)",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "YES",
+  }).then(async (result) => {
+      if (result.isConfirmed) {
+      await deleteUser()
+      switch (res.status) {
+          case 200:
+          Swal.fire({
+              icon: "success",
+              title: "Usuario borrado de la base de datos",
+              text: "Nos vemos pronto! 😜 🏎️💨",
+              showConfirmButton: false,
+              timer: 3500,
+          });
+          setResDelete(()=>true)
+          logout()
+          break;
+
+          default:
+          Swal.fire({
+              icon: "error",
+              title: "ERROR",
+              text: "Please, try again",
+              showConfirmButton: false,
+              timer: 1500,
+          });
+
+          break;
+      }
+      }
+      })
   }
   //setRes(await getByIdUser(user.id))
   const userInfo = res?.data
@@ -36,6 +79,10 @@ const Profile = () => {
     getIdService()
   },[])
   
+  useEffect(()=>{
+    getIdService()
+  },[resDelete])
+  
   return (
     <div className="Profile">
       {userInfo!=null &&(
@@ -43,11 +90,18 @@ const Profile = () => {
         <div className="divImgmasInfo">
           <div className="DivUpdatePerfil">
             
-            <img src={userInfo.imagen} alt={userInfo.name} />
+            <img src={userInfo.imagen} alt={userInfo.name} className="imagePerfil"/>
+            <div className="divBotonesPerfil">
             <Link to="/updateProfile" className="anchorCustom">
                 <Button type="text" text="Modificar PERFIL" variant="contained" color="white" onClick={<UpdateProfile data={userInfo}/>}/>
               </Link>
-           
+            <img 
+            src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687683100/delete-user-icon-png_ebmir2.webp" 
+            alt="delete user"
+            className="imageDeleteUser"
+            onClick={()=>userDelete()}
+            />
+            </div>
           </div>
           <div className="divInfoUser">
             <h2>{userInfo.name.toUpperCase()} {userInfo.apellido.toUpperCase()}</h2>
