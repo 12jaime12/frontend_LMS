@@ -29,13 +29,13 @@ const ToggleButton = ({ car, setAllElementByPather }) => {
     >
       {user ? (
         car.like.includes(user.id) ? (
-          <AiTwotoneHeart size={15} className="favorite-icon-red" />
+          <AiTwotoneHeart size={25} className="favorite-icon-red" />
         ) : (
-          <AiOutlineHeart size={15} className="favorite-icon" />
+          <AiOutlineHeart size={25} className="favorite-icon" />
         )
       ) : null}
 
-      {!user && <AiTwotoneHeart size={15} className="favorite-icon" />}
+      {!user && <AiTwotoneHeart size={30} className="favorite-icon" />}
     </button>
   );
 };

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router'
 import { useAuth } from '../../contexts/authContext'
 import { createComentario } from '../../service/API_proyect/comentario.service'
 import "./CreateComment.css"
+
 const CreateComment = ({variable,id}) => {
     const [res, setRes] = useState()
     const [send, setSend] = useState(false)

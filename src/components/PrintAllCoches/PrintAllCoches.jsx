@@ -84,15 +84,14 @@ const PrintAllCoches = () => {
                 </div>
               </div>
             </figure>
-            <button
+            <img src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687677683/message-circle-2-filled_sy9woy.svg" alt="icono comentarios"
               onClick={() =>
                 user == null
                   ? navigate("/login")
                   : navigate(`/compraryvender/coche/${elem._id}`)
               }
-            >
-              Comentar
-            </button>
+            />
+              
             <div>
               <ToggleButton car={elem} setAllElementByPather={setCoches} />
             </div>
