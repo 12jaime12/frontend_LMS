@@ -8,3 +8,11 @@ export const createComentario = async (formData) => {
       return error;
     });
 };
+
+export const getAllComentarios = async () => {
+  return API.get("/comentarios/getAll")
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};

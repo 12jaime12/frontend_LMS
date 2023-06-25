@@ -7,6 +7,8 @@ import { LayoutFlex} from "../../components/Layout";
 import { useNavigate } from 'react-router'
 import { useAuth } from '../../contexts/authContext'
 import CreateComment from '../CreateComment/CreateComment'
+import Swal from 'sweetalert2'
+import { getAllComentarios } from '../../service/API_proyect/comentario.service'
 
 const PrintInfoCoche = ({data}) => {
   const [comment, setComment] = useState(false)
@@ -14,19 +16,24 @@ const PrintInfoCoche = ({data}) => {
   const [send, setSend] = useState(false)
   const {user} = useAuth()
   const navigate=useNavigate()
-
+  const [comments, setComments] = useState({})
   const addUserComentario = async () => {
 
 
   }
+  const getAllComments = async () => {
+    setComments(await getAllComentarios())
+}
 
 
     const info = data?.data
     console.log(info)
     console.log(info?.modelo)
+  
   useEffect(()=>{
-    console.log(comment)
-  },[])
+    getAllComments()
+    console.log("all comments", comments)
+},[])
 
   return (
     <>
@@ -40,12 +47,18 @@ const PrintInfoCoche = ({data}) => {
         <PC text={`Precio: ${info?.precio} €`} width="medio"/>
     </LayoutFlex>
         
-        <button onClick={()=>setComment(true)}>button 2</button>
+        
+        <Button 
+        type="text" 
+        text="Crear comentario" 
+        variant="contained" 
+        color="" 
+        action={() => user ? setComment(true) : Swal.fire({icon: "error", title:"debes estar registrado para poder comentar"})}/>
         </LayoutFlex>
       
         {comment != false && (
           <div>
-           <CreateComment variable={"coche"} id={info?._id}/>
+           <CreateComment variable={"coche"} id={info?._id} comments={comments}/>
           </div>
         )}
       
