@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./PrintAllCoches.css";
 import { useAuth } from "../../contexts/authContext";
 import { useNavigate } from "react-router";
@@ -6,9 +6,10 @@ import deleteCocheUser from "../../util/deleteCocheUser";
 import Button from "../ui/Button";
 import { addLike } from "../../service/API_proyect/user.service";
 import ToggleButton from "../Like/Like";
-import { getAllCochesOcasion } from "../../service/API_proyect/coche.service";
+import { getAllCochesOcasion, getByMarca } from "../../service/API_proyect/coche.service";
 
 const PrintAllCoches = () => {
+  const refInput = useRef()
   const [coches, setCoches] = useState();
   //const [cocheCarga, setCocheCarga] = useState();
   const navigate = useNavigate();
@@ -16,29 +17,46 @@ const PrintAllCoches = () => {
   const [res, setRes] = useState(false);
   const [userLike, setUserLike] = useState();
   const [render, setRender] = useState(false);
-
+  const [filtrarCoche, setFiltrarCoche] = useState()
   const [initRes, setInitRes] = useState(null);
   const [send, setSend] = useState(false);
-
+  const arrayMarcas=[]
   const getCochesOcasion = async () => {
     console.log("user coches ocasion", user);
     setSend(true);
     setInitRes(await getAllCochesOcasion());
     setSend(false);
   };
-  // const cochesCarga = coches;
-  // console.log(cochesCarga);
 
-  // const buscarMarca = (e) => {
-  //   console.log(e.target.value);
-  //   const arrayAux = [];
-  //   cocheCarga.forEach((element) => {
-  //     if (element.marca.includes(e.target.value)) {
-  //       arrayAux.push(element);
-  //     }
-  //   });
-  //   setCoches(arrayAux);
-  // };
+  const cocheByMarca = async (event) => {
+    setCoches(await getByMarca(event))
+  }
+ /*  const cochesCarga = coches;
+  //console.log(cochesCarga);
+
+ const buscarMarca = (e) => {
+   console.log(e.target.value);
+   const arrayAux = [];
+   setFiltrarCoche(coches)
+   console.log("cochesCarga",cochesCarga)
+
+   cochesCarga.forEach((element) => {
+     if (element.marca.includes(e.target.value)) {
+       arrayAux.push(element);
+     }
+   });
+   console.log("arrayAux", arrayAux)
+   if(e.target.value!=""){
+    setCoches(arrayAux);
+   }else{
+    setCoches(cochesCarga)
+   }
+   console.log("coches en funcion", coches)
+ };
+ */
+ useEffect(()=>{
+  console.log("ffffffffff",filtrarCoche)
+ },[filtrarCoche])
 
   useEffect(() => {
     getCochesOcasion();
@@ -55,15 +73,30 @@ const PrintAllCoches = () => {
   // useEffect(() => {
   //   console.log(cocheCarga);
   // }, [cocheCarga]);
-
+console.log("ressssssssss", initRes)
   useEffect(() => {
     getCochesOcasion();
+    
   }, [res]);
 
   return (
     <div>
       <div>
-        <input type="text" onChange={(e) => buscarMarca(e)}></input>
+        {/* <input type="text" onChange={(e) => buscarMarca(e)}></input> */}
+        {/* <input type="text" ref={refInput}></input>
+        <button >Buscar</button> */}
+        {
+          initRes?.data?.forEach((elem)=>{
+            arrayMarcas.push(elem.marca)
+            console.log(arrayMarcas)
+          })}
+        {
+          arrayMarcas.forEach((element)=>{
+            console.log("element marca", element)
+          })
+        }
+
+        
       </div>
       <div className="divAllCoches">
         {coches?.map((elem) => (

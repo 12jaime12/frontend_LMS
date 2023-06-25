@@ -10,7 +10,11 @@ export const createComentario = async (formData) => {
 };
 
 export const getAllComentarios = async () => {
-  return API.get("/comentarios/getAll")
+  return API.get("/comentarios/getAll", {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
     .then((res) => res)
     .catch((error) => {
       return error;

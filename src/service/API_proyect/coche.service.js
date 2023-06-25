@@ -54,7 +54,7 @@ export const getCocheById = async (id) => {
 //--------------------GET BY LIKES--------------------
 //--------------------GET BY MARCA--------------------
 export const getByMarca = async (marca) => {
-  return API.delete(`/coche/marca/${marca}`, {
+  return API.get(`/coche/marca/${marca}`, {
     headers: {
       Authorization: `Bearer ${updateToken()}`,
     },
