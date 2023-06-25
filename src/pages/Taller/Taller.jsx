@@ -5,6 +5,7 @@ import PrintTalleres from "../../components/PrintTalleres/PrintTalleres";
 import PrintAllCoches from "../../components/PrintAllCoches/PrintAllCoches";
 import CarruselPersonalizar from "../../components/CarruselPersonalizar/CarruselPersonalizar";
 import "./Taller.css"
+import Button from "../../components/ui/Button";
 
 
 
@@ -38,12 +39,16 @@ const Taller = () => {
     <div className="Taller">
   
       {
-        
-        resUser!=null&&(
+        (resUser!=null && coche!=undefined)
+        ?(
           <div>
             <CarruselPersonalizar data={resUser?.data?.coche_cliente} setCoche={setCoche}/>
           </div>
         )
+        :(<div className="divSuperiorTaller">
+          <h3>No tienes ningun coche registrado en la web. Si quieres contratar servicios de taller deberás dar de alta algun coche</h3>
+          <Button type="text" text="Crear coche" variant="contained" color="" action={() => navigate("/createCoche")}/>
+        </div>)
       }
       <div>
         <PrintTalleres data={res} coche={coche}/>
