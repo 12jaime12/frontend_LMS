@@ -6,6 +6,7 @@ import PrintAllCoches from "../../components/PrintAllCoches/PrintAllCoches";
 import CarruselPersonalizar from "../../components/CarruselPersonalizar/CarruselPersonalizar";
 import "./Taller.css"
 import Button from "../../components/ui/Button";
+import { useNavigate } from "react-router";
 
 
 
@@ -14,6 +15,7 @@ const Taller = () => {
   const [resUser, setResUser] = useState()
   const [coche, setCoche] = useState()
   const {user} = useAuth()
+  const navigate=useNavigate()
   console.log("userID", user.id)
   
   const allTaller = async () =>{
