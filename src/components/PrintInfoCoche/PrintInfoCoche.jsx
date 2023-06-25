@@ -57,7 +57,7 @@ const PrintInfoCoche = ({data}) => {
         </LayoutFlex>
       
         {comment != false && (
-          <div>
+          <div className="divComentarios">
            <CreateComment variable={"coche"} id={info?._id} comments={comments}/>
           </div>
         )}

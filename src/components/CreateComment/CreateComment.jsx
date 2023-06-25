@@ -48,7 +48,7 @@ const CreateComment = ({variable,id,comments}) => {
                 action={()=>createComment(refComent.current.value)}/>
 
     </div>
-    <div>
+    <div className="divAllComentarios">
         {
             comments?.data?.map((comentario)=>{
                 let nombre=""
