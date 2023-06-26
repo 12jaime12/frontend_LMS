@@ -7,55 +7,12 @@
     align-items: center;
 }
 
-/* .form-wrap{
+.condiciones, .cuenta{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    min-height: 80vh;
-    width: 80vw;
-    background-color: #f2f2f2;
-    padding: 2rem;
+    gap: 1rem;
 }
-
-.generalContainerRegister{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2rem;
-}
-.form-wrap .form-group input {
-    display: flex;
-    flex-direction: row;
-
-    width: 90%;
-    padding: 10px;
-    border: black 2px solid;
-    border-radius: 5px;
-    font-family: inherit;
-    margin: 5px;
-/*
-.nombreCompleto{
-    display: flex;
-    flex-direction: row;
-}
-.ubicacion{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.sexo{
-    display: flex;
-    justify-content: center;
-}
-
-
-.parrafoLogin{
-    display: flex;
-    justify-content: center;
-} */
-
 
 .anchorCustom{
     text-decoration: none;
@@ -86,5 +43,70 @@
    text-align: left;
 }
 
+.genero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+  gap: 1rem;
+  }
+    
+  .label-radio {
+    background: #c61d1489;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    width: 140px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 13.33px;
+    cursor: pointer;
+  }
+  
+  input[type="radio"]:checked + .label-radio {
+    background: #C61C14;
+    color: #fff !important;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+/* 
+.genero{
+    height: 40px;
+    width: 140px;
+    color: white;
+    background-color: #C61C14;
+    border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  transition: 0.1s ease-in-out;
+  &:focus {
+    background-color: red;
+}
+} */
 
 
+@media screen and ( max-width: 1450px){
+  .condiciones, .cuenta{
+      flex-direction: column;
+      gap: 0;
+} 
+.label-radio{
+  width: 100px;
+}
+}
+
+@media screen and ( max-width: 950px){
+    .condiciones, .cuenta{
+        flex-direction: column;
+        gap: 0;
+} 
+.label-radio{
+    width: 100px;
+}
+}

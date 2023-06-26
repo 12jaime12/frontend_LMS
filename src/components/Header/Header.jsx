@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { H1C, H2C, PC } from "../ui";
-import { LayoutHeader, LayoutInfo } from "../Layout";
+import { LayoutInfo } from "../Layout";
 import { useAuth } from "../../contexts/authContext";
 
 const Header = () => {
@@ -12,21 +12,21 @@ const Header = () => {
   return (
     <header>
     
-      <LayoutHeader >
+      <div className="headerIcons">
         <img
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1686737065/logoredondo-removebg-preview_uidph4.png"
           alt="logo"
           className="logo"
           onClick={()=>navigate("/dashboard")}
         />
-         <LayoutInfo gap="3rem">
+         <div className="navHeader">
          <button class="hamburger">
             <span class="material-symbols-outlined"> menu </span>
           </button>
           <NavLink className="linkheader" to="/catalogo">Catálogo<div className="underline"></div></NavLink>
           <NavLink className="linkheader" to="/compraryvender">Compra y Venta<div className="underline"></div></NavLink>
           <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
-          </LayoutInfo>
+          </div>
 
           <LayoutInfo content="center" gap="1rem" >
           <button class="logout">
@@ -50,7 +50,7 @@ const Header = () => {
 
           </LayoutInfo>
 
-      </LayoutHeader>
+      </div>
     </header>
   );
 };

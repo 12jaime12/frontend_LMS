@@ -11,7 +11,10 @@ background: ${({ color }) => color};
 gap: ${({ gap }) => gap};
 padding: ${({ padding }) => padding};
 height: ${({ height }) => height};
-
+${'' /* @media only screen and ( max-width: 1050px){
+		width: 255px;
+    padding: 1rem;
+} */}
 `;
 export const LayoutInfo = ({children, content, position, color, gap, padding, height}) => {
   return (

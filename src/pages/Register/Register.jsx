@@ -54,7 +54,7 @@ const Register = () => {
 
   return (
     <div className="Register">
-      <LayoutInline gap="0.5rem" padding="1rem">
+      <LayoutInline gap="0.5rem" padding="1rem" flexMedia="column">
         <LayoutForm
           direction="column"
           gap="2rem"
@@ -86,7 +86,7 @@ const Register = () => {
             heigth="300px"
             padding="0">
             <form onSubmit={handleSubmit(formSubmit)}>
-              <LayoutInline gap="0.5rem" padding="1rem">
+              <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
                 <label htmlFor="custom-input" className="placeholder-register">
                   Nombre
                 </label>
@@ -112,7 +112,7 @@ const Register = () => {
                 />
               </LayoutInline>
 
-              <LayoutInline gap="0.5rem" padding="1rem">
+              <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
                 <label htmlFor="custom-input" className="placeholder-register">
                   Teléfono
                 </label>
@@ -140,7 +140,7 @@ const Register = () => {
                   {...register("dni", { required: true })}
                 />
               </LayoutInline>
-              <LayoutInline gap="0.5rem" padding="1rem">
+              <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
                 <label htmlFor="custom-input" className="placeholder-register">
                   Email
                 </label>
@@ -165,7 +165,7 @@ const Register = () => {
                   {...register("password", { required: true })}
                 />
               </LayoutInline>
-              <LayoutInline gap="0.5rem" padding="1rem">
+              <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
                 <label htmlFor="custom-input" className="placeholder-register">
                   País
                 </label>
@@ -190,7 +190,7 @@ const Register = () => {
                   {...register("provincia", { required: true })}
                 />
               </LayoutInline>
-              <LayoutInline gap="0.5rem" padding="1rem">
+              <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
                 <label htmlFor="custom-input" className="placeholder-register">
                   Ciudad
                 </label>
@@ -216,8 +216,8 @@ const Register = () => {
                 />
               </LayoutInline>
 
-              <LayoutInfo content="center" gap="3rem">
-              <LayoutInline gap="1rem" padding="0">
+              <div className="genero">
+              {/* <LayoutInline gap="1rem" padding="0"> */}
                   <input
                     type="radio"
                     name="sexo"
@@ -228,8 +228,8 @@ const Register = () => {
                 <label htmlFor="masculino" className="label-radio masculino">
                     Masculino
                   </label>
-                </LayoutInline>
-                <LayoutInline gap="1rem" padding="0">
+                {/* </LayoutInline>
+                <LayoutInline gap="1rem" padding="0"> */}
                   <input
                     type="radio"
                     name="sexo"
@@ -240,9 +240,9 @@ const Register = () => {
                  <label htmlFor="femenino" className="label-radio femenino">
                     Femenino
                   </label>
-                  </LayoutInline>
+                  {/* </LayoutInline> */}
                 
-              </LayoutInfo>
+              </div>
 
               <LayoutFlex
                 direction="column"
@@ -260,27 +260,26 @@ const Register = () => {
           </LayoutForm>
 
           
-            <LayoutInfo content="center" gap="1rem">
+            <div className="condiciones">
             
               <PC text="Haciendo click en Registrar, aceptas:" width="largo2" size="small"
               />
              
-              <LayoutInfo content="center" gap="0.5rem">
                 <Link className="anchorCustomSmall">
                   Términos y Condiciones
                 </Link>
                 <Link className="anchorCustomSmall">
                   Política de Privacidad
                 </Link>
-              </LayoutInfo>
-            </LayoutInfo>
+            
+            </div>
 
-            <LayoutInfo content="center" gap="1rem">
+            <div className="cuenta">
               <PC text="¿Ya tienes cuenta?" width="medio" />
               <Link to="/login" className="anchorCustom">
                 Accede a tu cuenta aquí.
               </Link>
-            </LayoutInfo>
+            </div>
           </LayoutForm>
        
       </LayoutInline>

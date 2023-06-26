@@ -7,6 +7,22 @@ Header{
     z-index: 300;
 }
 
+.headerIcons{
+    display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+font-size: 20px;
+height: 100%;
+width: 100vw;
+}
+
+.navHeader{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
 .logo{
     height: 85px;
 }

@@ -60,14 +60,14 @@ const ChangePassword = () => {
     changeOk && navigate("/profile")
   return (
     <div className="ChangePass">
-    <LayoutInline gap="0.5rem" padding="1rem">
+    <LayoutInline gap="0.5rem" padding="1rem" flexMedia="column">
     <H1C text="Cambiar contraseña" width="largo"/>
     <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
     <LayoutForm direction="column" gap="2rem" color="#f2f2f2" width="500px" heigth="300px" padding = "3rem">
         <form className='form-register' onSubmit={handleSubmit(formSubmit)}> 
             <div className="password-space">
                 <label htmlFor="custom-input" className="custom-placeholder">
-                <p>Introduce tu antigua contraseña:</p>
+                <p>Antigua contraseña:</p>
                 <input
                     className="input-change"
                     type="password"
@@ -77,7 +77,7 @@ const ChangePassword = () => {
                     {...register("password", { required: true })}
                 /></label>
                 <label htmlFor="custom-input" className="custom-placeholder">
-                <p>Introduce tu nueva contraseña:</p>
+                <p>Nueva contraseña:</p>
                 <input
                     className="input-change"
                     type="password"
