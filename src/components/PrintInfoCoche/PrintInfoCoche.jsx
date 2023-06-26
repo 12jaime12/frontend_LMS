@@ -51,32 +51,11 @@ const PrintInfoCoche = ({ data }) => {
           <PC text={`Combustible: ${info?.combustible}`} width="extralargo" />
           <PC text={`Precio: ${info?.precio} €`} width="medio" />
         </LayoutFlex>
-
-        <Button
-          type="text"
-          text="Crear comentario"
-          variant="contained"
-          color=""
-          action={() =>
-            user
-              ? setComment(true)
-              : Swal.fire({
-                  icon: "error",
-                  title: "debes estar registrado para poder comentar",
-                })
-          }
-        />
       </LayoutFlex>
 
-      {comment != false && (
-        <div className="divComentarios">
-          <CreateComment
-            variable={"coche"}
-            id={info?._id}
-            comments={comments}
-          />
-        </div>
-      )}
+      <div className="divComentarios">
+        <CreateComment variable={"coche"} id={info?._id} comments={comments} />
+      </div>
     </>
   );
 };

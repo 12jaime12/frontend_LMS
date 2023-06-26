@@ -119,6 +119,7 @@ console.log("ressssssssss", initRes)
             </figure>
 
             <div className="divIconos">
+              <div className="divLikesCoches">
               <img src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687677683/message-circle-2-filled_sy9woy.svg" alt="icono comentarios"
                 onClick={() =>
                   user == null
@@ -126,9 +127,10 @@ console.log("ressssssssss", initRes)
                     : navigate(`/compraryvender/coche/${elem._id}`)
                 }
               />
-                
-              <div>
+              <p>{elem.comentario.length}</p></div>  
+              <div className="divLikesCoches">
                 <ToggleButton car={elem} setAllElementByPather={setCoches} />
+                <p>{elem.like.length}</p>
               </div>
               {user?.coches?.includes(elem._id) && (
                 <img src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687680460/trash_hc1jlx.svg" alt="delete icon" onClick={() => deleteCocheUser(elem._id, setRes)}/>

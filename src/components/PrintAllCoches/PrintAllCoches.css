@@ -8,6 +8,10 @@
     
     gap:10px;
 }
+.divLikesCoches{
+    display:flex;
+    gap:5px;
+}
 .divIconos{
     display:flex;
     justify-content: space-evenly;
