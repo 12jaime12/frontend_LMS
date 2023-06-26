@@ -149,6 +149,7 @@ resOk && navigate("/profile")
               autoComplete="false"
               ref={inputFrontal}
               onChange={(e)=>handleImage(e)}
+              required="true"
             />
             </label>
             <label className='archivo'>Lateral derecho: <input

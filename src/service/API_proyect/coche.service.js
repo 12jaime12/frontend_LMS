@@ -34,6 +34,18 @@ export const deleteCocheServicio = async (id) => {
       return error;
     });
 };
+//--------------------UPDATE -------------------------
+export const updateCocheServicio = async (id, data) => {
+  return API.patch(`/coche/updateCoche/${id}`, data, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
 //--------------------GET ALL-------------------------
 export const getAllCochesOcasion = async () => {
   return API.get("/coche")

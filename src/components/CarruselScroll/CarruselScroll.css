@@ -1,0 +1,26 @@
+.divCarruselScroll{
+    width: 850px;
+    height: 55vh;
+    border:5px solid #c61c14;
+    display:flex;
+    overflow-x: scroll;
+    align-items: center;
+    text-align: center;
+}
+.carruselScrollFigure{
+    height: 100%;
+    width: 400px;
+    display: flex;
+    margin:0px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+
+}
+.carruselScrollImage{
+    width:350px;
+    height:300px;
+    object-fit: cover;
+
+}

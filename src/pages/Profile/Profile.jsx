@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import ChangeImageProfile from "../../components/ChangeImageProfile/ChangeImageProfile";
 import { H2C, PC } from "../../components/ui";
 import Swal from "sweetalert2";
+import CarruselScroll from "../../components/CarruselScroll/CarruselScroll";
 
 
 
@@ -126,7 +127,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="divUserCoches">
+        {/* <div className="divUserCoches">
           <h2>COCHES PROPIOS</h2>
           <Button
               text="Añadir coche"
@@ -134,8 +135,7 @@ const Profile = () => {
               variant="contained"
               color="white"
             />
-          {/* <button onClick={() => navigate("/createCoche")}>Añadir coche</button> */}
-          {/* <PrintAllCoches data={userInfo.coche_cliente}/> */}
+          
           <CarruselPorTres data={userInfo.coche_cliente}/>
 
         </div>
@@ -147,6 +147,56 @@ const Profile = () => {
         <div className="divUserComments">
           <h2>COMENTARIOS</h2>
 
+
+        </div> */}
+        <div className="divCarruselUser">
+          <ul className="ulInfoUser">
+            <li onClick={()=>(setCochesUser(true), setLikesUser(false), setCommentsUser(false))}>Coches</li>
+            <li onClick={()=>(setCochesUser(false), setLikesUser(true), setCommentsUser(false))}>Likes</li>
+            <li onClick={()=>(setCochesUser(false), setLikesUser(false), setCommentsUser(true))}>Perzonalizados</li>
+          </ul>
+          {cochesUser && (
+            <div className="divCarruselInfo">
+            <h2>COCHES PROPIOS</h2>
+            <Button
+                text="Añadir coche"
+                action={() => navigate("/createCoche")}
+                variant="contained"
+                color="white"
+              />
+            
+            <CarruselScroll cocheUser={userInfo.coche_cliente}/>
+            </div>
+          )
+          }
+          {likesUser && (
+            <div className="divCarruselInfo">
+            
+            <Button
+                text="Ver galeria"
+                action={() => navigate("/compraryvender")}
+                variant="contained"
+                color="white"
+              />
+            
+            <CarruselScroll cocheUser={userInfo.like_coche}/>
+            </div>
+          )
+          }
+          {commentsUser && (
+            <div className="divCarruselInfo">
+            <h2>Comentarios creados: </h2>
+            <Button
+                text="Ver galeria"
+                action={() => navigate("/comprayventa")}
+                variant="contained"
+                color="white"
+              />
+            
+            <CarruselScroll cocheUser={userInfo.coche_tienda}/>
+            </div>
+          )
+          }
 
         </div>
         </>

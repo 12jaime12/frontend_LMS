@@ -77,3 +77,43 @@
     width: 50px;
     height: 50px;
 }
+.divCarruselUser{
+    min-height: 50px;
+    width: 70vw;
+    gap:30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ulInfoUser{
+    display: flex;
+    justify-content: space-evenly;
+    gap:2rem;
+    height: 100%;
+    width: 100%;
+}
+.ulInfoUser li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 50px;
+}
+.divCarruselInfo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    padding:10px 0;
+    width: 80vw;
+}
+.infoPersonal:hover{
+    border-bottom:2px solid #C61C14
+}
+
+.ulInfoUser li:hover{
+    background-color: #C61C14;
+    color:whitesmoke;
+}
