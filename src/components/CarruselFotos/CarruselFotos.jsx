@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import "./CarruselFotos.css";
 const CarruselFotos = ({ data }) => {
   const [position, setPosition] = useState(0);
   //const large = data.length;
@@ -29,16 +29,16 @@ const CarruselFotos = ({ data }) => {
   return (
     <div className="carrusel">
       <img
-        className="flecha"
+        className="flechaFotos"
         src="https://res.cloudinary.com/dtyjzv2xg/image/upload/v1686508366/left_vgwaum.png"
         alt="left"
         onClick={() => resta()}
       />
-      <figure className="carta">
+      <figure className="cartaFotos">
         <img className="fotoCarta" src={data[position]} alt={data[position]} />
       </figure>
       <img
-        className="flecha"
+        className="flechaFotos"
         src="https://res.cloudinary.com/dtyjzv2xg/image/upload/v1686508364/right_hnqa08.png"
         alt="right"
         onClick={() => suma()}

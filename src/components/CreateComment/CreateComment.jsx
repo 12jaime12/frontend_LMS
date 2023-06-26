@@ -99,7 +99,6 @@ const CreateComment = ({ variable, id, comments }) => {
                 />
               </h7>
               <h5>{comentario?.content}</h5>
-              <p></p>
             </section>
           );
         })}

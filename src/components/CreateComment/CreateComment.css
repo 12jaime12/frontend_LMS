@@ -29,3 +29,16 @@
     justify-content: center;
     gap:45px;
 }
+@media screen and (max-width:1000px){
+    .divAllComentarios{
+        width: 425px;
+    }
+    .inputComentario{
+        width: 80vw;
+    }
+}
+@media screen and (max-width:500px){
+    .divAllComentarios{
+        width: 300px;
+    }
+}

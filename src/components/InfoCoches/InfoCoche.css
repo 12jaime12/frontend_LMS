@@ -20,3 +20,9 @@
 .imagenReal{
     height: 400px;
 }
+@media screen and (max-width:1000px){
+    .imagenReal{
+        height: auto;
+        width: 100vw;
+    }
+}

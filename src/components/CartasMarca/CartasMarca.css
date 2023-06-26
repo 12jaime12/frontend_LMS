@@ -36,3 +36,13 @@ box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
 .likesCatalogo p{
     margin: 5px;
 }
+@media screen and (max-width:1000px){
+    .fotoCartaSelect{
+        width: 90vw;
+        height: auto;
+        margin: 0;
+    }
+    .figureCoches{
+        margin: 2rem 0;
+    }
+}
