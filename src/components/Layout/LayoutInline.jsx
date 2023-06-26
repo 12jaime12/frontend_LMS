@@ -12,7 +12,10 @@ padding: ${({ padding }) => padding};
 heigth: ${({heigth})=> heigth};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
-margin-top: ${({ margin }) => margin}
+margin-top: ${({ margin }) => margin};
+@media only screen and ( max-width: 1050px){
+		flex-direction: column;
+}
 `
 
 export const LayoutInline = ({children, direction, color, padding, heigth, gap, margin}) => {

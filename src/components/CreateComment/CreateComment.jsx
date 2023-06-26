@@ -4,6 +4,8 @@ import { useAuth } from "../../contexts/authContext";
 import {
   createComentario,
   getAllComentarios,
+  getByCatalogo,
+  getByCoche,
 } from "../../service/API_proyect/comentario.service";
 import "./CreateComment.css";
 import Button from "../ui/Button";
@@ -16,6 +18,9 @@ const CreateComment = ({ variable, id, comments }) => {
   const { user } = useAuth();
   const refComent = useRef();
   const comentario = refComent?.current?.value;
+  const [newComments, setNewComments] = useState();
+  const [arrayComments, setArrayComments] = useState();
+  const navigate = useNavigate();
 
   const createComment = async (dataComment) => {
     const customData = {
@@ -25,15 +30,32 @@ const CreateComment = ({ variable, id, comments }) => {
     };
     console.log("data comentario------->", customData);
     setRes(await createComentario(customData));
+    if (variable === "coche") {
+      setNewComments(await getByCoche(id));
+      console.log("entro");
+    } else {
+      setNewComments(await getByCatalogo(id));
+    }
   };
 
   useEffect(() => {
-    console.log("all comments", comments);
+    console.log("all comments", comments?.data);
+    setArrayComments(comments?.data?.reverse());
   }, [comments]);
 
   useEffect(() => {
     console.log(res);
   }, [res]);
+
+  useEffect(() => {
+    const commentsReverse = newComments?.data?.reverse();
+    setArrayComments(commentsReverse);
+  }, [newComments]);
+
+  useEffect(() => {
+    console.log(arrayComments);
+  }, [arrayComments]);
+
   return (
     <>
       <div className="divCreateComentario">
@@ -44,14 +66,18 @@ const CreateComment = ({ variable, id, comments }) => {
           text="Crear comentario"
           variant="contained"
           color=""
-          action={() => createComment(refComent.current.value)}
+          action={
+            user == null
+              ? () => navigate("/login")
+              : () => createComment(refComent.current.value)
+          }
         />
       </div>
       <div className="divAllComentarios">
-        {comments?.data?.map((comentario) => {
+        {arrayComments?.map((comentario) => {
           let nombre = "";
           let apellido = "";
-          console.log(comentario.Creador);
+          //console.log(comentario.Creador);
           for (let clave in comentario.Creador) {
             if (clave == "name") {
               nombre = comentario.Creador[clave];
@@ -59,11 +85,10 @@ const CreateComment = ({ variable, id, comments }) => {
               apellido = comentario.Creador[clave];
             }
           }
-          console.log("nombre", nombre);
-          console.log("apellido", apellido);
+
           return (
             <section key={comentario._id} className="comentarioInfo">
-              <h4>
+              <h7>
                 <strong>
                   {nombre.toUpperCase()} {apellido.toUpperCase()}
                 </strong>{" "}
@@ -72,7 +97,7 @@ const CreateComment = ({ variable, id, comments }) => {
                   date={Date.parse(comentario?.createdAt)}
                   locale="es-ES"
                 />
-              </h4>
+              </h7>
               <h5>{comentario?.content}</h5>
               <p></p>
             </section>
