@@ -76,6 +76,18 @@ export const getByMarca = async (marca) => {
       return error;
     });
 };
-//--------------------ADD INTERESADO------------------
+//--------------------get-coche-venta------------------
+
+export const getCochesVenta = async () => {
+  return API.get(`/coche/getCocheVenta`, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
 //--------------------ADD LIKE------------------------
 //--------------------ADD TALLER----------------------
