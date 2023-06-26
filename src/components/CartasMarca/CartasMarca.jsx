@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./CartasMarca.css";
 import { getMarcaCocheBase } from "../../service/API_proyect/cocheBase.service";
 import ToggleButtonCatalogo from "../LikeCatalogo/LikeCatalogo";
+import CreateComment from "../CreateComment/CreateComment";
 const CartasMarca = ({ marca, setCoche }) => {
   const [coches, setCoches] = useState(null);
   const [initRes, setInitRes] = useState(null);

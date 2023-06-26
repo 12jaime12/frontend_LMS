@@ -30,6 +30,11 @@ import CochePersonalizar from "./components/CochePersonalizar/CochePersonalizar.
 import CreateCoche from "./pages/CreateCoche/CreateCoche.jsx";
 import UpdateProfile from "./pages/UpdateProfile/UpdateProfile.jsx";
 import InfoCoches from "./components/InfoCoches/infoCoches.jsx";
+import TimeAgo from "javascript-time-ago";
+import es from "javascript-time-ago/locale/es.json";
+
+TimeAgo.addDefaultLocale(es);
+TimeAgo.addLocale(es);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter basename="/">
