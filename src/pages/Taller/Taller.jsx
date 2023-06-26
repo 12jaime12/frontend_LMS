@@ -16,7 +16,7 @@ const Taller = () => {
   const [coche, setCoche] = useState()
   const {user} = useAuth()
   const navigate=useNavigate()
-  console.log("userID", user.id)
+  console.log("userID", user)
   
   const allTaller = async () =>{
     setRes(await getByRolUser())
@@ -41,7 +41,7 @@ const Taller = () => {
     <div className="Taller">
   
       {
-        (resUser!=null && coche!=undefined)
+        (resUser!=null || coche!=undefined)
         ?(
           <div>
             <CarruselPersonalizar data={resUser?.data?.coche_cliente} setCoche={setCoche}/>
