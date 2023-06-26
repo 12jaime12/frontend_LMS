@@ -26,23 +26,46 @@ const Header = () => {
         />
         
          <div className="navHeader">
-         {ancho > 1200 ? (
+         {ancho > 1050 ? (
           <>
           <NavLink className="linkheader" to="/catalogo">Catálogo<div className="underline"></div></NavLink>
           <NavLink className="linkheader" to="/compraryvender">Compra y Venta<div className="underline"></div></NavLink>
           <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
           </>
          ) : (
-          <button className="hamburger">
-            <span className="material-symbols-outlined" onClick={handleClick}> menu </span>
-            {open && (
-              <div className="menuHambuger">
-            <NavLink className="linkheader" to="/catalogo">Catálogo<div className="underline"></div></NavLink>
-          <NavLink className="linkheader" to="/compraryvender">Compra y Venta<div className="underline"></div></NavLink>
-          <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
-            </div>
-            )}
-          </button>
+          <>
+              <button className="hamburger">
+                <span
+                  className="material-symbols-outlined"
+                  onClick={handleClick}
+                >
+                  {" "}
+                  menu{" "}
+                </span>
+              </button>
+              {open && (
+                <div className={`menuHambuger ${open && "open"}`}>
+                  {/* <button onClick={handleClick}>X</button> */}
+                  <div className="linksBurguer">
+                    <span>
+                      <NavLink className="spanBurger" to="/catalogo">
+                        Catálogo<div className="underline"></div>
+                      </NavLink>
+                    </span>
+                    <span>
+                      <NavLink className="spanBurger" to="/compraryvender">
+                        Compra y Venta<div className="underline"></div>
+                      </NavLink>
+                    </span>
+                    <span>
+                      <NavLink className="spanBurger" to="/taller">
+                        Taller<div className="underline"></div>
+                      </NavLink>
+                    </span>
+                  </div>
+                </div>
+              )}
+            </> 
          )
          }
           </div>
@@ -54,18 +77,6 @@ const Header = () => {
           <button className="person">
           <span className="material-symbols-outlined" onClick={()=>navigate("/profile")}>person</span>
           </button>
-          {/* <img 
-          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687456756/logout_pjonak.svg" 
-          alt="home"
-          className="imgHeaderLogout" 
-          onClick={logout}
-          />
-        <img 
-          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687338307/home-2_snquca.svg" 
-          alt="home"
-          className="imgHeaderHome" 
-          onClick={()=>navigate("/profile")}
-          /> */}
 
           </LayoutInfo>
 

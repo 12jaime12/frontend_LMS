@@ -1,7 +1,7 @@
 .Login{
     min-height: 80vh;
     width: 100%;
-    margin-top: 10vh;
+    /* padding-top: 15vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,3 +36,8 @@
     list-style: disc;
 }
 
+@media screen and ( max-width: 1450px){
+    .Login{
+padding-top: 15vh;
+    }
+}
