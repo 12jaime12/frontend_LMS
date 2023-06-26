@@ -92,7 +92,7 @@ const CheckCode = () => {
   }
   return (
     <div className="CheckCode">
-    <LayoutInline gap="0.5rem" padding="1rem">
+    <LayoutInline gap="0.5rem" padding="1rem" flexMedia="column">
         <H1C text="Verificación de código" width="extralargo"/>
         <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
         <LayoutForm direction="column" color="#f2f2f2" width="500px" heigth="300px" padding = "1rem" gap="1rem">

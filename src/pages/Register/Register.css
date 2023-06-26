@@ -1,6 +1,6 @@
 .Register {
-    padding-top: 10vh;
-    min-height: 80vh;
+    margin-top: 10vh;
+    min-height: 70vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -73,28 +73,13 @@
     display: none;
   }
 
-/* 
-.genero{
-    height: 40px;
-    width: 140px;
-    color: white;
-    background-color: #C61C14;
-    border: none;
-  cursor: pointer;
-  border-radius: 20px;
-  font-family: inherit;
-  padding: 0.5rem 1rem;
-  transition: 0.1s ease-in-out;
-  &:focus {
-    background-color: red;
-}
-} */
+
 
 
 @media screen and ( max-width: 1450px){
   .condiciones, .cuenta{
-      flex-direction: column;
-      gap: 0;
+    
+      gap: 1rem;
 } 
 .label-radio{
   width: 100px;
