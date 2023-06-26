@@ -6,12 +6,12 @@
     overflow-x: scroll;
     align-items: center;
     text-align: center;
-    scrollbar-base-color: #c61c14;
+    /* scrollbar-base-color: #c61c14; */
 }
-.divCarruselScroll::-webkit-scrollbar-track{
+/* .divCarruselScroll::-webkit-scrollbar-track{
     color:#c61c14;
     background-color: #c61c14;
-}
+} */
 .estadoVenta{
     background-color: red;
     padding:5px 10px;
@@ -41,3 +41,26 @@
     object-fit: cover;
 
 }
+
+*::-webkit-scrollbar {
+    width: 10px;
+    width: 10px;
+  }
+  
+  
+  
+  
+  
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 35px;
+    background-color: #c61c14;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #c61c14;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #c61c14;
+  }
