@@ -1,14 +1,32 @@
 .divCarruselScroll{
-    width: 850px;
+    width: 85vw;
     height: 55vh;
     border:5px solid #c61c14;
     display:flex;
     overflow-x: scroll;
     align-items: center;
     text-align: center;
+    scrollbar-color: #c61c14;
+    scrollbar-base-color: #c61c14;
+    scrollbar-width: 200px;
+}
+.divCarruselScroll::-webkit-scrollbar:horizontal{
+    background: #fd0404;
+}
+.estadoVenta{
+    background-color: red;
+    padding:5px 10px;
+}
+.estadoEnVenta{
+    background-color: rgb(2, 255, 2);
+    padding:5px 10px;
+}
+.estadoEnTaller{
+    background-color: rgb(255, 183, 0);
+    padding: 5px 10px
 }
 .carruselScrollFigure{
-    height: 100%;
+    height: 350px;
     width: 400px;
     display: flex;
     margin:0px;
@@ -19,8 +37,8 @@
 
 }
 .carruselScrollImage{
-    width:350px;
-    height:300px;
+    width:320px;
+    height:280px;
     object-fit: cover;
 
 }

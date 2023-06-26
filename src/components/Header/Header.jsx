@@ -1,14 +1,19 @@
 import "./Header.css";
 import { useNavigate } from "react-router";
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { H1C, H2C, PC } from "../ui";
 import { LayoutInfo } from "../Layout";
 import { useAuth } from "../../contexts/authContext";
+import useWidth from "../../hooks/useWidth";
 
 const Header = () => {
   const {logout} = useAuth()
   const navigate = useNavigate()
+  const [open, setOpen] = useState(false)
+  const { ancho } = useWidth();
+  const handleClick = () => {setOpen(!open); console.log("entro")}
+
   return (
     <header>
     
@@ -19,20 +24,34 @@ const Header = () => {
           className="logo"
           onClick={()=>navigate("/dashboard")}
         />
+        
          <div className="navHeader">
-         <button class="hamburger">
-            <span class="material-symbols-outlined"> menu </span>
-          </button>
+         {ancho > 1200 ? (
+          <>
           <NavLink className="linkheader" to="/catalogo">Catálogo<div className="underline"></div></NavLink>
           <NavLink className="linkheader" to="/compraryvender">Compra y Venta<div className="underline"></div></NavLink>
           <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
+          </>
+         ) : (
+          <button className="hamburger">
+            <span className="material-symbols-outlined" onClick={handleClick}> menu </span>
+            {open && (
+              <div className="menuHambuger">
+            <NavLink className="linkheader" to="/catalogo">Catálogo<div className="underline"></div></NavLink>
+          <NavLink className="linkheader" to="/compraryvender">Compra y Venta<div className="underline"></div></NavLink>
+          <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
+            </div>
+            )}
+          </button>
+         )
+         }
           </div>
 
           <LayoutInfo content="center" gap="1rem" >
-          <button class="logout">
+          <button className="logout">
           <span className="material-symbols-outlined" onClick={logout}>logout</span>
           </button>
-          <button class="person">
+          <button className="person">
           <span className="material-symbols-outlined" onClick={()=>navigate("/profile")}>person</span>
           </button>
           {/* <img 

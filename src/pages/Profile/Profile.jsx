@@ -210,7 +210,10 @@ const Profile = () => {
                   color="white"
                 />
 
-                <CarruselScroll cocheUser={userInfo.like_coche} />
+                <CarruselScroll
+                  cocheUser={userInfo.like_coche}
+                  likes={"likes"}
+                />
               </div>
             )}
             {commentsUser && (
@@ -223,7 +226,7 @@ const Profile = () => {
                   color="white"
                 />
 
-                <CarruselScroll cocheUser={userInfo?.coche_tienda} />
+                <CarruselScroll cocheUser={userInfo.coche_tienda} />
               </div>
             )}
           </div>
