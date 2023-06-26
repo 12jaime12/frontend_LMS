@@ -1,94 +1,180 @@
-/* .Conocenos{
-    background-color: rgb(200, 200, 200);
-    width: 70vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-} */
-/* .nav li{
+
+.nav li{
     display: flex;
     height: 20rem;
-} */
-/* .ImgPrincipalDash{
+}
+.ImgPrincipalDash{
     width: 100vw;
     height: 70vh;
     object-fit: cover;
-} */
+}
 .ImgPrincipalDash{
     width: 100vw;
     height: 100vh;
     object-fit: cover;
 }
 
-.ConocenosImg{
-    
+.li-conocenos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.boxConocenos{
+    background-color: #f2f2f2;
     width: 30vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    gap: 1rem;
+}
+.ConocenosImg{
+    width: 20vw;
+    object-fit: cover;
+    display: flex;
+    justify-content: center ;
+}
+
+.li-catalogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20rem;
+}
+.CatalogoImg{
+    width: 50vw;
+    height: 50vh;
     object-fit: cover;
 }
- /* .Catalogo{
-    background-color: rgb(200, 200, 200);
-    width: 40vw;
+.boxCatalogo{
+    background-color: #f2f2f2;
+    width: 30vw;
+    height: 30vh;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    z-index:2;
-    position: relative;
-    left: 500px;
-    top: 100px;
-} 
-.Comprayvende{
-    background-color: rgb(200, 200, 200);
-    width: 40vw;
+    border-radius: 5%;
+    gap: 1rem;
+}
+.li-comprayvende{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 2rem;
-    z-index: 400
-} */
-
-.pdashboard{
-    text-align: center;
+    padding-top: 40rem;
+}
+.comprayvendeImg{
+    width: 50vw;
+    height: 50vh;
 }
 
-/* .li-catalogo{
-    margin-bottom: 600px;
-} */
+.boxComprayvende{
+    background-color: #f2f2f2;
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    gap: 1rem;
+}
+.li-taller{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20rem;
+}
+.tallerImg{
+    width: 50vw;
+    height: 50vh;
+    object-fit: cover;
+}
+.boxTaller{
+     background-color: #f2f2f2;
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    gap: 1rem;
+}
+/*.Conocenos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.boxConocenos{
+    background-color: #f2f2f2;
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    border-radius: 5%;
+    gap: 0.5rem;
+}
+ .Catalogo{
+    background-color: #f2f2f2;
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    border-radius: 5%;
+    gap: 0.5rem;
+} 
+
+
+.Comprayvende{
+    background-color: #f2f2f2;
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    border-radius: 5%;
+    gap: 0.5rem;
+}
+
 
 li{
     list-style: none;
 }
 
 
-
-.CatalogoImg{
-    width: 60vw;
-    object-fit: cover;
-}
-
-
-.comprayvendeImg{
-    width: 60vw;
-}
-/* .Taller{
-    background-color: rgb(200, 200, 200);
-    width: 40vw;
+.Taller{
+    background-color: #f2f2f2;
+    width: 30vw;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-} */
-.tallerImg{
-    width: 60vw;
-    object-fit: cover;
-
+    padding-top: 2rem;
+    border-radius: 5%;
+    gap: 0.5rem;
 }
+
+
+} */
 /* .div-info{
     display: flex;
     justify-content: space-around;
-} */
-/* .ul-info{
+}
+.ul-info{
     display: flex;
     list-style: none;
     margin: 1rem;
@@ -102,6 +188,14 @@ li{
     flex-direction: column;
     text-align: center;
 } */
-.imgiconos{
+/* .imgiconos{
     height: 50px;
 }
+
+.nuestrosvalores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25rem;
+} */
