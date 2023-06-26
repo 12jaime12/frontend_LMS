@@ -36,11 +36,12 @@ const CartasMarca = ({ marca, setCoche }) => {
             {element?.marca} {element?.modelo}
           </h3>
           <h3>Desde {element?.precio} €</h3>
-          <div>
+          <div className="likesCatalogo">
             <ToggleButtonCatalogo
               car={element}
               setAllElementByPather={setCoches}
             />
+            <p>{element?.like?.length}</p>
           </div>
         </figure>
       ))}
