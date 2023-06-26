@@ -23,6 +23,9 @@ const Profile = () => {
   const [send, setSend] = useState(false)
   const [res, setRes] = useState()
   const [resDelete, setResDelete] = useState(false)
+  const [cochesUser, setCochesUser] = useState(false)
+  const [likesUser, setLikesUser] = useState(false)
+  const [commentsUser, setCommentsUser] = useState(false)
   const navigate=useNavigate()
   
   console.log("user perfil",user)
