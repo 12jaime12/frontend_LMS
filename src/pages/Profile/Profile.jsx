@@ -179,7 +179,7 @@ const Profile = () => {
                 color="white"
               />
             
-            <CarruselScroll cocheUser={userInfo.like_coche}/>
+            <CarruselScroll cocheUser={userInfo.like_coche} likes={"likes"}/>
             </div>
           )
           }
