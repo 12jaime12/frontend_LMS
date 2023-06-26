@@ -32,6 +32,7 @@ import UpdateProfile from "./pages/UpdateProfile/UpdateProfile.jsx";
 import InfoCoches from "./components/InfoCoches/infoCoches.jsx";
 import TimeAgo from "javascript-time-ago";
 import es from "javascript-time-ago/locale/es.json";
+import CochesPerfil from "./components/CochesPerfil/CochesPerfil.jsx";
 
 TimeAgo.addDefaultLocale(es);
 TimeAgo.addLocale(es);
@@ -64,6 +65,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 </Protected>
               }
             />
+            <Route path="/profile/:variable/:id" element={<CochesPerfil />} />
             <Route path="/updateProfile" element={<UpdateProfile />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route

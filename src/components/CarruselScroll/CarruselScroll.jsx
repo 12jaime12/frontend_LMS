@@ -4,11 +4,13 @@ import Button from "../ui/Button";
 import { updateCocheServicio } from "../../service/API_proyect/coche.service";
 import { getByIdUser } from "../../service/API_proyect/user.service";
 import { useAuth } from "../../contexts/authContext";
+import { useNavigate } from "react-router";
 
-const CarruselScroll = ({ cocheUser, likes }) => {
+const CarruselScroll = ({ cocheUser, likes, variable }) => {
   const [estadoCoche, setEstadoCoche] = useState(false);
   const [coches, setCoches] = useState();
   const { user } = useAuth();
+  const navigate = useNavigate();
   console.log("cochessssss", cocheUser);
 
   const changeEstado = async (id, estado, precio) => {
@@ -42,6 +44,7 @@ const CarruselScroll = ({ cocheUser, likes }) => {
                 className="carruselScrollImage"
                 src={elem.image[0]}
                 alt={elem.modelo}
+                onClick={() => navigate(`/profile/${variable}/${elem._id}`)}
               />
               <h2 className="carruselScrollH2">
                 {elem.marca} {elem.modelo}

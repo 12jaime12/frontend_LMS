@@ -1,0 +1,10 @@
+.cochesPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+.cochesPerfil p{
+    margin: 0.5rem;
+}

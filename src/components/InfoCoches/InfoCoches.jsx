@@ -9,11 +9,14 @@ import {
   getByCatalogo,
   getByCoche,
 } from "../../service/API_proyect/comentario.service";
+import Button from "../ui/Button";
+import { useAuth } from "../../contexts/authContext";
 const InfoCoches = () => {
   const { id, marca } = useParams();
   const [cocheBase, setCocheBase] = useState();
   const [comments, setComments] = useState();
   const navigate = useNavigate();
+  const { user } = useAuth();
   useEffect(() => {
     (async () => {
       setCocheBase(await getByIdCocheBase(id));
@@ -49,9 +52,16 @@ const InfoCoches = () => {
         <CarruselFotos data={cocheBase?.data?.image} />
       )}
 
-      <button onClick={() => navigate(`/catalogo/${marca}/personalizar/${id}`)}>
-        Personalizalo
-      </button>
+      <Button
+        text="Personalizalo"
+        action={
+          user
+            ? () => navigate(`/catalogo/${marca}/personalizar/${id}`)
+            : () => navigate("/login")
+        }
+        variant="contained"
+        color="white"
+      />
     </div>
   );
 };

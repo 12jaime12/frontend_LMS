@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import "./CochePersonalizar.css";
 import {
   createCatalogo,
@@ -9,6 +9,7 @@ import { Switch } from "../Switch/Switch";
 import CarruselFotos from "../CarruselFotos/CarruselFotos";
 import { useAuth } from "../../contexts/authContext";
 import { getByIdCocheBase } from "../../service/API_proyect/cocheBase.service";
+import Button from "../ui/Button";
 
 const CochePersonalizar = () => {
   const { id } = useParams();
@@ -23,6 +24,7 @@ const CochePersonalizar = () => {
   const [precioLlantas, setPrecioLlantas] = useState(0);
   const [precioColor, setPrecioColor] = useState(0);
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   const enviarDatos = async () => {
     const formData = {
@@ -128,7 +130,12 @@ const CochePersonalizar = () => {
           </div>
         ))}
       </div>
-      <button onClick={() => enviarDatos()}>Guardar Coche Personalizado</button>
+      <Button
+        text="Guardar Coche Personalizado"
+        action={() => enviarDatos()}
+        variant="contained"
+        color="white"
+      />
     </div>
   );
 };
