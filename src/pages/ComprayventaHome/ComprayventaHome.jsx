@@ -11,20 +11,9 @@ const ComprayventaHome = () => {
   const [res, setRes] = useState();
   const [send, setSend] = useState(false);
 
-  const getCochesOcasion = async () => {
-    console.log("user coches ocasion", user);
-    setSend(true);
-    setRes(await getAllCochesOcasion());
-    setSend(false);
-  };
-
-  useEffect(() => {
-    getCochesOcasion();
-  }, []);
-
   return (
     <div>
-      <PrintAllCoches data={res?.data} />
+      <PrintAllCoches />
     </div>
   );
 };
