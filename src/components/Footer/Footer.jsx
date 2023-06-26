@@ -9,18 +9,18 @@ const Footer = () => {
     <footer>
       
     <LayoutFooter>
-     <LayoutFlex direction="column" gap="0.5rem">
-          <H3C text="Enlaces de interés" color="white" width="largo"/>
-          <NavLink className="linkheader" to="/catalogo">Catálogo</NavLink>
-          <NavLink className="linkheader" to="/compraryvender">Compra y venta</NavLink>
-          <NavLink className="linkheader" to="/taller">Taller</NavLink>
-      </LayoutFlex>
+     <div className="linksFooter">
+          <H3C className="h3footer" text="Enlaces de interés" color="white" width="largo"/>
+          <NavLink className="linkfooter" to="/catalogo">Catálogo</NavLink>
+          <NavLink className="linkfooter" to="/compraryvender">Compra y venta</NavLink>
+          <NavLink className="linkfooter" to="/taller">Taller</NavLink>
+      </div>
         <img 
         className="fotoLogo"
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687248341/logoprincipal_rsq0kx_cpp7tp.jpg"
           alt="logoLMS"
         />
-      <LayoutInline gap="2rem">
+      <div className="redes">
         <img
           className="iconoRedSocial"
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687249121/instagram_vgzuji.png"
@@ -36,7 +36,7 @@ const Footer = () => {
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687249119/facebook_hbh0pz.png"
           alt="logoFacebook"
         />
-      </LayoutInline>
+      </div>
      
       </LayoutFooter>
     </footer>

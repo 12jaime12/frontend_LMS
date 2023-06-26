@@ -1,6 +1,6 @@
 Header{
-    max-height: 10vh;
-    width: 100%;
+    height: 10vh;
+    width: 100vw;
     position: fixed;
     background: #242424b5;
     top: 0;
@@ -35,6 +35,7 @@ Header{
 
 /* .material-symbols-outlined{
     color: #C61C14;
+    
 }
 
 .material-symbols-outlined:hover{
@@ -50,12 +51,11 @@ Header{
 }
 
 
-.imgHeaderHome{
+/* .imgHeaderHome{
     height: 45px;
     background-color: #39E3EB;
     color:whitesmoke;
     filter:invert();
-    margin: 20px 10px 0 0;
     border-radius: 100%;
     right:10px;
     z-index: 401;
@@ -66,10 +66,36 @@ Header{
     background-color: #39E3EB;
     color:whitesmoke;
     filter:invert();
-    margin: 20px 10px 0 0;
     border-radius: 100%;
     right:70px;
     z-index: 401;
     position: fixed;
     
+} */
+
+.hamburger, .logout, .person{
+    color: white;
+    background: #C61C14;
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
 }
+
+@media screen and (max-width: 1050px) {
+    .linkheader {
+      display: none;
+    }
+  }
+
+@media screen and (min-width: 1050px) {
+    .hamburger {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 1050px) {
+    .logo{
+        height: 70px;
+    }
+  }

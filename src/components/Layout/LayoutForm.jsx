@@ -14,6 +14,11 @@ padding: ${({ padding }) => padding};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
 padding-top: ${({ paddingTop }) => paddingTop};
+margin-top: ${({ margin }) => margin};
+@media only screen and ( max-width: 1050px){
+		width: 255px;
+    padding: 1rem;
+}
 `;
 export const LayoutForm = ({children, direction,zindex, color, width, heigth, padding, gap, paddingTop}) => {
   return (

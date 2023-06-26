@@ -20,15 +20,22 @@ const Header = () => {
           onClick={()=>navigate("/dashboard")}
         />
          <LayoutInfo gap="3rem">
+         <button class="hamburger">
+            <span class="material-symbols-outlined"> menu </span>
+          </button>
           <NavLink className="linkheader" to="/catalogo">Catálogo<div className="underline"></div></NavLink>
           <NavLink className="linkheader" to="/compraryvender">Compra y Venta<div className="underline"></div></NavLink>
           <NavLink className="linkheader" to="/taller">Taller<div className="underline"></div></NavLink>
           </LayoutInfo>
 
           <LayoutInfo content="center" gap="1rem" >
-          {/* <span className="material-symbols-outlined" onClick={logout}>logout</span>
-          <span className="material-symbols-outlined" onClick={()=>navigate("/profile")}>person</span> */}
-          <img 
+          <button class="logout">
+          <span className="material-symbols-outlined" onClick={logout}>logout</span>
+          </button>
+          <button class="person">
+          <span className="material-symbols-outlined" onClick={()=>navigate("/profile")}>person</span>
+          </button>
+          {/* <img 
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687456756/logout_pjonak.svg" 
           alt="home"
           className="imgHeaderLogout" 
@@ -39,7 +46,7 @@ const Header = () => {
           alt="home"
           className="imgHeaderHome" 
           onClick={()=>navigate("/profile")}
-          />
+          /> */}
 
           </LayoutInfo>
 

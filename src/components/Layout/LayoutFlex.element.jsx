@@ -10,7 +10,8 @@ background: ${({ color }) => color};;
 padding: ${({ padding }) => padding};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
-margin-top: ${({ margin }) => margin}`
+
+`
 ;
 export const LayoutFlex = ({children, direction, color, padding, gap, margin}) => {
   return (
