@@ -12,35 +12,31 @@ const CarruselScroll = ({cocheUser}) => {
     console.log("cochessssss", cocheUser)
 
     const changeEstado = async (id, estado, precio) => {
-        console.log(id)
-        
         const customData={
             estado: estado=="none" ? "venta" : "none",
             precio: precio
         }
-
         console.log("estado del coche", customData)
-
         await updateCocheServicio(id, customData)
-        setEstadoCoche(true)
-        
+        setEstadoCoche(true) 
         const auxiliar = (await getByIdUser(user.id));
-        setCoches(auxiliar?.data)
-      
+        console.log("auxiliar", auxiliar)
+        setCoches(auxiliar?.data.coche_cliente)
     }
     useEffect(()=>{
         setCoches(cocheUser)
+        console.log("cocheUser", coches)
     },[cocheUser])
 
     
     useEffect(()=>{
-        console.log(cocheUser)
+        console.log("estadoCoche", coches)
     },[estadoCoche])
     return (
         <div className="divCarruselScroll">
             
             {
-                (coches?.length>0) 
+                (coches?.length!=0) 
                 ? (
                     coches?.map((elem)=>{
                         console.log(elem)
