@@ -16,7 +16,7 @@ const Dashboard = () => {
   console.log(user);
   return (
     <>
-      <div>
+      <div className="dashboard">
         <img 
         src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687252466/hpn-l-hondatyper-2560x1440-d70b_wvkrs1.jpg"
         alt="imagenprincipal"
@@ -102,8 +102,8 @@ const Dashboard = () => {
             </div>
           </li>
         </ul>
-        </div>
-        {/* <div className="oportunidades">
+        <div className="nuestrosvalores">
+        <div className="oportunidades">
               <img
                 src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687255176/gift_vouwzw.png"
                 alt="Oportunidades"
@@ -131,8 +131,9 @@ const Dashboard = () => {
               />
               <H2C text="Calidad" width="largo"></H2C>
               <PC text="Garantía de calidad en todos nuestros servicios. Gracias a nuestros proveedores." width="largo"></PC>
-              </div> */}
-      
+              </div>
+              </div>
+              </div>
        
      
     </>
