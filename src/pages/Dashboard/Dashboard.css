@@ -1,6 +1,6 @@
 .dashboard{
     min-height: 80vh;
-    width: 100%;
+    width: 100vw;
 }
 .nav{
     display:flex;
@@ -297,14 +297,17 @@ li{
 
 @media screen and ( max-width: 400px){
     .nav{
+        width: 100vw;
         display:flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         gap: 100px;
-        padding:15px 0;
+        padding:110px 0;
     }
-    
+    .ImgPrincipalDash{
+        display:none
+    }
     .li-conocenos,.li-comprayvende{
         flex-direction: column-reverse;
         /* padding-top: 50px; */
