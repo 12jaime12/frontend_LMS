@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { useAuth } from "../../contexts/authContext";
 import {
   createComentario,
+  deleteComent,
   getAllComentarios,
   getByCatalogo,
   getByCoche,
@@ -20,6 +21,7 @@ const CreateComment = ({ variable, id, comments }) => {
   const comentario = refComent?.current?.value;
   const [newComments, setNewComments] = useState();
   const [arrayComments, setArrayComments] = useState();
+  //const [inputValue, setInpuValue] = useState("");
   const navigate = useNavigate();
 
   const createComment = async (dataComment) => {
@@ -32,12 +34,30 @@ const CreateComment = ({ variable, id, comments }) => {
     setRes(await createComentario(customData));
     if (variable === "coche") {
       setNewComments(await getByCoche(id));
-      console.log("entro");
+      // setInpuValue("");
+      // const input = document.querySelector(".inputComentario");
+      // input.innerHTML = inputValue;
     } else {
       setNewComments(await getByCatalogo(id));
+      // setInpuValue("");
+      // const input = document.querySelector(".inputComentario");
+      // input.innerHTML = inputValue;
     }
   };
 
+  // const handleChange = (e) => {
+  //   setInpuValue(e.target.value);
+  // };
+
+  const deleteComentario = async (idComent) => {
+    if (variable === "coche") {
+      await deleteComent(idComent);
+      setNewComments(await getByCoche(id));
+    } else {
+      await deleteComent(idComent);
+      setNewComments(await getByCatalogo(id));
+    }
+  };
   useEffect(() => {
     console.log("all comments", comments?.data);
     setArrayComments(comments?.data?.reverse());
@@ -59,7 +79,12 @@ const CreateComment = ({ variable, id, comments }) => {
   return (
     <>
       <div className="divCreateComentario">
-        <input type="text" ref={refComent} className="inputComentario" />
+        <input
+          type="text"
+          ref={refComent}
+          className="inputComentario"
+          //onChange={(e) => handleChange(e)}
+        />
 
         <Button
           type="text"
@@ -88,16 +113,26 @@ const CreateComment = ({ variable, id, comments }) => {
 
           return (
             <section key={comentario._id} className="comentarioInfo">
-              <h7>
-                <strong>
-                  {nombre.toUpperCase()} {apellido.toUpperCase()}
-                </strong>{" "}
-                |{" "}
-                <ReactTimeAgo
-                  date={Date.parse(comentario?.createdAt)}
-                  locale="es-ES"
-                />
-              </h7>
+              <div className="comentariosDiv">
+                <h7>
+                  <strong>
+                    {nombre.toUpperCase()} {apellido.toUpperCase()}
+                  </strong>{" "}
+                  |{" "}
+                  <ReactTimeAgo
+                    date={Date.parse(comentario?.createdAt)}
+                    locale="es-ES"
+                  />{" "}
+                  |{" "}
+                </h7>
+                {nombre === user.user && (
+                  <img
+                    src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687680460/trash_hc1jlx.svg"
+                    alt="delete icon"
+                    onClick={() => deleteComentario(comentario._id)}
+                  />
+                )}
+              </div>
               <h5>{comentario?.content}</h5>
             </section>
           );

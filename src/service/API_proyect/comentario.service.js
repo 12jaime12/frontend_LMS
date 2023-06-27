@@ -49,3 +49,15 @@ export const getByCatalogo = async (id) => {
       return error;
     });
 };
+//-------------------delete-comentario-----------
+export const deleteComent = async (id) => {
+  return API.delete(`/comentarios/delete/${id}`, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};

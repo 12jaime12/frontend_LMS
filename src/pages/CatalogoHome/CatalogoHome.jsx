@@ -15,9 +15,10 @@ const CatalogoHome = () => {
           />
 
           <img
-            src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687337086/depositphotos_641587260-stock-illustration-honda-logo-brand-symbol-white_jl7xg0.webp"
+            src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687858064/honda2_caq1ge.png"
             alt="logoHonda"
             onClick={() => navigate(`/catalogo/honda`)}
+            className="logoHonda"
           />
         </nav>
       </div>
