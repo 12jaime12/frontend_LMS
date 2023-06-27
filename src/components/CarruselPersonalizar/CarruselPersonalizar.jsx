@@ -6,7 +6,7 @@ const CarruselPersonalizar = ({ data, setCoche }) => {
   const [position, setPosition] = useState(0);
   //const [tallerName, setTallerName] = useState()
 
-  const large = data.length;
+  const large = data?.length;
 
 /*   const buscaTaller = async (idTaller) => {
     console.log(idTaller)
@@ -52,7 +52,7 @@ const CarruselPersonalizar = ({ data, setCoche }) => {
         alt="left"
         onClick={() => resta()}
       />
-      {(data[position].estado!="taller") 
+      {(data[position]?.estado!="taller") 
       ? (
       
       <figure className="carta" id={data[position]?._id}>
