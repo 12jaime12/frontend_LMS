@@ -54,7 +54,7 @@ const UpdateProfile = ({data}) => {
     <>
     
       
-      <div className="Profile">
+      <div className="Profile2">
           <H1C text="Introduce SÓLO los datos que quieras cambiar" width="extralargo"/>
           <LayoutForm
             direction="column"
@@ -78,7 +78,7 @@ const UpdateProfile = ({data}) => {
                   <input type="file" name="imagePerfil" id="imagePerfil" ref="inputImage" {...register ("imagen")}/>
                 </label>
               </div>
-                <LayoutInline gap="0.5rem" padding="1rem">
+                <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
                   <label htmlFor="custom-input" className="placeholder-register">
                     Nombre
                   </label>
@@ -106,7 +106,7 @@ const UpdateProfile = ({data}) => {
   
                 
                 
-                <LayoutInline gap="0.5rem" padding="1rem">
+                <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
                   <label htmlFor="custom-input" className="placeholder-register">
                     País
                   </label>
@@ -131,7 +131,7 @@ const UpdateProfile = ({data}) => {
                     {...register("provincia", )}
                   />
                 </LayoutInline>
-                <LayoutInline gap="0.5rem" padding="1rem">
+                <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
                   <label htmlFor="custom-input" className="placeholder-register">
                     Ciudad
                   </label>
@@ -157,7 +157,7 @@ const UpdateProfile = ({data}) => {
                   />
                 </LayoutInline>
   
-                <LayoutInfo content="start" gap="1rem" padding="1rem">
+                <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
                   <label htmlFor="custom-input" className="placeholder-register">
                     Teléfono
                   </label>
@@ -172,7 +172,18 @@ const UpdateProfile = ({data}) => {
                     autoComplete="false"
                     {...register("movil", )}
                   />
-                </LayoutInfo>
+                  <label htmlFor="custom-input" className="placeholder-register">
+                  Email
+                </label>
+                <input
+                  className="input_user"
+                  type="email"
+                  id="email"
+                  name="email"
+                  autoComplete="false"
+                  {...register("email", { required: true })}
+                />
+                </LayoutInline>
   
                 <LayoutFlex 
                   direction="column"
@@ -190,12 +201,12 @@ const UpdateProfile = ({data}) => {
             </LayoutForm>
   
   
-              <LayoutInfo content="center" gap="1rem">
+              <div className='cambioContraseña'>
                 <PC text="¿Quieres cambiar la contraseña?" width="medio" />
                 <Link to="/changePassword" className="anchorCustom">
                   <Button type="text" text="Cambiar" variant="contained" color="white"/>
                 </Link>
-              </LayoutInfo>
+              </div>
             </LayoutForm>
       </div>
     </>
