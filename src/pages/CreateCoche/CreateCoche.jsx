@@ -70,7 +70,7 @@ resOk && navigate("/profile")
 
   return (
     <div className="CreateCar">
-<LayoutInline padding="1rem" gap="0.5rem">
+<LayoutInline padding="1rem" gap="0.5rem" flexMedia="column">
     <LayoutForm  direction="column" gap="3rem" color="white" width="700px" heigth="300px" padding = "2rem">
     <H1C text="Datos del vehículo" width="extralargo"/>
     <PC text="Añade los datos de tu vehículo y las mejores fotos para iniciar la venta." width="largo"></PC>
@@ -80,8 +80,8 @@ resOk && navigate("/profile")
           <form onSubmit={handleSubmit(formSubmit)} encType="multipart/form-data">
             
           <LayoutInline padding="1rem" gap="3rem">
-            <LayoutFlex direction="column" gap="0.5rem" padding="0">
-            <label htmlFor="custom-input" className="custom-placeholder">
+            <LayoutFlex direction="column" gap="0.5rem" padding="0" placeItems="normal">
+            <label htmlFor="custom-input" className="placeholder-create">
               Marca
             </label>
             <input
@@ -92,7 +92,7 @@ resOk && navigate("/profile")
               autoComplete="false"
               {...register("marca", { required: true })}
             />
-             <label htmlFor="custom-input" className="custom-placeholder">
+             <label htmlFor="custom-input" className="placeholder-create">
               Modelo
             </label>
             <input
@@ -103,7 +103,7 @@ resOk && navigate("/profile")
               autoComplete="false"
               {...register("modelo", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
+            <label htmlFor="custom-input" className="placeholder-create">
               Año
             </label>
             <input
@@ -114,7 +114,7 @@ resOk && navigate("/profile")
               autoComplete="false"
               {...register("year", { required: true })}
             />
-             <label htmlFor="custom-input" className="custom-placeholder">
+             <label htmlFor="custom-input" className="placeholder-create">
               Combustible
             </label>
             <input
@@ -125,7 +125,7 @@ resOk && navigate("/profile")
               autoComplete="false"
               {...register("combustible", { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
+            <label htmlFor="custom-input" className="placeholder-create">
               Precio
             </label>
             <input
