@@ -55,3 +55,11 @@
     background-color: red;
 }
 }
+
+@media screen and ((min-width:375px) and (max-width:900px)){
+    .sectionTaller{
+        flex-direction: column;
+        height: 800px;  
+    } 
+    
+}
