@@ -65,6 +65,7 @@
 .divInfoUser{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     gap:35px;
     height: 100%;
@@ -116,4 +117,15 @@
 .ulInfoUser li:hover{
     background-color: #C61C14;
     color:whitesmoke;
+}
+
+@media screen and ((min-width:375px) and (max-width:900px)){
+    .divImgmasInfo{
+        flex-direction: column;
+        gap: 3rem;
+        
+} 
+    .Profile, .divCarruselUser{
+        padding-top: 40vh;
+    }
 }
