@@ -16,7 +16,7 @@ gap: ${({ gap }) => gap};
 padding-top: ${({ paddingTop }) => paddingTop};
 margin-top: ${({ margin }) => margin};
 @media only screen and ( max-width: 1050px){
-		width: 255px;
+		width: 310px;
     padding: 1rem;
 }
 `;

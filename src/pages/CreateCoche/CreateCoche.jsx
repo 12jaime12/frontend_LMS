@@ -46,6 +46,12 @@ const CreateCoche = () => {
     setSend(false);
   };
 
+  // const formSubmit=async(formData)=>{
+  //   console.log(inputFrontal?.current?.files)
+  //   console.log(inputIzquierdo)
+  //   console.log(inputDerecho)
+  //   console.log(inputTrasero)
+
   const handleImage = (e) => {
     const file = e.target.files[0];
     const fileName = file.name;
@@ -68,7 +74,7 @@ const CreateCoche = () => {
 
   return (
     <div className="CreateCar">
-      <LayoutInline padding="1rem" gap="0.5rem">
+      <LayoutInline padding="1rem" gap="0.5rem" flexMedia="column">
         <LayoutForm
           direction="column"
           gap="3rem"
@@ -96,8 +102,13 @@ const CreateCoche = () => {
             encType="multipart/form-data"
           >
             <LayoutInline padding="1rem" gap="3rem">
-              <LayoutFlex direction="column" gap="0.5rem" padding="0">
-                <label htmlFor="custom-input" className="custom-placeholder">
+              <LayoutFlex
+                direction="column"
+                gap="0.5rem"
+                padding="0"
+                placeItems="normal"
+              >
+                <label htmlFor="custom-input" className="placeholder-create">
                   Marca
                 </label>
                 <input
@@ -108,7 +119,7 @@ const CreateCoche = () => {
                   autoComplete="false"
                   {...register("marca", { required: true })}
                 />
-                <label htmlFor="custom-input" className="custom-placeholder">
+                <label htmlFor="custom-input" className="placeholder-create">
                   Modelo
                 </label>
                 <input
@@ -119,7 +130,7 @@ const CreateCoche = () => {
                   autoComplete="false"
                   {...register("modelo", { required: true })}
                 />
-                <label htmlFor="custom-input" className="custom-placeholder">
+                <label htmlFor="custom-input" className="placeholder-create">
                   Año
                 </label>
                 <input
@@ -130,7 +141,7 @@ const CreateCoche = () => {
                   autoComplete="false"
                   {...register("year", { required: true })}
                 />
-                <label htmlFor="custom-input" className="custom-placeholder">
+                <label htmlFor="custom-input" className="placeholder-create">
                   Combustible
                 </label>
                 <input
@@ -141,7 +152,7 @@ const CreateCoche = () => {
                   autoComplete="false"
                   {...register("combustible", { required: true })}
                 />
-                <label htmlFor="custom-input" className="custom-placeholder">
+                <label htmlFor="custom-input" className="placeholder-create">
                   Precio
                 </label>
                 <input
@@ -180,9 +191,26 @@ const CreateCoche = () => {
                     autoComplete="false"
                     ref={inputFrontal}
                     onChange={(e) => handleImage(e)}
-                    required="true"
                   />
                 </label>
+
+                {/* <input 
+                type="file" 
+                name="file-2" 
+                id="file-2" 
+                className="inputfile inputfile-2" 
+                data-multiple-caption="{count} archivos seleccionados" 
+                multiple 
+                ref={inputFrontal}
+                onChange={(e)=>handleImage(e)}
+                required="true"
+                autoComplete="false"
+                />
+                <label htmlFor="file-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                <span class="iborrainputfile">{image.length<1 ? "Seleccionar archivo" : image[0]}</span>
+                </label> */}
+
                 <label className="archivo">
                   Lateral derecho:{" "}
                   <input
@@ -195,6 +223,24 @@ const CreateCoche = () => {
                     onChange={(e) => handleImage(e)}
                   />
                 </label>
+
+                {/* <input 
+                type="file" 
+                name="file-2" 
+                id="file-2" 
+                className="inputfile inputfile-2" 
+                data-multiple-caption="{count} archivos seleccionados" 
+                multiple 
+                ref={inputDerecho}
+                onChange={(e)=>handleImage(e)}
+                autoComplete="false"
+                
+                />
+                <label htmlFor="file-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                <span class="iborrainputfile">{image.length<2 ? "Seleccionar archivo" : image[1]}</span>
+                </label> */}
+
                 <label className="archivo">
                   Trasera:{" "}
                   <input
@@ -207,6 +253,23 @@ const CreateCoche = () => {
                     onChange={(e) => handleImage(e)}
                   />
                 </label>
+
+                {/* <input 
+                type="file" 
+                name="file-2" 
+                id="file-2" 
+                className="inputfile inputfile-2" 
+                data-multiple-caption="{count} archivos seleccionados" 
+                multiple 
+                ref={inputTrasero}
+                onChange={(e)=>handleImage(e)}
+                autoComplete="false"
+                />
+                <label htmlFor="file-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                <span class="iborrainputfile">{image.length<3 ? "Seleccionar archivo" : image[2]}</span>
+                </label> */}
+
                 <label className="archivo">
                   Lateral izquierdo:{" "}
                   <input
@@ -219,6 +282,22 @@ const CreateCoche = () => {
                     onChange={(e) => handleImage(e)}
                   />
                 </label>
+
+                {/* <input 
+                type="file" 
+                name="file-2" 
+                id="file-2" 
+                className="inputfile inputfile-2" 
+                data-multiple-caption="{count} archivos seleccionados" 
+                multiple 
+                ref={inputIzquierdo}
+                onChange={(e)=>handleImage(e)}
+                autoComplete="false"
+                />
+                <label htmlFor="file-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                <span class="iborrainputfile">{image.length<4 ? "Seleccionar archivo" : image[3]}</span>
+                </label> */}
               </LayoutFlex>
             </LayoutInline>
             <LayoutFlex

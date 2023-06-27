@@ -118,12 +118,6 @@ const CheckCode = () => {
             </LayoutFlex>
             <PC text="Si el código introducido no es correcto, su usuario será
                 eliminado de la base de datos y tendrá que registrarse de nuevo." width="extralargo" color="#C61C14" size="small"/>
-            {/* <p className="aviso">
-              <small>
-                Si el código introducido no es correcto, su usuario será
-                eliminado de la base de datos y tendrá que registrarse de nuevo.
-              </small>
-            </p> */}
           </form>
           {/* <button className="resend" onClick={()=>handleResend()}>Reenviar código</button> */}
           <Button
@@ -134,7 +128,6 @@ const CheckCode = () => {
               color="white"
             />
         </LayoutForm>
-        
         </LayoutFlex>
     </LayoutInline>
     </div>

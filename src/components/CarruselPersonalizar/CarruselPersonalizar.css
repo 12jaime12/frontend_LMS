@@ -19,11 +19,13 @@
     justify-content: center;
     text-align: center;
 }
-.cartaEnTaller{
+/* .cartaEnTaller{
     border:10px solid rgb(255, 145, 0);
-}
+} */
 .cocheEnTaller{
     display: flex;
     flex-direction: column;
     gap:20px;
 }
+
+

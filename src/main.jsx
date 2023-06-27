@@ -33,6 +33,7 @@ import InfoCoches from "./components/InfoCoches/infoCoches.jsx";
 import TimeAgo from "javascript-time-ago";
 import es from "javascript-time-ago/locale/es.json";
 import CochesPerfil from "./components/CochesPerfil/CochesPerfil.jsx";
+import Conocenos from "./pages/Conocenos/Conocenos.jsx";
 
 TimeAgo.addDefaultLocale(es);
 TimeAgo.addLocale(es);
@@ -51,8 +52,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 </ProtectedCheckChildren>
               }
             />
-            <Route path="createCoche" element={<CreateCoche />} />
-
+            <Route path="/createCoche" element={<CreateCoche />} />
+            <Route path="/conocenos" element={<Conocenos />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/changePassword" element={<ChangePassword />} />

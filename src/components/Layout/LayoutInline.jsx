@@ -17,10 +17,12 @@ margin-top: ${({ margin }) => margin};
 @media only screen and ( max-width: 1450px){
 		flex-direction: ${({ flexMedia }) => flexMedia};
     place-items: ${({ placeItems }) => placeItems};
+
 }
 @media only screen and ( max-width: 950px){
 		flex-direction: column;
     place-items: ${({ placeItems }) => placeItems};
+    
 }
 `
 
