@@ -31,6 +31,9 @@ const CreateCoche = () => {
 
      const formSubmit=async(formData)=>{
       console.log(inputFrontal?.current?.files)
+      console.log(inputIzquierdo)
+      console.log(inputDerecho)
+      console.log(inputTrasero)
 
       const customFormData = {
         option_1: inputFrontal?.current?.files[0],
@@ -149,9 +152,27 @@ resOk && navigate("/profile")
               autoComplete="false"
               ref={inputFrontal}
               onChange={(e)=>handleImage(e)}
-              required="true"
+              
             />
-            </label>
+            </label> 
+            
+                {/* <input 
+                type="file" 
+                name="file-2" 
+                id="file-2" 
+                className="inputfile inputfile-2" 
+                data-multiple-caption="{count} archivos seleccionados" 
+                multiple 
+                ref={inputFrontal}
+                onChange={(e)=>handleImage(e)}
+                required="true"
+                autoComplete="false"
+                />
+                <label htmlFor="file-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                <span class="iborrainputfile">{image.length<1 ? "Seleccionar archivo" : image[0]}</span>
+                </label> */}
+              
             <label className='archivo'>Lateral derecho: <input
               className="input_user"
               type="file"
@@ -160,7 +181,25 @@ resOk && navigate("/profile")
               autoComplete="false"
               ref={inputDerecho}
               onChange={(e)=>handleImage(e)}
-            /></label>
+            /></label> 
+            
+                {/* <input 
+                type="file" 
+                name="file-2" 
+                id="file-2" 
+                className="inputfile inputfile-2" 
+                data-multiple-caption="{count} archivos seleccionados" 
+                multiple 
+                ref={inputDerecho}
+                onChange={(e)=>handleImage(e)}
+                autoComplete="false"
+                
+                />
+                <label htmlFor="file-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                <span class="iborrainputfile">{image.length<2 ? "Seleccionar archivo" : image[1]}</span>
+                </label> */}
+              
             <label className='archivo'>Trasera: <input
               className="input_user"
               type="file"
@@ -169,7 +208,24 @@ resOk && navigate("/profile")
               autoComplete="false"
               ref={inputTrasero}
               onChange={(e)=>handleImage(e)}
-            /></label>
+            /></label> 
+            
+                {/* <input 
+                type="file" 
+                name="file-2" 
+                id="file-2" 
+                className="inputfile inputfile-2" 
+                data-multiple-caption="{count} archivos seleccionados" 
+                multiple 
+                ref={inputTrasero}
+                onChange={(e)=>handleImage(e)}
+                autoComplete="false"
+                />
+                <label htmlFor="file-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                <span class="iborrainputfile">{image.length<3 ? "Seleccionar archivo" : image[2]}</span>
+                </label> */}
+              
             <label className='archivo'>Lateral izquierdo: <input
               className="input_user"
               type="file"
@@ -179,6 +235,23 @@ resOk && navigate("/profile")
               input={inputIzquierdo}
               onChange={(e)=>handleImage(e)}
             /></label>
+            
+                {/* <input 
+                type="file" 
+                name="file-2" 
+                id="file-2" 
+                className="inputfile inputfile-2" 
+                data-multiple-caption="{count} archivos seleccionados" 
+                multiple 
+                ref={inputIzquierdo}
+                onChange={(e)=>handleImage(e)}
+                autoComplete="false"
+                />
+                <label htmlFor="file-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                <span class="iborrainputfile">{image.length<4 ? "Seleccionar archivo" : image[3]}</span>
+                </label> */}
+              
              </LayoutFlex>
             
         </LayoutInline>
