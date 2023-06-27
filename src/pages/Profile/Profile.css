@@ -119,13 +119,13 @@
     color:whitesmoke;
 }
 
-@media screen and ((min-width:375px) and (max-width:900px)){
+@media screen and (max-width:600px){
     .divImgmasInfo{
         flex-direction: column;
         gap: 3rem;
         
 } 
-    .Profile, .divCarruselUser{
-        padding-top: 40vh;
+    .divCarruselUser{
+        padding-top: 5vh;
     }
 }

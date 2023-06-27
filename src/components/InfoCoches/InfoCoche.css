@@ -11,6 +11,7 @@
 .infoCoche h2{
     margin: 2rem;
     font-size: 50px;
+    text-align: center;
 }
 .infoCoche p{
     width: 70%;
