@@ -62,3 +62,16 @@
     border: 2px solid red;
     background-color: black;
 }
+.inputsFiltros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.marca,.precio{
+    margin: 0.25rem;
+    border: solid 1px #C61C14;
+    border-radius: 10px;
+    padding: 0.5rem;
+}

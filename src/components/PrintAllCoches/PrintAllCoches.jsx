@@ -71,13 +71,15 @@ const PrintAllCoches = () => {
 
   return (
     <div>
-      <div>
+      <div className="inputsFiltros">
         <input
+          className="marca"
           type="text"
           onChange={(e) => buscarMarca(e)}
           placeholder="marca"
         ></input>
         <input
+          className="precio"
           type="text"
           onChange={(e) => buscarPrecio(e)}
           placeholder="maxPrecio"
