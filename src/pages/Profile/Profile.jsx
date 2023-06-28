@@ -185,7 +185,7 @@ const Profile = () => {
                   setCommentsUser(true)
                 )}
               >
-                Perzonalizados
+                Personalizados
               </li>
             </ul>
             {cochesUser && (

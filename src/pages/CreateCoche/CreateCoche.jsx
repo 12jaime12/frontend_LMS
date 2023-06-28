@@ -176,7 +176,7 @@ const CreateCoche = () => {
                   {...register("precio", { required: true })}
                 />
                 <label htmlFor="custom-input" className="placeholder-create">
-                  Informacion del Vehiculo
+                  Información del vehículo
                 </label>
                 <input
                   className="input_user"
