@@ -123,7 +123,7 @@ const CheckCode = () => {
           <Button
             type="button"
               text="Reenviar código"
-              action={handleResend}
+              action={() => handleResend()}
               variant="contained"
               color="white"
             />

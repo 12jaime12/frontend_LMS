@@ -128,4 +128,8 @@
     .divCarruselUser{
         padding-top: 5vh;
     }
+
+.divImgmasInfo{
+    min-height: 60vh;
+}
 }
