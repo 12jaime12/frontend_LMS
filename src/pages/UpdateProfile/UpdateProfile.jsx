@@ -13,9 +13,9 @@ import { useAuth } from '../../contexts/authContext';
 import { getByIdUser, updateUser } from '../../service/API_proyect/user.service';
 import ChangeImageProfile from '../../components/ChangeImageProfile/ChangeImageProfile';
 import "./UpdateProfile.css"
+import Swal from 'sweetalert2';
 
 const UpdateProfile = ({data}) => {
-    console.log("UPDATE PROFILE")
     const {register, handleSubmit} = useForm()
     const [res,setRes] = useState()
     const [send, setSend] = useState(false)
@@ -27,28 +27,84 @@ const UpdateProfile = ({data}) => {
     const getUser = async () => {
       setInfoUser(await getByIdUser(user.id))
     }
-    console.log("info",infoUser)
+
     
     const formSubmit = async (formData) =>{
-      console.log(inputImage)
-      const dataForm = {
-        name:(formData.name ? formData.name : infoUser.data.name),
-        apellido:(formData.apellido ? formData.apellido : infoUser.data.apellido),
-        pais:(formData.pais ? formData.pais : infoUser.data.pais),
-        provincia:(formData.provincia ? formData.provincia : infoUser.data.provincia),
-        ciudad:(formData.ciudad ? formData.ciudad : infoUser.data.ciudad),
-        direccion:(formData.direccion ? formData.direccion : infoUser.data.direccion),
-        movil:(formData.movil ? formData.movil : infoUser.data.movil),
+      console.log(formData)
+      if(formData.apellido==""&&formData.ciudad==""&&formData.direccion==""&&formData.email==""&&formData.movil==""&&formData.name==""&&formData.pais==""&&formData.provincia==""){
+        Swal.fire({
+          title: "No has introducido ninguna modificación en el perfil",
+          background: "#171717",
+          color: "#c61c14",
+          showConfirmButton: false,
+          timer: 3000,
+        })
+      }else{
+        Swal.fire({
+          title: "¿Seguro que quieres modificar tus datos?",
+          icon: "question",
+          iconColor:"#249e05",
+          background: "#F2F2F2",
+          color: "#249e05",
+          showCancelButton: true,
+          confirmButtonColor: "rgb(73, 193, 162)",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "YES",
+      }).then(async (result) => {
+          if (result.isConfirmed) {
+          
+          const dataForm = {
+            name:(formData.name ? formData.name : infoUser.data.name),
+            apellido:(formData.apellido ? formData.apellido : infoUser.data.apellido),
+            pais:(formData.pais ? formData.pais : infoUser.data.pais),
+            provincia:(formData.provincia ? formData.provincia : infoUser.data.provincia),
+            ciudad:(formData.ciudad ? formData.ciudad : infoUser.data.ciudad),
+            direccion:(formData.direccion ? formData.direccion : infoUser.data.direccion),
+            movil:(formData.movil ? formData.movil : infoUser.data.movil),
+          }
+          const dataCustom = {
+            imagen: inputImage.current.files[0],
+            ...dataForm,
+          }
+    
+          console.log("datacustom", dataCustom)
+          
+          const update=await updateUser(dataCustom)
+          
+          switch (update.status) {
+              case 200:
+              Swal.fire({
+                icon: "success",
+                iconColor:"#249e05",
+                background: "#F2F2F2",
+                color: "#249e05",
+                  title: "👍✅ Perfil actualizado ✅👍",
+                  text: "",
+                  showConfirmButton: false,
+                  timer: 2000,
+                  
+              });
+              setRes(()=>true)
+              break;
+  
+              default:
+              Swal.fire({
+                  icon: "error",
+                  title: "❌ ERROR ❌",
+                  text: "Please, try again",
+                  showConfirmButton: false,
+                  timer: 1500,
+                  iconColor:"#c61c14",
+                background: "#F2F2F2",
+                color: "#c61c14",
+              });
+  
+              break;
+          }
+          }
+          })
       }
-      const dataCustom = {
-        imagen: inputImage.current.files[0],
-        ...dataForm,
-      }
-
-      console.log("datacustom", dataCustom)
-      setSend(true)
-      setRes(await updateUser(dataCustom))
-      setSend(false)
+      
     }
     
     useEffect(()=>{
@@ -80,14 +136,28 @@ const UpdateProfile = ({data}) => {
               <form onSubmit={handleSubmit(formSubmit)}>
               <div className="divUpdateImagen">
                 <img src={infoUser?.data?.imagen} alt={infoUser?.data?.imagen}/>
-                <label>
+                {/* <label>
                   <input 
                   type="file" 
                   name="imagePerfil" 
                   id="imagePerfil" 
                   ref={inputImage}
                   />
+                </label> */}
+                <div className="container-input">
+                <input 
+                type="file" 
+                name="file-2" 
+                id="file-2" 
+                className="inputfile inputfile-2" 
+                ref={inputImage}
+                
+                />
+                <label htmlFor="file-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                <span className="iborrainputfile">Seleccionar archivo</span>
                 </label>
+              </div>
               </div>
                 <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
                   <label htmlFor="custom-input" className="placeholder-register">
