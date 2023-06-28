@@ -181,7 +181,7 @@ const UpdateProfile = ({data}) => {
                   id="email"
                   name="email"
                   autoComplete="false"
-                  {...register("email", { required: true })}
+                  {...register("email")}
                 />
                 </LayoutInline>
   

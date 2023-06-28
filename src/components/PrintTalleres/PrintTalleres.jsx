@@ -36,13 +36,13 @@ const PrintTalleres = ({data, coche}) => {
 
    return (
     <>
-    <div className="divCochesUser">
+    <div className="divTodosTalleres">
 
         {
             data?.data.map((elem)=>{
                 return (
                 <section key={elem._id} className="sectionTaller">
-                    <div>
+                    <div className="divTallerInfo">
                         <div className="divImgTaller">
                             <h2>{elem.name} - {elem.apellido}</h2>
                             <img src={elem.imagen} alt={elem.name} />

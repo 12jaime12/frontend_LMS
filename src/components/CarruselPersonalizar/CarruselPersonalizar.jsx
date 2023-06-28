@@ -69,7 +69,7 @@ const CarruselPersonalizar = ({ data, setCoche }) => {
       )
       :(
         <div className="cocheEnTaller">
-      <h2>❌ EL COCHE YA SE ENCUENTRA EN EL TALLER ❌</h2>
+     <h3 className="estadoEnTaller">Actualmente en taller</h3>
         <figure className="cartaEnTaller" id={data[position]?._id}>
         <img
           className="fotoCarta"
@@ -79,7 +79,7 @@ const CarruselPersonalizar = ({ data, setCoche }) => {
         <h3>
           {data[position]?.marca} {data[position]?.modelo}
         </h3>
-        <h3>Actualmente en taller</h3>
+        
       </figure>
       </div>
       )

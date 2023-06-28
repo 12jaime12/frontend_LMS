@@ -43,7 +43,7 @@ const Taller = () => {
       {
         (resUser!=null || coche!=undefined)
         ?(
-          <div>
+          <div className="divCarruselCocheCliente">
             <CarruselPersonalizar data={resUser?.data?.coche_cliente} setCoche={setCoche}/>
           </div>
         )
