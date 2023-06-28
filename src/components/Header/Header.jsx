@@ -12,7 +12,8 @@ const Header = () => {
   const navigate = useNavigate()
   const [open, setOpen] = useState(false)
   const { ancho } = useWidth();
-  const handleClick = () => {setOpen(!open); console.log("entro")}
+  const handleClick = () => {setOpen(!open)}
+  const handleClose = () => {setOpen(false)}
 
   return (
     <header>
@@ -22,7 +23,7 @@ const Header = () => {
           src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1686737065/logoredondo-removebg-preview_uidph4.png"
           alt="logo"
           className="logo"
-          onClick={()=>navigate("/dashboard")}
+          onClick={()=>{navigate("/dashboard");handleClose()}}
         />
         
          <div className="navHeader">
@@ -48,17 +49,17 @@ const Header = () => {
                   {/* <button onClick={handleClick}>X</button> */}
                   <div className="linksBurguer">
                     <span>
-                      <NavLink className="spanBurger" to="/catalogo">
+                      <NavLink onClick={handleClose} className="spanBurger" to="/catalogo">
                         Catálogo<div className="underline"></div>
                       </NavLink>
                     </span>
                     <span>
-                      <NavLink className="spanBurger" to="/compraryvender">
+                      <NavLink onClick={handleClose} className="spanBurger" to="/compraryvender">
                         Compra y Venta<div className="underline"></div>
                       </NavLink>
                     </span>
                     <span>
-                      <NavLink className="spanBurger" to="/taller">
+                      <NavLink onClick={handleClose} className="spanBurger" to="/taller">
                         Taller<div className="underline"></div>
                       </NavLink>
                     </span>
@@ -72,10 +73,10 @@ const Header = () => {
 
           <LayoutInfo content="center" gap="1rem" >
           <button className="logout">
-          <span className="material-symbols-outlined" onClick={logout}>logout</span>
+          <span className="material-symbols-outlined" onClick={() => {logout();handleClose()}}>logout</span>
           </button>
           <button className="person">
-          <span className="material-symbols-outlined" onClick={()=>navigate("/profile")}>person</span>
+          <span className="material-symbols-outlined" onClick={()=>{navigate("/profile");handleClose()}}>person</span>
           </button>
 
           </LayoutInfo>
