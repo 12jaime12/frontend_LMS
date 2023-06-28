@@ -94,9 +94,8 @@ const UpdateProfile = ({data}) => {
                   text: "Please, try again",
                   showConfirmButton: false,
                   timer: 1500,
-                  iconColor:"#c61c14",
-                background: "#F2F2F2",
-                color: "#c61c14",
+                  background: "#171717",
+                  color: "#c61c14",
               });
   
               break;

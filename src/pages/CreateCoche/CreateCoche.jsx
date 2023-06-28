@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { createCocheServicio } from "../../service/API_proyect/coche.service";
 import "./CreateCoche.css";
 import useCreateCoche from "../../hooks/useError/useCreateCoche";
+import Swal from "sweetalert2";
 
 const CreateCoche = () => {
   const navigate = useNavigate();
@@ -41,16 +42,29 @@ const CreateCoche = () => {
       option_4: inputDerecho?.current?.files[0],
       ...formData,
     };
-    setSend(true);
+    
+      
+      /* setSend(true);
     setRes(await createCocheServicio(customFormData));
-    setSend(false);
+    setSend(false); */
+    Swal.fire({
+      title: "¿Seguro que quieres crear este coche?",
+      icon: "question",
+      iconColor:"#249e05",
+      background: "#F2F2F2",
+      color: "#249e05",
+      showCancelButton: true,
+      confirmButtonColor: "rgb(73, 193, 162)",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "YES",
+  }).then(async (result) => {
+      if (result.isConfirmed) {
+        setSend(true);
+        setRes(await createCocheServicio(customFormData));
+        setSend(false);
+      }
+      })
   };
-
-  // const formSubmit=async(formData)=>{
-  //   console.log(inputFrontal?.current?.files)
-  //   console.log(inputIzquierdo)
-  //   console.log(inputDerecho)
-  //   console.log(inputTrasero)
 
   const handleImage = (e) => {
     const file = e.target.files[0];

@@ -6,8 +6,8 @@ const useCodeError = (res, setCodeOk, setDeleteUser) => {
       if(res?.data?.testCheck === true){
         Swal.fire({
             icon: "success",
-          title: "✅ Codigo correcto ✅ Cuenta verificada",
-          text: "Disfruta de tu experiencia en Legendary MotorSport",
+          title: "✅ Cuenta verificada ✅ ",
+          text: "🏎️💨 Disfruta de tu experiencia en Legendary MotorSport 🏎️💨",
           showConfirmButton: false,
           timer: 3000,
         })

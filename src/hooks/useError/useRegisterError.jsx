@@ -9,7 +9,8 @@ const useRegisterError = (res, setRegisterOk) => {
         setRegisterOk(()=>true)
         Swal.fire({
             icon: "success",
-            title: "BIENVENIDO!!",
+            title: "✅ Registrado correctamente 🏎️💨",
+            text: "📧 Comprueba el código que hemos enviado a tu email 📧",
             showConfirmButton: false,
             timer: 3000,
         })

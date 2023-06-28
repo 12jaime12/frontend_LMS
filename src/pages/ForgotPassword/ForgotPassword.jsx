@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form"
 import Button from "../../components/ui/Button";
 import { H1C, PC } from "../../components/ui";
 import {LayoutFlex, LayoutForm, LayoutInline} from "../../components/Layout"
+import useErrorForgotPassword from "../../hooks/useError/useErrorForgotPassword"
 
 
 const ForgotPassword = () => {
@@ -23,9 +24,13 @@ const ForgotPassword = () => {
   }
 
   useEffect(()=>{
+    useErrorForgotPassword(res, setForgotOk)
     console.log(res)
   },[res])
 
+  if(forgotOk){
+    navigate("/login")
+  }
   return (
     <div className="ForgotPassword">
     <LayoutInline gap="0.5rem" padding="1rem" flexMedia="column">
