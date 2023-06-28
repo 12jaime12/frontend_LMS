@@ -10,6 +10,7 @@ import CarruselFotos from "../CarruselFotos/CarruselFotos";
 import { useAuth } from "../../contexts/authContext";
 import { getByIdCocheBase } from "../../service/API_proyect/cocheBase.service";
 import Button from "../ui/Button";
+import Swal from "sweetalert2";
 
 const CochePersonalizar = () => {
   const { id } = useParams();
@@ -23,6 +24,7 @@ const CochePersonalizar = () => {
   const [precioMotor, setPrecioMotor] = useState(0);
   const [precioLlantas, setPrecioLlantas] = useState(0);
   const [precioColor, setPrecioColor] = useState(0);
+
   const { user } = useAuth();
   const navigate = useNavigate();
 
@@ -37,7 +39,29 @@ const CochePersonalizar = () => {
       image: array,
     };
     console.log(formData);
-    await createCatalogo(formData);
+    let res;
+    res = await createCatalogo(formData);
+    switch (res?.status) {
+      case 200:
+        Swal.fire({
+          icon: "success",
+          title: "Personalizacion Creada 🏎️💨",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        break;
+
+      default:
+        Swal.fire({
+          icon: "error",
+          title: "ERROR",
+          text: "Please, try again",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+
+        break;
+    }
     //console.log("enviado");
   };
 

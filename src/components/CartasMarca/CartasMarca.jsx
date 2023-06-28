@@ -40,6 +40,7 @@ const CartasMarca = ({ marca, setCoche }) => {
             <ToggleButtonCatalogo
               car={element}
               setAllElementByPather={setCoches}
+              variable={marca}
             />
             <p>{element?.like?.length}</p>
           </div>
