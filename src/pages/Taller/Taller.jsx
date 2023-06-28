@@ -48,7 +48,7 @@ const Taller = () => {
   return (
     <div className="Taller">
       {
-        (resUser=="undefined" || coche=="undefined")
+        (resUser!==undefined || coche!==undefined)
         ?(
           <div className="divCarruselCocheCliente">
             <CarruselPersonalizar data={resUser?.data?.coche_cliente} setCoche={setCoche}/>
