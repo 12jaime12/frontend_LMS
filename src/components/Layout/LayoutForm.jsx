@@ -19,6 +19,10 @@ margin-top: ${({ margin }) => margin};
 		width: 310px;
     padding: 1rem;
 }
+@media only screen and ( min-width: 900px) and ( max-width: 1050px){
+		width: 700px;
+    padding: 1rem;
+}
 `;
 export const LayoutForm = ({children, direction,zindex, color, width, heigth, padding, gap, paddingTop}) => {
   return (

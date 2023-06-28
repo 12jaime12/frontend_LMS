@@ -190,7 +190,7 @@ const Profile = () => {
             </ul>
             {cochesUser && (
               <div className="divCarruselInfo">
-                <h2>COCHES PROPIOS</h2>
+                <h2>Coches propios</h2>
                 <Button
                   text="Añadir coche"
                   action={() => navigate("/createCoche")}
