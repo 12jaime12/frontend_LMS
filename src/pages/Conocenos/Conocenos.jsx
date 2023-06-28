@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Conocenos.css";
 
 import React from "react";
@@ -29,16 +30,31 @@ const Conocenos = () => {
         <img
           className="img-conocenos"
           src="https://res.cloudinary.com/dpkqzc5zh/image/upload/v1685632147/andrea_v1aneu.jpg"
-          alt="claroquesiguapi"
+          alt=""
         />
         <section>
           <div className="datos">
+          
             <h3>Datos de contacto</h3>
-            <p>Nombre: Andrea</p>
-            <p>Apellidos: de Antonio Ortiz</p>
-            <p>Email: andreadeantonioortiz@gmail.com</p>
-            <p>LinkedIn: linkedin.com/in/andrea-de-antonio-ortiz-181b4826</p>
-            <p>Github: https://github.com/andreafcb1</p>
+            <p><strong>Nombre: </strong>Andrea</p>
+            <p><strong>Apellidos: </strong>de Antonio Ortiz</p>
+            <div className="mailConocenos">
+            <img className="img-mail" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687965931/sobre2_cmlizj.png" alt="mail"></img>
+            <p>andreadeantonioortiz@gmail.com</p>
+            </div>
+            <div className="logos-redes">
+        <Link to="http://www.linkedin.com/in/andrea-de-antonio-ortiz-181b4826" target="_blank">
+        <img className="img-linkedin" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/linkedin_zpt7lh.png" alt="linkedin"></img>
+      </Link>
+      <Link to="https://github.com/andreafcb1" target="_blank">
+      <img
+          className="img-github"
+          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/github_yusdze.png"
+          alt="github"
+        />
+      </Link>
+      </div>
+           
           </div>
           <div className="description">
             <h3>Descripción</h3>
@@ -62,11 +78,24 @@ const Conocenos = () => {
         <section>
           <div className="datos">
             <h3>Datos de contacto</h3>
-            <p>Nombre: Jaime</p>
-            <p>Apellidos: Calvo Cuadrado</p>
-            <p>Email: 12jaimejcc12@gmail.com</p>
-            <p>LinkedIn: linkedin.com/in/jaime-calvo-cuadrado-253a16271</p>
-            <p>Github: https://github.com/12jaime12</p>
+            <p><strong>Nombre: </strong>Jaime</p>
+            <p><strong>Apellidos: </strong>Calvo Cuadrado</p>
+            <div className="mailConocenos">
+            <img className="img-mail" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687965931/sobre2_cmlizj.png" alt="mail"></img>
+            <p>12jaimejcc12@gmail.com</p>
+            </div>
+            <div className="logos-redes">
+        <Link to="http://www.linkedin.com/in/jaime-calvo-cuadrado-253a16271" target="_blank">
+        <img className="img-linkedin" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/linkedin_zpt7lh.png" alt="linkedin"></img>
+      </Link>
+      <Link to="https://github.com/12jaime12" target="_blank">
+      <img
+          className="img-github"
+          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/github_yusdze.png"
+          alt="github"
+        />
+      </Link>
+      </div>
           </div>
           <div className="description">
             <h3>Descripción</h3>
@@ -90,11 +119,24 @@ const Conocenos = () => {
         <section>
           <div className="datos">
             <h3>Datos de contacto</h3>
-            <p>Nombre: Samuel</p>
-            <p>Apellidos: Martinez Gonzalez</p>
-            <p>Email: 3samuelmg@gmail.com</p>
-            <p>LinkedIn: linkedin.com/in/samuel-martinez-gonzalez-640594266</p>
-            <p>Github: https://github.com/Samuelson23</p>
+            <p><strong>Nombre: </strong>Samuel</p>
+            <p><strong>Apellidos: </strong>Martínez González</p>
+            <div className="mailConocenos">
+            <img className="img-mail" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687965931/sobre2_cmlizj.png" alt="mail"></img>
+            <p>3samuelmg@gmail.com</p>
+            </div>
+            <div className="logos-redes">
+        <Link to="http://www.linkedin.com/in/samuel-martinez-gonzalez-640594266" target="_blank">
+        <img className="img-linkedin" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/linkedin_zpt7lh.png" alt="linkedin"></img>
+      </Link>
+      <Link to="https://github.com/Samuelson23" target="_blank">
+      <img
+          className="img-github"
+          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/github_yusdze.png"
+          alt="github"
+        />
+      </Link>
+      </div>
           </div>
           <div className="description">
             <h3>Descripción</h3>
@@ -118,13 +160,24 @@ const Conocenos = () => {
         <section>
           <div className="datos">
             <h3>Datos de contacto</h3>
-            <p>Nombre: Carlos</p>
-            <p>Apellidos: Membrado de la Torre</p>
-            <p>Email: cmdt367@gmail.com</p>
-            <p>
-              LinkedIn: linkedin.com/in/carlos-membrado-de-la-torre-b76b6a271
-            </p>
-            <p>Github: https://github.com/cmdt367</p>
+            <p><strong>Nombre: </strong>Carlos</p>
+            <p><strong>Apellidos: </strong>Membrado de la Torre</p>
+            <div className="mailConocenos">
+            <img className="img-mail" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687965931/sobre2_cmlizj.png" alt="mail"></img>
+            <p>cmdt367@gmail.com</p>
+            </div>
+            <div className="logos-redes">
+        <Link to="http://www.linkedin.com/in/carlos-membrado-de-la-torre-b76b6a271" target="_blank">
+        <img className="img-linkedin" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/linkedin_zpt7lh.png" alt="linkedin"></img>
+      </Link>
+      <Link to="https://github.com/cmdt367" target="_blank">
+      <img
+          className="img-github"
+          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/github_yusdze.png"
+          alt="github"
+        />
+      </Link>
+      </div>
           </div>
           <div className="description">
             <h3>Descripción</h3>
@@ -148,11 +201,24 @@ const Conocenos = () => {
         <section>
           <div className="datos">
             <h3>Datos de contacto</h3>
-            <p>Nombre: Alberto</p>
-            <p>Apellidos: Santamaria Fajardo</p>
-            <p>Email: alberto.santamaria.ilustracion@outlook.es</p>
-            <p>LinkedIn: linkedin.com/in/alberto-santamaria-26a122272</p>
-            <p>Github: https://github.com/albertosantamari</p>
+            <p><strong>Nombre: </strong>Alberto</p>
+            <p><strong>Apellidos: </strong>Santamaría Fajardo</p>
+            <div className="mailConocenos">
+            <img className="img-mail" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687965931/sobre2_cmlizj.png" alt="mail"></img>
+            <p>alberto.santamaria.ilustracion@outlook.es</p>
+            </div>
+            <div className="logos-redes">
+        <Link to="http://www.linkedin.com/in/alberto-santamaria-26a122272" target="_blank">
+        <img className="img-linkedin" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/linkedin_zpt7lh.png" alt="linkedin"></img>
+      </Link>
+      <Link to="https://github.com/albertosantamari" target="_blank">
+      <img
+          className="img-github"
+          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/github_yusdze.png"
+          alt="github"
+        />
+      </Link>
+      </div>
           </div>
           <div className="description">
             <h3>Descripción</h3>
@@ -176,11 +242,24 @@ const Conocenos = () => {
         <section>
           <div className="datos">
             <h3>Datos de contacto</h3>
-            <p>Nombre: Laura</p>
-            <p>Apellidos: Martinez Paredes</p>
-            <p>Email: laura.prds@hotmail.com</p>
-            <p>LinkedIn: linkedin.com/in/laura-m-86802b160</p>
-            <p>Github: https://github.com/LauraMartinezParedes</p>
+            <p><strong>Nombre: </strong>Laura</p>
+            <p><strong>Apellidos: </strong>Martínez Paredes</p>
+            <div className="mailConocenos">
+            <img className="img-mail" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687965931/sobre2_cmlizj.png" alt="mail"></img>
+            <p>laura.prds@hotmail.com</p>
+            </div>
+            <div className="logos-redes">
+        <Link to="http://www.linkedin.com/in/laura-m-86802b160" target="_blank">
+        <img className="img-linkedin" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/linkedin_zpt7lh.png" alt="linkedin"></img>
+      </Link>
+      <Link to="https://github.com/LauraMartinezParedes" target="_blank">
+      <img
+          className="img-github"
+          src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687962988/github_yusdze.png"
+          alt="github"
+        />
+      </Link>
+      </div>
           </div>
           <div className="description">
             <h3>Descripción</h3>

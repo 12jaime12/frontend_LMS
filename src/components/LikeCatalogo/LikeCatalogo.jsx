@@ -5,7 +5,7 @@ import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
 import { useAuth } from "../../contexts/authContext";
 import { addLike } from "../../service/API_proyect/catalogo.service";
 
-const ToggleButtonCatalogo = ({ car, setAllElementByPather }) => {
+const ToggleButtonCatalogo = ({ car, setAllElementByPather, variable }) => {
   console.log(car);
   const [res, setRes] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -13,7 +13,7 @@ const ToggleButtonCatalogo = ({ car, setAllElementByPather }) => {
 
   const handleAddToFavorites = async () => {
     setLoading(true);
-    setRes(await addLike({ id: car._id }));
+    setRes(await addLike({ id: car._id, variable: variable }));
     setLoading(false);
   };
   useEffect(() => {

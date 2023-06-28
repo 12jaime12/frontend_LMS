@@ -21,8 +21,17 @@ const CreateComment = ({ variable, id, comments }) => {
   const comentario = refComent?.current?.value;
   const [newComments, setNewComments] = useState();
   const [arrayComments, setArrayComments] = useState();
-  //const [inputValue, setInpuValue] = useState("");
+  const [resDelete, setResDelete] = useState();
+  const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
+
+  const handleClick = () => {
+    setInputValue("");
+  };
+
+  const handleChange = (event) => {
+    setInputValue(event?.target?.value);
+  };
 
   const createComment = async (dataComment) => {
     const customData = {
@@ -31,7 +40,16 @@ const CreateComment = ({ variable, id, comments }) => {
       id: id,
     };
     console.log("data comentario------->", customData);
-    setRes(await createComentario(customData));
+    await createComentario(customData);
+
+    Swal.fire({
+      icon: "success",
+      title: "Comentario Añadido",
+      text: "Disfruta de Legendary Motor Sport! 😜 🏎️💨",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+
     if (variable === "coche") {
       setNewComments(await getByCoche(id));
       // setInpuValue("");
@@ -48,15 +66,36 @@ const CreateComment = ({ variable, id, comments }) => {
   // const handleChange = (e) => {
   //   setInpuValue(e.target.value);
   // };
+  useEffect(() => {
+    console.log(res);
+  }, [res]);
 
   const deleteComentario = async (idComent) => {
-    if (variable === "coche") {
-      await deleteComent(idComent);
-      setNewComments(await getByCoche(id));
-    } else {
-      await deleteComent(idComent);
-      setNewComments(await getByCatalogo(id));
-    }
+    Swal.fire({
+      title: "¿Seguro que quieres borrar el comentario?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "rgb(73, 193, 162)",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "YES",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        if (variable === "coche") {
+          await deleteComent(idComent);
+          setNewComments(await getByCoche(id));
+        } else {
+          await deleteComent(idComent);
+          setNewComments(await getByCatalogo(id));
+        }
+
+        Swal.fire({
+          icon: "success",
+          title: "Comentario borrado🏎️💨",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    });
   };
   useEffect(() => {
     console.log("all comments", comments?.data);
@@ -78,52 +117,58 @@ const CreateComment = ({ variable, id, comments }) => {
 
   return (
     <>
-      <div className="divAllComentarios">
-        {arrayComments?.map((comentario) => {
-          let nombre = "";
-          let apellido = "";
-          //console.log(comentario.Creador);
-          for (let clave in comentario.Creador) {
-            if (clave == "name") {
-              nombre = comentario.Creador[clave];
-            } else if (clave == "apellido") {
-              apellido = comentario.Creador[clave];
+      {arrayComments?.length === 0 ? (
+        <h3 className="sinComents">Sé el primero en comentar🏎️💨</h3>
+      ) : (
+        <div className="divAllComentarios">
+          {arrayComments?.map((comentario) => {
+            let nombre = "";
+            let apellido = "";
+            //console.log(comentario.Creador);
+            for (let clave in comentario.Creador) {
+              if (clave == "name") {
+                nombre = comentario.Creador[clave];
+              } else if (clave == "apellido") {
+                apellido = comentario.Creador[clave];
+              }
             }
-          }
 
-          return (
-            <section key={comentario._id} className="comentarioInfo">
-              <div className="comentariosDiv">
-                <h7>
-                  <strong>
-                    {nombre.toUpperCase()} {apellido.toUpperCase()}
-                  </strong>{" "}
-                  |{" "}
-                  <ReactTimeAgo
-                    date={Date.parse(comentario?.createdAt)}
-                    locale="es-ES"
-                  />{" "}
-                  |{" "}
-                </h7>
-                {nombre === user.user && (
-                  <img
-                    src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687680460/trash_hc1jlx.svg"
-                    alt="delete icon"
-                    onClick={() => deleteComentario(comentario._id)}
-                  />
-                )}
-              </div>
-              <h5>{comentario?.content}</h5>
-            </section>
-          );
-        })}
-      </div>
+            return (
+              <section key={comentario._id} className="comentarioInfo">
+                <div className="comentariosDiv">
+                  <h7>
+                    <strong>
+                      {nombre.toUpperCase()} {apellido.toUpperCase()}
+                    </strong>{" "}
+                    |{" "}
+                    <ReactTimeAgo
+                      date={Date.parse(comentario?.createdAt)}
+                      locale="es-ES"
+                    />{" "}
+                    |{" "}
+                  </h7>
+                  {nombre === user?.user && (
+                    <img
+                      src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687680460/trash_hc1jlx.svg"
+                      alt="delete icon"
+                      onClick={() => deleteComentario(comentario._id)}
+                    />
+                  )}
+                </div>
+                <h5>{comentario?.content}</h5>
+              </section>
+            );
+          })}
+        </div>
+      )}
       <div className="divCreateComentario">
         <input
           type="text"
           ref={refComent}
           className="inputComentario"
-          //onChange={(e) => handleChange(e)}
+          value={inputValue}
+          onChange={handleChange}
+          placeholder="Añade tu comentario"
         />
 
         <Button
@@ -134,7 +179,10 @@ const CreateComment = ({ variable, id, comments }) => {
           action={
             user == null
               ? () => navigate("/login")
-              : () => createComment(refComent.current.value)
+              : () => {
+                  createComment(refComent.current.value);
+                  handleClick();
+                }
           }
         />
       </div>
