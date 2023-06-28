@@ -7,6 +7,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding-bottom: 20px;
 }
 .divImgTaller{
@@ -32,12 +33,29 @@
 }
 .sectionTaller{
     height: 400px;
-    width: 80vw;
+    width: 70vw;
+    padding:0 20px 30px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #f2f2f2;
-    border: 2px solid black;
+    position:absolute;
+    /* background-color: #f2f2f2;
+    border: 2px solid black; */
+    
+}
+.divBordeTaller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 80vw;
+    position:relative;
+}
+.imgBordeTaller{
+    z-index:-1;
+    width: 80vw;
+    height: 550px;
+    position:absolute;
 }
 .divTallerInfo{
     height: 100%;
@@ -48,6 +66,7 @@
 .sectionTaller div div{
     display:flex;
     flex-direction: column;
+    width: 100%;
 }
 .divBotonTaller{
     display: flex;
@@ -71,10 +90,35 @@
 }
 }
 
-@media screen and ((min-width:375px) and (max-width:900px)){
-    .sectionTaller{
+@media screen and ((min-width:375px) and (max-width:1100px)){
+    .sectionTaller {
         flex-direction: column;
-        height: 800px;  
+        align-items: center;
+        height: 620px;  
+        width: 95vw;
+        padding: 0 0 30px 0;
     } 
+    .divBordeTaller{
+        height: 800px;
+    }
+    .imgBordeTaller{
+        width: 95vw;
+        height: 800px;
+    }
+    .divTallerInfo{
+        width: 70%;
+        justify-content: center;
+    }
+    .frameMapa{
+        width: 200px;
+        height: 100px;
+    }
+    .h3CiudadTaller{
+        display:none
+    }
+    .divImgTaller img{
+        height: 150px;
+        width: 150px;
+    }
     
 }

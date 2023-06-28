@@ -16,14 +16,7 @@ const CompraVenta = () => {
   return (
     <div className="Compra-venta">
       <nav className="ulNavCompraventa">
-        <Button
-          type="text"
-          text="Tienda"
-          variant="contained"
-          color="white"
-          action={() => navigate("/compraryvender")}
-        />
-
+        
         {user != null && (
           <Button
             type="text"

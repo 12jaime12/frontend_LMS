@@ -12,7 +12,9 @@ const PrintTalleres = ({data, coche}) => {
     const [res,setRes] = useState()
     const [location, setLocation]=useState({})
     let idTaller
-    let idCoche=user.coches[0]
+    let idCoche
+
+    (user?.coches>=0) && (idCoche=user?.coches[0])
     console.log("datataller", data)
     const crearServicio = async (tallerId) => {
         
@@ -41,7 +43,9 @@ const PrintTalleres = ({data, coche}) => {
         {
             data?.data.map((elem)=>{
                 return (
-                <section key={elem._id} className="sectionTaller">
+                    <div key={elem._id} className="divBordeTaller">
+                        <img className="imgBordeTaller" src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687949837/pngwing.com_3_gjhvpt.png" alt="borde taller"/>
+                <section className="sectionTaller">
                     <div className="divTallerInfo">
                         <div className="divImgTaller">
                             <h2>{elem.name} - {elem.apellido}</h2>
@@ -71,19 +75,19 @@ const PrintTalleres = ({data, coche}) => {
                             
                             {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50057.87547852751!2d-0.47252415!3d38.3578408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6235da3b9dab4b%3A0x1d7da872ac0b81e3!2sAlicante%20(Alacant)%2C%20Alicante!5e0!3m2!1ses!2ses!4v1687863294429!5m2!1ses!2ses" width="400" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
 
-                            <h3>{elem.ciudad}</h3>
+                            <h3 className="h3CiudadTaller">{elem.ciudad}</h3>
                             <p>{elem.direccion}</p>
                             
                             
                         </div>
                         <div className="divBotonTaller">
 {
-                                user.coches.length>0 && <button className="botonTaller" onClick={()=>crearServicio(elem._id)}>Añadir al taller</button>
+                                user?.coches?.length>0 && <button className="botonTaller" onClick={()=>crearServicio(elem._id)}>Añadir al taller</button>
                             }
                         </div>
                     </div>
                 </section>
-                
+                </div>
                 )
             })
         }

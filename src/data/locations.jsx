@@ -11,7 +11,7 @@ const Locations = ({provincia, setLocation}) => {
       ;
     case "ourense":
       return(
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23593.56187359089!2d-7.8842851889013055!3d42.33836075643962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2ffeb5bc5378eb%3A0x295326a374bca39c!2sOurense!5e0!3m2!1ses!2ses!4v1687872630932!5m2!1ses!2ses" width="300" height="250" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23593.56187359089!2d-7.8842851889013055!3d42.33836075643962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2ffeb5bc5378eb%3A0x295326a374bca39c!2sOurense!5e0!3m2!1ses!2ses!4v1687872630932!5m2!1ses!2ses" width="300" height="250" loading="lazy" className="frameMapa"></iframe>
       )
       ;
     case "pontevedra":

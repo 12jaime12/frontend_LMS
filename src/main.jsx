@@ -79,18 +79,18 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             />
             <Route path="/compraryvender" element={<CompraVenta />}>
               <Route index element={<ComprayventaHome />} />
-              <Route path="/compraryvender/coche/:id" element={<CocheById />} />
+              <Route path="/compraryvender/coche/:id" element={<Protected><CocheById /></Protected>} />
             </Route>
             <Route path="/catalogo" element={<Catalogo />}>
               <Route index element={<CatalogoHome />} />
               <Route path="/catalogo/:marca" element={<CatalogoMarca />} />
               <Route
                 path="/catalogo/:marca/info/:id"
-                element={<InfoCoches />}
+                element={<Protected><InfoCoches /></Protected>}
               />
               <Route
                 path="/catalogo/:marca/personalizar/:id"
-                element={<CochePersonalizar />}
+                element={<Protected><CochePersonalizar /></Protected>}
               />
             </Route>
           </Route>

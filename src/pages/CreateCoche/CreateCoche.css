@@ -1,6 +1,6 @@
 
 .CreateCar {
-    padding-top: 10vh;
+    padding-bottom:20px;
     min-height: 80vh;
     width: 100%;
     display: flex;
@@ -13,7 +13,10 @@
 }
 
 .placeholder-create{
-    width: 100px;
+    width: 100%;
    text-align: left;
+}
+.Compra-venta-crearCoche{
+    padding-top:12vh;
 }
 
