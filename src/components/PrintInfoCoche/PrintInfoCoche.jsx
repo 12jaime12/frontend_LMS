@@ -38,20 +38,20 @@ const PrintInfoCoche = ({ data }) => {
 
   return (
     <>
-      <LayoutFlex direction="column" gap="2rem" padding="2rem">
+      <div className="PrintCoche">
         <img
           className="imgPrintCoche"
           src={info?.image[0]}
           alt={info?.modelo}
         />
-        <LayoutFlex direction="column" gap="0.5rem" padding="0">
+        <div className="InfoPrintCoche">
           <PC text={`Marca: ${info?.marca}`} width="medio" />
           <PC text={`Modelo: ${info?.modelo}`} width="extralargo" />
           <PC text={`Año: ${info?.year}`} width="medio" />
           <PC text={`Combustible: ${info?.combustible}`} width="extralargo" />
           <PC text={`Precio: ${info?.precio} €`} width="medio" />
-        </LayoutFlex>
-      </LayoutFlex>
+        </div>
+      </div>
 
       <div className="divComentarios">
         <CreateComment variable={"coche"} id={info?._id} comments={comments} />
