@@ -73,9 +73,10 @@ export const forgotPassword = async (formData) => {
 };
 //---------------------updateUser--------------------
 export const updateUser = async (formData) => {
-  return API.patch("/user/updateUser)", formData, {
+  return API.patch("/user/updateUser", formData, {
     headers: {
       Authorization: `Bearer ${updateToken()}`,
+      headers: { "Content-Type": "multipart/form-data" },
     },
   })
     .then((res) => res)
