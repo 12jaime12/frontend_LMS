@@ -7,7 +7,7 @@ const CatalogoHome = () => {
     <div className="catalogo">
       <h1>Catálogo</h1>
       <div className="marcas">
-        <nav>
+        <nav className="portadaCatalogos">
           <img
             src="https://res.cloudinary.com/dx3e6knoz/image/upload/v1687275029/HD-wallpaper-bmw-new-logo-bmw-bmw-2020-bmw-cars-bmw-logo-car-new-logo_wgrr3k.jpg"
             alt="logoBMW"

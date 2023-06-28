@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     
-    gap:10px;
+    gap:15px;
 }
 .divLikesCoches{
     display:flex;
@@ -15,7 +15,8 @@
     gap:5px;
     background-color: #f2f2f2;
     width: 100%;
-    height: 30px;
+    height: 40px;
+
 
 }
 .divIconos{
@@ -53,14 +54,11 @@
 
 }
 .divCocheInfo{
-    width: 30vw;
+    width: 100%;
     text-align: center;
     padding-bottom: 40px;
 }
-.figureCoche:hover{
-    background-color: #C61C14;
-    color:white;
-}
+
 .divPrintInfo{
     position:absolute;
     width: 70vw;
@@ -83,4 +81,20 @@
 }
 .marca:focus,.precio:focus{
     outline: solid 1px #C61C14;
+}
+
+.cartaCompraVenta{
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.42);
+-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.42);
+box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.42);
+border-radius: 10px; 
+padding-bottom: 15px;
+}
+
+.cartaCompraVenta:hover{
+    background-color: #C61C14;
+    color:white;
+    .divLikesCoches p{
+        color: black;
+    }
 }

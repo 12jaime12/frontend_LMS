@@ -88,7 +88,7 @@ const PrintAllCoches = () => {
 
       <div className="divAllCoches">
         {cocheCarga?.map((elem) => (
-          <div key={elem._id}>
+          <div className="cartaCompraVenta" key={elem._id}>
             <figure
               className="figureCoche"
               onClick={() => navigate(`/compraryvender/coche/${elem._id}`)}

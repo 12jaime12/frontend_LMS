@@ -17,6 +17,7 @@ margin-top: ${({ margin }) => margin};
 @media only screen and ( max-width: 1450px){
 		flex-direction: ${({ flexMedia }) => flexMedia};
     place-items: ${({ placeItems }) => placeItems};
+    padding-bottom: 50px;
 
 }
 @media only screen and ( max-width: 950px){
