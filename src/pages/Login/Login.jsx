@@ -93,9 +93,9 @@ const Login = () => {
           </LayoutForm>
         </LayoutFlex>
 
-        <LayoutFlex direction="column" gap="0.5rem" padding="2rem">
+        <div className="ventajas-registro">
       <H1C text="¿Aún no tienes cuenta?" width="extralargo"/>
-      <LayoutForm direction="column" gap="0.5rem"  width="500px" heigth="300px" padding = "0.5rem">
+      <LayoutForm direction="column" gap="1rem"  width="500px" heigth="300px" padding = "0.5rem">
           <H3C text="Las ventajas de tener una cuenta:" width="extralargo" align="left"/>
           <ul>
           <li className="listaLogin">
@@ -121,7 +121,7 @@ const Login = () => {
           
           </LayoutForm>
         
-        </LayoutFlex>
+        </div>
         </LayoutInline>
         </div>
     </>
