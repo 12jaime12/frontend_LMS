@@ -8,13 +8,12 @@ import CarruselPersonalizar from '../CarruselPersonalizar/CarruselPersonalizar'
 import Locations from '../../data/locations'
 
 const PrintTalleres = ({data, coche}) => {
+    console.log("print talleres data", data)
     const {user} = useAuth()
     const [res,setRes] = useState()
     const [location, setLocation]=useState({})
     let idTaller
-    let idCoche
-
-    (user?.coches>=0) && (idCoche=user?.coches[0])
+    let idCoche=user?.coches[0]
     console.log("datataller", data)
     const crearServicio = async (tallerId) => {
         
