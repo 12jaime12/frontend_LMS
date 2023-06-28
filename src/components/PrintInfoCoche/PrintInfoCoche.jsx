@@ -37,7 +37,7 @@ const PrintInfoCoche = ({ data }) => {
   }, []);
 
   return (
-    <>
+    <div className="printInfo">
       <div className="PrintCoche">
         <img
           className="imgPrintCoche"
@@ -56,7 +56,7 @@ const PrintInfoCoche = ({ data }) => {
       <div className="divComentarios">
         <CreateComment variable={"coche"} id={info?._id} comments={comments} />
       </div>
-    </>
+    </div>
   );
 };
 
