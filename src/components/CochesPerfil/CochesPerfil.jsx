@@ -30,7 +30,7 @@ const CochesPerfil = () => {
   }, [coche]);
 
   return (
-    <div>
+    <div className="perfilCoches">
       {variable == "coche" ? (
         <div className="cochesPerfil">
           {coche !== undefined && <CarruselFotos data={coche?.data?.image} />}
