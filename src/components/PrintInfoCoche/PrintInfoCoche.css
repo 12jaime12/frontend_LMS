@@ -1,33 +1,19 @@
-/* .divPrintInfo{
-    position:absolute;
-    width: 70vw;
-    height: 70vh;
-    border: 2px solid red;
-    background-color: black;
-} */
-/* .divInfoCoche{
-    width: 70%;
+.PrintCoche{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:25px;
-    border: 2px solid crimson;
-    background-color: rgb(174, 174, 174);
-} */
-/* .divCocheId{
-    width: 100%;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.InfoPrintCoche{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:30px;
-    padding: 15px;
-} */
-/* .divCocheId img{
-    width: 600px;
-    height: 400px;
-} */
+    gap: 0.5rem;
+}
 
 .divPopUp{
     display:none;
@@ -44,4 +30,16 @@
     height: 400px;
     width: 600px;
     object-fit: contain;
+}
+
+@media screen and ((max-width:900px)){
+    .imgPrintCoche{
+        height: 200px;
+        width: 320px;
+        object-fit: contain;
+    }
+    .InfoPrintCoche{
+        width: 300px;
+    }
+   
 }

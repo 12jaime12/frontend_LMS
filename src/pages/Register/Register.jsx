@@ -246,7 +246,7 @@ const Register = () => {
                   {/* </LayoutInline> */}
                 
               </div>
-              <div class="container-input">
+              <div className="container-input">
                 <input 
                 type="file" 
                 name="file-2" 
