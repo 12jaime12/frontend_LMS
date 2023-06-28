@@ -9,11 +9,14 @@
     display: flex;
     justify-content: space-between;
     padding-top: 0.5rem;
+    
 }
 .inputComentario{
     width: 600px;
     height: 50px;
     background-color: rgb(230, 227, 227);
+    border-radius: 10px;
+    border: 1px solid #c61c14;
 }
 .comentarioInfo{
     border-bottom: 1px solid grey;
@@ -33,7 +36,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:45px;
+    
 }
 h7{
     margin-left: 0.7rem;

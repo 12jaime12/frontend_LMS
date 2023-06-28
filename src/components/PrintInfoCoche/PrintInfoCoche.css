@@ -45,3 +45,9 @@
     width: 600px;
     object-fit: contain;
 }
+.divComentarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

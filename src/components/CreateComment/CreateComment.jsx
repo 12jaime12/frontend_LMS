@@ -78,26 +78,6 @@ const CreateComment = ({ variable, id, comments }) => {
 
   return (
     <>
-      <div className="divCreateComentario">
-        <input
-          type="text"
-          ref={refComent}
-          className="inputComentario"
-          //onChange={(e) => handleChange(e)}
-        />
-
-        <Button
-          type="text"
-          text="Crear comentario"
-          variant="contained"
-          color=""
-          action={
-            user == null
-              ? () => navigate("/login")
-              : () => createComment(refComent.current.value)
-          }
-        />
-      </div>
       <div className="divAllComentarios">
         {arrayComments?.map((comentario) => {
           let nombre = "";
@@ -137,6 +117,26 @@ const CreateComment = ({ variable, id, comments }) => {
             </section>
           );
         })}
+      </div>
+      <div className="divCreateComentario">
+        <input
+          type="text"
+          ref={refComent}
+          className="inputComentario"
+          //onChange={(e) => handleChange(e)}
+        />
+
+        <Button
+          type="text"
+          text="Crear comentario"
+          variant="contained"
+          color=""
+          action={
+            user == null
+              ? () => navigate("/login")
+              : () => createComment(refComent.current.value)
+          }
+        />
       </div>
     </>
   );

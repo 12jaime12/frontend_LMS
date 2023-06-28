@@ -126,7 +126,9 @@
         
 } 
     .divCarruselUser{
-        padding-top: 25vh;
+        padding-top: 30vh;
     }
-
+    .Profile{
+        padding-top: 35vh;
+    }
 }
