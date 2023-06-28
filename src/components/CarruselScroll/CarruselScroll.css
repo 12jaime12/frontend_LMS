@@ -5,6 +5,7 @@
     display:flex;
     overflow-x: scroll;
     align-items: center;
+    justify-content: center;
     text-align: center;
     /* scrollbar-base-color: #c61c14; */
 }

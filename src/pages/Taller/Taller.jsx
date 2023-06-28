@@ -31,8 +31,10 @@ const Taller = () => {
     
     (async () => {
       setResUser(await getByIdUser(user.id));
+      
     })();
-    console.log("resuser", resUser)
+    setCoche(resUser?.coche_cliente)
+    console.log("rRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRResuser", resUser)
     console.log("cocheeeeeeeeeeee",coche)
   },[])
   useEffect(()=>{
@@ -42,13 +44,13 @@ const Taller = () => {
   },[])
 
   useEffect(()=>{
-    console.log(coche)
+    console.log("cocheeeeeeeeeeeeeeeeee",coche)
   },[coche])
   console.log("res",resUser)
   return (
     <div className="Taller">
       {
-        (resUser!==undefined || coche!==undefined)
+        (resUser?.data?.coche_cliente.length>0)
         ?(
           <div className="divCarruselCocheCliente">
             <CarruselPersonalizar data={resUser?.data?.coche_cliente} setCoche={setCoche}/>
