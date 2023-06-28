@@ -26,6 +26,28 @@
   font-size: 1.1rem;
 }
 
+.mailConocenos{
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+.logos-redes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 10px;
+}
+
+.img-mail{
+  height: 20px;
+}
+
+.img-linkedin, .img-github{
+  height: 40px;
+}
+
 .andrea,
 .jaime,
 .samu,

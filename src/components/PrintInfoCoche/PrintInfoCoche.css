@@ -3,8 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding: 2rem;
+    padding-bottom: 2rem;
 }
 
 .InfoPrintCoche{
@@ -13,6 +12,7 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    padding: 1rem;
 }
 
 .divPopUp{
@@ -42,9 +42,15 @@
         height: 200px;
         width: 320px;
         object-fit: contain;
+       
     }
     .InfoPrintCoche{
         width: 300px;
     }
-   
+   .PrintCoche{
+    gap: 1rem;
+   }
+   .PrintCoche{
+    padding-top: 1rem;
+   }
 }
