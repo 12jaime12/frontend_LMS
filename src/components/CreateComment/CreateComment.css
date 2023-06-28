@@ -18,6 +18,9 @@
     border-radius: 10px;
     border: 1px solid #c61c14;
 }
+.inputComentario:focus{
+    outline: solid 1px #c61c14;
+}
 .comentarioInfo{
     border-bottom: 1px solid grey;
 }
