@@ -28,9 +28,10 @@ const UpdateProfile = ({data}) => {
       setInfoUser(await getByIdUser(user.id))
     }
     console.log("info",infoUser)
-
+    
     const formSubmit = async (formData) =>{
-      const dataCustom = {
+      console.log(inputImage)
+      const dataForm = {
         name:(formData.name ? formData.name : infoUser.data.name),
         apellido:(formData.apellido ? formData.apellido : infoUser.data.apellido),
         pais:(formData.pais ? formData.pais : infoUser.data.pais),
@@ -39,6 +40,11 @@ const UpdateProfile = ({data}) => {
         direccion:(formData.direccion ? formData.direccion : infoUser.data.direccion),
         movil:(formData.movil ? formData.movil : infoUser.data.movil),
       }
+      const dataCustom = {
+        imagen: inputImage.current.files[0],
+        ...dataForm,
+      }
+
       console.log("datacustom", dataCustom)
       setSend(true)
       setRes(await updateUser(dataCustom))
@@ -75,7 +81,12 @@ const UpdateProfile = ({data}) => {
               <div className="divUpdateImagen">
                 <img src={infoUser?.data?.imagen} alt={infoUser?.data?.imagen}/>
                 <label>
-                  <input type="file" name="imagePerfil" id="imagePerfil" ref="inputImage" {...register ("imagen")}/>
+                  <input 
+                  type="file" 
+                  name="imagePerfil" 
+                  id="imagePerfil" 
+                  ref={inputImage}
+                  />
                 </label>
               </div>
                 <LayoutInline gap="0.5rem" padding="1rem" placeItems="normal">
