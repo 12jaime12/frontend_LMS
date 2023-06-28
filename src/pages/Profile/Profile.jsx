@@ -123,7 +123,7 @@ const Profile = () => {
               </h2>
               <h4>email: {userInfo.email}</h4>
               <h4>rol: {userInfo.rol}</h4>
-              <div>
+              <div className="divInfoPersonal">
                 <details className="infoPersonal">
                   <summary>INFORMACION PERSONAL:</summary>
                   <p>PAIS: {userInfo.pais}</p>

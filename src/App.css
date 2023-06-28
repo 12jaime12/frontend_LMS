@@ -6,6 +6,7 @@
 
 main {
   min-height: 80vh;
+  overflow-x: hidden;
   /* background-color: #e3e3e3;
   background-image: url("https://www.transparenttextures.com/patterns/real-carbon-fibre.png"); */
   /* margin-top: 13vh;  */
