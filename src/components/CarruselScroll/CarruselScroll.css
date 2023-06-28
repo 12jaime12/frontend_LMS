@@ -47,12 +47,6 @@
     width: 10px;
     width: 10px;
   }
-  
-  
-  
-  
-  
-  
   *::-webkit-scrollbar-thumb {
     border-radius: 35px;
     background-color: #c61c14;
@@ -64,4 +58,9 @@
   
   *::-webkit-scrollbar-thumb:active {
     background-color: #c61c14;
+  }
+  @media screen and (max-width:700px){
+    .divCarruselScroll{
+        width: 100vw;
+    }
   }

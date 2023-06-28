@@ -190,7 +190,7 @@ const Profile = () => {
             </ul>
             {cochesUser && (
               <div className="divCarruselInfo">
-                <h2>Coches propios</h2>
+                <h2>Coches propios:</h2>
                 <Button
                   text="Añadir coche"
                   action={() => navigate("/createCoche")}
@@ -206,6 +206,7 @@ const Profile = () => {
             )}
             {likesUser && (
               <div className="divCarruselInfo">
+              <h2>Likes:</h2>
                 <Button
                   text="Ver galeria"
                   action={() => navigate("/compraryvender")}
@@ -221,7 +222,7 @@ const Profile = () => {
             )}
             {commentsUser && (
               <div className="divCarruselInfo">
-                <h2>Comentarios creados: </h2>
+                <h2>Coches personalizados: </h2>
                 <Button
                   text="Ver galeria"
                   action={() => navigate("/comprayventa")}

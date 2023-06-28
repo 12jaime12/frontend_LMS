@@ -39,7 +39,7 @@ const InfoCoches = () => {
         className="imagenReal"
       />
 
-      <h2>{cocheBase?.data?.info?.titulo}</h2>
+      <h2 className="">{cocheBase?.data?.info?.titulo}</h2>
       <p>{cocheBase?.data?.info?.informacion}</p>
       <div className="divComentarios">
         <CreateComment

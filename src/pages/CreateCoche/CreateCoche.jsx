@@ -208,7 +208,7 @@ const CreateCoche = () => {
                 </label>
 
                 <label className="archivo" htmlFor="inputFrontal">
-                  Frontal:{" "}
+                  <span className="labelCreateCoche">Frontal:</span>
                   <section className="input-custom">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -252,7 +252,7 @@ const CreateCoche = () => {
                 </label> */}
 
                 <label className="archivo" htmlFor="inputDerecho">
-                  Lateral derecho:{" "}
+                <span className="labelCreateCoche">Lateral derecho:</span>
                   <section className="input-custom">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -296,7 +296,7 @@ const CreateCoche = () => {
                 </label> */}
 
                 <label className="archivo" htmlFor="inputTrasero">
-                  Trasera:{" "}
+                <span className="labelCreateCoche">Trasera:</span>
                   <section className="input-custom">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -339,7 +339,7 @@ const CreateCoche = () => {
                 </label> */}
 
                 <label className="archivo" htmlFor="inputIzquierdo">
-                  Lateral izquierdo:{" "}
+                <span className="labelCreateCoche">Lateral izquierdo:</span>
                   <section className="input-custom">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

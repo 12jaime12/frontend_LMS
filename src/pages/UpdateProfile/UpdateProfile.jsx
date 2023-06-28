@@ -123,7 +123,7 @@ const UpdateProfile = ({data}) => {
             color="#white"
             width="700px"
             heigth="300px"
-            padding="0">
+            padding="2rem">
               
             <LayoutForm
               direction="column"

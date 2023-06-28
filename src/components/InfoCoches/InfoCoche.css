@@ -15,7 +15,7 @@
 }
 .infoCoche p{
     width: 70%;
-    text-align: center;
+    text-align: justify;
     margin: 2rem;
 }
 .imagenReal{
@@ -25,5 +25,10 @@
     .imagenReal{
         height: auto;
         width: 100vw;
+    }
+}
+@media screen and (max-width:500px){
+    .infoCoche h2{
+        font-size: 30px;
     }
 }
