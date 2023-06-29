@@ -8,6 +8,8 @@
 
     text-align: center;
     /* scrollbar-base-color: #c61c14; */
+}.divCarruselScroll h2{
+  width: 100%;
 }
 /* .divCarruselScroll::-webkit-scrollbar-track{
     color:#c61c14;

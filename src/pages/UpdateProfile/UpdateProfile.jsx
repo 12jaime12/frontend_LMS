@@ -269,7 +269,8 @@ const UpdateProfile = ({data}) => {
                   direction="column"
                   gap="1rem"
                   color="f2f2f2"
-                  padding="2.5rem">
+                  padding="2rem"
+                  paddingBottom="2.5rem">
                   <Button
                     type="submit"
                     text="Actualizar"

@@ -10,6 +10,7 @@ background: ${({ color }) => color};;
 padding: ${({ padding }) => padding};
 border-radius: 5px;
 gap: ${({ gap }) => gap};
+padding-bottom: ${({ paddingBottom }) => paddingBottom};
 
 @media only screen and ( max-width: 1450px){
 		flex-direction: ${({ flexMedia }) => flexMedia};
@@ -22,9 +23,9 @@ gap: ${({ gap }) => gap};
 
 `
 ;
-export const LayoutFlex = ({children, direction, color, padding, gap, margin, placeItems}) => {
+export const LayoutFlex = ({children, direction, color, padding, gap, margin, placeItems, paddingBottom}) => {
   return (
-    <FlexStyled direction = { direction} gap={ gap} color={color} padding = { padding} margin={margin} placeItems={placeItems}>
+    <FlexStyled direction = { direction} gap={ gap} color={color} padding = { padding} margin={margin} placeItems={placeItems} paddingBottom={paddingBottom}>
         {children}
     </FlexStyled>
   )
