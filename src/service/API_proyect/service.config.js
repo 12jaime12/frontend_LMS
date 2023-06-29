@@ -9,7 +9,7 @@ const APIHeaders = {
 };
 
 export const API = axios.create({
-  baseURL: `https://backend-lms-murex.vercel.app//api/v1`,
+  baseURL: `https://backend-lms-murex.vercel.app/api/v1`,
   headers: APIHeaders,
   timeout: 60000,
 });
