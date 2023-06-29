@@ -59,12 +59,7 @@ const Conocenos = () => {
           <div className="description">
             <h3>Descripción</h3>
             <p>
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-              archivos de texto. Lorem Ipsum ha sido el texto de relleno
-              estándar de las industrias desde el año 1500, cuando un impresor
-              (N. del T. persona que se dedica a la imprenta) desconocido usó
-              una galería de textos y los mezcló de tal manera que logró hacer
-              un libro de textos especimen. No sólo sobrevivió 500 años, sino
+             FullStack Developer con manejo de tecnologías de Front-end y Back-end.
             </p>
           </div>
         </section>
@@ -100,12 +95,7 @@ const Conocenos = () => {
           <div className="description">
             <h3>Descripción</h3>
             <p>
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-              archivos de texto. Lorem Ipsum ha sido el texto de relleno
-              estándar de las industrias desde el año 1500, cuando un impresor
-              (N. del T. persona que se dedica a la imprenta) desconocido usó
-              una galería de textos y los mezcló de tal manera que logró hacer
-              un libro de textos especimen. No sólo sobrevivió 500 años, sino
+              Desarrollador Fullstack con conocimientos adquiridos en el Grado Superior de Desarrollo de Aplicaciones Web y perfeccionados con un Bootcamp Web Development.
             </p>
           </div>
         </section>
@@ -141,12 +131,7 @@ const Conocenos = () => {
           <div className="description">
             <h3>Descripción</h3>
             <p>
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-              archivos de texto. Lorem Ipsum ha sido el texto de relleno
-              estándar de las industrias desde el año 1500, cuando un impresor
-              (N. del T. persona que se dedica a la imprenta) desconocido usó
-              una galería de textos y los mezcló de tal manera que logró hacer
-              un libro de textos especimen. No sólo sobrevivió 500 años, sino
+            Me dedico al Fullstack Development y mis principales aptitudes vienen de la mano de JavaScript, ReactJS y NodeJS, controlando desde el backend hasta el frontend complementándolo con una interfaz gráfica que sea visiblemente bonita. Cada día intento mejorar mi forma de trabajar ya sea con buenos tutoriales, cursos actualizados o leyendo documentación.
             </p>
           </div>
         </section>
@@ -182,12 +167,7 @@ const Conocenos = () => {
           <div className="description">
             <h3>Descripción</h3>
             <p>
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-              archivos de texto. Lorem Ipsum ha sido el texto de relleno
-              estándar de las industrias desde el año 1500, cuando un impresor
-              (N. del T. persona que se dedica a la imprenta) desconocido usó
-              una galería de textos y los mezcló de tal manera que logró hacer
-              un libro de textos especimen. No sólo sobrevivió 500 años, sino
+              Fullstack Web Developer.
             </p>
           </div>
         </section>
@@ -223,12 +203,7 @@ const Conocenos = () => {
           <div className="description">
             <h3>Descripción</h3>
             <p>
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-              archivos de texto. Lorem Ipsum ha sido el texto de relleno
-              estándar de las industrias desde el año 1500, cuando un impresor
-              (N. del T. persona que se dedica a la imprenta) desconocido usó
-              una galería de textos y los mezcló de tal manera que logró hacer
-              un libro de textos especimen. No sólo sobrevivió 500 años, sino
+              Fullstack Developer, con conocimientos en JavaScript, Html, Css, Node, React, Vite y Emotion. 
             </p>
           </div>
         </section>
@@ -264,12 +239,7 @@ const Conocenos = () => {
           <div className="description">
             <h3>Descripción</h3>
             <p>
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-              archivos de texto. Lorem Ipsum ha sido el texto de relleno
-              estándar de las industrias desde el año 1500, cuando un impresor
-              (N. del T. persona que se dedica a la imprenta) desconocido usó
-              una galería de textos y los mezcló de tal manera que logró hacer
-              un libro de textos especimen. No sólo sobrevivió 500 años, sino
+            Dedicada siempre a la atención al cliente en el sector de la moda. Ahora he decidido dar un cambio radical a mi vida y dedicarme a este sector de nuevas tecnologías. Es un cambio motivado por el querer seguir creciendo, y especialmente aprender como desarrolladora de Full Stack Developer.
             </p>
           </div>
         </section>
