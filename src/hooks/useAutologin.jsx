@@ -20,7 +20,8 @@ const useAutologin = async(allUser, userlogin) => {
                 check:setData.data.user.check,
                 token:setData.data.token,
                 rol:setData.data.user.rol,
-                id:setData.data.user._id
+                id:setData.data.user._id,
+                coches:setData.data.user.coche_cliente,
             }
             console.log(newDataCustom)
             const dataString = JSON.stringify(newDataCustom)

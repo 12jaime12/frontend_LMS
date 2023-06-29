@@ -5,9 +5,11 @@
     display:flex;
     overflow-x: scroll;
     align-items: center;
-    justify-content: center;
+
     text-align: center;
     /* scrollbar-base-color: #c61c14; */
+}.divCarruselScroll h2{
+  width: 100%;
 }
 /* .divCarruselScroll::-webkit-scrollbar-track{
     color:#c61c14;
@@ -63,4 +65,9 @@
     .divCarruselScroll{
         width: 100vw;
     }
+    .carruselScrollImage{
+      width:360px;
+      height:300px;
+      object-fit: cover;
+  }
   }
