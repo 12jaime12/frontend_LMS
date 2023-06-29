@@ -2,9 +2,7 @@
   height: 50px;
   cursor: pointer;
 }
-.fotoCarta {
-  height: 300px;
-}
+
 .carta {
   display: flex;
   justify-content: center;
