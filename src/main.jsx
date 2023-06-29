@@ -29,7 +29,7 @@ import CatalogoMarca from './components/CatalogoMarca/CatalogoMarca.jsx';
 import CochePersonalizar from './components/CochePersonalizar/CochePersonalizar.jsx';
 import CreateCoche from './pages/CreateCoche/CreateCoche.jsx';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile.jsx';
-import InfoCoches from './components/InfoCoches/infoCoches.jsx';
+import InfoCoches from './components/InfoCoches/InfoCoches.jsx';
 import TimeAgo from 'javascript-time-ago';
 import es from 'javascript-time-ago/locale/es.json';
 import CochesPerfil from './components/CochesPerfil/CochesPerfil.jsx';
