@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from 'react-router';
 import { useAuth } from '../../contexts/authContext';
 import { getAllCochesOcasion } from '../../service/API_proyect/coche.service';
 import Button from '../../components/ui/Button';
-import './Compraventa.css';
+import './CompraVenta.css';
 import FiltrarMarca from '../../components/FiltrarMarca/FiltrarMarca';
 
 const CompraVenta = () => {
