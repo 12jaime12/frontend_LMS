@@ -34,12 +34,13 @@ const CreateCoche = () => {
 
   const formSubmit = async (formData) => {
     console.log(inputFrontal?.current?.files);
+    console.log("izquierdo", inputIzquierdo)
 
     const customFormData = {
       option_1: inputFrontal?.current?.files[0],
       option_2: inputDerecho?.current?.files[0],
       option_3: inputTrasero?.current?.files[0],
-      option_4: inputDerecho?.current?.files[0],
+      option_4: inputIzquierdo?.current?.files[0],
       ...formData,
     };
     
@@ -339,7 +340,7 @@ const CreateCoche = () => {
                 </label> */}
 
                 <label className="archivo" htmlFor="inputIzquierdo">
-                <span className="labelCreateCoche">Lateral izquierdo:</span>
+                <span className="labelCreateCoche">Trasera:</span>
                   <section className="input-custom">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -359,7 +360,7 @@ const CreateCoche = () => {
                       id="inputIzquierdo"
                       name="imageCar"
                       autoComplete="false"
-                      input={inputIzquierdo}
+                      ref={inputIzquierdo}
                       onChange={(e) => handleImage(e)}
                     />
                   </section>
