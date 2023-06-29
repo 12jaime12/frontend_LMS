@@ -1,56 +1,55 @@
-.PrintCoche{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 2rem;
+.PrintCoche {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 
-.InfoPrintCoche{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
+.InfoPrintCoche {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
 }
 
-.divPopUp{
-    display:none;
+.divPopUp {
+  display: none;
 }
-.activarFormComment{
-    display:flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 35vh;
-    background-color: red;
+.activarFormComment {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 35vh;
+  background-color: red;
 }
 
-.imgPrintCoche{
-    height: 400px;
-    width: 600px;
+.imgPrintCoche {
+  height: 400px;
+  width: 600px;
+  object-fit: contain;
+}
+.printInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and ((max-width: 900px)) {
+  .imgPrintCoche {
+    height: 200px;
+    width: 320px;
     object-fit: contain;
-}
-.printInfo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-@media screen and ((max-width:900px)){
-    .imgPrintCoche{
-        height: 200px;
-        width: 320px;
-        object-fit: contain;
-       
-    }
-    .InfoPrintCoche{
-        width: 300px;
-    }
-   .PrintCoche{
+  }
+  .InfoPrintCoche {
+    width: 300px;
+  }
+  .PrintCoche {
     gap: 1rem;
-   }
-   .PrintCoche{
+  }
+  .PrintCoche {
     padding-top: 1rem;
-   }
+  }
 }

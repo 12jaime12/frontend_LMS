@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
-import "./CatalogoMarca.css";
-import { getMarcaBase } from "../../service/API_proyect/catalogo.service";
-import CarruselPersonalizar from "../CarruselPersonalizar/CarruselPersonalizar";
-import { getMarcaCocheBase } from "../../service/API_proyect/cocheBase.service";
-import CartasMarca from "../CartasMarca/CartasMarca";
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router';
+import './CatalogoMarca.css';
+import { getMarcaBase } from '../../service/API_proyect/catalogo.service';
+import CarruselPersonalizar from '../CarruselPersonalizar/CarruselPersonalizar';
+import { getMarcaCocheBase } from '../../service/API_proyect/cocheBase.service';
+import CartasMarca from '../CartasMarca/CartasMarca';
 const CatalogoMarca = () => {
   const { marca } = useParams();
   const navigate = useNavigate();

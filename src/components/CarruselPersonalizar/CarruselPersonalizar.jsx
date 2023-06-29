@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import "./CarruselPersonalizar.css";
-import { getByIdUser } from "../../service/API_proyect/user.service";
+import React, { useEffect, useState } from 'react';
+import './CarruselPersonalizar.css';
+import { getByIdUser } from '../../service/API_proyect/user.service';
 
 const CarruselPersonalizar = ({ data, setCoche }) => {
   const [position, setPosition] = useState(0);
@@ -8,7 +8,7 @@ const CarruselPersonalizar = ({ data, setCoche }) => {
 
   const large = data?.length;
 
-/*   const buscaTaller = async (idTaller) => {
+  /*   const buscaTaller = async (idTaller) => {
     console.log(idTaller)
     const taller = await getByIdUser(idTaller)
     console.log(taller)
@@ -16,26 +16,26 @@ const CarruselPersonalizar = ({ data, setCoche }) => {
   } */
 
   const suma = () => {
-    console.log("suma");
+    console.log('suma');
     console.log(position);
     if (position < large - 1) {
-      console.log("entro");
+      console.log('entro');
       setPosition(position + 1);
       setCoche(data[position + 1]?._id);
     }
   };
 
   const resta = () => {
-    console.log("resta");
+    console.log('resta');
     console.log(position);
     if (position > 0) {
-      console.log("entro");
+      console.log('entro');
       setPosition(position - 1);
       setCoche(data[position - 1]?._id);
     }
   };
 
-/*   useEffect(()=>{
+  /*   useEffect(()=>{
   
     (async()=>{const respuesta = await getByIdUser(data[position].taller)
     setTallerName(respuesta?.data?.apellido)
@@ -43,7 +43,7 @@ const CarruselPersonalizar = ({ data, setCoche }) => {
     
   },[position]) */
 
-  console.log("dataaaaaaaaaaa", data)
+  console.log('dataaaaaaaaaaa', data);
   return (
     <div className="carrusel">
       <img
@@ -52,38 +52,33 @@ const CarruselPersonalizar = ({ data, setCoche }) => {
         alt="left"
         onClick={() => resta()}
       />
-      {(data[position]?.estado!="taller") 
-      ? (
-      
-      <figure className="carta" id={data[position]?._id}>
-        <img
-          className="fotoCarta"
-          src={data[position]?.image[1]}
-          alt={data[position]?.name}
-        />
-        <h3>
-          {data[position]?.marca} {data[position]?.modelo}
-        </h3>
-        <h3>Desde {data[position]?.precio} €</h3>
-      </figure>
-      )
-      :(
+      {data[position]?.estado != 'taller' ? (
+        <figure className="carta" id={data[position]?._id}>
+          <img
+            className="fotoCarta"
+            src={data[position]?.image[1]}
+            alt={data[position]?.name}
+          />
+          <h3>
+            {data[position]?.marca} {data[position]?.modelo}
+          </h3>
+          <h3>Desde {data[position]?.precio} €</h3>
+        </figure>
+      ) : (
         <div className="cocheEnTaller">
-     <h3 className="estadoEnTaller">Actualmente en taller</h3>
-        <figure className="cartaEnTaller" id={data[position]?._id}>
-        <img
-          className="fotoCarta"
-          src={data[position]?.image[1]}
-          alt={data[position]?.name}
-        />
-        <h3>
-          {data[position]?.marca} {data[position]?.modelo}
-        </h3>
-        
-      </figure>
-      </div>
-      )
-      }
+          <h3 className="estadoEnTaller">Actualmente en taller</h3>
+          <figure className="cartaEnTaller" id={data[position]?._id}>
+            <img
+              className="fotoCarta"
+              src={data[position]?.image[1]}
+              alt={data[position]?.name}
+            />
+            <h3>
+              {data[position]?.marca} {data[position]?.modelo}
+            </h3>
+          </figure>
+        </div>
+      )}
       <img
         className="flecha"
         src="https://res.cloudinary.com/dtyjzv2xg/image/upload/v1686508364/right_hnqa08.png"

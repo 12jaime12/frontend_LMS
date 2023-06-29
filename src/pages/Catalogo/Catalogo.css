@@ -1,8 +1,8 @@
 .Catalog {
-    padding-top: 13vh;
-    min-height: 80vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding-top: 13vh;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

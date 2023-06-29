@@ -1,56 +1,55 @@
-.Login{
-    min-height: 80vh;
-    width: 100%;
-    /* padding-top: 15vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Login {
+  min-height: 80vh;
+  width: 100%;
+  /* padding-top: 15vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.email-space, .password-space{
-    display: flex;
-    flex-direction: column;
-} 
-
-.input-login{
-    height: 30px;
+.email-space,
+.password-space {
+  display: flex;
+  flex-direction: column;
 }
 
-.input-login:focus{
-   outline-color:  #C61C14;
+.input-login {
+  height: 30px;
 }
 
-
-.anchorCustomSmall{
-    font-size: small;
-    text-decoration: none;
-    color: black
+.input-login:focus {
+  outline-color: #c61c14;
 }
 
-.anchorCustomSmall:hover{
-    text-decoration: underline;
-    color: #C61C14;
+.anchorCustomSmall {
+  font-size: small;
+  text-decoration: none;
+  color: black;
 }
 
-.listaLogin{
-    list-style: disc;
+.anchorCustomSmall:hover {
+  text-decoration: underline;
+  color: #c61c14;
 }
 
-
-.ventajas-registro{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
+.listaLogin {
+  list-style: disc;
 }
 
-@media screen and ( max-width: 1450px){
-    .Login{
-padding-top: 15vh;
-    }
-    .email-space{
-        padding-bottom: 2rem;
-    }
+.ventajas-registro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 1450px) {
+  .Login {
+    padding-top: 15vh;
+  }
+  .email-space {
+    padding-bottom: 2rem;
+  }
 }

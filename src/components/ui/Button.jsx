@@ -1,11 +1,11 @@
-import styled from "@emotion/styled";
-import React from "react";
+import styled from '@emotion/styled';
+import React from 'react';
 
 const ButtonStyled = styled.button`
   background-color: ${({ variant }) =>
-    variant === "contained" ? "#C61C14" : "transparent"};
+    variant === 'contained' ? '#C61C14' : 'transparent'};
   width: 140px;
-  color: ${({ color }) => (color ? color : "white")};
+  color: ${({ color }) => (color ? color : 'white')};
   outline: none;
   font-family: inherit;
   padding: 0.5rem 1rem;

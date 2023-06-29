@@ -1,20 +1,19 @@
-.Taller{
-    padding-top: 10vh;
-    min-height: 80vh;
-    width: 100%;
-   
+.Taller {
+  padding-top: 10vh;
+  min-height: 80vh;
+  width: 100%;
 }
-.divSuperiorTaller{
-    height: 25vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    gap:20px;
+.divSuperiorTaller {
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
 }
 
-.divCarruselCocheCliente{
-    padding: 40px
+.divCarruselCocheCliente {
+  padding: 40px;
 }

@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router";
-import { useAuth } from "../../contexts/authContext";
-import "./Dashboard.css";
-import React from "react";
-import Button from "../../components/ui/Button";
-import { H2C, ImgC, PC } from "../../components/ui";
+import { useNavigate } from 'react-router';
+import { useAuth } from '../../contexts/authContext';
+import './Dashboard.css';
+import React from 'react';
+import Button from '../../components/ui/Button';
+import { H2C, ImgC, PC } from '../../components/ui';
 import {
   LayoutAbsolute,
   LayoutFlex,
@@ -11,8 +11,8 @@ import {
   LayoutInfo,
   LayoutInline,
   LayoutRelative,
-} from "../../components/Layout";
-import { LayoutPosition } from "../../components/Layout/LayoutPosition";
+} from '../../components/Layout';
+import { LayoutPosition } from '../../components/Layout/LayoutPosition';
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -36,9 +36,10 @@ const Dashboard = () => {
                 text="Lengedary Motorsport es una comunidad creada para reunir a los
                   amantes de los coches y, además, encontrar diferentes
                   funcionalidades."
-                width="extralargo"></PC>
+                width="extralargo"
+              ></PC>
               <Button
-                action={() => navigate("/conocenos")}
+                action={() => navigate('/conocenos')}
                 type="submit"
                 text="Saber más"
                 variant="contained"
@@ -63,11 +64,12 @@ const Dashboard = () => {
               <H2C text="Catálogo" width="pequeño" />
               <PC
                 text="Podrás descubrir los últimos modelos de nuestras marcas colaboradoras y personalizar tu coche en tiempo real."
-                width="extralargo"></PC>
+                width="extralargo"
+              ></PC>
 
               <Button
                 text="Saber más"
-                action={() => navigate("/catalogo")}
+                action={() => navigate('/catalogo')}
                 variant="contained"
                 color="white"
               />
@@ -82,10 +84,11 @@ const Dashboard = () => {
                 buscas, o podrás publicar el coche que quieras vender. Con una
                 sección de comentarios donde compartir con el resto de los
                 usuarios."
-                width="extralargo"></PC>
+                width="extralargo"
+              ></PC>
               <Button
                 text="Saber más"
-                action={() => navigate("/compraryvender")}
+                action={() => navigate('/compraryvender')}
                 variant="contained"
                 color="white"
               />
@@ -109,11 +112,12 @@ const Dashboard = () => {
                 text="Accede a nuestra red de Talleres asociados. Seleccionados por
                 sus servicios de la mayor calidad y cercanía para dejar tu coche
                 en las mejores manos."
-                width="extralargo"></PC>
+                width="extralargo"
+              ></PC>
 
               <Button
                 text="Saber más"
-                action={() => navigate("/taller")}
+                action={() => navigate('/taller')}
                 variant="contained"
                 color="white"
               />
@@ -131,7 +135,8 @@ const Dashboard = () => {
             <PC
               text="Las mejores opciones en servicio, calidad y precio, para nuestros
                 clientes."
-              width="largo"></PC>
+              width="largo"
+            ></PC>
           </div>
           <div className="diseño">
             <img
@@ -143,7 +148,8 @@ const Dashboard = () => {
             <PC
               text="Página intuitiva y fácil de usar para ofrecer una experiencia
                 óptima."
-              width="largo"></PC>
+              width="largo"
+            ></PC>
           </div>
           <div className="calidad">
             <img
@@ -154,7 +160,8 @@ const Dashboard = () => {
             <H2C text="Calidad" width="largo"></H2C>
             <PC
               text="Garantía de calidad en todos nuestros servicios. Gracias a nuestros proveedores."
-              width="largo"></PC>
+              width="largo"
+            ></PC>
           </div>
         </div>
       </div>

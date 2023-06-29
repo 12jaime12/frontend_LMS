@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import "./PrintInfoCoche.css";
-import Button from "../ui/Button";
-import { H3C } from "../ui/H3.element";
-import { PC } from "../ui/P.element";
-import { LayoutFlex } from "../../components/Layout";
-import { useNavigate, useParams } from "react-router";
-import { useAuth } from "../../contexts/authContext";
-import CreateComment from "../CreateComment/CreateComment";
-import Swal from "sweetalert2";
+import React, { useEffect, useState } from 'react';
+import './PrintInfoCoche.css';
+import Button from '../ui/Button';
+import { H3C } from '../ui/H3.element';
+import { PC } from '../ui/P.element';
+import { LayoutFlex } from '../../components/Layout';
+import { useNavigate, useParams } from 'react-router';
+import { useAuth } from '../../contexts/authContext';
+import CreateComment from '../CreateComment/CreateComment';
+import Swal from 'sweetalert2';
 import {
   getAllComentarios,
   getByCoche,
-} from "../../service/API_proyect/comentario.service";
-import CarruselFotos from "../CarruselFotos/CarruselFotos";
+} from '../../service/API_proyect/comentario.service';
+import CarruselFotos from '../CarruselFotos/CarruselFotos';
 
 const PrintInfoCoche = ({ data }) => {
   const { id } = useParams();
@@ -34,7 +34,7 @@ const PrintInfoCoche = ({ data }) => {
 
   useEffect(() => {
     getAllComments();
-    console.log("all comments", comments);
+    console.log('all comments', comments);
   }, []);
 
   return (
@@ -52,7 +52,7 @@ const PrintInfoCoche = ({ data }) => {
       </div>
 
       <div className="divComentarios">
-        <CreateComment variable={"coche"} id={info?._id} comments={comments} />
+        <CreateComment variable={'coche'} id={info?._id} comments={comments} />
       </div>
     </div>
   );

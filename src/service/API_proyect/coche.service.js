@@ -1,11 +1,11 @@
-import { updateToken } from "../../util/updateToken";
-import { API } from "./service.config";
+import { updateToken } from '../../util/updateToken';
+import { API } from './service.config';
 
 //--------------------CREATE CAR----------------------
 export const createCocheServicio = async (dataForm) => {
-  return API.post("/coche/createCoche", dataForm, {
+  return API.post('/coche/createCoche', dataForm, {
     headers: {
-      "Content-Type": "multipart/form-data",
+      'Content-Type': 'multipart/form-data',
       Authorization: `Bearer ${updateToken()}`,
     },
   })
@@ -16,7 +16,7 @@ export const createCocheServicio = async (dataForm) => {
 };
 //--------------------add SERVICE------------------
 export const createServiceTaller = async (dataId) => {
-  return API.post("/coche/addTaller", dataId)
+  return API.post('/coche/addTaller', dataId)
     .then((res) => res)
     .catch((error) => {
       return error;
@@ -48,7 +48,7 @@ export const updateCocheServicio = async (id, data) => {
 };
 //--------------------GET ALL-------------------------
 export const getAllCochesOcasion = async () => {
-  return API.get("/coche")
+  return API.get('/coche')
     .then((res) => res)
     .catch((error) => {
       return error;

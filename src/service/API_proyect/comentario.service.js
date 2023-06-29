@@ -1,8 +1,8 @@
-import { updateToken } from "../../util/updateToken";
-import { API } from "./service.config";
+import { updateToken } from '../../util/updateToken';
+import { API } from './service.config';
 
 export const createComentario = async (formData) => {
-  return API.post("comentarios/create", formData, {
+  return API.post('comentarios/create', formData, {
     headers: {
       Authorization: `Bearer ${updateToken()}`,
     },
@@ -14,7 +14,7 @@ export const createComentario = async (formData) => {
 };
 
 export const getAllComentarios = async () => {
-  return API.get("/comentarios/getAll", {
+  return API.get('/comentarios/getAll', {
     headers: {
       Authorization: `Bearer ${updateToken()}`,
     },

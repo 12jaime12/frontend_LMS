@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
-import "./Like.css";
-import { addLike } from "../../service/API_proyect/user.service";
-import { useAuth } from "../../contexts/authContext";
+import React, { useState, useEffect } from 'react';
+import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
+import './Like.css';
+import { addLike } from '../../service/API_proyect/user.service';
+import { useAuth } from '../../contexts/authContext';
 
 const ToggleButton = ({ car, setAllElementByPather }) => {
   const [res, setRes] = useState(null);
@@ -23,7 +23,7 @@ const ToggleButton = ({ car, setAllElementByPather }) => {
 
   return (
     <button
-      style={{ background: "none", border: "none" }}
+      style={{ background: 'none', border: 'none' }}
       onClick={handleAddToFavorites}
       disabled={loading || user == null}
     >

@@ -1,5 +1,5 @@
-import { lighten, darken } from "./colorManipulator";
-import { spacing } from "./utils";
+import { lighten, darken } from './colorManipulator';
+import { spacing } from './utils';
 
 export const BREAKPOINTS = {
   extraSmall: 320,
@@ -16,17 +16,17 @@ export const ZINDEX = {
 };
 
 const PALETTE_COLOR_LIGHT = {
-  background: "#7f0a0a",
-  color: "#551951ff",
-  button: "#51e4a2ff",
-  border: "#df5e4b",
+  background: '#7f0a0a',
+  color: '#551951ff',
+  button: '#51e4a2ff',
+  border: '#df5e4b',
 };
 
 const PALETTE_COLOR_DARK = {
-  background: "#551951",
-  color: "#51e4a1",
-  button: "#4abbc5ff",
-  border: "#df5e4b",
+  background: '#551951',
+  color: '#51e4a1',
+  button: '#4abbc5ff',
+  border: '#df5e4b',
 };
 
 export const themeLight = {
@@ -62,10 +62,10 @@ export const themeLight = {
   },
   typography: {
     fonts: {
-      bold: "/assets/fonts/Rubik-Bold.ttf",
-      italic: "/assets/fonts/Rubik-Italic.ttf",
-      regular: "/assets/fonts/Rubik-Regular.ttf",
-      semibold: "/assets/fonts/Rubik-SemiBold.ttf",
+      bold: '/assets/fonts/Rubik-Bold.ttf',
+      italic: '/assets/fonts/Rubik-Italic.ttf',
+      regular: '/assets/fonts/Rubik-Regular.ttf',
+      semibold: '/assets/fonts/Rubik-SemiBold.ttf',
     },
   },
   spacing,
@@ -101,10 +101,10 @@ export const themeDark = {
   },
   typography: {
     fonts: {
-      bold: "/assets/fonts/Rubik-Bold.ttf",
-      italic: "/assets/fonts/Rubik-Italic.ttf",
-      regular: "/assets/fonts/Rubik-Regular.ttf",
-      semibold: "/assets/fonts/Rubik-SemiBold.ttf",
+      bold: '/assets/fonts/Rubik-Bold.ttf',
+      italic: '/assets/fonts/Rubik-Italic.ttf',
+      regular: '/assets/fonts/Rubik-Regular.ttf',
+      semibold: '/assets/fonts/Rubik-SemiBold.ttf',
     },
   },
   spacing,

@@ -1,14 +1,14 @@
 .Compra-venta {
-    padding-top: 13vh;
-    min-height: 80vh;
-    width: 100%;
+  padding-top: 13vh;
+  min-height: 80vh;
+  width: 100%;
   padding-bottom: 30px;
 }
 
-.ulNavCompraventa{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap:35px;
-    padding: 15px;
+.ulNavCompraventa {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 35px;
+  padding: 15px;
 }

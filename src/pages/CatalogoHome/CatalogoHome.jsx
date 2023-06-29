@@ -1,6 +1,6 @@
-import React from "react";
-import "./CatalogoHome.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import React from 'react';
+import './CatalogoHome.css';
+import { NavLink, useNavigate } from 'react-router-dom';
 const CatalogoHome = () => {
   const navigate = useNavigate();
   return (

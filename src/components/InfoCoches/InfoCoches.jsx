@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import "./InfoCoche.css";
-import { useNavigate, useParams } from "react-router";
-import { getByIdCocheBase } from "../../service/API_proyect/cocheBase.service";
-import CarruselFotos from "../CarruselFotos/CarruselFotos";
-import CreateComment from "../CreateComment/CreateComment";
+import React, { useEffect, useState } from 'react';
+import './InfoCoche.css';
+import { useNavigate, useParams } from 'react-router';
+import { getByIdCocheBase } from '../../service/API_proyect/cocheBase.service';
+import CarruselFotos from '../CarruselFotos/CarruselFotos';
+import CreateComment from '../CreateComment/CreateComment';
 import {
   getAllComentarios,
   getByCatalogo,
   getByCoche,
-} from "../../service/API_proyect/comentario.service";
-import Button from "../ui/Button";
-import { useAuth } from "../../contexts/authContext";
+} from '../../service/API_proyect/comentario.service';
+import Button from '../ui/Button';
+import { useAuth } from '../../contexts/authContext';
 const InfoCoches = () => {
   const { id, marca } = useParams();
   const [cocheBase, setCocheBase] = useState();
@@ -43,7 +43,7 @@ const InfoCoches = () => {
       <p>{cocheBase?.data?.info?.informacion}</p>
       <div className="divComentarios">
         <CreateComment
-          variable={"catalogo"}
+          variable={'catalogo'}
           id={cocheBase?.data?._id}
           comments={comments}
         />
@@ -57,7 +57,7 @@ const InfoCoches = () => {
         action={
           user
             ? () => navigate(`/catalogo/${marca}/personalizar/${id}`)
-            : () => navigate("/login")
+            : () => navigate('/login')
         }
         variant="contained"
         color="white"

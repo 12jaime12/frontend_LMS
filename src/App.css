@@ -14,8 +14,7 @@ main {
 
 .svg-input {
   place-self: center;
-  color:#c61c14;
-  
+  color: #c61c14;
 }
 
 .input-custom {
@@ -26,15 +25,14 @@ main {
   margin: auto;
   justify-content: center;
   margin-top: 0.5rem;
-  padding:5px;
+  padding: 5px;
 }
 
-.input-custom:hover{
-  -webkit-box-shadow: 3px 3px 10px 0px rgba(198,28,20,1);
--moz-box-shadow: 3px 3px 10px 0px rgba(198,28,20,1);
-box-shadow: 3px 3px 10px 0px rgba(198,28,20,1);
+.input-custom:hover {
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(198, 28, 20, 1);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(198, 28, 20, 1);
+  box-shadow: 3px 3px 10px 0px rgba(198, 28, 20, 1);
 }
-
 
 /* main{
   margin-top: 10vh;
@@ -42,14 +40,12 @@ box-shadow: 3px 3px 10px 0px rgba(198,28,20,1);
 
 /**********File Inputs**********/
 
-
 .container-input {
   text-align: center;
   border-radius: 6px;
 
   padding-top: 20px;
 }
-
 
 .inputfile {
   width: 0.1px;
@@ -59,7 +55,6 @@ box-shadow: 3px 3px 10px 0px rgba(198,28,20,1);
   position: absolute;
   z-index: -1;
 }
-
 
 .inputfile + label {
   max-width: 80%;
@@ -73,7 +68,6 @@ box-shadow: 3px 3px 10px 0px rgba(198,28,20,1);
   padding: 0.2rem 0.25rem;
 }
 
-
 .inputfile + label svg {
   width: 1em;
   height: 1em;
@@ -83,12 +77,10 @@ box-shadow: 3px 3px 10px 0px rgba(198,28,20,1);
   margin-right: 0.25em;
 }
 
-
 .iborrainputfile {
-font-size:16px; 
-font-weight:normal;
-font-family: 'Lato';
-
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Lato';
 }
 
 /* style 2 */
@@ -104,5 +96,3 @@ font-family: 'Lato';
 .inputfile-2 + label:hover {
   color: #9f8465;
 }
-
-

@@ -1,24 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
 import {
   deleteUser,
   getByIdUser,
-} from "../../service/API_proyect/user.service";
-import { useAuth } from "../../contexts/authContext";
-import "./Profile.css";
-import PrintCochesPerfil from "../../components/PrintInfoCoche/PrintInfoCoche";
-import PrintInfoCoche from "../../components/PrintInfoCoche/PrintInfoCoche";
-import PrintAllCoches from "../../components/PrintAllCoches/PrintAllCoches";
-import deleteCocheUser from "../../util/deleteCocheUser";
-import CarruselPersonalizar from "../../components/CarruselPersonalizar/CarruselPersonalizar";
-import CarruselPorTres from "../../components/CarruselPorTres/CarruselPorTres";
-import UpdateProfile from "../UpdateProfile/UpdateProfile";
-import Button from "../../components/ui/Button";
-import { Link } from "react-router-dom";
-import ChangeImageProfile from "../../components/ChangeImageProfile/ChangeImageProfile";
-import { H2C, PC } from "../../components/ui";
-import Swal from "sweetalert2";
-import CarruselScroll from "../../components/CarruselScroll/CarruselScroll";
+} from '../../service/API_proyect/user.service';
+import { useAuth } from '../../contexts/authContext';
+import './Profile.css';
+import PrintCochesPerfil from '../../components/PrintInfoCoche/PrintInfoCoche';
+import PrintInfoCoche from '../../components/PrintInfoCoche/PrintInfoCoche';
+import PrintAllCoches from '../../components/PrintAllCoches/PrintAllCoches';
+import deleteCocheUser from '../../util/deleteCocheUser';
+import CarruselPersonalizar from '../../components/CarruselPersonalizar/CarruselPersonalizar';
+import CarruselPorTres from '../../components/CarruselPorTres/CarruselPorTres';
+import UpdateProfile from '../UpdateProfile/UpdateProfile';
+import Button from '../../components/ui/Button';
+import { Link } from 'react-router-dom';
+import ChangeImageProfile from '../../components/ChangeImageProfile/ChangeImageProfile';
+import { H2C, PC } from '../../components/ui';
+import Swal from 'sweetalert2';
+import CarruselScroll from '../../components/CarruselScroll/CarruselScroll';
 
 const Profile = () => {
   const { user, logout, setUser } = useAuth();
@@ -30,10 +30,10 @@ const Profile = () => {
   const [commentsUser, setCommentsUser] = useState(false);
   const navigate = useNavigate();
 
-  console.log("user perfil", user);
+  console.log('user perfil', user);
   console.log(user.id);
   if (user == null) {
-    navigate("/dashboard");
+    navigate('/dashboard');
   }
 
   const getIdService = async () => {
@@ -41,21 +41,21 @@ const Profile = () => {
   };
   const userDelete = async () => {
     Swal.fire({
-      title: "¿Seguro que quieres borrar el usuario?",
-      icon: "warning",
+      title: '¿Seguro que quieres borrar el usuario?',
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: "rgb(73, 193, 162)",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "YES",
+      confirmButtonColor: 'rgb(73, 193, 162)',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'YES',
     }).then(async (result) => {
       if (result.isConfirmed) {
         await deleteUser();
         switch (res.status) {
           case 200:
             Swal.fire({
-              icon: "success",
-              title: "Usuario borrado de la base de datos",
-              text: "Nos vemos pronto! 😜 🏎️💨",
+              icon: 'success',
+              title: 'Usuario borrado de la base de datos',
+              text: 'Nos vemos pronto! 😜 🏎️💨',
               showConfirmButton: false,
               timer: 3500,
             });
@@ -65,9 +65,9 @@ const Profile = () => {
 
           default:
             Swal.fire({
-              icon: "error",
-              title: "ERROR",
-              text: "Please, try again",
+              icon: 'error',
+              title: 'ERROR',
+              text: 'Please, try again',
               showConfirmButton: false,
               timer: 1500,
             });
@@ -79,7 +79,7 @@ const Profile = () => {
   };
   //setRes(await getByIdUser(user.id))
   const userInfo = res?.data;
-  console.log("userinfo", userInfo);
+  console.log('userinfo', userInfo);
   useEffect(() => {
     getIdService();
   }, []);
@@ -193,30 +193,30 @@ const Profile = () => {
                 <h2>Coches propios:</h2>
                 <Button
                   text="Añadir coche"
-                  action={() => navigate("/createCoche")}
+                  action={() => navigate('/createCoche')}
                   variant="contained"
                   color="white"
                 />
 
                 <CarruselScroll
                   cocheUser={userInfo.coche_cliente}
-                  variable={"coche"}
+                  variable={'coche'}
                 />
               </div>
             )}
             {likesUser && (
               <div className="divCarruselInfo">
-              <h2>Likes:</h2>
+                <h2>Likes:</h2>
                 <Button
                   text="Ver galeria"
-                  action={() => navigate("/compraryvender")}
+                  action={() => navigate('/compraryvender')}
                   variant="contained"
                   color="white"
                 />
 
                 <CarruselScroll
                   cocheUser={userInfo.like_coche}
-                  likes={"likes"}
+                  likes={'likes'}
                 />
               </div>
             )}
@@ -225,14 +225,14 @@ const Profile = () => {
                 <h2>Coches personalizados: </h2>
                 <Button
                   text="Ver galeria"
-                  action={() => navigate("/comprayventa")}
+                  action={() => navigate('/comprayventa')}
                   variant="contained"
                   color="white"
                 />
 
                 <CarruselScroll
                   cocheUser={userInfo.coche_tienda}
-                  variable={"catalogo"}
+                  variable={'catalogo'}
                 />
               </div>
             )}

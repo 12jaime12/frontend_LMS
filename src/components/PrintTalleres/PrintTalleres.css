@@ -1,90 +1,88 @@
-#map{
-    height: 200px;
-    width:200px;
-    border:2px solid black;
+#map {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
 }
-.divTodosTalleres{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 20px;
+.divTodosTalleres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
-.divImgTaller{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.divImgTaller {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.divImgTaller img{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
+.divImgTaller img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-
-.divImgTaller h2{
-    padding-bottom: 15px;
+.divImgTaller h2 {
+  padding-bottom: 15px;
 }
-.divLocation{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    gap:10px;
+.divLocation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  gap: 10px;
 }
-.sectionTaller{
-    height: 400px;
-    width: 70vw;
-    padding:0 20px 30px 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position:absolute;
-    /* background-color: #f2f2f2;
+.sectionTaller {
+  height: 400px;
+  width: 70vw;
+  padding: 0 20px 30px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  /* background-color: #f2f2f2;
     border: 2px solid black; */
-    
 }
-.divBordeTaller{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 550px;
-    width: 80vw;
-    position:relative;
+.divBordeTaller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  width: 80vw;
+  position: relative;
 }
-.imgBordeTaller{
-    z-index:-1;
-    width: 80vw;
-    height: 550px;
-    position:absolute;
+.imgBordeTaller {
+  z-index: -1;
+  width: 80vw;
+  height: 550px;
+  position: absolute;
 }
-.divTallerInfo{
-    height: 100%;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
+.divTallerInfo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.sectionTaller div div{
-    display:flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
+.sectionTaller div div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
-.divBotonTaller{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+.divBotonTaller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
-.botonTaller{
-    height: 40px;
-    width: 200px;
-    color: white;
-    background-color: #C61C14;
-    border: none;
+.botonTaller {
+  height: 40px;
+  width: 200px;
+  color: white;
+  background-color: #c61c14;
+  border: none;
   cursor: pointer;
   border-radius: 20px;
   font-family: inherit;
@@ -92,37 +90,37 @@
   transition: 0.1s ease-in-out;
   &:focus {
     background-color: red;
-}
+  }
 }
 
-@media screen and ((min-width:375px) and (max-width:1100px)){
-    .sectionTaller {
-        flex-direction: column;
-        align-items: center;
-        height: 620px;  
-        width: 95vw;
-        padding: 0 0 30px 0;
-    } 
-    .divBordeTaller{
-        height: 800px;
-    }
-    .imgBordeTaller{
-        width: 95vw;
-        height: 800px;
-    }
-    .divTallerInfo{
-        width: 70%;
-        justify-content: center;
-    }
-    .frameMapa{
-        width: 200px;
-        height: 100px;
-    }
-    .h3CiudadTaller{
-        display:none
-    }
-    .divImgTaller img{
-        height: 150px;
-        width: 150px;
-    }
+@media screen and ((min-width: 375px) and (max-width:1100px)) {
+  .sectionTaller {
+    flex-direction: column;
+    align-items: center;
+    height: 620px;
+    width: 95vw;
+    padding: 0 0 30px 0;
+  }
+  .divBordeTaller {
+    height: 800px;
+  }
+  .imgBordeTaller {
+    width: 95vw;
+    height: 800px;
+  }
+  .divTallerInfo {
+    width: 70%;
+    justify-content: center;
+  }
+  .frameMapa {
+    width: 200px;
+    height: 100px;
+  }
+  .h3CiudadTaller {
+    display: none;
+  }
+  .divImgTaller img {
+    height: 150px;
+    width: 150px;
+  }
 }

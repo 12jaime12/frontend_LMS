@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from "react";
-import "./CarruselFotos.css";
+import React, { useEffect, useState } from 'react';
+import './CarruselFotos.css';
 const CarruselFotos = ({ data }) => {
   const [position, setPosition] = useState(0);
   //const large = data.length;
 
   const suma = () => {
-    console.log("suma");
+    console.log('suma');
     console.log(position);
     if (position < 4 - 1) {
-      console.log("entro");
+      console.log('entro');
       setPosition(position + 1);
     }
   };
 
   const resta = () => {
-    console.log("resta");
+    console.log('resta');
     console.log(position);
     if (position > 0) {
-      console.log("entro");
+      console.log('entro');
       setPosition(position - 1);
     }
   };

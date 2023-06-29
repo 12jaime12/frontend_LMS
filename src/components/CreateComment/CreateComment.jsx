@@ -1,17 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router";
-import { useAuth } from "../../contexts/authContext";
+import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router';
+import { useAuth } from '../../contexts/authContext';
 import {
   createComentario,
   deleteComent,
   getAllComentarios,
   getByCatalogo,
   getByCoche,
-} from "../../service/API_proyect/comentario.service";
-import "./CreateComment.css";
-import Button from "../ui/Button";
-import Swal from "sweetalert2";
-import ReactTimeAgo from "react-time-ago";
+} from '../../service/API_proyect/comentario.service';
+import './CreateComment.css';
+import Button from '../ui/Button';
+import Swal from 'sweetalert2';
+import ReactTimeAgo from 'react-time-ago';
 
 const CreateComment = ({ variable, id, comments }) => {
   const [res, setRes] = useState();
@@ -22,11 +22,11 @@ const CreateComment = ({ variable, id, comments }) => {
   const [newComments, setNewComments] = useState();
   const [arrayComments, setArrayComments] = useState();
   const [resDelete, setResDelete] = useState();
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const navigate = useNavigate();
 
   const handleClick = () => {
-    setInputValue("");
+    setInputValue('');
   };
 
   const handleChange = (event) => {
@@ -39,18 +39,18 @@ const CreateComment = ({ variable, id, comments }) => {
       variable: variable,
       id: id,
     };
-    console.log("data comentario------->", customData);
+    console.log('data comentario------->', customData);
     await createComentario(customData);
 
     Swal.fire({
-      icon: "success",
-      title: "Comentario Añadido",
-      text: "Disfruta de Legendary Motor Sport! 😜 🏎️💨",
+      icon: 'success',
+      title: 'Comentario Añadido',
+      text: 'Disfruta de Legendary Motor Sport! 😜 🏎️💨',
       showConfirmButton: false,
       timer: 1500,
     });
 
-    if (variable === "coche") {
+    if (variable === 'coche') {
       setNewComments(await getByCoche(id));
       // setInpuValue("");
       // const input = document.querySelector(".inputComentario");
@@ -72,15 +72,15 @@ const CreateComment = ({ variable, id, comments }) => {
 
   const deleteComentario = async (idComent) => {
     Swal.fire({
-      title: "¿Seguro que quieres borrar el comentario?",
-      icon: "warning",
+      title: '¿Seguro que quieres borrar el comentario?',
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: "rgb(73, 193, 162)",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "YES",
+      confirmButtonColor: 'rgb(73, 193, 162)',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'YES',
     }).then(async (result) => {
       if (result.isConfirmed) {
-        if (variable === "coche") {
+        if (variable === 'coche') {
           await deleteComent(idComent);
           setNewComments(await getByCoche(id));
         } else {
@@ -89,8 +89,8 @@ const CreateComment = ({ variable, id, comments }) => {
         }
 
         Swal.fire({
-          icon: "success",
-          title: "Comentario borrado🏎️💨",
+          icon: 'success',
+          title: 'Comentario borrado🏎️💨',
           showConfirmButton: false,
           timer: 1500,
         });
@@ -98,7 +98,7 @@ const CreateComment = ({ variable, id, comments }) => {
     });
   };
   useEffect(() => {
-    console.log("all comments", comments?.data);
+    console.log('all comments', comments?.data);
     setArrayComments(comments?.data?.reverse());
   }, [comments]);
 
@@ -122,13 +122,13 @@ const CreateComment = ({ variable, id, comments }) => {
       ) : (
         <div className="divAllComentarios">
           {arrayComments?.map((comentario) => {
-            let nombre = "";
-            let apellido = "";
+            let nombre = '';
+            let apellido = '';
             //console.log(comentario.Creador);
             for (let clave in comentario.Creador) {
-              if (clave == "name") {
+              if (clave == 'name') {
                 nombre = comentario.Creador[clave];
-              } else if (clave == "apellido") {
+              } else if (clave == 'apellido') {
                 apellido = comentario.Creador[clave];
               }
             }
@@ -139,13 +139,13 @@ const CreateComment = ({ variable, id, comments }) => {
                   <h7>
                     <strong>
                       {nombre.toUpperCase()} {apellido.toUpperCase()}
-                    </strong>{" "}
-                    |{" "}
+                    </strong>{' '}
+                    |{' '}
                     <ReactTimeAgo
                       date={Date.parse(comentario?.createdAt)}
                       locale="es-ES"
-                    />{" "}
-                    |{" "}
+                    />{' '}
+                    |{' '}
                   </h7>
                   {nombre === user?.user && (
                     <img
@@ -178,7 +178,7 @@ const CreateComment = ({ variable, id, comments }) => {
           color=""
           action={
             user == null
-              ? () => navigate("/login")
+              ? () => navigate('/login')
               : () => {
                   createComment(refComent.current.value);
                   handleClick();

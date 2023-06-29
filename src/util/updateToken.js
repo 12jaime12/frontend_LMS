@@ -1,8 +1,8 @@
 export const updateToken = () => {
-  const user = localStorage.getItem("user");
+  const user = localStorage.getItem('user');
   if (user) {
     const parseUser = JSON.parse(user);
-    console.log("parseuser", parseUser);
+    console.log('parseuser', parseUser);
     return parseUser.token;
   }
 };

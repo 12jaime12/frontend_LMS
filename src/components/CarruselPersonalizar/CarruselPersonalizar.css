@@ -1,31 +1,29 @@
-.flecha{
-    height: 50px;
-    margin: 1rem;
-    cursor: pointer;
+.flecha {
+  height: 50px;
+  margin: 1rem;
+  cursor: pointer;
 }
-.fotoCarta{
-    height: 300px;
+.fotoCarta {
+  height: 300px;
 }
-.carta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 2rem;
+.carta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
 }
-.carrusel{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 /* .cartaEnTaller{
     border:10px solid rgb(255, 145, 0);
 } */
-.cocheEnTaller{
-    display: flex;
-    flex-direction: column;
-    gap:20px;
+.cocheEnTaller {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
-

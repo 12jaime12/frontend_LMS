@@ -1,16 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./PrintAllCoches.css";
-import { useAuth } from "../../contexts/authContext";
-import { useNavigate } from "react-router";
-import deleteCocheUser from "../../util/deleteCocheUser";
-import Button from "../ui/Button";
-import { addLike } from "../../service/API_proyect/user.service";
-import ToggleButton from "../Like/Like";
+import React, { useEffect, useRef, useState } from 'react';
+import './PrintAllCoches.css';
+import { useAuth } from '../../contexts/authContext';
+import { useNavigate } from 'react-router';
+import deleteCocheUser from '../../util/deleteCocheUser';
+import Button from '../ui/Button';
+import { addLike } from '../../service/API_proyect/user.service';
+import ToggleButton from '../Like/Like';
 import {
   getAllCochesOcasion,
   getByMarca,
   getCochesVenta,
-} from "../../service/API_proyect/coche.service";
+} from '../../service/API_proyect/coche.service';
 
 const PrintAllCoches = () => {
   const refInput = useRef();
@@ -27,7 +27,7 @@ const PrintAllCoches = () => {
   const arrayMarcas = [];
 
   const getCochesOcasion = async () => {
-    console.log("user coches ocasion", user);
+    console.log('user coches ocasion', user);
     setSend(true);
     setInitRes(await getCochesVenta());
     setSend(false);
@@ -54,7 +54,7 @@ const PrintAllCoches = () => {
   }, [coches]);
 
   useEffect(() => {
-    console.log("ffffffffff", filtrarCoche);
+    console.log('ffffffffff', filtrarCoche);
   }, [filtrarCoche]);
 
   useEffect(() => {
@@ -113,7 +113,7 @@ const PrintAllCoches = () => {
                   alt="icono comentarios"
                   onClick={() =>
                     user == null
-                      ? navigate("/login")
+                      ? navigate('/login')
                       : navigate(`/compraryvender/coche/${elem._id}`)
                   }
                 />
