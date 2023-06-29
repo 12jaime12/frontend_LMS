@@ -24,7 +24,7 @@ const CarruselFotos = ({ data }) => {
 
   useEffect(() => {
     console.log(data);
-  }, []);
+  }, [data]);
 
   return (
     <div className="carrusel">

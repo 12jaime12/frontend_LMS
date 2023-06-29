@@ -12,6 +12,7 @@ import {
   getAllComentarios,
   getByCoche,
 } from "../../service/API_proyect/comentario.service";
+import CarruselFotos from "../CarruselFotos/CarruselFotos";
 
 const PrintInfoCoche = ({ data }) => {
   const { id } = useParams();
@@ -29,7 +30,7 @@ const PrintInfoCoche = ({ data }) => {
 
   const info = data?.data;
   console.log(info);
-  console.log(info?.modelo);
+  console.log(info?.image);
 
   useEffect(() => {
     getAllComments();
@@ -39,11 +40,7 @@ const PrintInfoCoche = ({ data }) => {
   return (
     <div className="printInfo">
       <div className="PrintCoche">
-        <img
-          className="imgPrintCoche"
-          src={info?.image[0]}
-          alt={info?.modelo}
-        />
+        {info !== undefined && <CarruselFotos data={info?.image} />}
         <div className="InfoPrintCoche">
           <PC text={`Marca: ${info?.marca}`} width="medio" />
           <PC text={`Modelo: ${info?.modelo}`} width="extralargo" />
