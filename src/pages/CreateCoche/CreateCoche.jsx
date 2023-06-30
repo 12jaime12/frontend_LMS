@@ -189,17 +189,7 @@ const CreateCoche = () => {
                     autoComplete="false"
                     {...register('precio', { required: true })}
                   />
-                  <label htmlFor="custom-input" className="placeholder-create">
-                    Información del vehículo
-                  </label>
-                  <input
-                    className="input_user"
-                    type="text"
-                    id="infoCar"
-                    name="infoCar"
-                    autoComplete="false"
-                    {...register('content', { required: true })}
-                  />
+                 
                 </LayoutFlex>
 
                 <LayoutFlex direction="column" gap="0.5rem" padding="0rem">
