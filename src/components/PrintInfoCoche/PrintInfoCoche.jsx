@@ -47,7 +47,7 @@ const PrintInfoCoche = ({ data }) => {
           <PC text={`Año: ${info?.year}`} width="medio" />
           <PC text={`Combustible: ${info?.combustible}`} width="extralargo" />
           <PC text={`Precio: ${info?.precio} €`} width="medio" />
-          <PC text={`Informacion: ${info?.content}`} width="extralargo" />
+          
         </div>
       </div>
 
