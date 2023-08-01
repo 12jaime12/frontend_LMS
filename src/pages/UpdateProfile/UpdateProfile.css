@@ -1,40 +1,39 @@
 .Profile2 {
-    padding-top: 13vh;
-    min-height: 80vh;
-    width: 100%;
-    display: flex;
+  padding-top: 13vh;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.divUpdateImagen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.divUpdateImagen img {
+  padding-top: 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cambioContraseña {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+}
+
+@media screen and ((min-width: 375px) and (max-width:900px)) {
+  .cambioContraseña {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 30px;
-}
-
-.divUpdateImagen{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.divUpdateImagen img{
-    padding-top:20px;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.cambioContraseña{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    padding-top: 20px;
-}
-
-@media screen and ((min-width:375px) and (max-width:900px)){
-    .cambioContraseña{
-        flex-direction: column;
-} 
-.Profile2{
+  }
+  .Profile2 {
     padding-top: 15vh;
-}
+  }
 }

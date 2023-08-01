@@ -1,154 +1,154 @@
 .Profile {
-    padding:10vh 0;
-    min-height: 80vh;
+  padding: 10vh 0;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.DivUpdatePerfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.divBotonesPerfil {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+.divUserCoches {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.divUserCoches button {
+  height: 45px;
+  width: 150px;
+}
+.divImgmasInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding-top: 15px;
+  gap: 8rem;
+  padding-bottom: 50px;
+}
+.imagePerfil {
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.divUserCoches {
+  width: 100vw;
+  height: 500px;
+  background-color: #f2f2f2;
+}
+.divUserLikes {
+  width: 100vw;
+  height: 500px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.divUserComments {
+  width: 100vw;
+  height: 500px;
+  background-color: #f2f2f2;
+}
+.divInfoPersonal {
+  height: 20px;
+}
+.infoPersonal {
+  font-style: italic;
+  display: flex;
+}
+
+.divInfoUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 35px;
+  min-height: 70vh;
+}
+.divInfoUser h2 {
+  font-size: 3rem;
+  letter-spacing: 5px;
+}
+.imageDeleteUser {
+  width: 50px;
+  height: 50px;
+}
+.divCarruselUser {
+  min-height: 50px;
+  width: 100vw;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ulInfoUser {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 95%;
+}
+.ulInfoUser li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 50px;
+  background-color: #f2f2f2;
+  border-right: 0.5px solid grey;
+  border-left: 0.5px solid grey;
+}
+.divCarruselInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 10px 0;
+  width: 80vw;
+}
+
+.infoPersonal:hover {
+  border-bottom: 2px solid #c61c14;
+}
+
+.ulInfoUser li:hover {
+  background-color: #c61c14;
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 750px) {
+  .divImgmasInfo {
+    flex-direction: column;
+    gap: 0;
+  }
+  .divCarruselUser {
+    padding-top: 5vh;
+  }
+  .Profile {
+    padding-top: 15vh;
+  }
+  .divInfoUser {
+    min-height: 55vh;
+  }
+  .ulInfoUser {
     width: 100%;
-    display: flex;
+  }
+  .divBotonesPerfil {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.DivUpdatePerfil{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.divBotonesPerfil{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-top: 30px;
-}
-.divUserCoches{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap:20px;
-}
-.divUserCoches button{
-    height: 45px;
-    width: 150px;
-}
-.divImgmasInfo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh;
-    padding-top: 15px;
-    gap:8rem;
-    padding-bottom: 50px;
-}
-.imagePerfil{
-    height: 320px;
-    width: 320px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.divUserCoches{
-    width: 100vw;
-    height: 500px;
-    background-color: #f2f2f2;
-}
-.divUserLikes{
-    width: 100vw;
-    height: 500px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-}
-.divUserComments{
-    width: 100vw;
-    height: 500px;
-    background-color: #f2f2f2;
-}
-.divInfoPersonal{
-    height: 20px;
-}
-.infoPersonal{
-    font-style: italic;
-    display: flex;
-}
-
-.divInfoUser{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap:35px;
-    min-height: 70vh;
-}
-.divInfoUser h2{
-    font-size: 3rem;
-    letter-spacing: 5px;
-}
-.imageDeleteUser{
-    width: 50px;
-    height: 50px;
-}
-.divCarruselUser{
-    min-height: 50px;
-    width: 100vw;
-    gap:30px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.ulInfoUser{
-    display: flex;
-    justify-content: space-evenly;
-    height: 100%;
-    width: 95%;
-}
-.ulInfoUser li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    height: 50px;
-    background-color: #f2f2f2;
-    border-right: 0.5px solid grey;
-    border-left: 0.5px solid grey;
-}
-.divCarruselInfo{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:30px;
-    padding:10px 0;
-    width: 80vw;
-}
-
-.infoPersonal:hover{
-    border-bottom:2px solid #C61C14
-}
-
-.ulInfoUser li:hover{
-    background-color: #C61C14;
-    color:whitesmoke;
-}
-
-@media screen and (max-width:750px){
-    .divImgmasInfo{
-        flex-direction: column;
-        gap: 0;   
-    } 
-    .divCarruselUser{
-        padding-top: 5vh;
-    }
-    .Profile{
-        padding-top: 15vh;
-    }
-    .divInfoUser{
-        min-height:55vh
-    }
-    .ulInfoUser{
-        width: 100%;
-    }
-    .divBotonesPerfil{
-        flex-direction: column;
-        gap:10px;
-    }
+    gap: 10px;
+  }
 }

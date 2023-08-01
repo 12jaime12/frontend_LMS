@@ -1,98 +1,94 @@
 .Register {
   padding-top: 10vh;
-    min-height: 80vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.condiciones, .cuenta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+.condiciones,
+.cuenta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.anchorCustom{
-    text-decoration: none;
-    color: black
+.anchorCustom {
+  text-decoration: none;
+  color: black;
 }
 
-.anchorCustom:hover{
-    text-decoration: underline;
-    color: #C61C14;
+.anchorCustom:hover {
+  text-decoration: underline;
+  color: #c61c14;
 }
 
-
-
-.input_user{
-    height: 30px;
-    margin-right: 2rem;
+.input_user {
+  height: 30px;
+  margin-right: 2rem;
 }
 
-.input_user:focus{
-    
-    outline-color: #C61C14;
+.input_user:focus {
+  outline-color: #c61c14;
 }
 
-
-.placeholder-register{
-    width: 100px;
-   text-align: left;
+.placeholder-register {
+  width: 100px;
+  text-align: left;
 }
 
 .genero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border: none;
-  gap: 1rem;
-  }
-    
-  .label-radio {
-    background: #c61d1489;
-    color: #fff;
-    padding: 5px;
-    text-align: center;
-    width: 140px;
-    border-radius: 20px;
-    font-family: inherit;
-    font-size: 13.33px;
-    cursor: pointer;
-  }
-  
-  input[type="radio"]:checked + .label-radio {
-    background: #C61C14;
-    color: #fff !important;
-  }
-
-  input[type="radio"] {
-    display: none;
-  }
-
-
-
-@media screen and ( max-width: 1450px){
-  .condiciones, .cuenta{
-    
-      gap: 1rem;
-} 
-.label-radio{
-  width: 100px;
-}
-}
-
-@media screen and ( max-width: 950px){
-    .condiciones, .cuenta{
-        flex-direction: column;
-        gap: 0;
-} 
-.label-radio{
-    width: 100px;
-}
-.input_user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  border: none;
+  gap: 1rem;
 }
+
+.label-radio {
+  background: #c61d1489;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  width: 140px;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 13.33px;
+  cursor: pointer;
+}
+
+input[type='radio']:checked + .label-radio {
+  background: #c61c14;
+  color: #fff !important;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+@media screen and (max-width: 1450px) {
+  .condiciones,
+  .cuenta {
+    gap: 1rem;
+  }
+  .label-radio {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .condiciones,
+  .cuenta {
+    flex-direction: column;
+    gap: 0;
+  }
+  .label-radio {
+    width: 100px;
+  }
+  .input_user {
+    width: 100%;
+  }
 }

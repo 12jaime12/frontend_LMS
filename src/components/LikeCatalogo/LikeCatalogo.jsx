@@ -1,9 +1,9 @@
-import "./LikeCatalogo.css";
+import './LikeCatalogo.css';
 
-import React, { useState, useEffect } from "react";
-import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
-import { useAuth } from "../../contexts/authContext";
-import { addLike } from "../../service/API_proyect/catalogo.service";
+import React, { useState, useEffect } from 'react';
+import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
+import { useAuth } from '../../contexts/authContext';
+import { addLike } from '../../service/API_proyect/catalogo.service';
 
 const ToggleButtonCatalogo = ({ car, setAllElementByPather, variable }) => {
   console.log(car);
@@ -25,7 +25,7 @@ const ToggleButtonCatalogo = ({ car, setAllElementByPather, variable }) => {
 
   return (
     <button
-      style={{ background: "none", border: "none" }}
+      style={{ background: 'none', border: 'none' }}
       onClick={handleAddToFavorites}
       disabled={loading || user == null}
     >

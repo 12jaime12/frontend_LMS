@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { createContext, useContext, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext();
 
@@ -7,7 +7,7 @@ export const AuthContextProvider = ({ children }) => {
   const navigate = useNavigate();
   //--------------------Login---------------------------
   const [user, setUser] = useState(() => {
-    const data = localStorage.getItem("user");
+    const data = localStorage.getItem('user');
     const parseUser = JSON.parse(data);
 
     if (data) {
@@ -20,19 +20,19 @@ export const AuthContextProvider = ({ children }) => {
   const [allUser, setAllUser] = useState({
     data: {
       user: {
-        password: "",
-        email: "",
+        password: '',
+        email: '',
       },
     },
   });
 
   const bridgeData = (state) => {
-    const data = localStorage.getItem("data");
+    const data = localStorage.getItem('data');
     const dataJson = JSON.parse(data);
     switch (state) {
-      case "ALLUSER":
+      case 'ALLUSER':
         setAllUser(dataJson);
-        localStorage.removeItem("data");
+        localStorage.removeItem('data');
         break;
 
       default:
@@ -40,16 +40,16 @@ export const AuthContextProvider = ({ children }) => {
     }
   };
   const userlogin = (data) => {
-    localStorage.setItem("user", data);
+    localStorage.setItem('user', data);
     const parseData = JSON.parse(data);
-    console.log("data user login",parseData)
+    console.log('data user login', parseData);
     setUser(() => parseData);
   };
 
   const logout = () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem('user');
     setUser(null);
-    navigate("/login");
+    navigate('/login');
   };
 
   const value = useMemo(

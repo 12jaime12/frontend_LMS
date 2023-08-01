@@ -1,135 +1,130 @@
-Header{
-    height: 10vh;
-    width: 100vw;
-    position: fixed;
-    background: #060E10;
-    top: 0;
-    z-index: 300;
+Header {
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+  background: #060e10;
+  top: 0;
+  z-index: 300;
 }
 
-.headerIcons{
-    display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
-font-size: 20px;
-height: 100%;
-width: 100vw;
+.headerIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  height: 100%;
+  width: 100vw;
 }
 
-.navHeader{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+.navHeader {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-.logo{
-    height: 85px;
+.logo {
+  height: 85px;
 }
 
 .linkheader {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .linkheader:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .underline {
-    content: "";
-    background-color: white; 
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
+  content: '';
+  background-color: white;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
 }
 
 .linkheader:hover .underline {
-    width: 100%;
-}
-   
-
-.iconos img{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
 }
 
+.iconos img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
-
-
-.hamburger, .logout, .person{
-    color: white;
-    background: #C61C14;
-    border: none;
-    height: 30px;
-    width: 30px;
-    border-radius: 100%;
+.hamburger,
+.logout,
+.person {
+  color: white;
+  background: #c61c14;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
 }
 
 @media screen and (max-width: 1050px) {
-    .linkheader {
-      display: none;
-    }
+  .linkheader {
+    display: none;
   }
+}
 
 @media screen and (min-width: 1050px) {
-    .hamburger {
-      display: none;
-    }
+  .hamburger {
+    display: none;
   }
-  
-  @media screen and (max-width: 1050px) {
-    .logo{
-        height: 70px;
-    }
+}
+
+@media screen and (max-width: 1050px) {
+  .logo {
+    height: 70px;
   }
+}
 
-  @media screen and (max-width: 1050px) {
-    .menuHambuger{
-      top: 10vh;
-    }
-  }
-
-
+@media screen and (max-width: 1050px) {
   .menuHambuger {
-    position: absolute;
     top: 10vh;
   }
+}
 
-  .menuHambuger.open {
-    position: absolute;
-    top: 10vh;
-    /* height: 30vh; */
-    width: 50vw;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    transform: translateX(0);
-    transition: 0.3s ease all;
-    
-  }
+.menuHambuger {
+  position: absolute;
+  top: 10vh;
+}
 
-  .linksBurguer {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 0;
-background-color: #c61d14;
-height: 100%;
-width: 100%;
-color: white;
-text-decoration: none;
-border-radius: 0 0 0 10px;
-  }
-  
+.menuHambuger.open {
+  position: absolute;
+  top: 10vh;
+  /* height: 30vh; */
+  width: 50vw;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0);
+  transition: 0.3s ease all;
+}
 
-  .linksBurguer span {
-    text-align: center;
-  }
+.linksBurguer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+  background-color: #c61d14;
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  border-radius: 0 0 0 10px;
+}
 
-  .spanBurger{
-    text-decoration: none;
-    color: white;
-  }
+.linksBurguer span {
+  text-align: center;
+}
+
+.spanBurger {
+  text-decoration: none;
+  color: white;
+}

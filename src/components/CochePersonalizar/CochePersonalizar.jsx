@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
-import "./CochePersonalizar.css";
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router';
+import './CochePersonalizar.css';
 import {
   createCatalogo,
   getById,
-} from "../../service/API_proyect/catalogo.service";
-import { Switch } from "../Switch/Switch";
-import CarruselFotos from "../CarruselFotos/CarruselFotos";
-import { useAuth } from "../../contexts/authContext";
-import { getByIdCocheBase } from "../../service/API_proyect/cocheBase.service";
-import Button from "../ui/Button";
-import Swal from "sweetalert2";
+} from '../../service/API_proyect/catalogo.service';
+import { Switch } from '../Switch/Switch';
+import CarruselFotos from '../CarruselFotos/CarruselFotos';
+import { useAuth } from '../../contexts/authContext';
+import { getByIdCocheBase } from '../../service/API_proyect/cocheBase.service';
+import Button from '../ui/Button';
+import Swal from 'sweetalert2';
 
 const CochePersonalizar = () => {
   const { id } = useParams();
   const [cocheBase, setCocheBase] = useState(null);
-  const [arrayString, setArrayString] = useState("");
+  const [arrayString, setArrayString] = useState('');
   const [array, setArray] = useState([]);
   const [positionColor, setPositionColor] = useState(0);
   const [positionLlantas, setPositionLlantas] = useState(0);
@@ -44,8 +44,8 @@ const CochePersonalizar = () => {
     switch (res?.status) {
       case 200:
         Swal.fire({
-          icon: "success",
-          title: "Personalizacion Creada 🏎️💨",
+          icon: 'success',
+          title: 'Personalizacion Creada 🏎️💨',
           showConfirmButton: false,
           timer: 1500,
         });
@@ -53,9 +53,9 @@ const CochePersonalizar = () => {
 
       default:
         Swal.fire({
-          icon: "error",
-          title: "ERROR",
-          text: "Please, try again",
+          icon: 'error',
+          title: 'ERROR',
+          text: 'Please, try again',
           showConfirmButton: false,
           timer: 1500,
         });

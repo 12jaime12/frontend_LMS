@@ -1,0 +1,24 @@
+{
+  "routes": [
+    { "src": "/", "dest": "/" },
+    { "src": "/checkCode", "dest": "/" },
+    { "src": "/createCoche", "dest": "/" },
+    { "src": "/conocenos", "dest": "/" },
+    { "src": "/login", "dest": "/" },
+    { "src": "/register", "dest": "/" },
+    { "src": "/changePassword", "dest": "/" },
+    { "src": "/forgotPassword", "dest": "/" },
+    { "src": "/profile", "dest": "/" },
+    { "src": "/profile/:variable/:id", "dest": "/" },
+    { "src": "/updateProfile", "dest": "/" },
+    { "src": "/dashboard", "dest": "/" },
+    { "src": "/taller", "dest": "/" },
+    { "src": "/compraryvender", "dest": "/" },
+    { "src": "/compraryvender/coche/:id", "dest": "/" },
+    { "src": "/catalogo", "dest": "/" },
+    { "src": "/catalogo/:marca", "dest": "/" },
+    { "src": "/catalogo/:marca/info/:id", "dest": "/" },
+    { "src": "/catalogo/:marca/personalizar/:id", "dest": "/" },
+    { "src": "/[^.]+", "dest": "/", "status": 200 }
+  ]
+}

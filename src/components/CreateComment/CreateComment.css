@@ -1,66 +1,63 @@
-.divCreateComentario{
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-    justify-content: center;
-    align-items: center;
+.divCreateComentario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
-.comentariosDiv{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0.5rem;
-    
+.comentariosDiv {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
 }
-.sinComents{
-    margin: 1rem;
+.sinComents {
+  margin: 1rem;
 }
-.inputComentario{
-    width: 45vw;
-    height: 50px;
-    background-color: rgb(230, 227, 227);
-    border-radius: 10px;
-    border: 1px solid #c61c14;
+.inputComentario {
+  width: 45vw;
+  height: 50px;
+  background-color: rgb(230, 227, 227);
+  border-radius: 10px;
+  border: 1px solid #c61c14;
 }
-.inputComentario:focus{
-    outline: solid 1px #c61c14;
+.inputComentario:focus {
+  outline: solid 1px #c61c14;
 }
-.comentarioInfo{
-    border-bottom: 1px solid grey;
+.comentarioInfo {
+  border-bottom: 1px solid grey;
 }
-.divAllComentarios{
-    
-    border:1px solid #c61c14;
-    overflow-y: scroll;
-    height: 300px;
-    width: 45vw;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+.divAllComentarios {
+  border: 1px solid #c61c14;
+  overflow-y: scroll;
+  height: 300px;
+  width: 45vw;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
-.divComentarios{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+.divComentarios {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-h7{
-    margin-left: 0.7rem;
-    margin-bottom: 0.5rem;
+h7 {
+  margin-left: 0.7rem;
+  margin-bottom: 0.5rem;
 }
-h5{
-    margin-left: 1rem;
-    margin-bottom: 0.5rem;
+h5 {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
 }
-@media screen and (max-width:1000px){
-    .inputComentario,.divAllComentarios{
-        width: 425px;
-    }
-    
+@media screen and (max-width: 1000px) {
+  .inputComentario,
+  .divAllComentarios {
+    width: 425px;
+  }
 }
-@media screen and (max-width:500px){
-    .inputComentario,.divAllComentarios{
-        width: 300px;
-    }
-    
+@media screen and (max-width: 500px) {
+  .inputComentario,
+  .divAllComentarios {
+    width: 300px;
+  }
 }

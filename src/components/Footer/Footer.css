@@ -1,46 +1,44 @@
-Footer{
-    height: 20vh;
-    width: 100%;
-    background-color: #242424;
-    /* display: flex;
+Footer {
+  height: 20vh;
+  width: 100%;
+  background-color: #242424;
+  /* display: flex;
     justify-content: space-around;
     align-items: center; */
 }
 
-.fotoLogo{
-    height: 100px; 
+.fotoLogo {
+  height: 100px;
 }
 
-.iconoRedSocial{
-    height: 30px;
-    filter: invert();
-    
+.iconoRedSocial {
+  height: 30px;
+  filter: invert();
 }
 
 .linkfooter {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .linkfooter:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.linksFooter{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-
+.linksFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.redes{
-    display: flex;
-    flex-direction: row;
-justify-content: space-around;
-align-items: center;
-gap: 2rem;
+.redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
 }
 /* .div-listaInteres{
     margin
@@ -58,16 +56,14 @@ gap: 2rem;
     margin-right: 2rem;
 } */
 
-@media screen and ( max-width: 1050px){
-    .fotoLogo{
-      height: 50px; 
-    }
-    .redes{
-      flex-direction: row;
-    }
-    .linksFooter{
-        display: none;
-    }
+@media screen and (max-width: 1050px) {
+  .fotoLogo {
+    height: 50px;
   }
-
-  
+  .redes {
+    flex-direction: row;
+  }
+  .linksFooter {
+    display: none;
+  }
+}

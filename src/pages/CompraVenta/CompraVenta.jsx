@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Outlet, useNavigate } from "react-router";
-import { useAuth } from "../../contexts/authContext";
-import { getAllCochesOcasion } from "../../service/API_proyect/coche.service";
-import Button from "../../components/ui/Button";
-import "./Compraventa.css";
-import FiltrarMarca from "../../components/FiltrarMarca/FiltrarMarca";
+import React, { useEffect, useState } from 'react';
+import { Outlet, useNavigate } from 'react-router';
+import { useAuth } from '../../contexts/authContext';
+import { getAllCochesOcasion } from '../../service/API_proyect/coche.service';
+import Button from '../../components/ui/Button';
+import './CompraVenta.css';
+import FiltrarMarca from '../../components/FiltrarMarca/FiltrarMarca';
 
 const CompraVenta = () => {
   //AQUI CREO LA ESTRUCTURA DE LA PAGINA DE COMPRAVENTA -> 2 BOTONES CON comprar y vender Y UN OUTLET CON EL CONTENIDO(todos los coches)
@@ -16,14 +16,13 @@ const CompraVenta = () => {
   return (
     <div className="Compra-venta">
       <nav className="ulNavCompraventa">
-        
         {user != null && (
           <Button
             type="text"
             text="Crear coche"
             variant="contained"
             color=""
-            action={() => navigate("/createCoche")}
+            action={() => navigate('/createCoche')}
           />
         )}
       </nav>

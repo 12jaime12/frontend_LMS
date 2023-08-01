@@ -1,28 +1,25 @@
 .CheckCode {
-    padding-top: 10vh;
-    min-height: 80vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding-top: 10vh;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.codigoregistro-space{
-    display: flex;
-    flex-direction: column;
+.codigoregistro-space {
+  display: flex;
+  flex-direction: column;
 }
 
-.input-checkcode{
-    height: 30px;
+.input-checkcode {
+  height: 30px;
 }
 
-.input-checkcode:focus{
-   outline-color:  #C61C14;
- 
+.input-checkcode:focus {
+  outline-color: #c61c14;
 }
 
-.aviso{
-    color: #C61C14;
+.aviso {
+  color: #c61c14;
 }

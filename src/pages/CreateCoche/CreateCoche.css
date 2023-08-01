@@ -1,26 +1,24 @@
-
 .CreateCar {
-    padding-bottom:20px;
-    min-height: 80vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  padding-bottom: 20px;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.archivo{
-    width: 300px;
-}
-
-.placeholder-create{
-    width: 100%;
-   text-align: left;
-}
-.Compra-venta-crearCoche{
-    padding-top:12vh;
+.archivo {
+  width: 300px;
 }
 
-.labelCreateCoche{
-position: relative;
-left: 2.8rem;
+.placeholder-create {
+  width: 100%;
+  text-align: left;
+}
+.Compra-venta-crearCoche {
+  padding-top: 12vh;
+}
+
+.labelCreateCoche {
+  position: relative;
+  left: 2.8rem;
 }

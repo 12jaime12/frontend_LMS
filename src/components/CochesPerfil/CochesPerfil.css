@@ -1,19 +1,18 @@
-.perfilCoches{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10vh;
-    min-height: 80vh;
+.perfilCoches {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  min-height: 80vh;
 }
 
-.cochesPerfil{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: left;
-    
+.cochesPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
 }
-.cochesPerfil p{
-    margin: 0.5rem;
+.cochesPerfil p {
+  margin: 0.5rem;
 }

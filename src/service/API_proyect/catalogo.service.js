@@ -1,5 +1,5 @@
-import { API } from "./service.config";
-import { updateToken } from "../../util/updateToken";
+import { API } from './service.config';
+import { updateToken } from '../../util/updateToken';
 //--------------get-by-marca-base--------------
 export const getMarcaBase = async (marca) => {
   return API.get(`/catalogo/getMarca/${marca}`, {
@@ -39,7 +39,7 @@ export const createCatalogo = async (formData) => {
 //---------------add-like-----------------------
 export const addLike = async (dataId) => {
   console.log(dataId);
-  return API.patch("/CocheBase/addLike", dataId, {
+  return API.patch('/CocheBase/addLike', dataId, {
     headers: {
       Authorization: `Bearer ${updateToken()}`,
     },

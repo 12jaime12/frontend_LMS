@@ -26,13 +26,12 @@
   font-size: 1.1rem;
 }
 
-.mailConocenos{
+.mailConocenos {
   display: flex;
   gap: 0.5rem;
 }
 
-
-.logos-redes{
+.logos-redes {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,11 +39,12 @@
   padding-top: 10px;
 }
 
-.img-mail{
+.img-mail {
   height: 20px;
 }
 
-.img-linkedin, .img-github{
+.img-linkedin,
+.img-github {
   height: 40px;
 }
 

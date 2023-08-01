@@ -1,6 +1,6 @@
-import React from "react";
-import "./Catalogo.css";
-import { NavLink, Outlet } from "react-router-dom";
+import React from 'react';
+import './Catalogo.css';
+import { NavLink, Outlet } from 'react-router-dom';
 const Catalogo = () => {
   return (
     <div className="Catalog">

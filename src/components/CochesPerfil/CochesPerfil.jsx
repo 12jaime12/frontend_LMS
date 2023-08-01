@@ -1,12 +1,12 @@
-import { useNavigate, useParams } from "react-router";
-import "./CochesPerfil.css";
+import { useNavigate, useParams } from 'react-router';
+import './CochesPerfil.css';
 
-import React, { useState } from "react";
-import { useEffect } from "react";
-import { getCocheById } from "../../service/API_proyect/coche.service";
-import { getById } from "../../service/API_proyect/catalogo.service";
-import CarruselFotos from "../CarruselFotos/CarruselFotos";
-import Button from "../ui/Button";
+import React, { useState } from 'react';
+import { useEffect } from 'react';
+import { getCocheById } from '../../service/API_proyect/coche.service';
+import { getById } from '../../service/API_proyect/catalogo.service';
+import CarruselFotos from '../CarruselFotos/CarruselFotos';
+import Button from '../ui/Button';
 
 const CochesPerfil = () => {
   const { id, variable } = useParams();
@@ -15,12 +15,12 @@ const CochesPerfil = () => {
 
   useEffect(() => {
     (async () => {
-      if (variable === "coche") {
+      if (variable === 'coche') {
         setCoche(await getCocheById(id));
-        console.log("coche entro");
+        console.log('coche entro');
       } else {
         setCoche(await getById(id));
-        console.log("catalogo entro");
+        console.log('catalogo entro');
       }
     })();
   }, []);
@@ -31,7 +31,7 @@ const CochesPerfil = () => {
 
   return (
     <div className="perfilCoches">
-      {variable == "coche" ? (
+      {variable == 'coche' ? (
         <div className="cochesPerfil">
           {coche !== undefined && <CarruselFotos data={coche?.data?.image} />}
           <h3>
@@ -42,7 +42,7 @@ const CochesPerfil = () => {
           <p>Precio: {coche?.data?.precio} €</p>
           <Button
             text="Volver al Perfil"
-            action={() => navigate("/profile")}
+            action={() => navigate('/profile')}
             variant="contained"
             color="white"
           />
@@ -51,7 +51,7 @@ const CochesPerfil = () => {
         <div className="cochesPerfil">
           {coche !== undefined && <CarruselFotos data={coche?.data?.image} />}
           <h3>
-            {coche?.data?.cocheBase?.marca.toUpperCase()}{" "}
+            {coche?.data?.cocheBase?.marca.toUpperCase()}{' '}
             {coche?.data?.cocheBase?.modelo.toUpperCase()}
           </h3>
           <div
@@ -64,7 +64,7 @@ const CochesPerfil = () => {
 
           <Button
             text="Volver al Perfil"
-            action={() => navigate("/profile")}
+            action={() => navigate('/profile')}
             variant="contained"
             color="white"
           />
