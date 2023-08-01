@@ -16,7 +16,11 @@ export const createCocheServicio = async (dataForm) => {
 };
 //--------------------add SERVICE------------------
 export const createServiceTaller = async (dataId) => {
-  return API.post("/coche/addTaller", dataId)
+  return API.post("/coche/addTaller", dataId, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
     .then((res) => res)
     .catch((error) => {
       return error;
